@@ -896,15 +896,16 @@ def recompute_scores(data: Dict[str, Any]) -> None:
         p["pointsChange"] = new_total - old_total
         p["prevRank"] = old_rank or None
 
-    # Competition ranking: 1, 2, 2, 4 style.
+    # Dense ranking: 1, 2, 2, 3 style.
+    # Same score = same rank. The next different score gets the next rank, without skipping numbers.
     participants = data.get("participants", [])
     participants.sort(key=lambda x: (-int(x.get("total", 0) or 0), str(x.get("name", ""))))
     last_score = None
     last_rank = 0
-    for idx, p in enumerate(participants, start=1):
+    for p in participants:
         score = int(p.get("total", 0) or 0)
         if score != last_score:
-            last_rank = idx
+            last_rank += 1
             last_score = score
         old_rank = p.get("prevRank")
         p["rank"] = last_rank
