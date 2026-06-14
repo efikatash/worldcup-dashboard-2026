@@ -1,0 +1,50 @@
+חיבור הדשבורד ל-GitHub Pages - הוראות הכי פשוטות
+
+מה המטרה?
+להעלות את הדשבורד ל-GitHub כך שכל המשתתפים יקבלו לינק אחד קבוע.
+כל פעם שתעדכן את הקבצים ב-GitHub, האתר יתעדכן לבד באותו לינק.
+
+שלב 1 - צור Repository
+1. היכנס ל-GitHub.
+2. לחץ על + למעלה ואז New repository.
+3. שם מומלץ: worldcup-dashboard-2026
+4. בחר Public.
+5. סמן Add a README file אם GitHub מבקש, לא חובה.
+6. לחץ Create repository.
+
+שלב 2 - העלה קבצים
+1. פתח את ה-Repository החדש.
+2. לחץ Add file ואז Upload files.
+3. גרור את כל הקבצים מתוך התיקייה הזו, לא את תיקיית האב ולא את ה-ZIP.
+4. לחץ Commit changes.
+
+חשוב: index.html חייב להיות בשורש ה-Repository, לא בתוך תיקייה פנימית.
+
+שלב 3 - הפעל GitHub Pages
+1. ב-Repository לחץ Settings.
+2. בתפריט השמאלי לחץ Pages.
+3. תחת Build and deployment בחר Source: Deploy from a branch.
+4. Branch: main
+5. Folder: /root
+6. לחץ Save.
+
+שלב 4 - קבל לינק
+אחרי דקה-שתיים GitHub יציג לינק ירוק.
+הלינק ייראה בערך כך:
+https://YOUR_USERNAME.github.io/worldcup-dashboard-2026/
+
+זה הלינק שאתה שולח למשתתפים.
+
+שלב 5 - עדכון בעתיד
+כשיש עדכון ניקוד:
+1. העלה את data.json החדש לאותו Repository במקום הישן.
+2. העלה גם CSV חדשים אם יש.
+3. לחץ Commit changes.
+4. האתר יתעדכן לבד באותו לינק.
+
+שליחה בוואטסאפ למשתתפים:
+שלום לכולם, הדשבורד של משחק הניחושים עלה לאוויר.
+אפשר לחפש את השם שלכם ולראות דירוג ופירוט ניקוד:
+PASTE_SITE_URL_HERE
+
+הדשבורד מתעדכן אוטומטית, אין צורך להוריד קבצים.
