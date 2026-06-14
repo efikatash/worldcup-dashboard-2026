@@ -1,97 +1,24 @@
 {
   "status": "ok",
-  "message": "Dashboard checked against FIFA. Added 5 new final match result(s). Updated 6 live match score(s). Fast-track daily review prepared for 24 question(s).",
-  "updated_at_utc": "2026-06-14T18:32:46Z",
-  "updates": [
-    {
-      "matchId": 29,
-      "match": "אקוואדור - גרמניה",
-      "score": "4-1",
-      "status": "verified",
-      "source": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021470",
-      "evidence": "ED 01 Jul THU 02 Jul FRI 03 Jul SAT 04 Jul SUN 05 Jul MON 06 Jul TUE 07 Jul WED 08 Jul Live(3) CHANGE DAY SORT FILTER FIFA World Cup™ FIFA World Cup 2026™ Group E LIVE 66' Germany 4 - 1 Curaçao Côte d'Ivoire 07:00 Ecuador Group F Netherlands 04:00 Japan Sweden 10:00 Tunisia Group E Show table Pos Team P W Pts 1 Germany 1 1 3 2 Ecuador 0 0 0 Group F Show table Pos Team P W Pts 1 Netherlands 0 0 0 1 Japan 0 0 0 Primera División Match Day 15 FT Deportes Concepción 3 - 2 Deportes Limache Unión La Ca"
-    },
-    {
-      "matchId": 31,
-      "match": "הולנד - יפן",
-      "score": "3-2",
-      "status": "verified",
-      "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-      "evidence": "Jul MON 06 Jul TUE 07 Jul WED 08 Jul Live(3) CHANGE DAY SORT FILTER FIFA World Cup™ FIFA World Cup 2026™ Group E LIVE 66' Germany 4 - 1 Curaçao Côte d'Ivoire 07:00 Ecuador Group F Netherlands 04:00 Japan Sweden 10:00 Tunisia Group E Show table Pos Team P W Pts 1 Germany 1 1 3 2 Ecuador 0 0 0 Group F Show table Pos Team P W Pts 1 Netherlands 0 0 0 1 Japan 0 0 0 Primera División Match Day 15 FT Deportes Concepción 3 - 2 Deportes Limache Unión La Calera 03:00 Universidad de Chile Universidad Católi"
-    },
-    {
-      "matchId": 32,
-      "match": "שבדיה - טוניסיה",
-      "score": "4-1",
-      "status": "verified",
-      "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-      "evidence": "ED 01 Jul THU 02 Jul FRI 03 Jul SAT 04 Jul SUN 05 Jul MON 06 Jul TUE 07 Jul WED 08 Jul Live(3) CHANGE DAY SORT FILTER FIFA World Cup™ FIFA World Cup 2026™ Group E LIVE 66' Germany 4 - 1 Curaçao Côte d'Ivoire 07:00 Ecuador Group F Netherlands 04:00 Japan Sweden 10:00 Tunisia Group E Show table Pos Team P W Pts 1 Germany 1 1 3 2 Ecuador 0 0 0 Group F Show table Pos Team P W Pts 1 Netherlands 0 0 0 1 Japan 0 0 0 Primera División Match Day 15 FT Deportes"
-    },
-    {
-      "matchId": 34,
-      "match": "טוניסיה - יפן",
-      "score": "3-2",
-      "status": "verified",
-      "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-      "evidence": "Live(3) CHANGE DAY SORT FILTER FIFA World Cup™ FIFA World Cup 2026™ Group E LIVE 66' Germany 4 - 1 Curaçao Côte d'Ivoire 07:00 Ecuador Group F Netherlands 04:00 Japan Sweden 10:00 Tunisia Group E Show table Pos Team P W Pts 1 Germany 1 1 3 2 Ecuador 0 0 0 Group F Show table Pos Team P W Pts 1 Netherlands 0 0 0 1 Japan 0 0 0 Primera División Match Day 15 FT Deportes Concepción 3 - 2 Deportes Limache Unión La Calera 03:00 Universidad de Chile Universidad Católica 05:30 Universidad de Concepción Sh"
-    },
-    {
-      "matchId": 35,
-      "match": "טוניסיה - הולנד",
-      "score": "3-2",
-      "status": "verified",
-      "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-      "evidence": "Live(3) CHANGE DAY SORT FILTER FIFA World Cup™ FIFA World Cup 2026™ Group E LIVE 66' Germany 4 - 1 Curaçao Côte d'Ivoire 07:00 Ecuador Group F Netherlands 04:00 Japan Sweden 10:00 Tunisia Group E Show table Pos Team P W Pts 1 Germany 1 1 3 2 Ecuador 0 0 0 Group F Show table Pos Team P W Pts 1 Netherlands 0 0 0 1 Japan 0 0 0 Primera División Match Day 15 FT Deportes Concepción 3 - 2 Deportes Limache Unión La Calera 03:00 Universidad de Chile Universidad Católica 05:30 Universidad de Concepción Sh"
-    }
-  ],
+  "message": "Dashboard checked against FIFA. No new final match results found. Updated 2 live match score(s). Fast-track daily review prepared for 24 question(s).",
+  "updated_at_utc": "2026-06-14T18:42:30Z",
+  "updates": [],
   "live_updates": [
     {
       "matchId": 25,
       "match": "גרמניה - קורסאו",
-      "score": "4-1",
+      "score": "5-1",
       "status": "live",
       "source": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021464",
-      "evidence": "30 Jun WED 01 Jul THU 02 Jul FRI 03 Jul SAT 04 Jul SUN 05 Jul MON 06 Jul TUE 07 Jul WED 08 Jul Live(3) CHANGE DAY SORT FILTER FIFA World Cup™ FIFA World Cup 2026™ Group E LIVE 66' Germany 4 - 1 Curaçao Côte d'Ivoire 07:00 Ecuador Group F Netherlands 04:00 Japan Sweden 10:00 Tunisia Group E Show table Pos Team P W Pts 1 Germany 1 1 3 2 Ecuador 0 0 0 Group F Show table Pos Team P"
-    },
-    {
-      "matchId": 26,
-      "match": "חוף השנהב - אקוואדור",
-      "score": "4-1",
-      "status": "live",
-      "source": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021467",
-      "evidence": "ED 01 Jul THU 02 Jul FRI 03 Jul SAT 04 Jul SUN 05 Jul MON 06 Jul TUE 07 Jul WED 08 Jul Live(3) CHANGE DAY SORT FILTER FIFA World Cup™ FIFA World Cup 2026™ Group E LIVE 66' Germany 4 - 1 Curaçao Côte d'Ivoire 07:00 Ecuador Group F Netherlands 04:00 Japan Sweden 10:00 Tunisia Group E Show table Pos Team P W Pts 1 Germany 1 1 3 2 Ecuador 0 0 0 Group F Show table Pos Team P W Pts 1 Netherlands 0 0 0 1"
+      "evidence": "SAT 04 Jul SUN 05 Jul MON 06 Jul TUE 07 Jul WED 08 Jul Live(3) CHANGE DAY SORT FILTER FIFA World Cup™ FIFA World Cup 2026™ Group E LIVE 76' Germany 5 - 1 Curaçao Côte d'Ivoire 07:00 Ecuador Group F Netherlands 04:00 Japan Sweden 10:00 Tunisia Group E Show table Pos Team P W Pts 1 Germany 1 1 3 2 Ecua"
     },
     {
       "matchId": 27,
       "match": "גרמניה - חוף השנהב",
-      "score": "4-1",
+      "score": "5-1",
       "status": "live",
       "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-      "evidence": "30 Jun WED 01 Jul THU 02 Jul FRI 03 Jul SAT 04 Jul SUN 05 Jul MON 06 Jul TUE 07 Jul WED 08 Jul Live(3) CHANGE DAY SORT FILTER FIFA World Cup™ FIFA World Cup 2026™ Group E LIVE 66' Germany 4 - 1 Curaçao Côte d'Ivoire 07:00 Ecuador Group F Netherlands 04:00 Japan Sweden 10:00 Tunisia Group E Show table Pos Team P W Pts 1 Germany 1 1 3 2 Ecuador 0 0 0 Group F Show table Pos Team P W Pts 1 Nether"
-    },
-    {
-      "matchId": 30,
-      "match": "קורסאו - חוף השנהב",
-      "score": "4-1",
-      "status": "live",
-      "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-      "evidence": "ED 01 Jul THU 02 Jul FRI 03 Jul SAT 04 Jul SUN 05 Jul MON 06 Jul TUE 07 Jul WED 08 Jul Live(3) CHANGE DAY SORT FILTER FIFA World Cup™ FIFA World Cup 2026™ Group E LIVE 66' Germany 4 - 1 Curaçao Côte d'Ivoire 07:00 Ecuador Group F Netherlands 04:00 Japan Sweden 10:00 Tunisia Group E Show table Pos Team P W Pts 1 Germany 1 1 3 2 Ecuador 0 0 0 Group F Show table Pos Team P W Pts 1 Nether"
-    },
-    {
-      "matchId": 33,
-      "match": "הולנד - שבדיה",
-      "score": "4-1",
-      "status": "live",
-      "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-      "evidence": "ED 01 Jul THU 02 Jul FRI 03 Jul SAT 04 Jul SUN 05 Jul MON 06 Jul TUE 07 Jul WED 08 Jul Live(3) CHANGE DAY SORT FILTER FIFA World Cup™ FIFA World Cup 2026™ Group E LIVE 66' Germany 4 - 1 Curaçao Côte d'Ivoire 07:00 Ecuador Group F Netherlands 04:00 Japan Sweden 10:00 Tunisia Group E Show table Pos Team P W Pts 1 Germany 1 1 3 2 Ecuador 0 0 0 Group F Show table Pos Team P W Pts 1 Netherlands 0 0 0 1 Japan 0 0 0 Primera División Match Day"
-    },
-    {
-      "matchId": 36,
-      "match": "יפן - שבדיה",
-      "score": "4-1",
-      "status": "live",
-      "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-      "evidence": "ED 01 Jul THU 02 Jul FRI 03 Jul SAT 04 Jul SUN 05 Jul MON 06 Jul TUE 07 Jul WED 08 Jul Live(3) CHANGE DAY SORT FILTER FIFA World Cup™ FIFA World Cup 2026™ Group E LIVE 66' Germany 4 - 1 Curaçao Côte d'Ivoire 07:00 Ecuador Group F Netherlands 04:00 Japan Sweden 10:00 Tunisia Group E Show table Pos Team P W Pts 1 Germany 1 1 3 2 Ecuador 0 0 0 Group F Show table Pos Team P W Pts 1 Netherlands 0 0 0 1 Japan 0 0 0 Primera División Match Day"
+      "evidence": "SAT 04 Jul SUN 05 Jul MON 06 Jul TUE 07 Jul WED 08 Jul Live(3) CHANGE DAY SORT FILTER FIFA World Cup™ FIFA World Cup 2026™ Group E LIVE 76' Germany 5 - 1 Curaçao Côte d'Ivoire 07:00 Ecuador Group F Netherlands 04:00 Japan Sweden 10:00 Tunisia Group E Show table Pos Team P W Pts 1 Germany 1 1 3 2 Ecuador 0 0 0 Grou"
     }
   ],
   "conflicts": [],
@@ -2248,6 +2175,6 @@
   "live_matches": 6,
   "live_open_questions": 0,
   "resolved_open_questions": 6,
-  "leader": "אוראל ויצמן",
-  "leader_points": 104
+  "leader": "אורטל שלומי",
+  "leader_points": 105
 }
