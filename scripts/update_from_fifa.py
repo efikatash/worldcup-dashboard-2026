@@ -1311,7 +1311,7 @@ def recompute_scores(data: Dict[str, Any]) -> None:
     meta["resolvedOpenQuestions"] = sum(1 for q in data.get("openQuestions", []) if q.get("status") in ("known", "verified"))
     meta["verifiedOpenQuestions"] = meta["resolvedOpenQuestions"]
     meta["liveOpenQuestions"] = sum(1 for q in data.get("openQuestions", []) if q.get("status") == "live")
-    meta["dashboardVersion"] = "GitHub Auto FIFA Final + ESPN Strict Live + Stale Cleanup"
+    meta["dashboardVersion"] = "GitHub Auto FIFA Final + ESPN Live + Final Authority Cleanup"
     meta["lastAutomationAtUtc"] = utc_now()
 
 def ensure_source(data: Dict[str, Any], title: str, url: str, note: str = "") -> None:
@@ -1398,6 +1398,69 @@ def write_csvs(data: Dict[str, Any]) -> None:
         write_csv("efi_katash_audit.csv", rows, ["type", "id", "item", "actual", "prediction", "points", "label"])
 
 
+
+def clear_untrusted_nonfinal_scores(data: Dict[str, Any], fifa_final_discovered: Dict[int, Dict[str, Any]], espn_live_discovered: Dict[int, Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Remove temporary or untrusted scores that are neither FIFA-final nor ESPN-live NOW.
+
+    This is the safety valve after previous live-parsing experiments. ESPN may be used only while
+    it confirms the exact fixture is currently live. FIFA is the only authority for final scores.
+    Therefore, any existing temporary score that is not reconfirmed by the current ESPN feed and is
+    not verified by FIFA in this run must be removed.
+
+    Existing legacy final scores that were entered before automation often have sourceStatus None.
+    We preserve those so the historical FIFA-confirmed first matchdays are not erased if FIFA pages
+    are slow/unavailable during a run. New FIFA-final updates written by this script are locked with
+    sourceStatus='verified_fifa_locked'.
+    """
+    cleared: List[Dict[str, Any]] = []
+    trusted_legacy_final_statuses = {None, "", "known", "verified_fifa_locked", "manual_verified_fifa"}
+    temporary_or_untrusted_statuses = {
+        "live", "live_espn", "post_pending_fifa", "live_fifa", "verified_fifa",
+        "verified_espn", "espn_final_pending_fifa", "temporary_live", "browser_live",
+        "live_from_fifa_matches", "live_from_espn",
+    }
+
+    for m in data.get("matches", []):
+        mid = int(m.get("id", 0) or 0)
+        current_status = str(m.get("status", "") or "")
+        has_score = m.get("actualHome") is not None and m.get("actualAway") is not None
+        if not has_score or current_status in ("pending", ""):
+            continue
+
+        # Current run confirms the match is final through FIFA. Keep it and let the normal merge lock it.
+        if mid in fifa_final_discovered:
+            continue
+
+        # Current run confirms the exact fixture is live through ESPN. Keep it temporarily.
+        espn_hit = espn_live_discovered.get(mid)
+        if espn_hit and str(espn_hit.get("matchStatus")) == "live":
+            continue
+
+        source_status = m.get("sourceStatus")
+
+        # Preserve original/legacy verified finals, but do not preserve automated temporary/fake finals.
+        if current_status in ("verified", "known") and source_status in trusted_legacy_final_statuses:
+            continue
+
+        # Anything else scored without current ESPN-live or FIFA-final authority is unsafe.
+        if current_status == "live" or source_status in temporary_or_untrusted_statuses or current_status == "verified":
+            cleared.append({
+                "matchId": mid,
+                "match": f"{m.get('home')} - {m.get('away')}",
+                "oldScore": f"{m.get('actualHome', '')}-{m.get('actualAway', '')}",
+                "oldStatus": current_status,
+                "oldSourceStatus": source_status,
+                "reason": "score was not confirmed by current ESPN live feed and not verified as final by FIFA",
+            })
+            m["actualHome"] = None
+            m["actualAway"] = None
+            m["status"] = "pending"
+            m["sourceStatus"] = "pending"
+            m["sourceUrl"] = ""
+            m["sourceTitle"] = "ממתין לתוצאת משחק"
+    return cleared
+
+
 def main() -> int:
     if not os.path.exists(DATA_PATH):
         write_status("error", "data.json was not found", root=ROOT)
@@ -1426,30 +1489,11 @@ def main() -> int:
     conflicts: List[Dict[str, Any]] = []
 
     live_updates: List[Dict[str, Any]] = []
-    cleared_live: List[Dict[str, Any]] = []
 
-    # Safety cleanup: live scores are temporary. If the current run does not see that exact match
-    # live in ESPN, and FIFA has not verified it as final, clear the old temporary score.
-    # This prevents a previous bad live parse from leaving unplayed matches as "live" forever.
-    for m in data.get("matches", []):
-        mid = int(m.get("id", 0) or 0)
-        if str(m.get("status", "")) != "live":
-            continue
-        hit = discovered.get(mid)
-        if hit and str(hit.get("matchStatus")) in ("live", "verified"):
-            continue
-        cleared_live.append({
-            "matchId": mid,
-            "match": f"{m.get('home')} - {m.get('away')}",
-            "oldScore": f"{m.get('actualHome', '')}-{m.get('actualAway', '')}",
-            "reason": "temporary live score was not confirmed by current ESPN live feed or FIFA final result",
-        })
-        m["actualHome"] = None
-        m["actualAway"] = None
-        m["status"] = "pending"
-        m["sourceStatus"] = "pending"
-        m["sourceUrl"] = ""
-        m["sourceTitle"] = "ממתין לתוצאת משחק"
+    # Hard safety cleanup:
+    # ESPN live scores must be reconfirmed every run. FIFA is the only final authority.
+    # This also cleans bad verified/live scores that previous experimental parsers attached to unplayed fixtures.
+    cleared_live: List[Dict[str, Any]] = clear_untrusted_nonfinal_scores(data, fifa_final_discovered, espn_discovered)
 
     for m in data.get("matches", []):
         mid = int(m.get("id", 0) or 0)
@@ -1481,7 +1525,10 @@ def main() -> int:
         m["actualHome"] = int(hit["actualHome"])
         m["actualAway"] = int(hit["actualAway"])
         m["status"] = "live" if hit_status == "live" else "verified"
-        m["sourceStatus"] = hit.get("sourceStatus") or ("live_fifa" if hit_status == "live" else "verified_fifa")
+        if hit_status == "verified":
+            m["sourceStatus"] = "verified_fifa_locked"
+        else:
+            m["sourceStatus"] = hit.get("sourceStatus") or "live_espn"
         m["sourceUrl"] = hit.get("sourceUrl") or FIFA_SCORES_URL
         m["sourceTitle"] = hit.get("sourceTitle") or ("FIFA official live score" if hit_status == "live" else "FIFA official final result")
 
@@ -1509,7 +1556,7 @@ def main() -> int:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
     status = "ok" if not conflicts else "needs_review"
-    msg = "Dashboard checked against FIFA finals and strict ESPN live scores."
+    msg = "Dashboard checked against FIFA finals and ESPN live scores. Unconfirmed temporary scores were cleaned."
     if updates:
         msg += f" Added {len(updates)} new final match result(s)."
     else:
