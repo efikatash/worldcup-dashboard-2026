@@ -35,6 +35,8 @@ FIFA_LIVE_DEBUG_CSV_PATH = os.path.join(ROOT, "fifa_live_debug.csv")
 FIFA_SCORES_URL = "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures"
 FIFA_LIVE_UPDATES_URL = "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/todays-matches-live-updates"
 FIFA_MATCH_CENTRE_URL = "https://www.fifa.com/en/match-centre"
+FIFA_MATCH_CENTRE_LIVE_URL = "https://www.fifa.com/en/match-centre/live"
+FIFA_MATCH_CENTRE_LIVE_ROOT_URL = "https://www.fifa.com/live"
 
 # Hebrew names in the dashboard -> possible official/English names on FIFA.
 TEAM_ALIASES: Dict[str, List[str]] = {
@@ -93,7 +95,13 @@ TEAM_ALIASES: Dict[str, List[str]] = {
 KNOWN_MATCH_CENTRE: Dict[int, str] = {
     2: "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021441",
     16: "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021463",
+    # Matchday 4 - needed for live scoring. FIFA scores/fixtures page often hides live score in JS,
+    # so we fetch the official Match Centre page directly.
+    25: "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021464",  # Germany vs Curacao
+    26: "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021467",  # Cote d Ivoire vs Ecuador
+    29: "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021470",  # Netherlands vs Japan
 }
+
 
 
 def utc_now() -> str:
@@ -269,7 +277,7 @@ def discover_fifa_results(data: Dict[str, Any]) -> Tuple[Dict[int, Dict[str, Any
     warnings: List[str] = []
     discovered: Dict[int, Dict[str, Any]] = {}
 
-    urls = [FIFA_SCORES_URL, FIFA_LIVE_UPDATES_URL, FIFA_MATCH_CENTRE_URL]
+    urls = [FIFA_SCORES_URL, FIFA_LIVE_UPDATES_URL, FIFA_MATCH_CENTRE_URL, FIFA_MATCH_CENTRE_LIVE_URL, FIFA_MATCH_CENTRE_LIVE_ROOT_URL]
     # Also fetch known official URLs already in the data, useful for validation.
     for m in data.get("matches", []):
         url = m.get("sourceUrl")
