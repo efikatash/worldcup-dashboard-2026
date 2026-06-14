@@ -208,6 +208,26 @@ def find_score_in_text(text: str, home_he: str, away_he: str) -> Optional[Tuple[
     return None
 
 
+
+def classify_fifa_match_status(evidence: str) -> str:
+    """Classify a FIFA score as verified final or live. Unknown scores are ignored for pending matches."""
+    txt = normalize_text(evidence).lower()
+    final_cues = [
+        "ft", "full-time", "full time", "final", "match report", "highlights",
+        "beat", "defeat", "victory", "win over", "earn battling draws", "round-up", "review"
+    ]
+    live_cues = [
+        "live", "in progress", "first half", "second half", "half-time", "halftime",
+        "ht", "kick-off", "kickoff", "minute", "mins", "added time", "stoppage time"
+    ]
+    minute_cue = re.search(r"(?:\b\d{1,3}\s*(?:'|’|min|mins|minute)\b|\b\d{1,2}\+\d{1,2}\s*(?:'|’))", txt)
+    if any(cue in txt for cue in final_cues):
+        return "verified"
+    if minute_cue or any(cue in txt for cue in live_cues):
+        return "live"
+    return "unknown"
+
+
 def extract_next_json(html_text: str) -> List[Any]:
     found: List[Any] = []
     # Next.js data, if present.
@@ -283,11 +303,18 @@ def discover_fifa_results(data: Dict[str, Any]) -> Tuple[Dict[int, Dict[str, Any
         if not found:
             continue
         hs, aw, evidence = found
+        match_status = classify_fifa_match_status(evidence)
+        # Guardrail: do not turn scheduled future 0-0 fixtures into live scores unless FIFA text says live/in-progress.
+        if match_status == "unknown" and str(match.get("status", "")) not in ("verified", "live"):
+            continue
+        if match_status == "unknown":
+            match_status = "verified" if str(match.get("status", "")) == "verified" else "live"
         discovered[mid] = {
             "actualHome": hs,
             "actualAway": aw,
+            "matchStatus": match_status,
             "sourceUrl": KNOWN_MATCH_CENTRE.get(mid, FIFA_SCORES_URL),
-            "sourceTitle": "FIFA official scores/fixtures or match centre",
+            "sourceTitle": "FIFA official live score" if match_status == "live" else "FIFA official final result",
             "evidence": evidence,
         }
     return discovered, warnings
@@ -852,9 +879,13 @@ def recompute_scores(data: Dict[str, Any]) -> None:
             m = matches_by_id.get(mid)
             if not m:
                 continue
-            ah = m.get("actualHome") if m.get("status") == "verified" else None
-            aa = m.get("actualAway") if m.get("status") == "verified" else None
+            match_status = str(m.get("status", ""))
+            is_scored = match_status in ("verified", "known", "live")
+            ah = m.get("actualHome") if is_scored else None
+            aa = m.get("actualAway") if is_scored else None
             pts, ex, pa, gd, label = score_match_pick(md.get("homePick", ""), md.get("awayPick", ""), ah, aa)
+            if match_status == "live" and ah is not None and aa is not None:
+                label = "לייב - " + label
             md["points"] = pts
             md["exact"] = ex
             md["partial"] = pa
@@ -916,7 +947,9 @@ def recompute_scores(data: Dict[str, Any]) -> None:
     meta["participantsCount"] = len(participants)
     meta["matchesCount"] = len(data.get("matches", []))
     meta["completedFifaMatches"] = sum(1 for m in data.get("matches", []) if m.get("status") == "verified")
-    meta["pendingMatches"] = meta["matchesCount"] - meta["completedFifaMatches"]
+    meta["liveFifaMatches"] = sum(1 for m in data.get("matches", []) if m.get("status") == "live")
+    meta["scoredMatchesForLeaderboard"] = meta["completedFifaMatches"] + meta["liveFifaMatches"]
+    meta["pendingMatches"] = meta["matchesCount"] - meta["completedFifaMatches"] - meta["liveFifaMatches"]
     meta["openQuestionsCount"] = len(data.get("openQuestions", []))
     meta["resolvedOpenQuestions"] = sum(1 for q in data.get("openQuestions", []) if q.get("status") in ("known", "verified"))
     meta["verifiedOpenQuestions"] = meta["resolvedOpenQuestions"]
@@ -1020,14 +1053,21 @@ def main() -> int:
     updates: List[Dict[str, Any]] = []
     conflicts: List[Dict[str, Any]] = []
 
+    live_updates: List[Dict[str, Any]] = []
+
     for m in data.get("matches", []):
         mid = int(m.get("id", 0) or 0)
         hit = discovered.get(mid)
         if not hit:
             continue
-        current_verified = m.get("status") == "verified" and m.get("actualHome") is not None and m.get("actualAway") is not None
+        hit_status = str(hit.get("matchStatus") or "verified")
+        current_status = str(m.get("status", ""))
+        current_has_score = m.get("actualHome") is not None and m.get("actualAway") is not None
+        current_verified = current_status == "verified" and current_has_score
+
         if current_verified:
-            if int(m.get("actualHome")) != int(hit["actualHome"]) or int(m.get("actualAway")) != int(hit["actualAway"]):
+            # A verified final result is locked. Only another verified FIFA final result can create a conflict.
+            if hit_status == "verified" and (int(m.get("actualHome")) != int(hit["actualHome"]) or int(m.get("actualAway")) != int(hit["actualAway"])):
                 conflicts.append({
                     "matchId": mid,
                     "match": f"{m.get('home')} - {m.get('away')}",
@@ -1037,19 +1077,31 @@ def main() -> int:
                     "evidence": hit.get("evidence"),
                 })
             continue
+
+        changed = (not current_has_score) or int(m.get("actualHome") or -999) != int(hit["actualHome"]) or int(m.get("actualAway") or -999) != int(hit["actualAway"]) or current_status != hit_status
+        if not changed:
+            continue
+
         m["actualHome"] = int(hit["actualHome"])
         m["actualAway"] = int(hit["actualAway"])
-        m["status"] = "verified"
+        m["status"] = "live" if hit_status == "live" else "verified"
+        m["sourceStatus"] = "live_fifa" if hit_status == "live" else "verified_fifa"
         m["sourceUrl"] = hit.get("sourceUrl") or FIFA_SCORES_URL
-        m["sourceTitle"] = hit.get("sourceTitle") or "FIFA official result"
-        updates.append({
+        m["sourceTitle"] = hit.get("sourceTitle") or ("FIFA official live score" if hit_status == "live" else "FIFA official final result")
+
+        payload = {
             "matchId": mid,
             "match": f"{m.get('home')} - {m.get('away')}",
             "score": f"{m['actualHome']}-{m['actualAway']}",
+            "status": m["status"],
             "source": m["sourceUrl"],
             "evidence": hit.get("evidence"),
-        })
-        ensure_source(data, m["sourceTitle"], m["sourceUrl"], f"{m.get('home')} - {m.get('away')} {m['actualHome']}-{m['actualAway']}")
+        }
+        if m["status"] == "live":
+            live_updates.append(payload)
+        else:
+            updates.append(payload)
+        ensure_source(data, m["sourceTitle"], m["sourceUrl"], f"{m.get('home')} - {m.get('away')} {m['actualHome']}-{m['actualAway']} ({m['status']})")
 
     open_result = update_open_questions(data)
     recompute_scores(data)
@@ -1063,9 +1115,11 @@ def main() -> int:
     status = "ok" if not conflicts else "needs_review"
     msg = "Dashboard checked against FIFA."
     if updates:
-        msg += f" Added {len(updates)} new match result(s)."
+        msg += f" Added {len(updates)} new final match result(s)."
     else:
-        msg += " No new match results found."
+        msg += " No new final match results found."
+    if live_updates:
+        msg += f" Updated {len(live_updates)} live match score(s)."
     if open_result.get("manualUpdates"):
         msg += f" Applied {len(open_result.get('manualUpdates', []))} manual open-question answer(s)."
     if open_result.get("manualSkipped"):
@@ -1079,7 +1133,7 @@ def main() -> int:
     if conflicts:
         msg += f" {len(conflicts)} conflict(s) need manual review."
 
-    write_status(status, msg, updates=updates, conflicts=conflicts, warnings=warnings, open_questions=open_result, completed_matches=data.get("meta", {}).get("completedFifaMatches"), live_open_questions=data.get("meta", {}).get("liveOpenQuestions"), resolved_open_questions=data.get("meta", {}).get("resolvedOpenQuestions"), leader=data.get("participants", [{}])[0].get("name"), leader_points=data.get("participants", [{}])[0].get("total"))
+    write_status(status, msg, updates=updates, live_updates=live_updates, conflicts=conflicts, warnings=warnings, open_questions=open_result, completed_matches=data.get("meta", {}).get("completedFifaMatches"), live_matches=data.get("meta", {}).get("liveFifaMatches"), live_open_questions=data.get("meta", {}).get("liveOpenQuestions"), resolved_open_questions=data.get("meta", {}).get("resolvedOpenQuestions"), leader=data.get("participants", [{}])[0].get("name"), leader_points=data.get("participants", [{}])[0].get("total"))
     print(msg)
     if warnings:
         print("Warnings:")
