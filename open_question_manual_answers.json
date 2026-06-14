@@ -1,0 +1,17 @@
+{
+  "_instructions_he": "כאן מוסיפים תשובות לשאלות פתוחות שמותר לסגור ידנית/ממקור חיצוני. הבוט יספור ניקוד אוטומטית לפי qId. משחקים עדיין מגיעים מפיפא בלבד.",
+  "_example": {
+    "enabled": false,
+    "qId": 116,
+    "answer": "כן",
+    "acceptedAnswers": [
+      "כן"
+    ],
+    "status": "known",
+    "sourceStatus": "verified_external",
+    "sourceTitle": "שם המקור",
+    "sourceUrl": "https://example.com/source",
+    "note": "הסבר קצר למה השאלה נסגרה"
+  },
+  "answers": []
+}
