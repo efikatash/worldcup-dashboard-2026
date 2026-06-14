@@ -28,6 +28,8 @@ from typing import Any, Dict, Iterable, List, Optional, Tuple
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 DATA_PATH = os.path.join(ROOT, "data.json")
 STATUS_PATH = os.path.join(ROOT, "automation_status.json")
+MANUAL_OPEN_ANSWERS_PATH = os.path.join(ROOT, "open_question_manual_answers.json")
+OPEN_REVIEW_CSV_PATH = os.path.join(ROOT, "open_question_review.csv")
 
 FIFA_SCORES_URL = "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures"
 FIFA_MATCH_CENTRE_URL = "https://www.fifa.com/en/match-centre"
@@ -315,9 +317,316 @@ def score_match_pick(home_pick: str, away_pick: str, actual_home: Optional[int],
     return points, 0, 1 if partial else 0, 1 if gd else 0, label
 
 
+
+# --- Open questions engine -------------------------------------------------
+# The dashboard has two different kinds of data:
+# 1) Match results: accepted only from FIFA pages.
+# 2) Open questions: may be verified by FIFA, a reliable external source, or a manual admin decision.
+#
+# This engine is conservative by design:
+# - It DOES score open questions that are explicitly closed in open_question_manual_answers.json.
+# - It DOES show live leaders for score-based group-stage questions.
+# - It DOES NOT give final points for live/superlative questions until the relevant stage is complete.
+
+GROUP_HE = {
+    "A": "א", "B": "ב", "C": "ג", "D": "ד", "E": "ה", "F": "ו",
+    "G": "ז", "H": "ח", "I": "ט", "J": "י", "K": "יא", "L": "יב",
+}
+
+
+def normalize_answer(value: Any) -> str:
+    s = normalize_text(str(value or ""))
+    s = s.replace('"', "").replace("'", "").replace("׳", "").replace("״", "")
+    s = re.sub(r"\s+", " ", s)
+    return s.strip().lower()
+
+
+def answer_bucket(value: int, buckets: List[Tuple[int, int, str]]) -> str:
+    for lo, hi, label in buckets:
+        if lo <= value <= hi:
+            return label
+    return str(value)
+
+
+def bucket_group_goals(value: int) -> str:
+    return answer_bucket(value, [
+        (0, 10, "לא יותר מ- 10 שערים"),
+        (11, 15, "11-15"),
+        (16, 20, "16-20"),
+        (21, 25, "21-25"),
+        (26, 30, "26-30"),
+        (31, 999, "לפחות 31 שערים"),
+    ])
+
+
+def bucket_team_goals(value: int) -> str:
+    return answer_bucket(value, [
+        (0, 0, "0"), (1, 1, "1"), (2, 2, "2"), (3, 5, "3-5"),
+        (6, 10, "6-10"), (11, 15, "11-15"), (16, 999, "לפחות 16"),
+    ])
+
+
+def bucket_draws(value: int) -> str:
+    return answer_bucket(value, [
+        (0, 7, "לא יותר מ- 7 תיקו"), (8, 10, "8-10"), (11, 13, "11-13"),
+        (14, 16, "14-16"), (17, 19, "17-19"), (20, 999, "לפחות 20 תיקו"),
+    ])
+
+
+def load_manual_open_answers() -> List[Dict[str, Any]]:
+    if not os.path.exists(MANUAL_OPEN_ANSWERS_PATH):
+        return []
+    try:
+        with open(MANUAL_OPEN_ANSWERS_PATH, "r", encoding="utf-8") as f:
+            payload = json.load(f)
+        if isinstance(payload, list):
+            return [x for x in payload if isinstance(x, dict)]
+        if isinstance(payload, dict):
+            answers = payload.get("answers", [])
+            if isinstance(answers, list):
+                return [x for x in answers if isinstance(x, dict)]
+    except Exception as exc:
+        # Do not fail the whole dashboard just because the manual file is malformed.
+        write_status("error", f"open_question_manual_answers.json is not valid JSON: {exc}")
+        raise
+    return []
+
+
+def group_stage_complete(data: Dict[str, Any]) -> bool:
+    matches = data.get("matches", [])
+    # The current master file has 72 group-stage matches.
+    return bool(matches) and all(m.get("status") == "verified" for m in matches)
+
+
+def match_aggregates(data: Dict[str, Any]) -> Dict[str, Any]:
+    group_goals: Dict[str, int] = {}
+    group_completed: Dict[str, int] = {}
+    team_for: Dict[str, int] = {}
+    team_against: Dict[str, int] = {}
+    team_draws: Dict[str, int] = {}
+    total_draws = 0
+    completed = 0
+
+    for m in data.get("matches", []):
+        if m.get("status") != "verified":
+            continue
+        try:
+            ah, aa = int(m.get("actualHome")), int(m.get("actualAway"))
+        except Exception:
+            continue
+        completed += 1
+        group = str(m.get("group", ""))
+        home = str(m.get("home", ""))
+        away = str(m.get("away", ""))
+        group_goals[group] = group_goals.get(group, 0) + ah + aa
+        group_completed[group] = group_completed.get(group, 0) + 1
+        team_for[home] = team_for.get(home, 0) + ah
+        team_for[away] = team_for.get(away, 0) + aa
+        team_against[home] = team_against.get(home, 0) + aa
+        team_against[away] = team_against.get(away, 0) + ah
+        if ah == aa:
+            total_draws += 1
+            team_draws[home] = team_draws.get(home, 0) + 1
+            team_draws[away] = team_draws.get(away, 0) + 1
+        else:
+            team_draws.setdefault(home, team_draws.get(home, 0))
+            team_draws.setdefault(away, team_draws.get(away, 0))
+
+    return {
+        "completed": completed,
+        "group_goals": group_goals,
+        "group_completed": group_completed,
+        "team_for": team_for,
+        "team_against": team_against,
+        "team_draws": team_draws,
+        "total_draws": total_draws,
+    }
+
+
+def leaders(mapping: Dict[str, int], mode: str = "max") -> Tuple[List[str], Optional[int]]:
+    if not mapping:
+        return [], None
+    value = max(mapping.values()) if mode == "max" else min(mapping.values())
+    names = sorted([k for k, v in mapping.items() if v == value])
+    return names, value
+
+
+def set_live_or_final(q: Dict[str, Any], answers: List[str], display_value: str, complete: bool, source_title: str) -> str:
+    if complete:
+        q["actualAnswer"] = display_value
+        q["acceptedAnswers"] = answers
+        q["status"] = "known"
+        q["sourceStatus"] = "verified_fifa_aggregate"
+        q["sourceUrl"] = FIFA_SCORES_URL
+        q["sourceTitle"] = source_title
+        return "closed_auto"
+    q["actualAnswer"] = "מוביל זמני: " + display_value
+    q["acceptedAnswers"] = answers
+    q["status"] = "live"
+    q["sourceStatus"] = "live_from_fifa_matches"
+    q["sourceUrl"] = FIFA_SCORES_URL
+    q["sourceTitle"] = source_title + " - מוביל זמני, לא נספר לניקוד"
+    return "live_only"
+
+
+def build_answer_group_questions(qid: int, ag: Dict[str, Any], complete: bool) -> Optional[Tuple[List[str], str, str]]:
+    if qid not in (5, 6):
+        return None
+    groups = ag["group_goals"]
+    names, val = leaders(groups, "min" if qid == 5 else "max")
+    if val is None:
+        return None
+    answers = [f"{GROUP_HE.get(g, g)} | מס' השערים שיובקעו: {bucket_group_goals(int(val))}" for g in names]
+    display = " / ".join(answers)
+    title = "FIFA verified match scores aggregate - group goals"
+    return answers, display, title
+
+
+def build_answer_team_questions(qid: int, ag: Dict[str, Any], complete: bool) -> Optional[Tuple[List[str], str, str]]:
+    # q7: team most goals for; q8: most conceded; q9: fewest goals for; q10: fewest conceded; q11: most draws.
+    if qid == 7:
+        names, val = leaders(ag["team_for"], "max")
+        field = "מס' השערים שתבקיע"
+        bucket = bucket_team_goals
+        title = "FIFA verified match scores aggregate - team goals for"
+    elif qid == 8:
+        names, val = leaders(ag["team_against"], "max")
+        field = "מס' השערים שתספוג"
+        bucket = bucket_team_goals
+        title = "FIFA verified match scores aggregate - team goals against"
+    elif qid == 9:
+        names, val = leaders(ag["team_for"], "min")
+        field = "מס' השערים שתבקיע"
+        bucket = bucket_team_goals
+        title = "FIFA verified match scores aggregate - team goals for"
+    elif qid == 10:
+        names, val = leaders(ag["team_against"], "min")
+        field = "מס' השערים שתספוג"
+        bucket = bucket_team_goals
+        title = "FIFA verified match scores aggregate - team goals against"
+    elif qid == 11:
+        names, val = leaders(ag["team_draws"], "max")
+        field = "מס' תוצאות תיקו"
+        bucket = lambda x: str(x)
+        title = "FIFA verified match scores aggregate - team draws"
+    else:
+        return None
+    if val is None:
+        return None
+    answers = [f"{name} | {field}: {bucket(int(val))}" for name in names]
+    display = " / ".join(answers)
+    return answers, display, title
+
+
+def build_answer_count_questions(qid: int, ag: Dict[str, Any], complete: bool) -> Optional[Tuple[List[str], str, str]]:
+    if qid != 12:
+        return None
+    val = int(ag["total_draws"])
+    answer = bucket_draws(val)
+    return [answer], answer, "FIFA verified match scores aggregate - total draws"
+
+
+def apply_manual_open_answers(data: Dict[str, Any]) -> List[Dict[str, Any]]:
+    manual = load_manual_open_answers()
+    q_by_id = {int(q.get("id")): q for q in data.get("openQuestions", []) if q.get("id") is not None}
+    applied: List[Dict[str, Any]] = []
+    for item in manual:
+        if not item.get("enabled", True):
+            continue
+        try:
+            qid = int(item.get("qId"))
+        except Exception:
+            continue
+        q = q_by_id.get(qid)
+        if not q:
+            continue
+        answer = str(item.get("answer", "")).strip()
+        if not answer:
+            continue
+        accepted = item.get("acceptedAnswers")
+        if not isinstance(accepted, list) or not accepted:
+            accepted = [answer]
+        q["actualAnswer"] = answer
+        q["acceptedAnswers"] = [str(x) for x in accepted]
+        q["status"] = item.get("status", "known")
+        q["sourceStatus"] = item.get("sourceStatus", "verified_manual")
+        q["sourceUrl"] = item.get("sourceUrl", "")
+        q["sourceTitle"] = item.get("sourceTitle", "Manual verified open-question answer")
+        if item.get("note"):
+            q["note"] = item.get("note")
+        applied.append({"qId": qid, "answer": answer, "sourceStatus": q.get("sourceStatus"), "sourceTitle": q.get("sourceTitle")})
+    return applied
+
+
+def update_open_questions(data: Dict[str, Any]) -> Dict[str, Any]:
+    complete = group_stage_complete(data)
+    ag = match_aggregates(data)
+    manual_updates = apply_manual_open_answers(data)
+    review: List[Dict[str, Any]] = []
+    auto_live = []
+    auto_closed = []
+
+    for q in data.get("openQuestions", []):
+        qid = int(q.get("id", 0) or 0)
+        # Do not overwrite questions already verified by manual/uploaded/external unless they are live.
+        current_status = str(q.get("status", ""))
+        if current_status in ("known", "verified") and q.get("sourceStatus") not in ("live_from_fifa_matches", "verified_fifa_aggregate"):
+            review.append({
+                "id": qid, "row": q.get("row"), "question": q.get("question"),
+                "engineStatus": "already_closed", "actualAnswer": q.get("actualAnswer"),
+                "nextAction": "לא נוגע - כבר סגור/מאומת", "sourceStatus": q.get("sourceStatus"),
+            })
+            continue
+
+        built = build_answer_group_questions(qid, ag, complete) or build_answer_team_questions(qid, ag, complete) or build_answer_count_questions(qid, ag, complete)
+        if built:
+            answers, display, title = built
+            result = set_live_or_final(q, answers, display, complete, title)
+            row = {
+                "id": qid, "row": q.get("row"), "question": q.get("question"),
+                "engineStatus": result, "actualAnswer": q.get("actualAnswer"),
+                "nextAction": "נספר סופית רק אחרי סיום 72 משחקי הבתים" if result == "live_only" else "נסגר אוטומטית",
+                "sourceStatus": q.get("sourceStatus"),
+            }
+            review.append(row)
+            (auto_closed if result == "closed_auto" else auto_live).append(row)
+        else:
+            review.append({
+                "id": qid, "row": q.get("row"), "question": q.get("question"),
+                "engineStatus": "manual_or_future_rule", "actualAnswer": q.get("actualAnswer"),
+                "nextAction": "צריך מקור/כלל ידני או כלל סטטיסטי ייעודי", "sourceStatus": q.get("sourceStatus"),
+            })
+
+    data["_openQuestionReview"] = review
+    meta = data.setdefault("meta", {})
+    meta["openQuestionEngine"] = "enabled"
+    meta["liveOpenQuestions"] = sum(1 for q in data.get("openQuestions", []) if q.get("status") == "live")
+    meta["resolvedOpenQuestions"] = sum(1 for q in data.get("openQuestions", []) if q.get("status") in ("known", "verified"))
+    meta["verifiedOpenQuestions"] = meta["resolvedOpenQuestions"]
+    meta["openQuestionManualUpdates"] = len(manual_updates)
+    return {"manualUpdates": manual_updates, "autoLive": auto_live, "autoClosed": auto_closed, "reviewRows": review}
+
+
+def score_open_pick(prediction: Any, q: Dict[str, Any]) -> Tuple[int, str]:
+    if q.get("status") not in ("known", "verified"):
+        if q.get("status") == "live":
+            return 0, "מוביל זמני - לא נספר עדיין"
+        return 0, "ממתין למקור מאומת"
+    actual = q.get("actualAnswer", "")
+    accepted = q.get("acceptedAnswers")
+    if not isinstance(accepted, list) or not accepted:
+        accepted = [actual]
+    n_pred = normalize_answer(prediction)
+    accepted_norm = {normalize_answer(x) for x in accepted}
+    if n_pred in accepted_norm:
+        return int(q.get("maxPoints", 10) or 10), "פגיעה"
+    return 0, "פספוס"
+
+
 def recompute_scores(data: Dict[str, Any]) -> None:
     matches_by_id = {int(m["id"]): m for m in data.get("matches", [])}
-    prev_by_name = {p.get("name", ""): p for p in data.get("participants", [])}
+    open_by_id = {int(q.get("id")): q for q in data.get("openQuestions", []) if q.get("id") is not None}
+    prev_by_name = {p.get("name", ""): dict(p) for p in data.get("participants", [])}
 
     for p in data.get("participants", []):
         match_points = exact = partial = gd_count = 0
@@ -338,12 +647,29 @@ def recompute_scores(data: Dict[str, Any]) -> None:
             exact += ex
             partial += pa
             gd_count += gd
+        open_points = 0
+        open_hits = 0
+        open_resolved = 0
+        for od in p.get("open", []):
+            qid = int(od.get("qId", 0) or 0)
+            q = open_by_id.get(qid)
+            if not q:
+                continue
+            pts, label = score_open_pick(od.get("prediction", ""), q)
+            od["points"] = pts
+            od["label"] = label
+            open_points += pts
+            if q.get("status") in ("known", "verified"):
+                open_resolved += 1
+                if pts > 0:
+                    open_hits += 1
         p["matchPoints"] = match_points
         p["exact"] = exact
         p["partial"] = partial
         p["gd"] = gd_count
-        # Keep open and bonus points from current data.json. Open questions are handled manually/separately.
-        p["openPoints"] = int(sum(int(x.get("points", 0) or 0) for x in p.get("open", [])))
+        p["openPoints"] = int(open_points)
+        p["openHits"] = int(open_hits)
+        p["openResolved"] = int(open_resolved)
         p["bonusPoints"] = int(sum(int(x.get("points", 0) or 0) for x in p.get("bonuses", [])))
         old_total = int(prev_by_name.get(p.get("name", ""), {}).get("total", 0) or 0)
         old_rank = int(prev_by_name.get(p.get("name", ""), {}).get("rank", 0) or 0)
@@ -375,9 +701,10 @@ def recompute_scores(data: Dict[str, Any]) -> None:
     meta["pendingMatches"] = meta["matchesCount"] - meta["completedFifaMatches"]
     meta["openQuestionsCount"] = len(data.get("openQuestions", []))
     meta["resolvedOpenQuestions"] = sum(1 for q in data.get("openQuestions", []) if q.get("status") in ("known", "verified"))
-    meta["dashboardVersion"] = "GitHub Auto FIFA Updater"
+    meta["verifiedOpenQuestions"] = meta["resolvedOpenQuestions"]
+    meta["liveOpenQuestions"] = sum(1 for q in data.get("openQuestions", []) if q.get("status") == "live")
+    meta["dashboardVersion"] = "GitHub Auto FIFA + Open Questions Updater"
     meta["lastAutomationAtUtc"] = utc_now()
-
 
 def ensure_source(data: Dict[str, Any], title: str, url: str, note: str = "") -> None:
     sources = data.setdefault("sources", [])
@@ -427,6 +754,10 @@ def write_csvs(data: Dict[str, Any]) -> None:
     write_csv("sources_all.csv", src_rows, ["type", "title", "url", "note"])
     fifa_rows = [r for r in src_rows if "fifa.com" in str(r.get("url", "")).lower()]
     write_csv("sources_fifa.csv", fifa_rows, ["type", "title", "url", "note"])
+
+    review_rows = data.get("_openQuestionReview", [])
+    if review_rows:
+        write_csv("open_question_review.csv", review_rows, ["id", "row", "question", "engineStatus", "actualAnswer", "nextAction", "sourceStatus"])
 
     # Personal audit for Efi if present.
     efi = next((p for p in data.get("participants", []) if "אפי" in str(p.get("name", "")) and "קטש" in str(p.get("name", ""))), None)
@@ -494,9 +825,11 @@ def main() -> int:
         })
         ensure_source(data, m["sourceTitle"], m["sourceUrl"], f"{m.get('home')} - {m.get('away')} {m['actualHome']}-{m['actualAway']}")
 
+    open_result = update_open_questions(data)
     recompute_scores(data)
     write_csvs(data)
 
+    data.pop("_openQuestionReview", None)
     with open(DATA_PATH, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
@@ -506,10 +839,16 @@ def main() -> int:
         msg += f" Added {len(updates)} new match result(s)."
     else:
         msg += " No new match results found."
+    if open_result.get("manualUpdates"):
+        msg += f" Applied {len(open_result.get("manualUpdates", []))} manual open-question answer(s)."
+    if open_result.get("autoClosed"):
+        msg += f" Closed {len(open_result.get("autoClosed", []))} open question(s) automatically."
+    if open_result.get("autoLive"):
+        msg += f" Updated {len(open_result.get("autoLive", []))} live open-question tracker(s)."
     if conflicts:
         msg += f" {len(conflicts)} conflict(s) need manual review."
 
-    write_status(status, msg, updates=updates, conflicts=conflicts, warnings=warnings, completed_matches=data.get("meta", {}).get("completedFifaMatches"), leader=data.get("participants", [{}])[0].get("name"), leader_points=data.get("participants", [{}])[0].get("total"))
+    write_status(status, msg, updates=updates, conflicts=conflicts, warnings=warnings, open_questions=open_result, completed_matches=data.get("meta", {}).get("completedFifaMatches"), live_open_questions=data.get("meta", {}).get("liveOpenQuestions"), resolved_open_questions=data.get("meta", {}).get("resolvedOpenQuestions"), leader=data.get("participants", [{}])[0].get("name"), leader_points=data.get("participants", [{}])[0].get("total"))
     print(msg)
     if warnings:
         print("Warnings:")
