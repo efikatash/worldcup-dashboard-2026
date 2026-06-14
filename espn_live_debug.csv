@@ -6,24 +6,24 @@
 5,דרום אפריקה - דרום קוריאה,pending,None-None,,,,not_found,,,
 6,צ'כיה - מקסיקו,pending,None-None,,,,not_found,,,
 7,קנדה - בוסניה,verified,1-1,,,,not_found,,,
-8,קטאר - שווייץ,verified,1-1,760420,Switzerland at Qatar,1-1,post_pending_fifa,FT,https://www.espn.com/soccer/match/_/gameId/760420/switzerland-qatar,matched by home/away teams from ESPN structured JSON
+8,קטאר - שווייץ,verified,1-1,760420,Switzerland at Qatar,1-1,final_espn,FT,https://www.espn.com/soccer/match/_/gameId/760420/switzerland-qatar,matched by home/away teams from ESPN structured JSON
 9,שווייץ - בוסניה,pending,None-None,,,,not_found,,,
 10,קנדה - קטאר,pending,None-None,,,,not_found,,,
 11,שווייץ - קנדה,pending,None-None,,,,not_found,,,
 12,בוסניה - קטאר,pending,None-None,,,,not_found,,,
-13,ברזיל - מרוקו,verified,1-1,760419,Morocco at Brazil,1-1,post_pending_fifa,FT,https://www.espn.com/soccer/match/_/gameId/760419/morocco-brazil,matched by home/away teams from ESPN structured JSON
-14,האיטי - סקוטלנד,verified,0-1,760418,Scotland at Haiti,0-1,post_pending_fifa,FT,https://www.espn.com/soccer/match/_/gameId/760418/scotland-haiti,matched by home/away teams from ESPN structured JSON
+13,ברזיל - מרוקו,verified,1-1,760419,Morocco at Brazil,1-1,final_espn,FT,https://www.espn.com/soccer/match/_/gameId/760419/morocco-brazil,matched by home/away teams from ESPN structured JSON
+14,האיטי - סקוטלנד,verified,0-1,760418,Scotland at Haiti,0-1,final_espn,FT,https://www.espn.com/soccer/match/_/gameId/760418/scotland-haiti,matched by home/away teams from ESPN structured JSON
 15,סקוטלנד - מרוקו,pending,None-None,,,,not_found,,,
 16,ברזיל - האיטי,pending,None-None,,,,not_found,,,
 17,סקוטלנד - ברזיל,pending,None-None,,,,not_found,,,
 18,מרוקו - האיטי,pending,None-None,,,,not_found,,,
 19,"ארה""ב - פרגוואי",verified,4-1,,,,not_found,,,
-20,אוסטרליה - טורקיה,verified,2-0,760421,Türkiye at Australia,2-0,post_pending_fifa,FT,https://www.espn.com/soccer/match/_/gameId/760421/turkiye-australia,matched by home/away teams from ESPN structured JSON
+20,אוסטרליה - טורקיה,verified,2-0,760421,Türkiye at Australia,2-0,final_espn,FT,https://www.espn.com/soccer/match/_/gameId/760421/turkiye-australia,matched by home/away teams from ESPN structured JSON
 21,"ארה""ב - אוסטרליה",pending,None-None,,,,not_found,,,
 22,טורקיה - פרגוואי,pending,None-None,,,,not_found,,,
 23,פרגוואי - אוסטרליה,pending,None-None,,,,not_found,,,
 24,"טורקיה - ארה""ב",pending,None-None,,,,not_found,,,
-25,גרמניה - קורסאו,live,7-1,760422,Curaçao at Germany,7-1,post_pending_fifa,FT,https://www.espn.com/soccer/match/_/gameId/760422/curacao-germany,matched by home/away teams from ESPN structured JSON
+25,גרמניה - קורסאו,live,7-1,760422,Curaçao at Germany,7-1,final_espn,FT,https://www.espn.com/soccer/match/_/gameId/760422/curacao-germany,matched by home/away teams from ESPN structured JSON
 26,חוף השנהב - אקוואדור,pending,None-None,760423,Ecuador at Ivory Coast,,pre,"Sun, June 14th at 7:00 PM EDT",,matched upcoming ESPN fixture; ignored
 27,גרמניה - חוף השנהב,pending,None-None,,,,not_found,,,
 28,אקוואדור - קורסאו,pending,None-None,,,,not_found,,,
