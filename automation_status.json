@@ -1,16 +1,48 @@
 {
   "status": "ok",
-  "message": "Dashboard checked against FIFA finals and ESPN live scores. No new final match results found. Updated 1 live match score(s). Fast-track daily review prepared for 24 question(s).",
-  "updated_at_utc": "2026-06-14T18:49:35Z",
+  "message": "Dashboard checked against FIFA finals and strict ESPN live scores. No new final match results found. Updated 1 live match score(s). Fast-track daily review prepared for 24 question(s).",
+  "updated_at_utc": "2026-06-14T18:55:46Z",
   "updates": [],
   "live_updates": [
     {
       "matchId": 25,
       "match": "גרמניה - קורסאו",
-      "score": "6-1",
+      "score": "7-1",
       "status": "live",
       "source": "https://www.espn.com/soccer/match/_/gameId/760422",
-      "evidence": "ESPN event 760422 Curaçao at Germany 6-1 85'"
+      "evidence": "ESPN event 760422 Curaçao at Germany 7-1 90'+2'"
+    }
+  ],
+  "cleared_live": [
+    {
+      "matchId": 26,
+      "match": "חוף השנהב - אקוואדור",
+      "oldScore": "4-1",
+      "reason": "temporary live score was not confirmed by current ESPN live feed or FIFA final result"
+    },
+    {
+      "matchId": 27,
+      "match": "גרמניה - חוף השנהב",
+      "oldScore": "5-1",
+      "reason": "temporary live score was not confirmed by current ESPN live feed or FIFA final result"
+    },
+    {
+      "matchId": 30,
+      "match": "קורסאו - חוף השנהב",
+      "oldScore": "4-1",
+      "reason": "temporary live score was not confirmed by current ESPN live feed or FIFA final result"
+    },
+    {
+      "matchId": 33,
+      "match": "הולנד - שבדיה",
+      "oldScore": "4-1",
+      "reason": "temporary live score was not confirmed by current ESPN live feed or FIFA final result"
+    },
+    {
+      "matchId": 36,
+      "match": "יפן - שבדיה",
+      "oldScore": "4-1",
+      "reason": "temporary live score was not confirmed by current ESPN live feed or FIFA final result"
     }
   ],
   "conflicts": [],
@@ -2164,9 +2196,9 @@
     ]
   },
   "completed_matches": 13,
-  "live_matches": 6,
+  "live_matches": 1,
   "live_open_questions": 0,
   "resolved_open_questions": 6,
-  "leader": "אוראל ויצמן",
-  "leader_points": 106
+  "leader": "אושרי ברזילי",
+  "leader_points": 94
 }

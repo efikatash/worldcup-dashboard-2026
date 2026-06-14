@@ -23,7 +23,7 @@
 22,טורקיה - פרגוואי,pending,None-None,,,,not_found,,,
 23,פרגוואי - אוסטרליה,pending,None-None,,,,not_found,,,
 24,"טורקיה - ארה""ב",pending,None-None,,,,not_found,,,
-25,גרמניה - קורסאו,live,5-1,760422,Curaçao at Germany,6-1,live,85',https://www.espn.com/soccer/match/_/gameId/760422,matched by home/away teams from ESPN structured JSON
+25,גרמניה - קורסאו,live,6-1,760422,Curaçao at Germany,7-1,live,90'+2',https://www.espn.com/soccer/match/_/gameId/760422,matched by home/away teams from ESPN structured JSON
 26,חוף השנהב - אקוואדור,live,4-1,760423,Ecuador at Ivory Coast,,pre,"Sun, June 14th at 7:00 PM EDT",,matched upcoming ESPN fixture; ignored
 27,גרמניה - חוף השנהב,live,5-1,,,,not_found,,,
 28,אקוואדור - קורסאו,pending,None-None,,,,not_found,,,
