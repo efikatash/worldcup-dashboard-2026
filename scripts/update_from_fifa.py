@@ -334,6 +334,62 @@ GROUP_HE = {
 }
 
 
+# Open questions are grouped in the original master file. A row can look generic, but its section/block
+# can completely change the meaning. Example: "red card to one of the players" inside the heavy-gunners
+# block refers only to Diaz/Vinicius/Messi/Kane/Ronaldo/Mbappe/Mane/En-Nesyri/Salah, not to any player.
+def open_question_block(section: Any, question: Any) -> str:
+    sec = normalize_text(section or "")
+    q = normalize_text(question or "")
+    if any(x in sec for x in ["התותחים", "דיאז", "ויניסיוס", "מסי", "קיין", "רונאלדו", "אמבפה", "מאנה", "נסירי", "סלאח"]):
+        return "ראש בראש כוכבים - התותחים הכבדים"
+    if any(x in sec for x in ["שלב הבתים", "בית", "בתים"]):
+        return "שלב הבתים"
+    if any(x in sec for x in ["שמינית", "1/16", "נוקאאוט"]):
+        return "שלב 1/16 / נוקאאוט"
+    if any(x in sec for x in ["רבע"]):
+        return "רבע הגמר"
+    if any(x in sec for x in ["חצי"]):
+        return "חצי הגמר"
+    if any(x in sec for x in ["גמר"]):
+        return "גמר"
+    if any(x in q for x in ["מלך השערים", "הנבחרת הזוכה"]):
+        return "כל הטורניר"
+    return "לא מסווג - דורש בדיקת מנהל"
+
+
+def open_question_rule_type(qid: int, section: Any, question: Any) -> str:
+    sec = normalize_text(section or "")
+    q = normalize_text(question or "")
+    if qid in (1, 2, 3, 4):
+        return "closed_from_opening_match"
+    if qid in (5, 6, 7, 8, 9, 10, 11, 12):
+        return "live_aggregate_until_group_stage_complete"
+    if any(x in q for x in ["האם", "לפחות", "יישלף", "יכבוש", "יובקע"]):
+        if open_question_block(sec, q) == "ראש בראש כוכבים - התותחים הכבדים":
+            return "specific_player_group_manual"
+        return "threshold_or_yes_no_manual"
+    if any(x in q for x in ["הכי", "מלך", "הנבחרת", "מס'", "מספר", "הפרש", "תוצאה"]):
+        return "leader_or_superlative_do_not_close_early"
+    return "manual_context_required"
+
+
+def add_review_row(review: List[Dict[str, Any]], q: Dict[str, Any], engine_status: str, actual_answer: Any, next_action: str, source_status: Any) -> None:
+    section = q.get("section", "")
+    review.append({
+        "id": q.get("id"),
+        "row": q.get("row"),
+        "section": section,
+        "block": open_question_block(section, q.get("question", "")),
+        "ruleType": open_question_rule_type(int(q.get("id", 0) or 0), section, q.get("question", "")),
+        "question": q.get("question"),
+        "engineStatus": engine_status,
+        "actualAnswer": actual_answer,
+        "nextAction": next_action,
+        "sourceStatus": source_status,
+    })
+
+
+
 def normalize_answer(value: Any) -> str:
     s = normalize_text(str(value or ""))
     s = s.replace('"', "").replace("'", "").replace("׳", "").replace("״", "")
@@ -526,22 +582,52 @@ def build_answer_count_questions(qid: int, ag: Dict[str, Any], complete: bool) -
     return [answer], answer, "FIFA verified match scores aggregate - total draws"
 
 
-def apply_manual_open_answers(data: Dict[str, Any]) -> List[Dict[str, Any]]:
+def apply_manual_open_answers(data: Dict[str, Any]) -> Dict[str, List[Dict[str, Any]]]:
     manual = load_manual_open_answers()
     q_by_id = {int(q.get("id")): q for q in data.get("openQuestions", []) if q.get("id") is not None}
     applied: List[Dict[str, Any]] = []
+    skipped: List[Dict[str, Any]] = []
     for item in manual:
         if not item.get("enabled", True):
             continue
         try:
             qid = int(item.get("qId"))
         except Exception:
+            skipped.append({"item": item, "reason": "missing_or_invalid_qId"})
             continue
         q = q_by_id.get(qid)
         if not q:
+            skipped.append({"qId": qid, "reason": "question_not_found"})
             continue
+
+        # Guardrail: manual entries may include expectedSectionContains/questionContains.
+        # If provided, the bot refuses to apply the answer unless the question is in the intended block.
+        section = normalize_text(q.get("section", ""))
+        question = normalize_text(q.get("question", ""))
+        expected_section = item.get("expectedSectionContains", [])
+        if isinstance(expected_section, str):
+            expected_section = [expected_section]
+        if expected_section and not all(str(x) in section for x in expected_section):
+            skipped.append({
+                "qId": qid, "reason": "section_guard_failed",
+                "expectedSectionContains": expected_section,
+                "actualSection": section,
+            })
+            continue
+        expected_question = item.get("expectedQuestionContains", [])
+        if isinstance(expected_question, str):
+            expected_question = [expected_question]
+        if expected_question and not all(str(x) in question for x in expected_question):
+            skipped.append({
+                "qId": qid, "reason": "question_guard_failed",
+                "expectedQuestionContains": expected_question,
+                "actualQuestion": question,
+            })
+            continue
+
         answer = str(item.get("answer", "")).strip()
         if not answer:
+            skipped.append({"qId": qid, "reason": "empty_answer"})
             continue
         accepted = item.get("acceptedAnswers")
         if not isinstance(accepted, list) or not accepted:
@@ -552,16 +638,27 @@ def apply_manual_open_answers(data: Dict[str, Any]) -> List[Dict[str, Any]]:
         q["sourceStatus"] = item.get("sourceStatus", "verified_manual")
         q["sourceUrl"] = item.get("sourceUrl", "")
         q["sourceTitle"] = item.get("sourceTitle", "Manual verified open-question answer")
+        q["block"] = open_question_block(section, question)
+        q["ruleType"] = open_question_rule_type(qid, section, question)
         if item.get("note"):
             q["note"] = item.get("note")
-        applied.append({"qId": qid, "answer": answer, "sourceStatus": q.get("sourceStatus"), "sourceTitle": q.get("sourceTitle")})
-    return applied
+        applied.append({
+            "qId": qid,
+            "row": q.get("row"),
+            "block": q.get("block"),
+            "answer": answer,
+            "sourceStatus": q.get("sourceStatus"),
+            "sourceTitle": q.get("sourceTitle"),
+        })
+    return {"applied": applied, "skipped": skipped}
 
 
 def update_open_questions(data: Dict[str, Any]) -> Dict[str, Any]:
     complete = group_stage_complete(data)
     ag = match_aggregates(data)
-    manual_updates = apply_manual_open_answers(data)
+    manual_result = apply_manual_open_answers(data)
+    manual_updates = manual_result.get("applied", [])
+    manual_skipped = manual_result.get("skipped", [])
     review: List[Dict[str, Any]] = []
     auto_live = []
     auto_closed = []
@@ -571,11 +668,7 @@ def update_open_questions(data: Dict[str, Any]) -> Dict[str, Any]:
         # Do not overwrite questions already verified by manual/uploaded/external unless they are live.
         current_status = str(q.get("status", ""))
         if current_status in ("known", "verified") and q.get("sourceStatus") not in ("live_from_fifa_matches", "verified_fifa_aggregate"):
-            review.append({
-                "id": qid, "row": q.get("row"), "question": q.get("question"),
-                "engineStatus": "already_closed", "actualAnswer": q.get("actualAnswer"),
-                "nextAction": "לא נוגע - כבר סגור/מאומת", "sourceStatus": q.get("sourceStatus"),
-            })
+            add_review_row(review, q, "already_closed", q.get("actualAnswer"), "לא נוגע - כבר סגור/מאומת", q.get("sourceStatus"))
             continue
 
         built = build_answer_group_questions(qid, ag, complete) or build_answer_team_questions(qid, ag, complete) or build_answer_count_questions(qid, ag, complete)
@@ -583,19 +676,21 @@ def update_open_questions(data: Dict[str, Any]) -> Dict[str, Any]:
             answers, display, title = built
             result = set_live_or_final(q, answers, display, complete, title)
             row = {
-                "id": qid, "row": q.get("row"), "question": q.get("question"),
-                "engineStatus": result, "actualAnswer": q.get("actualAnswer"),
+                "id": qid,
+                "row": q.get("row"),
+                "section": q.get("section", ""),
+                "block": open_question_block(q.get("section", ""), q.get("question", "")),
+                "ruleType": open_question_rule_type(qid, q.get("section", ""), q.get("question", "")),
+                "question": q.get("question"),
+                "engineStatus": result,
+                "actualAnswer": q.get("actualAnswer"),
                 "nextAction": "נספר סופית רק אחרי סיום 72 משחקי הבתים" if result == "live_only" else "נסגר אוטומטית",
                 "sourceStatus": q.get("sourceStatus"),
             }
             review.append(row)
             (auto_closed if result == "closed_auto" else auto_live).append(row)
         else:
-            review.append({
-                "id": qid, "row": q.get("row"), "question": q.get("question"),
-                "engineStatus": "manual_or_future_rule", "actualAnswer": q.get("actualAnswer"),
-                "nextAction": "צריך מקור/כלל ידני או כלל סטטיסטי ייעודי", "sourceStatus": q.get("sourceStatus"),
-            })
+            add_review_row(review, q, "manual_or_future_rule", q.get("actualAnswer"), "צריך מקור/כלל ידני או כלל סטטיסטי ייעודי", q.get("sourceStatus"))
 
     data["_openQuestionReview"] = review
     meta = data.setdefault("meta", {})
@@ -604,7 +699,7 @@ def update_open_questions(data: Dict[str, Any]) -> Dict[str, Any]:
     meta["resolvedOpenQuestions"] = sum(1 for q in data.get("openQuestions", []) if q.get("status") in ("known", "verified"))
     meta["verifiedOpenQuestions"] = meta["resolvedOpenQuestions"]
     meta["openQuestionManualUpdates"] = len(manual_updates)
-    return {"manualUpdates": manual_updates, "autoLive": auto_live, "autoClosed": auto_closed, "reviewRows": review}
+    return {"manualUpdates": manual_updates, "manualSkipped": manual_skipped, "autoLive": auto_live, "autoClosed": auto_closed, "reviewRows": review}
 
 
 def score_open_pick(prediction: Any, q: Dict[str, Any]) -> Tuple[int, str]:
@@ -703,7 +798,7 @@ def recompute_scores(data: Dict[str, Any]) -> None:
     meta["resolvedOpenQuestions"] = sum(1 for q in data.get("openQuestions", []) if q.get("status") in ("known", "verified"))
     meta["verifiedOpenQuestions"] = meta["resolvedOpenQuestions"]
     meta["liveOpenQuestions"] = sum(1 for q in data.get("openQuestions", []) if q.get("status") == "live")
-    meta["dashboardVersion"] = "GitHub Auto FIFA + Open Questions Updater"
+    meta["dashboardVersion"] = "GitHub Auto FIFA + Block-Aware Open Questions Updater"
     meta["lastAutomationAtUtc"] = utc_now()
 
 def ensure_source(data: Dict[str, Any], title: str, url: str, note: str = "") -> None:
@@ -757,7 +852,7 @@ def write_csvs(data: Dict[str, Any]) -> None:
 
     review_rows = data.get("_openQuestionReview", [])
     if review_rows:
-        write_csv("open_question_review.csv", review_rows, ["id", "row", "question", "engineStatus", "actualAnswer", "nextAction", "sourceStatus"])
+        write_csv("open_question_review.csv", review_rows, ["id", "row", "section", "block", "ruleType", "question", "engineStatus", "actualAnswer", "nextAction", "sourceStatus"])
 
     # Personal audit for Efi if present.
     efi = next((p for p in data.get("participants", []) if "אפי" in str(p.get("name", "")) and "קטש" in str(p.get("name", ""))), None)
@@ -841,6 +936,8 @@ def main() -> int:
         msg += " No new match results found."
     if open_result.get("manualUpdates"):
         msg += f" Applied {len(open_result.get('manualUpdates', []))} manual open-question answer(s)."
+    if open_result.get("manualSkipped"):
+        msg += f" Skipped {len(open_result.get('manualSkipped', []))} manual open-question answer(s) because of guardrails."
     if open_result.get("autoClosed"):
         msg += f" Closed {len(open_result.get('autoClosed', []))} open question(s) automatically."
     if open_result.get("autoLive"):
