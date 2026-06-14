@@ -1,18 +1,18 @@
 {
   "status": "ok",
-  "message": "Dashboard checked against FIFA finals and ESPN live/final fallback. Unconfirmed temporary scores were cleaned. Added 1 new final match result(s). Fast-track daily review prepared for 24 question(s).",
-  "updated_at_utc": "2026-06-14T19:32:45Z",
-  "updates": [
+  "message": "Dashboard checked against FIFA finals and ESPN live/final fallback. Unconfirmed temporary scores were cleaned. No new final match results found. Updated 1 live match score(s). Fast-track daily review prepared for 24 question(s).",
+  "updated_at_utc": "2026-06-14T20:18:33Z",
+  "updates": [],
+  "live_updates": [
     {
-      "matchId": 25,
-      "match": "גרמניה - קורסאו",
-      "score": "7-1",
-      "status": "verified",
-      "source": "https://www.espn.com/soccer/match/_/gameId/760422/curacao-germany",
-      "evidence": "ESPN event 760422 Curaçao at Germany 7-1 FT"
+      "matchId": 31,
+      "match": "הולנד - יפן",
+      "score": "0-0",
+      "status": "live",
+      "source": "https://www.espn.com/soccer/match/_/gameId/760425",
+      "evidence": "ESPN event 760425 Japan at Netherlands 0-0 18'"
     }
   ],
-  "live_updates": [],
   "cleared_live": [],
   "conflicts": [],
   "warnings": [],
@@ -2165,10 +2165,10 @@
     ]
   },
   "completed_matches": 9,
-  "live_matches": 0,
+  "live_matches": 1,
   "provisional_final_matches": 0,
   "live_open_questions": 0,
   "resolved_open_questions": 6,
-  "leader": "אושרי ברזילי",
-  "leader_points": 82
+  "leader": "יובל אברהם",
+  "leader_points": 89
 }
