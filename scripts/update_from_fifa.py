@@ -840,11 +840,11 @@ def main() -> int:
     else:
         msg += " No new match results found."
     if open_result.get("manualUpdates"):
-        msg += f" Applied {len(open_result.get("manualUpdates", []))} manual open-question answer(s)."
+        msg += f" Applied {len(open_result.get('manualUpdates', []))} manual open-question answer(s)."
     if open_result.get("autoClosed"):
-        msg += f" Closed {len(open_result.get("autoClosed", []))} open question(s) automatically."
+        msg += f" Closed {len(open_result.get('autoClosed', []))} open question(s) automatically."
     if open_result.get("autoLive"):
-        msg += f" Updated {len(open_result.get("autoLive", []))} live open-question tracker(s)."
+        msg += f" Updated {len(open_result.get('autoLive', []))} live open-question tracker(s)."
     if conflicts:
         msg += f" {len(conflicts)} conflict(s) need manual review."
 
