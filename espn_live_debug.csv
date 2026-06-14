@@ -29,7 +29,7 @@
 28,אקוואדור - קורסאו,pending,None-None,,,,not_found,,,
 29,אקוואדור - גרמניה,pending,None-None,,,,not_found,,,
 30,קורסאו - חוף השנהב,pending,None-None,,,,not_found,,,
-31,הולנד - יפן,pending,None-None,760425,Japan at Netherlands,0-0,live,18',https://www.espn.com/soccer/match/_/gameId/760425,matched by home/away teams from ESPN structured JSON
+31,הולנד - יפן,live,0-0,760425,Japan at Netherlands,2-2,final_espn,FT,https://www.espn.com/soccer/match/_/gameId/760425/japan-netherlands,matched by home/away teams from ESPN structured JSON
 32,שבדיה - טוניסיה,pending,None-None,760424,Tunisia at Sweden,,pre,"Sun, June 14th at 10:00 PM EDT",,matched upcoming ESPN fixture; ignored
 33,הולנד - שבדיה,pending,None-None,,,,not_found,,,
 34,טוניסיה - יפן,pending,None-None,,,,not_found,,,
