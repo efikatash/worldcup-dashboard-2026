@@ -30,8 +30,10 @@ DATA_PATH = os.path.join(ROOT, "data.json")
 STATUS_PATH = os.path.join(ROOT, "automation_status.json")
 MANUAL_OPEN_ANSWERS_PATH = os.path.join(ROOT, "open_question_manual_answers.json")
 OPEN_REVIEW_CSV_PATH = os.path.join(ROOT, "open_question_review.csv")
+FIFA_LIVE_DEBUG_CSV_PATH = os.path.join(ROOT, "fifa_live_debug.csv")
 
 FIFA_SCORES_URL = "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures"
+FIFA_LIVE_UPDATES_URL = "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/todays-matches-live-updates"
 FIFA_MATCH_CENTRE_URL = "https://www.fifa.com/en/match-centre"
 
 # Hebrew names in the dashboard -> possible official/English names on FIFA.
@@ -267,7 +269,7 @@ def discover_fifa_results(data: Dict[str, Any]) -> Tuple[Dict[int, Dict[str, Any
     warnings: List[str] = []
     discovered: Dict[int, Dict[str, Any]] = {}
 
-    urls = [FIFA_SCORES_URL, FIFA_MATCH_CENTRE_URL]
+    urls = [FIFA_SCORES_URL, FIFA_LIVE_UPDATES_URL, FIFA_MATCH_CENTRE_URL]
     # Also fetch known official URLs already in the data, useful for validation.
     for m in data.get("matches", []):
         url = m.get("sourceUrl")
@@ -293,17 +295,43 @@ def discover_fifa_results(data: Dict[str, Any]) -> Tuple[Dict[int, Dict[str, Any
         warnings.append("No FIFA pages could be fetched. Data was not changed.")
         return discovered, warnings
 
+    debug_rows: List[Dict[str, Any]] = []
     for match in data.get("matches", []):
         mid = int(match.get("id", 0) or 0)
         home = str(match.get("home", ""))
         away = str(match.get("away", ""))
         if not home or not away or not mid:
             continue
+
+        home_aliases = aliases_for(home)
+        away_aliases = aliases_for(away)
+        home_found_aliases = [a for a in home_aliases if re.search(rx_alias(a), combined_text, flags=re.I)]
+        away_found_aliases = [a for a in away_aliases if re.search(rx_alias(a), combined_text, flags=re.I)]
+
         found = find_score_in_text(combined_text, home, away)
+        debug_row: Dict[str, Any] = {
+            "matchId": mid,
+            "match": f"{home} - {away}",
+            "currentStatus": match.get("status", ""),
+            "currentScore": f"{match.get('actualHome', '')}-{match.get('actualAway', '')}",
+            "homeAliasesFound": " | ".join(home_found_aliases[:8]),
+            "awayAliasesFound": " | ".join(away_found_aliases[:8]),
+            "candidateScore": "",
+            "candidateStatus": "not_found",
+            "evidence": "",
+        }
+
         if not found:
+            debug_rows.append(debug_row)
             continue
+
         hs, aw, evidence = found
         match_status = classify_fifa_match_status(evidence)
+        debug_row["candidateScore"] = f"{hs}-{aw}"
+        debug_row["candidateStatus"] = match_status
+        debug_row["evidence"] = evidence
+        debug_rows.append(debug_row)
+
         # Guardrail: do not turn scheduled future 0-0 fixtures into live scores unless FIFA text says live/in-progress.
         if match_status == "unknown" and str(match.get("status", "")) not in ("verified", "live"):
             continue
@@ -317,6 +345,18 @@ def discover_fifa_results(data: Dict[str, Any]) -> Tuple[Dict[int, Dict[str, Any
             "sourceTitle": "FIFA official live score" if match_status == "live" else "FIFA official final result",
             "evidence": evidence,
         }
+
+    # Diagnostic file: tells us exactly what the GitHub runner can see from FIFA.
+    # This is critical because FIFA often renders live scores through client-side JavaScript/API calls.
+    try:
+        with open(FIFA_LIVE_DEBUG_CSV_PATH, "w", encoding="utf-8-sig", newline="") as f:
+            fields = ["matchId", "match", "currentStatus", "currentScore", "homeAliasesFound", "awayAliasesFound", "candidateScore", "candidateStatus", "evidence"]
+            w = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
+            w.writeheader()
+            w.writerows(debug_rows)
+    except Exception as exc:
+        warnings.append(f"Could not write fifa_live_debug.csv: {exc}")
+
     return discovered, warnings
 
 
