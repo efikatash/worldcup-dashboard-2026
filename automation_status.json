@@ -1,8 +1,9 @@
 {
   "status": "ok",
-  "message": "Dashboard checked against FIFA. No new match results found. Fast-track daily review prepared for 24 question(s).",
-  "updated_at_utc": "2026-06-14T12:30:18Z",
+  "message": "Dashboard checked against FIFA. No new final match results found. Fast-track daily review prepared for 24 question(s).",
+  "updated_at_utc": "2026-06-14T12:51:08Z",
   "updates": [],
+  "live_updates": [],
   "conflicts": [],
   "warnings": [],
   "open_questions": {
@@ -2154,6 +2155,7 @@
     ]
   },
   "completed_matches": 8,
+  "live_matches": 0,
   "live_open_questions": 0,
   "resolved_open_questions": 6,
   "leader": "אושרי ברזילי",
