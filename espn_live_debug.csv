@@ -23,18 +23,18 @@
 22,טורקיה - פרגוואי,pending,None-None,,,,not_found,,,
 23,פרגוואי - אוסטרליה,pending,None-None,,,,not_found,,,
 24,"טורקיה - ארה""ב",pending,None-None,,,,not_found,,,
-25,גרמניה - קורסאו,live,6-1,760422,Curaçao at Germany,7-1,live,90'+2',https://www.espn.com/soccer/match/_/gameId/760422,matched by home/away teams from ESPN structured JSON
-26,חוף השנהב - אקוואדור,live,4-1,760423,Ecuador at Ivory Coast,,pre,"Sun, June 14th at 7:00 PM EDT",,matched upcoming ESPN fixture; ignored
-27,גרמניה - חוף השנהב,live,5-1,,,,not_found,,,
+25,גרמניה - קורסאו,live,7-1,760422,Curaçao at Germany,7-1,post_pending_fifa,FT,https://www.espn.com/soccer/match/_/gameId/760422/curacao-germany,matched by home/away teams from ESPN structured JSON
+26,חוף השנהב - אקוואדור,pending,None-None,760423,Ecuador at Ivory Coast,,pre,"Sun, June 14th at 7:00 PM EDT",,matched upcoming ESPN fixture; ignored
+27,גרמניה - חוף השנהב,pending,None-None,,,,not_found,,,
 28,אקוואדור - קורסאו,pending,None-None,,,,not_found,,,
 29,אקוואדור - גרמניה,verified,4-1,,,,not_found,,,
-30,קורסאו - חוף השנהב,live,4-1,,,,not_found,,,
+30,קורסאו - חוף השנהב,pending,None-None,,,,not_found,,,
 31,הולנד - יפן,verified,3-2,760425,Japan at Netherlands,,pre,"Sun, June 14th at 4:00 PM EDT",,matched upcoming ESPN fixture; ignored
 32,שבדיה - טוניסיה,verified,4-1,760424,Tunisia at Sweden,,pre,"Sun, June 14th at 10:00 PM EDT",,matched upcoming ESPN fixture; ignored
-33,הולנד - שבדיה,live,4-1,,,,not_found,,,
+33,הולנד - שבדיה,pending,None-None,,,,not_found,,,
 34,טוניסיה - יפן,verified,3-2,,,,not_found,,,
 35,טוניסיה - הולנד,verified,3-2,,,,not_found,,,
-36,יפן - שבדיה,live,4-1,,,,not_found,,,
+36,יפן - שבדיה,pending,None-None,,,,not_found,,,
 37,בלגיה - מצרים,pending,None-None,760426,Egypt at Belgium,,pre,"Mon, June 15th at 3:00 PM EDT",,matched upcoming ESPN fixture; ignored
 38,איראן - ניו זילנד,pending,None-None,760427,New Zealand at Iran,,pre,"Mon, June 15th at 9:00 PM EDT",,matched upcoming ESPN fixture; ignored
 39,בלגיה - איראן,pending,None-None,,,,not_found,,,

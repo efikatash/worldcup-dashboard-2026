@@ -1,48 +1,49 @@
 {
   "status": "ok",
-  "message": "Dashboard checked against FIFA finals and strict ESPN live scores. No new final match results found. Updated 1 live match score(s). Fast-track daily review prepared for 24 question(s).",
-  "updated_at_utc": "2026-06-14T18:55:46Z",
+  "message": "Dashboard checked against FIFA finals and ESPN live scores. Unconfirmed temporary scores were cleaned. No new final match results found. Fast-track daily review prepared for 24 question(s).",
+  "updated_at_utc": "2026-06-14T19:04:32Z",
   "updates": [],
-  "live_updates": [
-    {
-      "matchId": 25,
-      "match": "גרמניה - קורסאו",
-      "score": "7-1",
-      "status": "live",
-      "source": "https://www.espn.com/soccer/match/_/gameId/760422",
-      "evidence": "ESPN event 760422 Curaçao at Germany 7-1 90'+2'"
-    }
-  ],
+  "live_updates": [],
   "cleared_live": [
     {
-      "matchId": 26,
-      "match": "חוף השנהב - אקוואדור",
+      "matchId": 29,
+      "match": "אקוואדור - גרמניה",
       "oldScore": "4-1",
-      "reason": "temporary live score was not confirmed by current ESPN live feed or FIFA final result"
+      "oldStatus": "verified",
+      "oldSourceStatus": "verified_fifa",
+      "reason": "score was not confirmed by current ESPN live feed and not verified as final by FIFA"
     },
     {
-      "matchId": 27,
-      "match": "גרמניה - חוף השנהב",
-      "oldScore": "5-1",
-      "reason": "temporary live score was not confirmed by current ESPN live feed or FIFA final result"
+      "matchId": 31,
+      "match": "הולנד - יפן",
+      "oldScore": "3-2",
+      "oldStatus": "verified",
+      "oldSourceStatus": "verified_fifa",
+      "reason": "score was not confirmed by current ESPN live feed and not verified as final by FIFA"
     },
     {
-      "matchId": 30,
-      "match": "קורסאו - חוף השנהב",
+      "matchId": 32,
+      "match": "שבדיה - טוניסיה",
       "oldScore": "4-1",
-      "reason": "temporary live score was not confirmed by current ESPN live feed or FIFA final result"
+      "oldStatus": "verified",
+      "oldSourceStatus": "verified_fifa",
+      "reason": "score was not confirmed by current ESPN live feed and not verified as final by FIFA"
     },
     {
-      "matchId": 33,
-      "match": "הולנד - שבדיה",
-      "oldScore": "4-1",
-      "reason": "temporary live score was not confirmed by current ESPN live feed or FIFA final result"
+      "matchId": 34,
+      "match": "טוניסיה - יפן",
+      "oldScore": "3-2",
+      "oldStatus": "verified",
+      "oldSourceStatus": "verified_fifa",
+      "reason": "score was not confirmed by current ESPN live feed and not verified as final by FIFA"
     },
     {
-      "matchId": 36,
-      "match": "יפן - שבדיה",
-      "oldScore": "4-1",
-      "reason": "temporary live score was not confirmed by current ESPN live feed or FIFA final result"
+      "matchId": 35,
+      "match": "טוניסיה - הולנד",
+      "oldScore": "3-2",
+      "oldStatus": "verified",
+      "oldSourceStatus": "verified_fifa",
+      "reason": "score was not confirmed by current ESPN live feed and not verified as final by FIFA"
     }
   ],
   "conflicts": [],
@@ -2195,10 +2196,10 @@
       }
     ]
   },
-  "completed_matches": 13,
+  "completed_matches": 8,
   "live_matches": 1,
   "live_open_questions": 0,
   "resolved_open_questions": 6,
   "leader": "אושרי ברזילי",
-  "leader_points": 94
+  "leader_points": 82
 }
