@@ -372,6 +372,53 @@ def open_question_rule_type(qid: int, section: Any, question: Any) -> str:
         return "leader_or_superlative_do_not_close_early"
     return "manual_context_required"
 
+def is_fast_track_section(section: Any) -> bool:
+    sec = normalize_text(section or "")
+    return "המסלול המהיר" in sec
+
+
+def is_opening_match_exception(qid: int) -> bool:
+    # These four questions are already settled by the opening match and may remain scored.
+    return qid in (1, 2, 3, 4)
+
+
+def is_section_locked_until_stage_end(section: Any, question: Any) -> bool:
+    sec = normalize_text(section or "")
+    # User decision: do not answer these open-question sections for now.
+    locked_markers = [
+        "שלב הבתים",
+        "התותחים", "דיאז", "ויניסיוס", "מסי", "קיין", "רונאלדו", "אמבפה", "מאנה", "נסירי", "סלאח",
+        "1/16", "שמינית", "רבע", "חצי",
+        "הניחושים המיוחדים",
+        "מסלול ה\"גמר\"", "מסלול הגמר",
+    ]
+    if is_fast_track_section(sec):
+        return False
+    return any(marker in sec for marker in locked_markers)
+
+
+def open_question_policy_status(q: Dict[str, Any]) -> str:
+    qid = int(q.get("id", 0) or 0)
+    if is_opening_match_exception(qid):
+        return "opening_match_exception_closed"
+    if is_fast_track_section(q.get("section", "")):
+        return "fast_track_daily_check"
+    if is_section_locked_until_stage_end(q.get("section", ""), q.get("question", "")):
+        return "locked_not_answered_now"
+    return "manual_context_required"
+
+
+def reset_locked_live_question(q: Dict[str, Any]) -> None:
+    # Previous versions wrote live leaders for group-stage/superlative questions.
+    # Per admin decision, locked sections should not be answered now, even as live scoring inputs.
+    if q.get("status") == "live":
+        q["status"] = "pending"
+        q["actualAnswer"] = "לא ידוע"
+        q["acceptedAnswers"] = []
+        q["sourceStatus"] = "locked_not_answered_now"
+        q["sourceUrl"] = ""
+        q["sourceTitle"] = "לא נענה כרגע לפי החלטת מנהל - השאלה תיסגר רק במועד המתאים"
+
 
 def add_review_row(review: List[Dict[str, Any]], q: Dict[str, Any], engine_status: str, actual_answer: Any, next_action: str, source_status: Any) -> None:
     section = q.get("section", "")
@@ -381,6 +428,7 @@ def add_review_row(review: List[Dict[str, Any]], q: Dict[str, Any], engine_statu
         "section": section,
         "block": open_question_block(section, q.get("question", "")),
         "ruleType": open_question_rule_type(int(q.get("id", 0) or 0), section, q.get("question", "")),
+        "policyStatus": open_question_policy_status(q),
         "question": q.get("question"),
         "engineStatus": engine_status,
         "actualAnswer": actual_answer,
@@ -600,10 +648,28 @@ def apply_manual_open_answers(data: Dict[str, Any]) -> Dict[str, List[Dict[str, 
             skipped.append({"qId": qid, "reason": "question_not_found"})
             continue
 
-        # Guardrail: manual entries may include expectedSectionContains/questionContains.
+        # Default guardrail: for now, manual answers are allowed automatically only for fast-track questions
+        # and the four opening-match exceptions. Locked sections can still be closed later with
+        # overrideProtectedSection=true, but only after admin decision.
+        if (
+            not is_fast_track_section(q.get("section", ""))
+            and not is_opening_match_exception(qid)
+            and not item.get("overrideProtectedSection", False)
+        ):
+            skipped.append({
+                "qId": qid,
+                "row": q.get("row"),
+                "reason": "protected_section_not_enabled_for_manual_updates",
+                "section": q.get("section", ""),
+                "policyStatus": open_question_policy_status(q),
+            })
+            continue
+
+        # Context guardrail: manual entries may include expectedSectionContains/questionContains/blockContains.
         # If provided, the bot refuses to apply the answer unless the question is in the intended block.
         section = normalize_text(q.get("section", ""))
         question = normalize_text(q.get("question", ""))
+        block = normalize_text(open_question_block(section, question))
         expected_section = item.get("expectedSectionContains", [])
         if isinstance(expected_section, str):
             expected_section = [expected_section]
@@ -612,6 +678,16 @@ def apply_manual_open_answers(data: Dict[str, Any]) -> Dict[str, List[Dict[str, 
                 "qId": qid, "reason": "section_guard_failed",
                 "expectedSectionContains": expected_section,
                 "actualSection": section,
+            })
+            continue
+        expected_block = item.get("expectedBlockContains", [])
+        if isinstance(expected_block, str):
+            expected_block = [expected_block]
+        if expected_block and not all(str(x) in block for x in expected_block):
+            skipped.append({
+                "qId": qid, "reason": "block_guard_failed",
+                "expectedBlockContains": expected_block,
+                "actualBlock": block,
             })
             continue
         expected_question = item.get("expectedQuestionContains", [])
@@ -640,6 +716,7 @@ def apply_manual_open_answers(data: Dict[str, Any]) -> Dict[str, List[Dict[str, 
         q["sourceTitle"] = item.get("sourceTitle", "Manual verified open-question answer")
         q["block"] = open_question_block(section, question)
         q["ruleType"] = open_question_rule_type(qid, section, question)
+        q["policyStatus"] = open_question_policy_status(q)
         if item.get("note"):
             q["note"] = item.get("note")
         applied.append({
@@ -654,53 +731,98 @@ def apply_manual_open_answers(data: Dict[str, Any]) -> Dict[str, List[Dict[str, 
 
 
 def update_open_questions(data: Dict[str, Any]) -> Dict[str, Any]:
+    # User-approved policy as of Step 8:
+    # - Do NOT answer now: group-stage open questions, heavy-gunners block, 1/16, round of 16,
+    #   quarter-finals, semi-finals, final, special guesses, final path.
+    # - Check the fast-track section after every matchday.
+    # - Existing verified/known answers remain untouched.
     complete = group_stage_complete(data)
     ag = match_aggregates(data)
     manual_result = apply_manual_open_answers(data)
     manual_updates = manual_result.get("applied", [])
     manual_skipped = manual_result.get("skipped", [])
     review: List[Dict[str, Any]] = []
-    auto_live = []
-    auto_closed = []
+    auto_live: List[Dict[str, Any]] = []
+    auto_closed: List[Dict[str, Any]] = []
+    fast_track_review: List[Dict[str, Any]] = []
 
     for q in data.get("openQuestions", []):
         qid = int(q.get("id", 0) or 0)
-        # Do not overwrite questions already verified by manual/uploaded/external unless they are live.
+        q["block"] = open_question_block(q.get("section", ""), q.get("question", ""))
+        q["ruleType"] = open_question_rule_type(qid, q.get("section", ""), q.get("question", ""))
+        q["policyStatus"] = open_question_policy_status(q)
+
         current_status = str(q.get("status", ""))
+
+        # Already verified answers stay. This preserves the four opening questions, q99 from the uploaded file,
+        # and q116 from the fast-track evidence.
         if current_status in ("known", "verified") and q.get("sourceStatus") not in ("live_from_fifa_matches", "verified_fifa_aggregate"):
             add_review_row(review, q, "already_closed", q.get("actualAnswer"), "לא נוגע - כבר סגור/מאומת", q.get("sourceStatus"))
+            if is_fast_track_section(q.get("section", "")):
+                fast_track_review.append({
+                    "id": qid, "row": q.get("row"), "question": q.get("question"),
+                    "status": "closed", "actualAnswer": q.get("actualAnswer"),
+                    "nextAction": "כבר נסגר וניקוד מחושב",
+                    "sourceTitle": q.get("sourceTitle", ""), "sourceUrl": q.get("sourceUrl", ""),
+                })
             continue
 
-        built = build_answer_group_questions(qid, ag, complete) or build_answer_team_questions(qid, ag, complete) or build_answer_count_questions(qid, ag, complete)
-        if built:
-            answers, display, title = built
-            result = set_live_or_final(q, answers, display, complete, title)
-            row = {
-                "id": qid,
-                "row": q.get("row"),
-                "section": q.get("section", ""),
-                "block": open_question_block(q.get("section", ""), q.get("question", "")),
-                "ruleType": open_question_rule_type(qid, q.get("section", ""), q.get("question", "")),
-                "question": q.get("question"),
-                "engineStatus": result,
-                "actualAnswer": q.get("actualAnswer"),
-                "nextAction": "נספר סופית רק אחרי סיום 72 משחקי הבתים" if result == "live_only" else "נסגר אוטומטית",
-                "sourceStatus": q.get("sourceStatus"),
-            }
-            review.append(row)
-            (auto_closed if result == "closed_auto" else auto_live).append(row)
-        else:
-            add_review_row(review, q, "manual_or_future_rule", q.get("actualAnswer"), "צריך מקור/כלל ידני או כלל סטטיסטי ייעודי", q.get("sourceStatus"))
+        # Locked sections: do not answer now. Also remove previous live-only values from older versions.
+        if is_section_locked_until_stage_end(q.get("section", ""), q.get("question", "")) and not is_opening_match_exception(qid):
+            reset_locked_live_question(q)
+            add_review_row(
+                review, q,
+                "locked_not_answered_now",
+                q.get("actualAnswer"),
+                "לא נענה עכשיו לפי החלטת מנהל; ייסגר רק בסיום השלב/האירוע המתאים או עם override מפורש",
+                q.get("sourceStatus"),
+            )
+            continue
+
+        # Fast track: do not guess. Create a daily checklist. Only manual verified fast-track answers score.
+        if is_fast_track_section(q.get("section", "")):
+            if current_status == "live":
+                q["status"] = "pending"
+                q["actualAnswer"] = "לא ידוע"
+                q["acceptedAnswers"] = []
+                q["sourceStatus"] = "fast_track_daily_check_required"
+                q["sourceTitle"] = "מסלול מהיר - דורש בדיקת סטטיסטיקה יומית"
+                q["sourceUrl"] = ""
+            if q.get("status") not in ("known", "verified"):
+                q["status"] = "pending"
+                q.setdefault("actualAnswer", "לא ידוע")
+                q["sourceStatus"] = "fast_track_daily_check_required"
+                q["sourceTitle"] = "מסלול מהיר - דורש בדיקת סטטיסטיקה יומית"
+            add_review_row(
+                review, q,
+                "fast_track_daily_check_required",
+                q.get("actualAnswer"),
+                "לבדוק אחרי יום משחקים; לסגור רק אם התנאי קרה בוודאות עם מקור",
+                q.get("sourceStatus"),
+            )
+            fast_track_review.append({
+                "id": qid, "row": q.get("row"), "question": q.get("question"),
+                "status": q.get("status"), "actualAnswer": q.get("actualAnswer"),
+                "nextAction": "בדיקה יומית לאחר משחקים; אם התקיים - להוסיף ל-open_question_manual_answers.json עם expectedSectionContains=המסלול המהיר",
+                "sourceTitle": q.get("sourceTitle", ""), "sourceUrl": q.get("sourceUrl", ""),
+            })
+            continue
+
+        # Fallback: no automatic scoring unless explicitly designed later.
+        add_review_row(review, q, "manual_context_required", q.get("actualAnswer"), "צריך כלל ידני/מקור/החלטת מנהל", q.get("sourceStatus"))
 
     data["_openQuestionReview"] = review
+    data["_fastTrackReview"] = fast_track_review
     meta = data.setdefault("meta", {})
-    meta["openQuestionEngine"] = "enabled"
+    meta["openQuestionEngine"] = "enabled_step8_fast_track_only"
+    meta["openQuestionPolicy"] = "Only fast-track is reviewed daily; locked sections are not answered now"
+    meta["fastTrackReviewCount"] = len(fast_track_review)
+    meta["lockedOpenQuestionCount"] = sum(1 for r in review if r.get("engineStatus") == "locked_not_answered_now")
     meta["liveOpenQuestions"] = sum(1 for q in data.get("openQuestions", []) if q.get("status") == "live")
     meta["resolvedOpenQuestions"] = sum(1 for q in data.get("openQuestions", []) if q.get("status") in ("known", "verified"))
     meta["verifiedOpenQuestions"] = meta["resolvedOpenQuestions"]
     meta["openQuestionManualUpdates"] = len(manual_updates)
-    return {"manualUpdates": manual_updates, "manualSkipped": manual_skipped, "autoLive": auto_live, "autoClosed": auto_closed, "reviewRows": review}
-
+    return {"manualUpdates": manual_updates, "manualSkipped": manual_skipped, "autoLive": auto_live, "autoClosed": auto_closed, "reviewRows": review, "fastTrackReview": fast_track_review}
 
 def score_open_pick(prediction: Any, q: Dict[str, Any]) -> Tuple[int, str]:
     if q.get("status") not in ("known", "verified"):
@@ -837,11 +959,15 @@ def write_csvs(data: Dict[str, Any]) -> None:
     open_rows = []
     for q in data.get("openQuestions", []):
         open_rows.append({
-            "id": q.get("id"), "row": q.get("row"), "section": q.get("section"), "question": q.get("question"),
+            "id": q.get("id"), "row": q.get("row"), "section": q.get("section"),
+            "block": q.get("block") or open_question_block(q.get("section", ""), q.get("question", "")),
+            "ruleType": q.get("ruleType") or open_question_rule_type(int(q.get("id", 0) or 0), q.get("section", ""), q.get("question", "")),
+            "policyStatus": q.get("policyStatus") or open_question_policy_status(q),
+            "question": q.get("question"),
             "actualAnswer": q.get("actualAnswer"), "status": q.get("status"), "sourceStatus": q.get("sourceStatus"),
             "sourceTitle": q.get("sourceTitle"), "sourceUrl": q.get("sourceUrl"), "maxPoints": q.get("maxPoints"),
         })
-    write_csv("open_questions.csv", open_rows, ["id", "row", "section", "question", "actualAnswer", "status", "sourceStatus", "sourceTitle", "sourceUrl", "maxPoints"])
+    write_csv("open_questions.csv", open_rows, ["id", "row", "section", "block", "ruleType", "policyStatus", "question", "actualAnswer", "status", "sourceStatus", "sourceTitle", "sourceUrl", "maxPoints"])
 
     src_rows = []
     for s in data.get("sources", []):
@@ -852,7 +978,11 @@ def write_csvs(data: Dict[str, Any]) -> None:
 
     review_rows = data.get("_openQuestionReview", [])
     if review_rows:
-        write_csv("open_question_review.csv", review_rows, ["id", "row", "section", "block", "ruleType", "question", "engineStatus", "actualAnswer", "nextAction", "sourceStatus"])
+        write_csv("open_question_review.csv", review_rows, ["id", "row", "section", "block", "ruleType", "policyStatus", "question", "engineStatus", "actualAnswer", "nextAction", "sourceStatus"])
+
+    fast_rows = data.get("_fastTrackReview", [])
+    if fast_rows:
+        write_csv("fast_track_review.csv", fast_rows, ["id", "row", "question", "status", "actualAnswer", "nextAction", "sourceTitle", "sourceUrl"])
 
     # Personal audit for Efi if present.
     efi = next((p for p in data.get("participants", []) if "אפי" in str(p.get("name", "")) and "קטש" in str(p.get("name", ""))), None)
@@ -925,6 +1055,7 @@ def main() -> int:
     write_csvs(data)
 
     data.pop("_openQuestionReview", None)
+    data.pop("_fastTrackReview", None)
     with open(DATA_PATH, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
@@ -942,6 +1073,8 @@ def main() -> int:
         msg += f" Closed {len(open_result.get('autoClosed', []))} open question(s) automatically."
     if open_result.get("autoLive"):
         msg += f" Updated {len(open_result.get('autoLive', []))} live open-question tracker(s)."
+    if open_result.get("fastTrackReview"):
+        msg += f" Fast-track daily review prepared for {len(open_result.get('fastTrackReview', []))} question(s)."
     if conflicts:
         msg += f" {len(conflicts)} conflict(s) need manual review."
 
