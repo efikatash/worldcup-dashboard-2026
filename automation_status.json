@@ -1,16 +1,20 @@
 {
   "status": "ok",
   "message": "Dashboard checked against FIFA. No new match results found. Updated 8 live open-question tracker(s).",
-  "updated_at_utc": "2026-06-14T10:35:23Z",
+  "updated_at_utc": "2026-06-14T10:55:40Z",
   "updates": [],
   "conflicts": [],
   "warnings": [],
   "open_questions": {
     "manualUpdates": [],
+    "manualSkipped": [],
     "autoLive": [
       {
         "id": 5,
         "row": 140,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "live_aggregate_until_group_stage_complete",
         "question": "הבית עם מס' השערים הנמוך ביותר",
         "engineStatus": "live_only",
         "actualAnswer": "מוביל זמני: ג | מס' השערים שיובקעו: לא יותר מ- 10 שערים",
@@ -20,6 +24,9 @@
       {
         "id": 6,
         "row": 142,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "live_aggregate_until_group_stage_complete",
         "question": "הבית עם מס' השערים הרב ביותר",
         "engineStatus": "live_only",
         "actualAnswer": "מוביל זמני: ד | מס' השערים שיובקעו: לא יותר מ- 10 שערים",
@@ -29,6 +36,9 @@
       {
         "id": 7,
         "row": 144,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "live_aggregate_until_group_stage_complete",
         "question": "הנבחרת שתבקיע את מס' השערים הגדול ביותר בשלב הבתים",
         "engineStatus": "live_only",
         "actualAnswer": "מוביל זמני: ארה\"ב | מס' השערים שתבקיע: 3-5",
@@ -38,6 +48,9 @@
       {
         "id": 8,
         "row": 146,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "live_aggregate_until_group_stage_complete",
         "question": "הנבחרת שתספוג את מס' השערים הגדול ביותר בשלב הבתים",
         "engineStatus": "live_only",
         "actualAnswer": "מוביל זמני: פרגוואי | מס' השערים שתספוג: 3-5",
@@ -47,6 +60,9 @@
       {
         "id": 9,
         "row": 148,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "live_aggregate_until_group_stage_complete",
         "question": "הנבחרת שתבקיע את מס' השערים הקטן ביותר בשלב הבתים",
         "engineStatus": "live_only",
         "actualAnswer": "מוביל זמני: דרום אפריקה | מס' השערים שתבקיע: 0 / האיטי | מס' השערים שתבקיע: 0 / טורקיה | מס' השערים שתבקיע: 0",
@@ -56,6 +72,9 @@
       {
         "id": 10,
         "row": 150,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "live_aggregate_until_group_stage_complete",
         "question": "הנבחרת שתספוג את מס' השערים הקטן ביותר בשלב הבתים",
         "engineStatus": "live_only",
         "actualAnswer": "מוביל זמני: אוסטרליה | מס' השערים שתספוג: 0 / מקסיקו | מס' השערים שתספוג: 0 / סקוטלנד | מס' השערים שתספוג: 0",
@@ -65,6 +84,9 @@
       {
         "id": 11,
         "row": 152,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "live_aggregate_until_group_stage_complete",
         "question": "הנבחרת בעלת הכי הרבה תוצאות תיקו בשלב הבתים",
         "engineStatus": "live_only",
         "actualAnswer": "מוביל זמני: בוסניה | מס' תוצאות תיקו: 1 / ברזיל | מס' תוצאות תיקו: 1 / מרוקו | מס' תוצאות תיקו: 1 / קטאר | מס' תוצאות תיקו: 1 / קנדה | מס' תוצאות תיקו: 1 / שווייץ | מס' תוצאות תיקו: 1",
@@ -74,6 +96,9 @@
       {
         "id": 12,
         "row": 154,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "live_aggregate_until_group_stage_complete",
         "question": "מס' תוצאות התיקו שיהיו בשלב הבתים (סה\"כ 72 משחקים)",
         "engineStatus": "live_only",
         "actualAnswer": "מוביל זמני: לא יותר מ- 7 תיקו",
@@ -86,6 +111,9 @@
       {
         "id": 1,
         "row": 132,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "closed_from_opening_match",
         "question": "הנבחרת שתבעט את בעיטת הפתיחה במשחק הפתיחה (מקסיקו - דרום אפריקה) תהיה:",
         "engineStatus": "already_closed",
         "actualAnswer": "מקסיקו",
@@ -95,6 +123,9 @@
       {
         "id": 2,
         "row": 134,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "closed_from_opening_match",
         "question": "בעיטת הפתיחה של משחק הפתיחה תיבעט ב:",
         "engineStatus": "already_closed",
         "actualAnswer": "רגל ימין",
@@ -104,6 +135,9 @@
       {
         "id": 3,
         "row": 136,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "closed_from_opening_match",
         "question": "האירוע הראשון בטורניר לאחר שריקת הפתיחה יהיה:",
         "engineStatus": "already_closed",
         "actualAnswer": "זריקת חוץ",
@@ -113,6 +147,9 @@
       {
         "id": 4,
         "row": 138,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "closed_from_opening_match",
         "question": "השער הראשון בטורניר יובקע ב:",
         "engineStatus": "already_closed",
         "actualAnswer": "רגל ימין",
@@ -122,6 +159,9 @@
       {
         "id": 5,
         "row": 140,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "live_aggregate_until_group_stage_complete",
         "question": "הבית עם מס' השערים הנמוך ביותר",
         "engineStatus": "live_only",
         "actualAnswer": "מוביל זמני: ג | מס' השערים שיובקעו: לא יותר מ- 10 שערים",
@@ -131,6 +171,9 @@
       {
         "id": 6,
         "row": 142,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "live_aggregate_until_group_stage_complete",
         "question": "הבית עם מס' השערים הרב ביותר",
         "engineStatus": "live_only",
         "actualAnswer": "מוביל זמני: ד | מס' השערים שיובקעו: לא יותר מ- 10 שערים",
@@ -140,6 +183,9 @@
       {
         "id": 7,
         "row": 144,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "live_aggregate_until_group_stage_complete",
         "question": "הנבחרת שתבקיע את מס' השערים הגדול ביותר בשלב הבתים",
         "engineStatus": "live_only",
         "actualAnswer": "מוביל זמני: ארה\"ב | מס' השערים שתבקיע: 3-5",
@@ -149,6 +195,9 @@
       {
         "id": 8,
         "row": 146,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "live_aggregate_until_group_stage_complete",
         "question": "הנבחרת שתספוג את מס' השערים הגדול ביותר בשלב הבתים",
         "engineStatus": "live_only",
         "actualAnswer": "מוביל זמני: פרגוואי | מס' השערים שתספוג: 3-5",
@@ -158,6 +207,9 @@
       {
         "id": 9,
         "row": 148,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "live_aggregate_until_group_stage_complete",
         "question": "הנבחרת שתבקיע את מס' השערים הקטן ביותר בשלב הבתים",
         "engineStatus": "live_only",
         "actualAnswer": "מוביל זמני: דרום אפריקה | מס' השערים שתבקיע: 0 / האיטי | מס' השערים שתבקיע: 0 / טורקיה | מס' השערים שתבקיע: 0",
@@ -167,6 +219,9 @@
       {
         "id": 10,
         "row": 150,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "live_aggregate_until_group_stage_complete",
         "question": "הנבחרת שתספוג את מס' השערים הקטן ביותר בשלב הבתים",
         "engineStatus": "live_only",
         "actualAnswer": "מוביל זמני: אוסטרליה | מס' השערים שתספוג: 0 / מקסיקו | מס' השערים שתספוג: 0 / סקוטלנד | מס' השערים שתספוג: 0",
@@ -176,6 +231,9 @@
       {
         "id": 11,
         "row": 152,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "live_aggregate_until_group_stage_complete",
         "question": "הנבחרת בעלת הכי הרבה תוצאות תיקו בשלב הבתים",
         "engineStatus": "live_only",
         "actualAnswer": "מוביל זמני: בוסניה | מס' תוצאות תיקו: 1 / ברזיל | מס' תוצאות תיקו: 1 / מרוקו | מס' תוצאות תיקו: 1 / קטאר | מס' תוצאות תיקו: 1 / קנדה | מס' תוצאות תיקו: 1 / שווייץ | מס' תוצאות תיקו: 1",
@@ -185,6 +243,9 @@
       {
         "id": 12,
         "row": 154,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "live_aggregate_until_group_stage_complete",
         "question": "מס' תוצאות התיקו שיהיו בשלב הבתים (סה\"כ 72 משחקים)",
         "engineStatus": "live_only",
         "actualAnswer": "מוביל זמני: לא יותר מ- 7 תיקו",
@@ -194,6 +255,9 @@
       {
         "id": 13,
         "row": 156,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "הנבחרת שתספוג הכי הרבה כרטיסים אדומים בשלב הבתים",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע | מס' הכרטיסים שתספוג: לא ידוע",
@@ -203,6 +267,9 @@
       {
         "id": 14,
         "row": 158,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "מס' כרטיסים אדומים שיישלפו בשלב הבתים (סה\"כ 72 משחקים)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -212,6 +279,9 @@
       {
         "id": 15,
         "row": 160,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "מלך השערים בבתים",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע | לא ידוע | מס' השערים שיכבוש: לא ידוע",
@@ -221,6 +291,9 @@
       {
         "id": 16,
         "row": 162,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "הנבחרת שיישרקו לזכותה הכי הרבה פנדלים בבתים",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע + מס' הפנדלים שיישרקו: לא ידוע",
@@ -230,6 +303,9 @@
       {
         "id": 17,
         "row": 164,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "הנבחרת שיישרקו לחובתה הכי הרבה פנדלים בבתים",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע + מס' הפנדלים שיישרקו: לא ידוע",
@@ -239,6 +315,9 @@
       {
         "id": 18,
         "row": 166,
+        "section": "(*) \"שלב הבתים\"",
+        "block": "שלב הבתים",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "מס' פנדלים שיישרקו בשלב הבתים (סה\"כ 72 משחקים)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -248,6 +327,9 @@
       {
         "id": 19,
         "row": 173,
+        "section": "דיאז (קולומביה) + ויניסיוס (ברזיל) + מסי (ארגנטינה) VS. קיין (אנגליה) + רונאלדו (פורטוגל) + אמבפה (צרפת) VS. מאנה (סנגל), נסירי (מרוקו), סאלח (מצרים)**",
+        "block": "ראש בראש כוכבים - התותחים הכבדים",
+        "ruleType": "manual_context_required",
         "question": "מי מהשחקנים יבקיע יותר שערים בשלב הבתים ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -257,6 +339,9 @@
       {
         "id": 20,
         "row": 175,
+        "section": "דיאז (קולומביה) + ויניסיוס (ברזיל) + מסי (ארגנטינה) VS. קיין (אנגליה) + רונאלדו (פורטוגל) + אמבפה (צרפת) VS. מאנה (סנגל), נסירי (מרוקו), סאלח (מצרים)**",
+        "block": "ראש בראש כוכבים - התותחים הכבדים",
+        "ruleType": "manual_context_required",
         "question": "מאיזו יבשת יבקיעו יותר שערים בשלב הבתים ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -266,6 +351,9 @@
       {
         "id": 21,
         "row": 178,
+        "section": "דיאז (קולומביה) + ויניסיוס (ברזיל) + מסי (ארגנטינה) VS. קיין (אנגליה) + רונאלדו (פורטוגל) + אמבפה (צרפת) VS. מאנה (סנגל), נסירי (מרוקו), סאלח (מצרים)**",
+        "block": "ראש בראש כוכבים - התותחים הכבדים",
+        "ruleType": "specific_player_group_manual",
         "question": "האם כל השחקנים יכבשו ביחד לפחות 15 שערים לזכות נבחרתם בשלב הבתים ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -275,6 +363,9 @@
       {
         "id": 22,
         "row": 180,
+        "section": "דיאז (קולומביה) + ויניסיוס (ברזיל) + מסי (ארגנטינה) VS. קיין (אנגליה) + רונאלדו (פורטוגל) + אמבפה (צרפת) VS. מאנה (סנגל), נסירי (מרוקו), סאלח (מצרים)**",
+        "block": "ראש בראש כוכבים - התותחים הכבדים",
+        "ruleType": "manual_context_required",
         "question": "מי מהשחקנים יבקיע יותר שערים בנגיחה ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -284,6 +375,9 @@
       {
         "id": 23,
         "row": 182,
+        "section": "דיאז (קולומביה) + ויניסיוס (ברזיל) + מסי (ארגנטינה) VS. קיין (אנגליה) + רונאלדו (פורטוגל) + אמבפה (צרפת) VS. מאנה (סנגל), נסירי (מרוקו), סאלח (מצרים)**",
+        "block": "ראש בראש כוכבים - התותחים הכבדים",
+        "ruleType": "manual_context_required",
         "question": "מאיזו יבשת יבקיעו יותר שערים בנגיחה ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -293,6 +387,9 @@
       {
         "id": 24,
         "row": 185,
+        "section": "דיאז (קולומביה) + ויניסיוס (ברזיל) + מסי (ארגנטינה) VS. קיין (אנגליה) + רונאלדו (פורטוגל) + אמבפה (צרפת) VS. מאנה (סנגל), נסירי (מרוקו), סאלח (מצרים)**",
+        "block": "ראש בראש כוכבים - התותחים הכבדים",
+        "ruleType": "specific_player_group_manual",
         "question": "האם כל השחקנים יכבשו בנגיחה ביחד לפחות 2 שערים לזכות נבחרתם בשלב הבתים ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -302,6 +399,9 @@
       {
         "id": 25,
         "row": 187,
+        "section": "דיאז (קולומביה) + ויניסיוס (ברזיל) + מסי (ארגנטינה) VS. קיין (אנגליה) + רונאלדו (פורטוגל) + אמבפה (צרפת) VS. מאנה (סנגל), נסירי (מרוקו), סאלח (מצרים)**",
+        "block": "ראש בראש כוכבים - התותחים הכבדים",
+        "ruleType": "manual_context_required",
         "question": "מי מהשחקנים יבשל יותר שערים בשלב הבתים ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -311,6 +411,9 @@
       {
         "id": 26,
         "row": 189,
+        "section": "דיאז (קולומביה) + ויניסיוס (ברזיל) + מסי (ארגנטינה) VS. קיין (אנגליה) + רונאלדו (פורטוגל) + אמבפה (צרפת) VS. מאנה (סנגל), נסירי (מרוקו), סאלח (מצרים)**",
+        "block": "ראש בראש כוכבים - התותחים הכבדים",
+        "ruleType": "manual_context_required",
         "question": "מאיזו יבשת יבשלו יותר שערים בשלב הבתים ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -320,6 +423,9 @@
       {
         "id": 27,
         "row": 192,
+        "section": "דיאז (קולומביה) + ויניסיוס (ברזיל) + מסי (ארגנטינה) VS. קיין (אנגליה) + רונאלדו (פורטוגל) + אמבפה (צרפת) VS. מאנה (סנגל), נסירי (מרוקו), סאלח (מצרים)**",
+        "block": "ראש בראש כוכבים - התותחים הכבדים",
+        "ruleType": "specific_player_group_manual",
         "question": "האם כל השחקנים יבשלו ביחד לפחות 3 שערים לזכות נבחרתם בשלב הבתים ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -329,6 +435,9 @@
       {
         "id": 28,
         "row": 194,
+        "section": "דיאז (קולומביה) + ויניסיוס (ברזיל) + מסי (ארגנטינה) VS. קיין (אנגליה) + רונאלדו (פורטוגל) + אמבפה (צרפת) VS. מאנה (סנגל), נסירי (מרוקו), סאלח (מצרים)**",
+        "block": "ראש בראש כוכבים - התותחים הכבדים",
+        "ruleType": "specific_player_group_manual",
         "question": "האם  יישלף כרטיס אדום לאחד מהשחקנים בשלב הבתים ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -338,6 +447,9 @@
       {
         "id": 29,
         "row": 196,
+        "section": "דיאז (קולומביה) + ויניסיוס (ברזיל) + מסי (ארגנטינה) VS. קיין (אנגליה) + רונאלדו (פורטוגל) + אמבפה (צרפת) VS. מאנה (סנגל), נסירי (מרוקו), סאלח (מצרים)**",
+        "block": "ראש בראש כוכבים - התותחים הכבדים",
+        "ruleType": "specific_player_group_manual",
         "question": "מי מהשחקנים יכבוש ביותר משחקים יותר משער אחד למשחק (צמד, שלושער ועוד) בשלב הבתים ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -347,6 +459,9 @@
       {
         "id": 30,
         "row": 198,
+        "section": "דיאז (קולומביה) + ויניסיוס (ברזיל) + מסי (ארגנטינה) VS. קיין (אנגליה) + רונאלדו (פורטוגל) + אמבפה (צרפת) VS. מאנה (סנגל), נסירי (מרוקו), סאלח (מצרים)**",
+        "block": "ראש בראש כוכבים - התותחים הכבדים",
+        "ruleType": "manual_context_required",
         "question": "שחקנים מאיזו יבשת יכבשו יותר משער אחד למשחק (צמד, שלושער ועוד) בשלב הבתים ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -356,6 +471,9 @@
       {
         "id": 31,
         "row": 201,
+        "section": "דיאז (קולומביה) + ויניסיוס (ברזיל) + מסי (ארגנטינה) VS. קיין (אנגליה) + רונאלדו (פורטוגל) + אמבפה (צרפת) VS. מאנה (סנגל), נסירי (מרוקו), סאלח (מצרים)**",
+        "block": "ראש בראש כוכבים - התותחים הכבדים",
+        "ruleType": "specific_player_group_manual",
         "question": "האם כל השחקנים יכבשו ביחד לפחות 5 צמדים (או יותר) בשלב הבתים ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -365,6 +483,9 @@
       {
         "id": 32,
         "row": 203,
+        "section": "דיאז (קולומביה) + ויניסיוס (ברזיל) + מסי (ארגנטינה) VS. קיין (אנגליה) + רונאלדו (פורטוגל) + אמבפה (צרפת) VS. מאנה (סנגל), נסירי (מרוקו), סאלח (מצרים)**",
+        "block": "ראש בראש כוכבים - התותחים הכבדים",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "מי מהשחקנים יחליף/יוחלף הכי הרבה פעמים בשלב הבתים ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -374,6 +495,9 @@
       {
         "id": 33,
         "row": 205,
+        "section": "דיאז (קולומביה) + ויניסיוס (ברזיל) + מסי (ארגנטינה) VS. קיין (אנגליה) + רונאלדו (פורטוגל) + אמבפה (צרפת) VS. מאנה (סנגל), נסירי (מרוקו), סאלח (מצרים)**",
+        "block": "ראש בראש כוכבים - התותחים הכבדים",
+        "ruleType": "manual_context_required",
         "question": "שחקנים מאיזו יבשת יוחלפו/יחליפו יותר פעמים בשלב הבתים ? (**)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -383,6 +507,9 @@
       {
         "id": 34,
         "row": 208,
+        "section": "דיאז (קולומביה) + ויניסיוס (ברזיל) + מסי (ארגנטינה) VS. קיין (אנגליה) + רונאלדו (פורטוגל) + אמבפה (צרפת) VS. מאנה (סנגל), נסירי (מרוקו), סאלח (מצרים)**",
+        "block": "ראש בראש כוכבים - התותחים הכבדים",
+        "ruleType": "manual_context_required",
         "question": "לאיזו יבשת יהיו יותר ניצחונות בשלב הבתים של הנבחרות עם השחקנים המופיעים בראש בראש ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -392,6 +519,9 @@
       {
         "id": 35,
         "row": 259,
+        "section": "בונוס עולות | 6",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יישרקו לפחות 7 פנדלים בשלב 1/16 הגמר ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -401,6 +531,9 @@
       {
         "id": 36,
         "row": 261,
+        "section": "בונוס עולות | 6",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יהיה משחק שיגמר בהפרש של 5 שערים ומעלה ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -410,6 +543,9 @@
       {
         "id": 37,
         "row": 263,
+        "section": "בונוס עולות | 6",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "מס' השערים הגדול ביותר ב- 1/16 שיובקע במשחק אחד ע\"י קבוצה אחת (לא כולל הארכה ופנדלים)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -419,6 +555,9 @@
       {
         "id": 38,
         "row": 265,
+        "section": "בונוס עולות | 6",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "מס' השערים הגדול ביותר ב- 1/16 שיובקע במשחק אחד ע\"י שתי הקבוצות (לא כולל הארכה ופנדלים)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -428,6 +567,9 @@
       {
         "id": 39,
         "row": 267,
+        "section": "בונוס עולות | 6",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יהיו לפחות 4 שחקנים שיכבשו צמד שערים (או יותר) במשחק אחד לזכות קבוצתם ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -437,6 +579,9 @@
       {
         "id": 40,
         "row": 269,
+        "section": "בונוס עולות | 6",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יקרה מצב של מהפך בתוצאה בלפחות שלושה משחקי 1/16 הגמר ? (***)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -446,6 +591,9 @@
       {
         "id": 41,
         "row": 271,
+        "section": "בונוס עולות | 6",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יישלפו לפחות 3 כרטיסים אדומים במשחקי 1/16 הגמר ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -455,6 +603,9 @@
       {
         "id": 42,
         "row": 273,
+        "section": "בונוס עולות | 6",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "הדקה בה יובקע השער המהיר בשלב 1/16 הגמר ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -464,6 +615,9 @@
       {
         "id": 43,
         "row": 275,
+        "section": "בונוס עולות | 6",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "הדקה בה יובקע השער המאוחר בשלב 1/16 הגמר ? (ללא הארכה)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -473,6 +627,9 @@
       {
         "id": 44,
         "row": 277,
+        "section": "בונוס עולות | 6",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם ייכבש לפחות שער עצמי אחד במשחקי 1/16 הגמר ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -482,6 +639,9 @@
       {
         "id": 45,
         "row": 301,
+        "section": "בונוס עולות | 16",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יישרקו לפחות 4 פנדלים בשלב שמינית הגמר ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -491,6 +651,9 @@
       {
         "id": 46,
         "row": 303,
+        "section": "בונוס עולות | 16",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יהיה משחק שיגמר בהפרש של 4 שערים ומעלה ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -500,6 +663,9 @@
       {
         "id": 47,
         "row": 305,
+        "section": "בונוס עולות | 16",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "מס' השערים הגדול ביותר בשמינית שיובקע במשחק אחד ע\"י קבוצה אחת (לא כולל הארכה ופנדלים)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -509,6 +675,9 @@
       {
         "id": 48,
         "row": 307,
+        "section": "בונוס עולות | 16",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "מס' השערים הגדול ביותר בשמינית שיובקע במשחק אחד ע\"י שתי הקבוצות (לא כולל הארכה ופנדלים)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -518,6 +687,9 @@
       {
         "id": 49,
         "row": 309,
+        "section": "בונוס עולות | 16",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יהיו לפחות 2 שחקנים שיכבשו צמד שערים (או יותר) במשחק אחד לזכות קבוצתם ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -527,6 +699,9 @@
       {
         "id": 50,
         "row": 311,
+        "section": "בונוס עולות | 16",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יקרה מצב של מהפך בתוצאה בלפחות שני משחקי שמינית הגמר ? (***)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -536,6 +711,9 @@
       {
         "id": 51,
         "row": 313,
+        "section": "בונוס עולות | 16",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יישלפו לפחות 2 כרטיסים אדומים במשחקי שמינית הגמר ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -545,6 +723,9 @@
       {
         "id": 52,
         "row": 315,
+        "section": "בונוס עולות | 16",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "הדקה בה יובקע השער המהיר בשלב שמינית הגמר ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -554,6 +735,9 @@
       {
         "id": 53,
         "row": 317,
+        "section": "בונוס עולות | 16",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "הדקה בה יובקע השער המאוחר בשלב שמינית הגמר ? (ללא הארכה)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -563,6 +747,9 @@
       {
         "id": 54,
         "row": 319,
+        "section": "בונוס עולות | 16",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם בלפחות 6 משחקים בשמינית הגמר ייכבש שער במחצית הראשונה ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -572,6 +759,9 @@
       {
         "id": 55,
         "row": 335,
+        "section": "בונוס עולות | 16",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יישרקו לפחות 2 פנדלים בשלב רבע הגמר ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -581,6 +771,9 @@
       {
         "id": 56,
         "row": 337,
+        "section": "בונוס עולות | 16",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יהיה משחק ברבע הגמר שיגמר בהפרש של 3 שערים ומעלה ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -590,6 +783,9 @@
       {
         "id": 57,
         "row": 339,
+        "section": "בונוס עולות | 16",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "מס' השערים הגדול ביותר ברבע הגמר שיובקע במשחק אחד ע\"י קבוצה אחת (לא כולל הארכה ופנדלים)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -599,6 +795,9 @@
       {
         "id": 58,
         "row": 341,
+        "section": "בונוס עולות | 16",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "מס' השערים הגדול ביותר ברבע הגמר שיובקע במשחק אחד ע\"י 2 הקבוצות (לא כולל הארכה ופנדלים)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -608,6 +807,9 @@
       {
         "id": 59,
         "row": 343,
+        "section": "בונוס עולות | 16",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יהיה ברבע הגמר שחקן שיכבוש צמד שערים (או יותר) במשחק אחד לזכות קבוצתו ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -617,6 +819,9 @@
       {
         "id": 60,
         "row": 345,
+        "section": "בונוס עולות | 16",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יקרה מצב של מהפך בתוצאה באחד ממשחקי רבע הגמר ? (***)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -626,6 +831,9 @@
       {
         "id": 61,
         "row": 347,
+        "section": "בונוס עולות | 16",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יישלף לפחות כרטיס אדום אחד במשחקי רבע הגמר ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -635,6 +843,9 @@
       {
         "id": 62,
         "row": 349,
+        "section": "בונוס עולות | 16",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "הדקה בה יובקע השער המהיר בשלב רבע הגמר ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -644,6 +855,9 @@
       {
         "id": 63,
         "row": 351,
+        "section": "בונוס עולות | 16",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "הדקה בה יובקע השער המאוחר בשלב רבע הגמר ? (ללא הארכה)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -653,6 +867,9 @@
       {
         "id": 64,
         "row": 353,
+        "section": "בונוס עולות | 16",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם בלפחות 3 משחקים ברבע הגמר ייכבש שער במחצית הראשונה ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -662,6 +879,9 @@
       {
         "id": 65,
         "row": 365,
+        "section": "בונוס עולות | 8",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יישרק לפחות פנדל אחד בשלב חצי הגמר ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -671,6 +891,9 @@
       {
         "id": 66,
         "row": 367,
+        "section": "בונוס עולות | 8",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יהיה משחק בחצי הגמר שיגמר בהפרש של 3 שערים ומעלה ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -680,6 +903,9 @@
       {
         "id": 67,
         "row": 369,
+        "section": "בונוס עולות | 8",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "מס' השערים הגדול ביותר בחצי הגמר שיובקע במשחק אחד ע\"י קבוצה אחת (לא כולל הארכה ופנדלים)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -689,6 +915,9 @@
       {
         "id": 68,
         "row": 371,
+        "section": "בונוס עולות | 8",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "מס' השערים הגדול ביותר בחצי הגמר שיובקע במשחק אחד ע\"י 2 הקבוצות (לא כולל הארכה ופנדלים)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -698,6 +927,9 @@
       {
         "id": 69,
         "row": 373,
+        "section": "בונוס עולות | 8",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יהיה בחצי הגמר שחקן שיכבוש צמד שערים (או יותר) במשחק אחד לזכות קבוצתו ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -707,6 +939,9 @@
       {
         "id": 70,
         "row": 375,
+        "section": "בונוס עולות | 8",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יקרה מצב של מהפך בתוצאה באחד ממשחקי חצי הגמר ? (***)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -716,6 +951,9 @@
       {
         "id": 71,
         "row": 377,
+        "section": "בונוס עולות | 8",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יישלף לפחות כרטיס אדום אחד במשחקי חצי הגמר ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -725,6 +963,9 @@
       {
         "id": 72,
         "row": 379,
+        "section": "בונוס עולות | 8",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "הדקה בה יובקע השער המהיר בשלב חצי הגמר ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -734,6 +975,9 @@
       {
         "id": 73,
         "row": 381,
+        "section": "בונוס עולות | 8",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "הדקה בה יובקע השער המאוחר בשלב חצי הגמר ? (ללא הארכה)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -743,6 +987,9 @@
       {
         "id": 74,
         "row": 383,
+        "section": "בונוס עולות | 8",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם בכל אחד משני משחקי חצי הגמר ייכבש שער במחצית הראשונה ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -752,6 +999,9 @@
       {
         "id": 75,
         "row": 395,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "כל הטורניר",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "מלך השערים של הטורניר",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע + מס' השערים שיבקיע: לא ידוע",
@@ -761,6 +1011,9 @@
       {
         "id": 76,
         "row": 397,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "מלך הבישולים של הטורניר",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע + מס' השערים שיבשל: לא ידוע",
@@ -770,6 +1023,9 @@
       {
         "id": 77,
         "row": 399,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "הנבחרת שיישרקו לזכותה הכי הרבה פנדלים בטורניר",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע + מס' הפנדלים שיישרקו: לא ידוע",
@@ -779,6 +1035,9 @@
       {
         "id": 78,
         "row": 401,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "הנבחרת שיישרקו לחובתה הכי הרבה פנדלים בטורניר",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע + מס' הפנדלים שיישרקו: לא ידוע",
@@ -788,6 +1047,9 @@
       {
         "id": 79,
         "row": 403,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "הנבחרת שתכבוש הכי הרבה שערים בטורניר",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע + מס' השערים שתבקיע: לא ידוע",
@@ -797,6 +1059,9 @@
       {
         "id": 80,
         "row": 405,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "מס' השערים הגדול ביותר שיובקע במשחק אחד ע\"י שתי הקבוצות (לא כולל הארכה ופנדלים)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -806,6 +1071,9 @@
       {
         "id": 81,
         "row": 407,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "מס' השערים הגדול ביותר שיובקע במשחק אחד ע\"י קבוצה אחת (לא כולל הארכה ופנדלים)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -815,6 +1083,9 @@
       {
         "id": 82,
         "row": 409,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "מס' השערים הגדול ביותר שיובקע ע\"י הקבוצה המפסידה במשחק (ב- 90 דקות)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -824,6 +1095,9 @@
       {
         "id": 83,
         "row": 411,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "הפרש השערים הגדול ביותר בניצחון של קבוצה במהלך משחק בטורניר",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -833,6 +1107,9 @@
       {
         "id": 84,
         "row": 413,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "הפרש השערים הגדול ביותר במחצית המשחק",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -842,6 +1119,9 @@
       {
         "id": 85,
         "row": 415,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "מס' השערים שיובקעו בתוספות הזמן של המשחקים במהלך הטורניר (מעבר לדקה 90 ו- 120)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -851,6 +1131,9 @@
       {
         "id": 86,
         "row": 417,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "manual_context_required",
         "question": "תוצאת התיקו הגבוהה שתהיה במהלך הטורניר בתום 90 דקות",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -860,6 +1143,9 @@
       {
         "id": 87,
         "row": 419,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "manual_context_required",
         "question": "תוצאת התיקו השכיחה שתהיה במהלך הטורניר בתום 90 דקות",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -869,6 +1155,9 @@
       {
         "id": 88,
         "row": 421,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "התוצאה השכיחה ביותר שתהיה במהלך הטורניר בתום 90 דקות",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -878,6 +1167,9 @@
       {
         "id": 89,
         "row": 423,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "מס' המשחקים אשר יכנסו להארכה",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -887,6 +1179,9 @@
       {
         "id": 90,
         "row": 425,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "מס' המשחקים אשר יוכרעו בפנדלים",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -896,6 +1191,9 @@
       {
         "id": 91,
         "row": 427,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "מס' הפנדלים הרב ביותר שייפסקו במשחק אחד (כולל הארכה, לא כולל דו קרב פנדלים)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -905,6 +1203,9 @@
       {
         "id": 92,
         "row": 429,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "מס' המורחקים הרב ביותר שיורחקו במשחק אחד (כולל הארכה)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -914,6 +1215,9 @@
       {
         "id": 93,
         "row": 431,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "מס' הפנדלים הרב ביותר שייבעטו במסגרת דו קרב פנדלים (**)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -923,6 +1227,9 @@
       {
         "id": 94,
         "row": 433,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "מס' הפנדלים המוחמצים הגדול ביותר של קבוצה אחת בדו קרב פנדלים (**)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -932,6 +1239,9 @@
       {
         "id": 95,
         "row": 435,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "מס' הפנדלים המוחמצים הגדול ביותר של שתי הקבוצות בדו קרב פנדלים (**)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -941,6 +1251,9 @@
       {
         "id": 96,
         "row": 437,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "הדקה בה יובקע השער המהיר בטורניר",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -950,6 +1263,9 @@
       {
         "id": 97,
         "row": 439,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "הדקה בה יובקע השער המאוחר בטורניר (ללא הארכה)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -959,6 +1275,9 @@
       {
         "id": 98,
         "row": 441,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "הדקה בה יישלף הכרטיס האדום הכי מהיר בטורניר",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -968,6 +1287,9 @@
       {
         "id": 99,
         "row": 443,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "הדקה בה יישלף הכרטיס האדום הכי מאוחר בטורניר",
         "engineStatus": "already_closed",
         "actualAnswer": "תוספת הזמן",
@@ -977,6 +1299,9 @@
       {
         "id": 100,
         "row": 445,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "מס' השערים הגדול ביותר שתכבוש קבוצה אחת במהלך הארכה אחת (***)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -986,6 +1311,9 @@
       {
         "id": 101,
         "row": 447,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "מס' השערים הגדול ביותר שיכבשו שתי הקבוצות במהלך הארכה אחת (***)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -995,6 +1323,9 @@
       {
         "id": 102,
         "row": 449,
+        "section": "(*) \"הניחושים המיוחדים\"",
+        "block": "כל הטורניר",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "הנבחרת הזוכה בטורניר",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1004,6 +1335,9 @@
       {
         "id": 103,
         "row": 454,
+        "section": "(*) \"המסלול המהיר\" | כן/לא",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יוחמצו לפחות 6 פנדלים במסגרת משחקי שלב הבתים ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1013,6 +1347,9 @@
       {
         "id": 104,
         "row": 456,
+        "section": "(*) \"המסלול המהיר\" | כן/לא",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם תהיינה לפחות 2 קבוצות אשר יפסידו בכל שלושת משחקי שלב הבתים ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1022,6 +1359,9 @@
       {
         "id": 105,
         "row": 458,
+        "section": "(*) \"המסלול המהיר\" | כן/לא",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם תהיינה לפחות 2 נבחרות אשר תנצחנה בכל שלושת משחקי שלב הבתים ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1031,6 +1371,9 @@
       {
         "id": 106,
         "row": 460,
+        "section": "(*) \"המסלול המהיר\" | כן/לא",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם תהיה נבחרת שלא תבקיע לפחות 2 שערים בשלב הבתים ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1040,6 +1383,9 @@
       {
         "id": 107,
         "row": 462,
+        "section": "(*) \"המסלול המהיר\" | כן/לא",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם תהיה נבחרת שלא תספוג יותר משער אחד בשלב הבתים ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1049,6 +1395,9 @@
       {
         "id": 108,
         "row": 464,
+        "section": "(*) \"המסלול המהיר\" | כן/לא",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם תהיינה לפחות 4 קבוצות שלא תנצחנה אפילו משחק אחד בשלב הבתים ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1058,6 +1407,9 @@
       {
         "id": 109,
         "row": 466,
+        "section": "(*) \"המסלול המהיר\" | כן/לא",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם תהיינה לפחות 5 קבוצות שלא תפסדנה אפילו משחק אחד בשלב הבתים ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1067,6 +1419,9 @@
       {
         "id": 110,
         "row": 468,
+        "section": "(*) \"המסלול המהיר\" | כן/לא",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם מצב של מהפך (קבוצה שנקלעה לפיגור וסיימה כמנצחת ב- 90 דקות) יקרה בלפחות שלושה משחקים בשלב הבתים ? (***)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1076,6 +1431,9 @@
       {
         "id": 111,
         "row": 470,
+        "section": "(*) \"המסלול המהיר\" | כן/לא",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יהיה לפחות שחקן אחד שיבקיע לזכות קבוצתו בכל שלושת משחקי שלב הבתים ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1085,6 +1443,9 @@
       {
         "id": 112,
         "row": 472,
+        "section": "(*) \"המסלול המהיר\" | כן/לא",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יהיו לפחות 3 משחקים בטורניר בהם לא יישלפו כלל כרטיסים (צהובים/אדומים) במשחק ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1094,6 +1455,9 @@
       {
         "id": 113,
         "row": 474,
+        "section": "(*) \"המסלול המהיר\" | כן/לא",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יובקעו לפחות 3 שערים עצמיים בטורניר ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1103,6 +1467,9 @@
       {
         "id": 114,
         "row": 476,
+        "section": "(*) \"המסלול המהיר\" | כן/לא",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם לפחות שחקן אחד יבקיע שלושער (או יותר) במשחק לאורך הטורניר ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1112,6 +1479,9 @@
       {
         "id": 115,
         "row": 478,
+        "section": "(*) \"המסלול המהיר\" | כן/לא",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם לפחות 2 שחקנים יבקיעו ביותר משני משחקים צמד (או יותר) שערים לזכות קבוצתם לאורך הטורניר ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1121,6 +1491,9 @@
       {
         "id": 116,
         "row": 480,
+        "section": "(*) \"המסלול המהיר\" | כן/לא",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יובקע לפחות שער אחד בטורניר ע\"י שחקן מחליף בתוך 2 דקות מרגע כניסתו למגרש ?",
         "engineStatus": "already_closed",
         "actualAnswer": "כן",
@@ -1130,6 +1503,9 @@
       {
         "id": 117,
         "row": 482,
+        "section": "(*) \"המסלול המהיר\" | כן/לא",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם בטורניר יישלפו לפחות 2 כרטיסים אדומים במחצית הראשונה (עד שריקת המחצית) ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1139,6 +1515,9 @@
       {
         "id": 118,
         "row": 484,
+        "section": "(*) \"המסלול המהיר\" | כן/לא",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יהיו לפחות 2 משחקים בטורניר בהם יהיה חילוף ב- 15 דקות הראשונות של המשחק ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1148,6 +1527,9 @@
       {
         "id": 119,
         "row": 486,
+        "section": "(*) \"המסלול המהיר\" | כן/לא",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם במהלך הטורניר יהיה מצב בו שחקן שנכנס כמחליף יוחלף בעצמו ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1157,6 +1539,9 @@
       {
         "id": 120,
         "row": 488,
+        "section": "(*) \"המסלול המהיר\" | כן/לא",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם במהלך הטורניר יהיה משחק במהלכו שוער יוחלף ישירות ע\"י שוער אחר ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1166,6 +1551,9 @@
       {
         "id": 121,
         "row": 490,
+        "section": "(*) \"המסלול המהיר\" | כן/לא",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם במהלך הטורניר יהיה משחק בו יובקעו שני שערים בהפרש של דקה אחת ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1175,6 +1563,9 @@
       {
         "id": 122,
         "row": 492,
+        "section": "(*) \"המסלול המהיר\" | כן/לא",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם תהיה קבוצה בטורניר שתשתתף ביותר מדו קרב פנדלים אחד ? (********)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1184,6 +1575,9 @@
       {
         "id": 123,
         "row": 494,
+        "section": "(*) \"המסלול המהיר\" | כן/לא",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם תהיינה לפחות 2 קבוצות בטורניר שיבקיעו רביעיית שערים (או יותר) ביותר ממשחק אחד (כולל הארכה) ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1193,6 +1587,9 @@
       {
         "id": 124,
         "row": 496,
+        "section": "(*) \"המסלול המהיר\" | כן/לא",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם תהינה לפחות 2 קבוצות בטורניר שיצליחו להבקיע שער זכות לאחר שיורחק להן שחקן בכרטיס אדום (כולל הארכה)  ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1202,6 +1599,9 @@
       {
         "id": 125,
         "row": 498,
+        "section": "(*) \"המסלול המהיר\" | כן/לא",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם תהיה קבוצה בטורניר שיישלפו לה כרטיסים אדומים ביותר מ- 2 משחקים במהלך הטורניר ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1211,6 +1611,9 @@
       {
         "id": 126,
         "row": 500,
+        "section": "(*) \"המסלול המהיר\" | כן/לא",
+        "block": "לא מסווג - דורש בדיקת מנהל",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יהיו לפחות 2 משחקים בטורניר בהם קבוצה תחזור מפיגור של 2 שערים למצב של תיקו או ניצחון (ב- 90 דקות) ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1220,6 +1623,9 @@
       {
         "id": 127,
         "row": 505,
+        "section": "מסלול ה\"גמר\" (*)",
+        "block": "גמר",
+        "ruleType": "manual_context_required",
         "question": "משחק הגמר יוכרע בתום:",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1229,6 +1635,9 @@
       {
         "id": 128,
         "row": 507,
+        "section": "מסלול ה\"גמר\" (*)",
+        "block": "גמר",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "מס' השערים שיובקעו במשחק הגמר ב- 90 דקות",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1238,6 +1647,9 @@
       {
         "id": 129,
         "row": 509,
+        "section": "מסלול ה\"גמר\" (*)",
+        "block": "גמר",
+        "ruleType": "manual_context_required",
         "question": "תוצאת משחק הגמר בתום 90 דקות",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1247,6 +1659,9 @@
       {
         "id": 130,
         "row": 511,
+        "section": "מסלול ה\"גמר\" (*)",
+        "block": "גמר",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "מס' השערים שיובקעו במשחק הגמר בהארכה (במידה ומשחק הגמר לא יגיע להארכה - הניחוש מבוטל)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1256,6 +1671,9 @@
       {
         "id": 131,
         "row": 513,
+        "section": "מסלול ה\"גמר\" (*)",
+        "block": "גמר",
+        "ruleType": "leader_or_superlative_do_not_close_early",
         "question": "מס' הפנדלים שייבעטו במסגרת דו קרב פנדלים (במידה ומשחק הגמר לא יגיע לדו קרב פנדלים - הניחוש מבוטל)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1265,6 +1683,9 @@
       {
         "id": 132,
         "row": 515,
+        "section": "מסלול ה\"גמר\" (*)",
+        "block": "גמר",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יובקע שער עד לדקה ה- 26 (כולל) של משחק הגמר ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1274,6 +1695,9 @@
       {
         "id": 133,
         "row": 517,
+        "section": "מסלול ה\"גמר\" (*)",
+        "block": "גמר",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "ציון המחצית בה יובקעו יותר שערים במשחק הגמר",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1283,6 +1707,9 @@
       {
         "id": 134,
         "row": 519,
+        "section": "מסלול ה\"גמר\" (*)",
+        "block": "גמר",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם ישלף כרטיס אדום במשחק הגמר (כולל הארכה, במידה ותהיה) ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1292,6 +1719,9 @@
       {
         "id": 135,
         "row": 521,
+        "section": "מסלול ה\"גמר\" (*)",
+        "block": "גמר",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם תישרק בעיטת פנדל במשחק הגמר (כולל הארכה, במידה ותהיה) ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1301,6 +1731,9 @@
       {
         "id": 136,
         "row": 523,
+        "section": "מסלול ה\"גמר\" (*)",
+        "block": "גמר",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם ישלפו לפחות 5 כרטיסים צהובים במשחק הגמר (כולל הארכה, במידה ותהיה) ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1310,6 +1743,9 @@
       {
         "id": 137,
         "row": 525,
+        "section": "מסלול ה\"גמר\" (*)",
+        "block": "גמר",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יובקע במשחק הגמר שער בנגיחה (כולל הארכה, במידה ותהיה) ? (*******)",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1319,6 +1755,9 @@
       {
         "id": 138,
         "row": 527,
+        "section": "מסלול ה\"גמר\" (*)",
+        "block": "גמר",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם במשחק הגמר יהיה לפחות שחקן אחד שיבקיע לזכות קבוצתו צמד שערים או יותר ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1328,6 +1767,9 @@
       {
         "id": 139,
         "row": 529,
+        "section": "מסלול ה\"גמר\" (*)",
+        "block": "גמר",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם מלך השערים של הטורניר יבקיע שער במשחק הגמר (כולל הארכה ובעיטות הכרעה בפנדלים) ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1337,6 +1779,9 @@
       {
         "id": 140,
         "row": 531,
+        "section": "מסלול ה\"גמר\" (*)",
+        "block": "גמר",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם בתום 90 דקות של משחק הגמר יבוצעו כל עשרת החילופים (5 חילופים לכל קבוצה) ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1346,6 +1791,9 @@
       {
         "id": 141,
         "row": 533,
+        "section": "מסלול ה\"גמר\" (*)",
+        "block": "גמר",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יבוצע חילוף במשחק הגמר בטרם פתיחת המחצית השניה (כולל חילוף במחצית המשחק) ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1355,6 +1803,9 @@
       {
         "id": 142,
         "row": 535,
+        "section": "מסלול ה\"גמר\" (*)",
+        "block": "גמר",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יהיו יותר מ- 10 קרנות במשחק הגמר (לא כולל הארכה) ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1364,6 +1815,9 @@
       {
         "id": 143,
         "row": 537,
+        "section": "מסלול ה\"גמר\" (*)",
+        "block": "גמר",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "האם יהיו יותר מ- 5 נבדלים במשחק הגמר (לא כולל הארכה) ?",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1373,6 +1827,9 @@
       {
         "id": 144,
         "row": 539,
+        "section": "מסלול ה\"גמר\" (*)",
+        "block": "גמר",
+        "ruleType": "threshold_or_yes_no_manual",
         "question": "השער הראשון במשחק הגמר (כולל הארכה ובעיטות הכרעה בפנדלים) יובקע ב:",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1382,6 +1839,9 @@
       {
         "id": 145,
         "row": 541,
+        "section": "מסלול ה\"גמר\" (*)",
+        "block": "גמר",
+        "ruleType": "manual_context_required",
         "question": "האירוע הראשון במשחק הגמר לאחר שריקת הפתיחה יהיה:",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
@@ -1391,6 +1851,9 @@
       {
         "id": 146,
         "row": 543,
+        "section": "מסלול ה\"גמר\" (*)",
+        "block": "גמר",
+        "ruleType": "manual_context_required",
         "question": "בעיטת הפתיחה של משחק הגמר תיבעט ב:",
         "engineStatus": "manual_or_future_rule",
         "actualAnswer": "לא ידוע",
