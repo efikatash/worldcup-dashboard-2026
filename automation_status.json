@@ -1,51 +1,10 @@
 {
   "status": "ok",
   "message": "Dashboard checked against FIFA finals and ESPN live scores. Unconfirmed temporary scores were cleaned. No new final match results found. Fast-track daily review prepared for 24 question(s).",
-  "updated_at_utc": "2026-06-14T19:04:32Z",
+  "updated_at_utc": "2026-06-14T19:09:57Z",
   "updates": [],
   "live_updates": [],
-  "cleared_live": [
-    {
-      "matchId": 29,
-      "match": "אקוואדור - גרמניה",
-      "oldScore": "4-1",
-      "oldStatus": "verified",
-      "oldSourceStatus": "verified_fifa",
-      "reason": "score was not confirmed by current ESPN live feed and not verified as final by FIFA"
-    },
-    {
-      "matchId": 31,
-      "match": "הולנד - יפן",
-      "oldScore": "3-2",
-      "oldStatus": "verified",
-      "oldSourceStatus": "verified_fifa",
-      "reason": "score was not confirmed by current ESPN live feed and not verified as final by FIFA"
-    },
-    {
-      "matchId": 32,
-      "match": "שבדיה - טוניסיה",
-      "oldScore": "4-1",
-      "oldStatus": "verified",
-      "oldSourceStatus": "verified_fifa",
-      "reason": "score was not confirmed by current ESPN live feed and not verified as final by FIFA"
-    },
-    {
-      "matchId": 34,
-      "match": "טוניסיה - יפן",
-      "oldScore": "3-2",
-      "oldStatus": "verified",
-      "oldSourceStatus": "verified_fifa",
-      "reason": "score was not confirmed by current ESPN live feed and not verified as final by FIFA"
-    },
-    {
-      "matchId": 35,
-      "match": "טוניסיה - הולנד",
-      "oldScore": "3-2",
-      "oldStatus": "verified",
-      "oldSourceStatus": "verified_fifa",
-      "reason": "score was not confirmed by current ESPN live feed and not verified as final by FIFA"
-    }
-  ],
+  "cleared_live": [],
   "conflicts": [],
   "warnings": [],
   "open_questions": {
