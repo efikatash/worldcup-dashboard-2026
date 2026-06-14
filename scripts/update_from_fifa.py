@@ -227,7 +227,14 @@ def rx_alias(alias: str) -> str:
 
 
 def find_score_in_text(text: str, home_he: str, away_he: str) -> Optional[Tuple[int, int, str]]:
-    """Return (homeScore, awayScore, evidenceSnippet) from FIFA page text if confidently found."""
+    """Return (homeScore, awayScore, evidenceSnippet) from FIFA page text if confidently found.
+
+    Important RTL/dashboard safety note:
+    We only accept a score when the score is physically between the two relevant team names
+    or in a tight rendered scoreboard pattern that clearly belongs to that exact pair.
+    This prevents a live score like "Germany 4-1 Curaçao" from being accidentally attached
+    to nearby upcoming fixtures such as "Côte d'Ivoire vs Ecuador" that appear on the same FIFA page.
+    """
     text = normalize_text(text)
     home_aliases = aliases_for(home_he)
     away_aliases = aliases_for(away_he)
@@ -236,76 +243,60 @@ def find_score_in_text(text: str, home_he: str, away_he: str) -> Optional[Tuple[
     score = r"(\d{1,2})\s*[-–]\s*(\d{1,2})"
 
     def sane_score(hs: int, aw: int) -> bool:
-        # Avoid obvious time/date false positives such as 17:00 or 2026.
         return 0 <= hs <= 15 and 0 <= aw <= 15
 
-    def ctx_ok(window: str, snippet: str) -> bool:
-        if re.search(status_words, window, flags=re.I):
-            return True
-        # Tight scoreboard snippets are accepted, especially after a rendered FIFA page read.
-        return len(snippet) <= 260
+    def ctx_ok(window: str) -> bool:
+        # Require football context. This is deliberately stricter than earlier versions.
+        return bool(re.search(status_words, window, flags=re.I) or re.search(r"\bGroup\s+[A-L]\b|World Cup|MATCH DETAILS|Match Centre", window, flags=re.I))
 
+    def good_window(start: int, end: int) -> str:
+        return text[max(0, start - 140): min(len(text), end + 140)]
+
+    # Best case: Team A 4-1 Team B / TEAM A 4 - 1 TEAM B.
+    # The score must be BETWEEN the two team aliases. We do NOT accept "4-1 Team A Team B" or
+    # "Team A Team B 4-1", because those caused false positives from other matches on the same page.
     for ha in home_aliases:
         for aa in away_aliases:
             h = rx_alias(ha)
             a = rx_alias(aa)
-            patterns = [
-                rf"({h}.{{0,180}}?{score}.{{0,180}}?{a})",
-                rf"({h}.{{0,220}}?{a}.{{0,120}}?{score})",
-                rf"({score}.{{0,160}}?{h}.{{0,180}}?{a})",
-            ]
-            for pat in patterns:
-                for m in re.finditer(pat, text, flags=re.I):
-                    snippet = m.group(1)
-                    window_start = max(0, m.start() - 180)
-                    window_end = min(len(text), m.end() + 180)
-                    window = text[window_start:window_end]
-                    nums = re.search(score, snippet)
-                    if not nums:
-                        continue
-                    hs, aw = int(nums.group(1)), int(nums.group(2))
-                    if sane_score(hs, aw) and ctx_ok(window, snippet):
-                        return hs, aw, normalize_text(window)[:500]
+            pat = rf"({h}.{{0,80}}?{score}.{{0,80}}?{a})"
+            for m in re.finditer(pat, text, flags=re.I):
+                snippet = m.group(1)
+                hs, aw = int(m.group(2)), int(m.group(3))
+                window = good_window(m.start(), m.end())
+                if sane_score(hs, aw) and ctx_ok(window):
+                    return hs, aw, normalize_text(window)[:500]
 
-    # Rendered scoreboard pattern: GER 3 CUW 1, Germany 3 Curaçao 1.
-    # This is common when FIFA renders score tiles without a hyphen.
+    # Rendered tile without hyphen: Team A 4 Team B 1.
+    # Keep this very tight and reject obvious time rows like 07:00.
     for ha in home_aliases:
         for aa in away_aliases:
             h = rx_alias(ha)
             a = rx_alias(aa)
-            scoreboard_patterns = [
-                rf"({h}\W{{0,80}}(\d{{1,2}})\W{{0,120}}{a}\W{{0,80}}(\d{{1,2}}))",
-                rf"({h}\W{{0,120}}{a}\W{{0,80}}(\d{{1,2}})\W{{0,40}}(\d{{1,2}}))",
-            ]
-            for pat in scoreboard_patterns:
-                for m in re.finditer(pat, text, flags=re.I):
-                    snippet = m.group(1)
-                    window_start = max(0, m.start() - 220)
-                    window_end = min(len(text), m.end() + 220)
-                    window = text[window_start:window_end]
-                    # For first pattern groups are snippet, homeScore, awayScore.
-                    # For second pattern groups are snippet, homeScore, awayScore as well.
-                    try:
-                        hs, aw = int(m.group(2)), int(m.group(3))
-                    except Exception:
-                        continue
-                    if not sane_score(hs, aw):
-                        continue
-                    # Extra guard: do not accept two identical clock times or standings rows.
-                    if re.search(r"\b\d{1,2}:\d{2}\b", snippet):
-                        continue
-                    if ctx_ok(window, snippet):
-                        return hs, aw, normalize_text(window)[:500]
+            pat = rf"({h}\W{{0,35}}(\d{{1,2}})\W{{0,70}}{a}\W{{0,35}}(\d{{1,2}}))"
+            for m in re.finditer(pat, text, flags=re.I):
+                snippet = m.group(1)
+                if re.search(r"\b\d{1,2}:\d{2}\b", snippet):
+                    continue
+                try:
+                    hs, aw = int(m.group(2)), int(m.group(3))
+                except Exception:
+                    continue
+                window = good_window(m.start(), m.end())
+                if sane_score(hs, aw) and ctx_ok(window):
+                    return hs, aw, normalize_text(window)[:500]
 
-    # Also catch headline/article style: "Team 2-0 Team | Match report".
+    # Article/headline style, still strict: Team A 2-0 Team B | Match report.
     for ha in home_aliases:
         for aa in away_aliases:
-            pat = rf"({rx_alias(ha)}\s+{score}\s+{rx_alias(aa)}\s*(?:\||-|,|:)?.{{0,80}}?(?:Match report|highlights|FIFA|World Cup))"
+            pat = rf"({rx_alias(ha)}\s+{score}\s+{rx_alias(aa)}\s*(?:\||-|,|:)?.{{0,80}}?(?:Match report|highlights|FIFA|World Cup|Full Time|LIVE|Live))"
             m = re.search(pat, text, flags=re.I)
             if m:
                 hs, aw = int(m.group(2)), int(m.group(3))
                 if sane_score(hs, aw):
-                    return hs, aw, normalize_text(m.group(1))[:500]
+                    window = good_window(m.start(), m.end())
+                    if ctx_ok(window):
+                        return hs, aw, normalize_text(window)[:500]
 
     return None
 
