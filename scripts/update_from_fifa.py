@@ -38,6 +38,12 @@ FIFA_MATCH_CENTRE_URL = "https://www.fifa.com/en/match-centre"
 FIFA_MATCH_CENTRE_LIVE_URL = "https://www.fifa.com/en/match-centre/live"
 FIFA_MATCH_CENTRE_LIVE_ROOT_URL = "https://www.fifa.com/live"
 
+# Lightweight live source. ESPN's public scoreboard endpoint returns structured JSON,
+# including live clocks and scores, without launching a browser.
+# We use ESPN only for TEMPORARY live scoring. Final locking remains FIFA-only when FIFA confirms.
+ESPN_SCOREBOARD_BASE = "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard"
+ESPN_LIVE_DEBUG_CSV_PATH = os.path.join(ROOT, "espn_live_debug.csv")
+
 # Hebrew names in the dashboard -> possible official/English names on FIFA.
 TEAM_ALIASES: Dict[str, List[str]] = {
     "מקסיקו": ["Mexico", "MEX"],
@@ -381,23 +387,6 @@ def discover_fifa_results(data: Dict[str, Any]) -> Tuple[Dict[int, Dict[str, Any
         except Exception as e:
             warnings.append(f"Could not fetch FIFA URL {url}: {e}")
 
-    # Browser-rendered pass: this is the heavy but necessary path for live scores rendered by JavaScript.
-    # Keep it focused on the central fixtures/live pages and known match-centre URLs.
-    rendered_urls: List[str] = []
-    for url in [FIFA_SCORES_URL, FIFA_MATCH_CENTRE_LIVE_URL, FIFA_MATCH_CENTRE_LIVE_ROOT_URL]:
-        if url not in rendered_urls:
-            rendered_urls.append(url)
-    for mid, url in KNOWN_MATCH_CENTRE.items():
-        if url not in rendered_urls:
-            rendered_urls.append(url)
-    for url in rendered_urls:
-        try:
-            rendered = fetch_rendered_url(url)
-            fetched.append(url + " [rendered]")
-            combined_text += "\n\nRENDERED_SOURCE_URL: " + url + "\n" + rendered
-        except Exception as e:
-            warnings.append(f"Could not render FIFA URL {url}: {e}")
-
     if not fetched:
         warnings.append("No FIFA pages could be fetched. Data was not changed.")
         return discovered, warnings
@@ -468,6 +457,222 @@ def discover_fifa_results(data: Dict[str, Any]) -> Tuple[Dict[int, Dict[str, Any
             w.writerows(debug_rows)
     except Exception as exc:
         warnings.append(f"Could not write fifa_live_debug.csv: {exc}")
+
+    return discovered, warnings
+
+
+
+def fetch_json_url(url: str, timeout: int = 25) -> Any:
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "Mozilla/5.0 (compatible; worldcup-dashboard-bot/1.0; +https://github.com/efikatash/worldcup-dashboard-2026)",
+            "Accept": "application/json,text/plain;q=0.9,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.9",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        raw = resp.read()
+        charset = resp.headers.get_content_charset() or "utf-8"
+        return json.loads(raw.decode(charset, errors="replace"))
+
+
+def canonical_aliases(team_he: str) -> set[str]:
+    vals = aliases_for(team_he)
+    out = set()
+    for v in vals:
+        if not v:
+            continue
+        n = normalize_text(v).lower()
+        out.add(n)
+        out.add(re.sub(r"[^a-z0-9]+", "", n))
+    return out
+
+
+def espn_team_tokens(comp: Dict[str, Any]) -> set[str]:
+    team = comp.get("team") or {}
+    vals = [
+        team.get("displayName"), team.get("shortDisplayName"), team.get("name"),
+        team.get("location"), team.get("abbreviation"), comp.get("id"),
+    ]
+    out = set()
+    for v in vals:
+        if v is None:
+            continue
+        n = normalize_text(str(v)).lower()
+        if not n:
+            continue
+        out.add(n)
+        out.add(re.sub(r"[^a-z0-9]+", "", n))
+    return out
+
+
+def team_matches_espn(team_he: str, comp: Dict[str, Any]) -> bool:
+    aliases = canonical_aliases(team_he)
+    tokens = espn_team_tokens(comp)
+    return bool(aliases & tokens)
+
+
+def espn_scoreboard_urls() -> List[str]:
+    # ESPN date is event-date based. Fetch yesterday/today/tomorrow in UTC to cover Philippines evening matches.
+    today = dt.datetime.now(dt.timezone.utc).date()
+    dates = [(today + dt.timedelta(days=offset)).strftime("%Y%m%d") for offset in (-1, 0, 1)]
+    urls = [ESPN_SCOREBOARD_BASE + "?limit=100"]
+    urls += [ESPN_SCOREBOARD_BASE + "?limit=100&dates=" + d for d in dates]
+    # De-duplicate while preserving order.
+    result = []
+    for u in urls:
+        if u not in result:
+            result.append(u)
+    return result
+
+
+def discover_espn_live_scores(data: Dict[str, Any]) -> Tuple[Dict[int, Dict[str, Any]], List[str]]:
+    """Find live/in-progress scores from ESPN's structured JSON scoreboard.
+
+    ESPN is used only for temporary live scoring and drama during matches. It should not permanently
+    lock a final result. FIFA remains the authority for verified final results.
+    """
+    warnings: List[str] = []
+    discovered: Dict[int, Dict[str, Any]] = {}
+    events: List[Dict[str, Any]] = []
+    fetched_urls: List[str] = []
+
+    for url in espn_scoreboard_urls():
+        try:
+            payload = fetch_json_url(url)
+            fetched_urls.append(url)
+            evs = payload.get("events", []) if isinstance(payload, dict) else []
+            if isinstance(evs, list):
+                events.extend([e for e in evs if isinstance(e, dict)])
+        except Exception as exc:
+            warnings.append(f"Could not fetch ESPN scoreboard {url}: {exc}")
+
+    seen_event_ids = set()
+    unique_events = []
+    for e in events:
+        eid = str(e.get("id", ""))
+        if eid and eid in seen_event_ids:
+            continue
+        if eid:
+            seen_event_ids.add(eid)
+        unique_events.append(e)
+
+    debug_rows: List[Dict[str, Any]] = []
+
+    for match in data.get("matches", []):
+        mid = int(match.get("id", 0) or 0)
+        home = str(match.get("home", ""))
+        away = str(match.get("away", ""))
+        if not mid or not home or not away:
+            continue
+
+        debug = {
+            "matchId": mid,
+            "match": f"{home} - {away}",
+            "currentStatus": match.get("status", ""),
+            "currentScore": f"{match.get('actualHome', '')}-{match.get('actualAway', '')}",
+            "espnEventId": "",
+            "espnName": "",
+            "candidateScore": "",
+            "candidateStatus": "not_found",
+            "clock": "",
+            "sourceUrl": "",
+            "note": "",
+        }
+
+        for event in unique_events:
+            comps = []
+            competitions = event.get("competitions", [])
+            if not competitions:
+                continue
+            comp0 = competitions[0] or {}
+            comps = comp0.get("competitors", []) or []
+            home_comp = next((c for c in comps if str(c.get("homeAway", "")).lower() == "home"), None)
+            away_comp = next((c for c in comps if str(c.get("homeAway", "")).lower() == "away"), None)
+            if not home_comp or not away_comp:
+                # ESPN sometimes uses order. Keep fallback conservative.
+                if len(comps) >= 2:
+                    home_comp, away_comp = comps[0], comps[1]
+                else:
+                    continue
+
+            if not (team_matches_espn(home, home_comp) and team_matches_espn(away, away_comp)):
+                continue
+
+            status = comp0.get("status") or event.get("status") or {}
+            stype = status.get("type") or {}
+            state = str(stype.get("state", "")).lower()
+            completed = bool(stype.get("completed"))
+            detail = str(stype.get("detail") or stype.get("shortDetail") or status.get("displayClock") or "")
+            status_name = str(stype.get("name") or stype.get("description") or "")
+
+            try:
+                hs = int(str(home_comp.get("score", "")).strip())
+                aw = int(str(away_comp.get("score", "")).strip())
+            except Exception:
+                debug["note"] = "matched teams but score was not numeric"
+                continue
+
+            # Ignore fixtures that have not started, unless ESPN gives a non-zero score, which would be odd.
+            if state == "pre" and hs == 0 and aw == 0:
+                debug.update({
+                    "espnEventId": event.get("id", ""),
+                    "espnName": event.get("name", ""),
+                    "candidateStatus": "pre",
+                    "clock": detail,
+                    "note": "matched upcoming ESPN fixture; ignored",
+                })
+                continue
+
+            source_url = ESPN_SCOREBOARD_BASE
+            for link in event.get("links", []) or []:
+                if isinstance(link, dict) and link.get("href"):
+                    source_url = link.get("href")
+                    break
+
+            if completed or state == "post":
+                match_status = "live"  # final-looking ESPN score, but still temporary until FIFA verifies.
+                source_title = "ESPN final score - awaiting FIFA verification"
+                candidate_status = "post_pending_fifa"
+            else:
+                match_status = "live"
+                source_title = "ESPN live score - temporary"
+                candidate_status = "live"
+
+            debug.update({
+                "espnEventId": event.get("id", ""),
+                "espnName": event.get("name", ""),
+                "candidateScore": f"{hs}-{aw}",
+                "candidateStatus": candidate_status,
+                "clock": detail or status_name,
+                "sourceUrl": source_url,
+                "note": "matched by home/away teams from ESPN structured JSON",
+            })
+            discovered[mid] = {
+                "actualHome": hs,
+                "actualAway": aw,
+                "matchStatus": match_status,
+                "sourceUrl": source_url,
+                "sourceTitle": source_title,
+                "sourceStatus": "live_espn",
+                "evidence": f"ESPN event {event.get('id')} {event.get('name')} {hs}-{aw} {detail or status_name}",
+            }
+            break
+
+        debug_rows.append(debug)
+
+    try:
+        with open(ESPN_LIVE_DEBUG_CSV_PATH, "w", encoding="utf-8-sig", newline="") as f:
+            fields = ["matchId", "match", "currentStatus", "currentScore", "espnEventId", "espnName", "candidateScore", "candidateStatus", "clock", "sourceUrl", "note"]
+            w = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
+            w.writeheader()
+            w.writerows(debug_rows)
+    except Exception as exc:
+        warnings.append(f"Could not write espn_live_debug.csv: {exc}")
+
+    if not fetched_urls:
+        warnings.append("No ESPN scoreboard pages could be fetched. Live scoring source was not updated.")
 
     return discovered, warnings
 
@@ -1106,7 +1311,7 @@ def recompute_scores(data: Dict[str, Any]) -> None:
     meta["resolvedOpenQuestions"] = sum(1 for q in data.get("openQuestions", []) if q.get("status") in ("known", "verified"))
     meta["verifiedOpenQuestions"] = meta["resolvedOpenQuestions"]
     meta["liveOpenQuestions"] = sum(1 for q in data.get("openQuestions", []) if q.get("status") == "live")
-    meta["dashboardVersion"] = "GitHub Auto FIFA + Block-Aware Open Questions Updater"
+    meta["dashboardVersion"] = "GitHub Auto FIFA Final + ESPN Lightweight Live Scoring"
     meta["lastAutomationAtUtc"] = utc_now()
 
 def ensure_source(data: Dict[str, Any], title: str, url: str, note: str = "") -> None:
@@ -1201,7 +1406,20 @@ def main() -> int:
     with open(DATA_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    discovered, warnings = discover_fifa_results(data)
+    fifa_discovered, warnings = discover_fifa_results(data)
+    espn_discovered, espn_warnings = discover_espn_live_scores(data)
+    warnings.extend(espn_warnings)
+
+    # Merge sources carefully:
+    # - FIFA verified final results always win and lock the score.
+    # - ESPN is used only for live/temporary scoring when FIFA has not verified the final yet.
+    discovered: Dict[int, Dict[str, Any]] = dict(espn_discovered)
+    for mid, hit in fifa_discovered.items():
+        if str(hit.get("matchStatus")) == "verified":
+            discovered[mid] = hit
+        elif mid not in discovered:
+            discovered[mid] = hit
+
     updates: List[Dict[str, Any]] = []
     conflicts: List[Dict[str, Any]] = []
 
@@ -1237,7 +1455,7 @@ def main() -> int:
         m["actualHome"] = int(hit["actualHome"])
         m["actualAway"] = int(hit["actualAway"])
         m["status"] = "live" if hit_status == "live" else "verified"
-        m["sourceStatus"] = "live_fifa" if hit_status == "live" else "verified_fifa"
+        m["sourceStatus"] = hit.get("sourceStatus") or ("live_fifa" if hit_status == "live" else "verified_fifa")
         m["sourceUrl"] = hit.get("sourceUrl") or FIFA_SCORES_URL
         m["sourceTitle"] = hit.get("sourceTitle") or ("FIFA official live score" if hit_status == "live" else "FIFA official final result")
 
@@ -1265,7 +1483,7 @@ def main() -> int:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
     status = "ok" if not conflicts else "needs_review"
-    msg = "Dashboard checked against FIFA."
+    msg = "Dashboard checked against FIFA finals and ESPN live scores."
     if updates:
         msg += f" Added {len(updates)} new final match result(s)."
     else:
