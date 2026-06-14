@@ -1,5 +1,11 @@
 {
   "status": "ok",
-  "message": "GitHub Action is working",
-  "updated_at_utc": "2026-06-14T09:45:56Z"
+  "message": "Dashboard checked against FIFA. No new match results found.",
+  "updated_at_utc": "2026-06-14T10:10:25Z",
+  "updates": [],
+  "conflicts": [],
+  "warnings": [],
+  "completed_matches": 8,
+  "leader": "אושרי ברזילי",
+  "leader_points": 77
 }
