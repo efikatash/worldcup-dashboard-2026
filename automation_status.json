@@ -1,24 +1,16 @@
 {
   "status": "ok",
-  "message": "Dashboard checked against FIFA. No new final match results found. Updated 2 live match score(s). Fast-track daily review prepared for 24 question(s).",
-  "updated_at_utc": "2026-06-14T18:42:30Z",
+  "message": "Dashboard checked against FIFA finals and ESPN live scores. No new final match results found. Updated 1 live match score(s). Fast-track daily review prepared for 24 question(s).",
+  "updated_at_utc": "2026-06-14T18:49:35Z",
   "updates": [],
   "live_updates": [
     {
       "matchId": 25,
       "match": "גרמניה - קורסאו",
-      "score": "5-1",
+      "score": "6-1",
       "status": "live",
-      "source": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021464",
-      "evidence": "SAT 04 Jul SUN 05 Jul MON 06 Jul TUE 07 Jul WED 08 Jul Live(3) CHANGE DAY SORT FILTER FIFA World Cup™ FIFA World Cup 2026™ Group E LIVE 76' Germany 5 - 1 Curaçao Côte d'Ivoire 07:00 Ecuador Group F Netherlands 04:00 Japan Sweden 10:00 Tunisia Group E Show table Pos Team P W Pts 1 Germany 1 1 3 2 Ecua"
-    },
-    {
-      "matchId": 27,
-      "match": "גרמניה - חוף השנהב",
-      "score": "5-1",
-      "status": "live",
-      "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-      "evidence": "SAT 04 Jul SUN 05 Jul MON 06 Jul TUE 07 Jul WED 08 Jul Live(3) CHANGE DAY SORT FILTER FIFA World Cup™ FIFA World Cup 2026™ Group E LIVE 76' Germany 5 - 1 Curaçao Côte d'Ivoire 07:00 Ecuador Group F Netherlands 04:00 Japan Sweden 10:00 Tunisia Group E Show table Pos Team P W Pts 1 Germany 1 1 3 2 Ecuador 0 0 0 Grou"
+      "source": "https://www.espn.com/soccer/match/_/gameId/760422",
+      "evidence": "ESPN event 760422 Curaçao at Germany 6-1 85'"
     }
   ],
   "conflicts": [],
@@ -2175,6 +2167,6 @@
   "live_matches": 6,
   "live_open_questions": 0,
   "resolved_open_questions": 6,
-  "leader": "אורטל שלומי",
-  "leader_points": 105
+  "leader": "אוראל ויצמן",
+  "leader_points": 106
 }
