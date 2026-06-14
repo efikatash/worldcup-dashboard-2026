@@ -3,7 +3,7 @@ name: Update World Cup Dashboard
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/20 * * * *"
+    - cron: "*/5 * * * *"
 
 permissions:
   contents: write
@@ -21,7 +21,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Update results and open-question trackers
+      - name: Update results, live scores and open-question trackers
         run: python scripts/update_from_fifa.py
 
       - name: Commit updated dashboard files
@@ -29,5 +29,5 @@ jobs:
           git config user.name "worldcup-dashboard-bot"
           git config user.email "worldcup-dashboard-bot@users.noreply.github.com"
           git add data.json leaderboard.csv matches.csv open_questions.csv open_question_review.csv fast_track_review.csv sources_all.csv sources_fifa.csv efi_katash_audit.csv automation_status.json
-          git commit -m "Auto-update dashboard results and open questions" || echo "No changes to commit"
+          git commit -m "Auto-update dashboard results, live scores and open questions" || echo "No changes to commit"
           git push
