@@ -1311,7 +1311,7 @@ def recompute_scores(data: Dict[str, Any]) -> None:
     meta["resolvedOpenQuestions"] = sum(1 for q in data.get("openQuestions", []) if q.get("status") in ("known", "verified"))
     meta["verifiedOpenQuestions"] = meta["resolvedOpenQuestions"]
     meta["liveOpenQuestions"] = sum(1 for q in data.get("openQuestions", []) if q.get("status") == "live")
-    meta["dashboardVersion"] = "GitHub Auto FIFA Final + ESPN Lightweight Live Scoring"
+    meta["dashboardVersion"] = "GitHub Auto FIFA Final + ESPN Strict Live + Stale Cleanup"
     meta["lastAutomationAtUtc"] = utc_now()
 
 def ensure_source(data: Dict[str, Any], title: str, url: str, note: str = "") -> None:
@@ -1411,19 +1411,45 @@ def main() -> int:
     warnings.extend(espn_warnings)
 
     # Merge sources carefully:
-    # - FIFA verified final results always win and lock the score.
-    # - ESPN is used only for live/temporary scoring when FIFA has not verified the final yet.
+    # - FIFA is used ONLY for verified final results. We intentionally ignore FIFA live parsing here,
+    #   because FIFA pages can render several match tiles on one page and may cause false live matches.
+    # - ESPN is used only for temporary live scoring and is accepted only when its structured JSON
+    #   matches BOTH teams of the specific dashboard fixture.
+    fifa_final_discovered: Dict[int, Dict[str, Any]] = {
+        mid: hit for mid, hit in fifa_discovered.items()
+        if str(hit.get("matchStatus")) == "verified"
+    }
     discovered: Dict[int, Dict[str, Any]] = dict(espn_discovered)
-    for mid, hit in fifa_discovered.items():
-        if str(hit.get("matchStatus")) == "verified":
-            discovered[mid] = hit
-        elif mid not in discovered:
-            discovered[mid] = hit
+    discovered.update(fifa_final_discovered)
 
     updates: List[Dict[str, Any]] = []
     conflicts: List[Dict[str, Any]] = []
 
     live_updates: List[Dict[str, Any]] = []
+    cleared_live: List[Dict[str, Any]] = []
+
+    # Safety cleanup: live scores are temporary. If the current run does not see that exact match
+    # live in ESPN, and FIFA has not verified it as final, clear the old temporary score.
+    # This prevents a previous bad live parse from leaving unplayed matches as "live" forever.
+    for m in data.get("matches", []):
+        mid = int(m.get("id", 0) or 0)
+        if str(m.get("status", "")) != "live":
+            continue
+        hit = discovered.get(mid)
+        if hit and str(hit.get("matchStatus")) in ("live", "verified"):
+            continue
+        cleared_live.append({
+            "matchId": mid,
+            "match": f"{m.get('home')} - {m.get('away')}",
+            "oldScore": f"{m.get('actualHome', '')}-{m.get('actualAway', '')}",
+            "reason": "temporary live score was not confirmed by current ESPN live feed or FIFA final result",
+        })
+        m["actualHome"] = None
+        m["actualAway"] = None
+        m["status"] = "pending"
+        m["sourceStatus"] = "pending"
+        m["sourceUrl"] = ""
+        m["sourceTitle"] = "ממתין לתוצאת משחק"
 
     for m in data.get("matches", []):
         mid = int(m.get("id", 0) or 0)
@@ -1483,7 +1509,7 @@ def main() -> int:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
     status = "ok" if not conflicts else "needs_review"
-    msg = "Dashboard checked against FIFA finals and ESPN live scores."
+    msg = "Dashboard checked against FIFA finals and strict ESPN live scores."
     if updates:
         msg += f" Added {len(updates)} new final match result(s)."
     else:
@@ -1503,7 +1529,7 @@ def main() -> int:
     if conflicts:
         msg += f" {len(conflicts)} conflict(s) need manual review."
 
-    write_status(status, msg, updates=updates, live_updates=live_updates, conflicts=conflicts, warnings=warnings, open_questions=open_result, completed_matches=data.get("meta", {}).get("completedFifaMatches"), live_matches=data.get("meta", {}).get("liveFifaMatches"), live_open_questions=data.get("meta", {}).get("liveOpenQuestions"), resolved_open_questions=data.get("meta", {}).get("resolvedOpenQuestions"), leader=data.get("participants", [{}])[0].get("name"), leader_points=data.get("participants", [{}])[0].get("total"))
+    write_status(status, msg, updates=updates, live_updates=live_updates, cleared_live=cleared_live, conflicts=conflicts, warnings=warnings, open_questions=open_result, completed_matches=data.get("meta", {}).get("completedFifaMatches"), live_matches=data.get("meta", {}).get("liveFifaMatches"), live_open_questions=data.get("meta", {}).get("liveOpenQuestions"), resolved_open_questions=data.get("meta", {}).get("resolvedOpenQuestions"), leader=data.get("participants", [{}])[0].get("name"), leader_points=data.get("participants", [{}])[0].get("total"))
     print(msg)
     if warnings:
         print("Warnings:")
