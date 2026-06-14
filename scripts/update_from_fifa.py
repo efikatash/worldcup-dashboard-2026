@@ -139,6 +139,62 @@ def fetch_url(url: str, timeout: int = 30) -> str:
         return raw.decode(charset, errors="replace")
 
 
+def fetch_rendered_url(url: str, timeout_ms: int = 65000) -> str:
+    """Render a FIFA page with a real Chromium browser and return visible text + HTML text.
+
+    FIFA often hydrates live scores through client-side JavaScript, so urllib can see the shell
+    but not the live score. This function is intentionally optional: if Playwright is not installed
+    or FIFA blocks the runner, the updater logs a warning and falls back to normal HTML parsing.
+    """
+    try:
+        from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
+    except Exception as exc:  # pragma: no cover - only happens on GitHub if install failed
+        raise RuntimeError(f"Playwright is not available: {exc}")
+
+    user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125 Safari/537.36"
+    with sync_playwright() as pw:
+        browser = pw.chromium.launch(
+            headless=True,
+            args=["--disable-dev-shm-usage", "--no-sandbox", "--disable-gpu"],
+        )
+        context = browser.new_context(
+            user_agent=user_agent,
+            locale="en-US",
+            timezone_id="Asia/Manila",
+            viewport={"width": 1440, "height": 1200},
+        )
+        page = context.new_page()
+        try:
+            page.goto(url, wait_until="domcontentloaded", timeout=timeout_ms)
+            # Try to dismiss cookie/consent overlays without failing if no overlay exists.
+            for label in ["Accept all", "Accept All", "I accept", "Agree", "Allow all", "Continue"]:
+                try:
+                    btn = page.get_by_role("button", name=label)
+                    if btn.count() > 0:
+                        btn.first.click(timeout=2500)
+                        break
+                except Exception:
+                    pass
+            try:
+                page.wait_for_load_state("networkidle", timeout=15000)
+            except PlaywrightTimeoutError:
+                pass
+            # Give live widgets a little extra time to hydrate.
+            page.wait_for_timeout(8000)
+            try:
+                visible_text = page.locator("body").inner_text(timeout=15000)
+            except Exception:
+                visible_text = ""
+            try:
+                html_text = page.content()
+            except Exception:
+                html_text = ""
+            return normalize_text(visible_text + "\n" + strip_tags(html_text))
+        finally:
+            context.close()
+            browser.close()
+
+
 def normalize_text(s: str) -> str:
     s = html.unescape(str(s))
     s = s.replace("\u2013", "-").replace("\u2014", "-").replace("\u00a0", " ")
@@ -176,14 +232,23 @@ def find_score_in_text(text: str, home_he: str, away_he: str) -> Optional[Tuple[
     home_aliases = aliases_for(home_he)
     away_aliases = aliases_for(away_he)
 
-    status_words = r"(?:FT|Full[- ]time|Full time|Result|Final|Match report|highlights|beat|edge|draw|defeat|win|victory|earn)"
+    status_words = r"(?:FT|Full[- ]time|Full time|Result|Final|Match report|highlights|beat|edge|draw|defeat|win|victory|earn|LIVE|Live|live|In progress|First half|Second half|Half-time|Halftime|HT)"
     score = r"(\d{1,2})\s*[-–]\s*(\d{1,2})"
+
+    def sane_score(hs: int, aw: int) -> bool:
+        # Avoid obvious time/date false positives such as 17:00 or 2026.
+        return 0 <= hs <= 15 and 0 <= aw <= 15
+
+    def ctx_ok(window: str, snippet: str) -> bool:
+        if re.search(status_words, window, flags=re.I):
+            return True
+        # Tight scoreboard snippets are accepted, especially after a rendered FIFA page read.
+        return len(snippet) <= 260
 
     for ha in home_aliases:
         for aa in away_aliases:
             h = rx_alias(ha)
             a = rx_alias(aa)
-            # Most common: Home 2-0 Away, or Home HOME 2-0 Away.
             patterns = [
                 rf"({h}.{{0,180}}?{score}.{{0,180}}?{a})",
                 rf"({h}.{{0,220}}?{a}.{{0,120}}?{score})",
@@ -192,31 +257,57 @@ def find_score_in_text(text: str, home_he: str, away_he: str) -> Optional[Tuple[
             for pat in patterns:
                 for m in re.finditer(pat, text, flags=re.I):
                     snippet = m.group(1)
-                    window_start = max(0, m.start() - 120)
-                    window_end = min(len(text), m.end() + 120)
+                    window_start = max(0, m.start() - 180)
+                    window_end = min(len(text), m.end() + 180)
                     window = text[window_start:window_end]
                     nums = re.search(score, snippet)
                     if not nums:
                         continue
                     hs, aw = int(nums.group(1)), int(nums.group(2))
-                    # Avoid obvious non-football false positives. Football scores rarely exceed 15.
-                    if hs > 15 or aw > 15:
+                    if sane_score(hs, aw) and ctx_ok(window, snippet):
+                        return hs, aw, normalize_text(window)[:500]
+
+    # Rendered scoreboard pattern: GER 3 CUW 1, Germany 3 Curaçao 1.
+    # This is common when FIFA renders score tiles without a hyphen.
+    for ha in home_aliases:
+        for aa in away_aliases:
+            h = rx_alias(ha)
+            a = rx_alias(aa)
+            scoreboard_patterns = [
+                rf"({h}\W{{0,80}}(\d{{1,2}})\W{{0,120}}{a}\W{{0,80}}(\d{{1,2}}))",
+                rf"({h}\W{{0,120}}{a}\W{{0,80}}(\d{{1,2}})\W{{0,40}}(\d{{1,2}}))",
+            ]
+            for pat in scoreboard_patterns:
+                for m in re.finditer(pat, text, flags=re.I):
+                    snippet = m.group(1)
+                    window_start = max(0, m.start() - 220)
+                    window_end = min(len(text), m.end() + 220)
+                    window = text[window_start:window_end]
+                    # For first pattern groups are snippet, homeScore, awayScore.
+                    # For second pattern groups are snippet, homeScore, awayScore as well.
+                    try:
+                        hs, aw = int(m.group(2)), int(m.group(3))
+                    except Exception:
                         continue
-                    # Require a match-status/result context if possible. FIFA article titles often use "Team 2-0 Team" without FT.
-                    # If the pair and score are tight enough, accept even without FT.
-                    if re.search(status_words, window, flags=re.I) or len(snippet) <= 220:
-                        return hs, aw, normalize_text(window)[:380]
+                    if not sane_score(hs, aw):
+                        continue
+                    # Extra guard: do not accept two identical clock times or standings rows.
+                    if re.search(r"\b\d{1,2}:\d{2}\b", snippet):
+                        continue
+                    if ctx_ok(window, snippet):
+                        return hs, aw, normalize_text(window)[:500]
 
     # Also catch headline/article style: "Team 2-0 Team | Match report".
     for ha in home_aliases:
         for aa in away_aliases:
-            pat = rf"({rx_alias(ha)}\s+{score}\s+{rx_alias(aa)}\s*(?:\||-|,|:)?\s*.{{0,80}}?(?:Match report|highlights|FIFA|World Cup))"
+            pat = rf"({rx_alias(ha)}\s+{score}\s+{rx_alias(aa)}\s*(?:\||-|,|:)?.{{0,80}}?(?:Match report|highlights|FIFA|World Cup))"
             m = re.search(pat, text, flags=re.I)
             if m:
-                return int(m.group(2)), int(m.group(3)), normalize_text(m.group(1))[:380]
+                hs, aw = int(m.group(2)), int(m.group(3))
+                if sane_score(hs, aw):
+                    return hs, aw, normalize_text(m.group(1))[:500]
 
     return None
-
 
 
 def classify_fifa_match_status(evidence: str) -> str:
@@ -299,6 +390,23 @@ def discover_fifa_results(data: Dict[str, Any]) -> Tuple[Dict[int, Dict[str, Any
         except Exception as e:
             warnings.append(f"Could not fetch FIFA URL {url}: {e}")
 
+    # Browser-rendered pass: this is the heavy but necessary path for live scores rendered by JavaScript.
+    # Keep it focused on the central fixtures/live pages and known match-centre URLs.
+    rendered_urls: List[str] = []
+    for url in [FIFA_SCORES_URL, FIFA_MATCH_CENTRE_LIVE_URL, FIFA_MATCH_CENTRE_LIVE_ROOT_URL]:
+        if url not in rendered_urls:
+            rendered_urls.append(url)
+    for mid, url in KNOWN_MATCH_CENTRE.items():
+        if url not in rendered_urls:
+            rendered_urls.append(url)
+    for url in rendered_urls:
+        try:
+            rendered = fetch_rendered_url(url)
+            fetched.append(url + " [rendered]")
+            combined_text += "\n\nRENDERED_SOURCE_URL: " + url + "\n" + rendered
+        except Exception as e:
+            warnings.append(f"Could not render FIFA URL {url}: {e}")
+
     if not fetched:
         warnings.append("No FIFA pages could be fetched. Data was not changed.")
         return discovered, warnings
@@ -340,9 +448,14 @@ def discover_fifa_results(data: Dict[str, Any]) -> Tuple[Dict[int, Dict[str, Any
         debug_row["evidence"] = evidence
         debug_rows.append(debug_row)
 
-        # Guardrail: do not turn scheduled future 0-0 fixtures into live scores unless FIFA text says live/in-progress.
+        # Guardrail: do not turn scheduled future 0-0 fixtures into live scores unless context is strong.
+        # If a rendered FIFA/Match Centre page shows a plausible non-clock score for this exact team pair,
+        # treat it as live. Final locking still requires final/FT/report cues.
         if match_status == "unknown" and str(match.get("status", "")) not in ("verified", "live"):
-            continue
+            if mid in KNOWN_MATCH_CENTRE and (hs != 0 or aw != 0):
+                match_status = "live"
+            else:
+                continue
         if match_status == "unknown":
             match_status = "verified" if str(match.get("status", "")) == "verified" else "live"
         discovered[mid] = {
