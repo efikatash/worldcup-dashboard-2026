@@ -35,38 +35,38 @@
 34,65,F,07:00 - 21/6,טוניסיה,יפן,,,pending,,,
 35,66,F,02:00 - 26/6,טוניסיה,הולנד,,,pending,,,
 36,67,F,02:00 - 26/6,יפן,שבדיה,,,pending,,,
-37,72,G,22:00 - 15/6,בלגיה,מצרים,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760426
-38,73,G,04:00 - 16/6,איראן,ניו זילנד,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760427
+37,72,G,22:00 - 15/6,בלגיה,מצרים,,,pending,pending,ממתין לתוצאת משחק,
+38,73,G,04:00 - 16/6,איראן,ניו זילנד,,,pending,pending,ממתין לתוצאת משחק,
 39,74,G,22:00 - 21/6,בלגיה,איראן,,,pending,,,
 40,75,G,04:00 - 22/6,ניו זילנד,מצרים,,,pending,,,
 41,76,G,06:00 - 27/6,מצרים,איראן,,,pending,,,
 42,77,G,06:00 - 27/6,ניו זילנד,בלגיה,,,pending,,,
-43,82,H,19:00 - 15/6,ספרד,קייפ ורדה,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760428
-44,83,H,01:00 - 16/6,ערב הסעודית,אורוגוואי,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760429
+43,82,H,19:00 - 15/6,ספרד,קייפ ורדה,,,pending,pending,ממתין לתוצאת משחק,
+44,83,H,01:00 - 16/6,ערב הסעודית,אורוגוואי,,,pending,pending,ממתין לתוצאת משחק,
 45,84,H,19:00 - 21/6,ספרד,ערב הסעודית,,,pending,,,
 46,85,H,01:00 - 22/6,אורוגוואי,קייפ ורדה,,,pending,,,
 47,86,H,03:00 - 27/6,אורוגוואי,ספרד,,,pending,,,
 48,87,H,03:00 - 27/6,קייפ ורדה,ערב הסעודית,,,pending,,,
-49,92,I,22:00 - 16/6,צרפת,סנגל,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760432
-50,93,I,01:00 - 17/6,עירק,נורווגיה,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760430
+49,92,I,22:00 - 16/6,צרפת,סנגל,,,pending,pending,ממתין לתוצאת משחק,
+50,93,I,01:00 - 17/6,עירק,נורווגיה,,,pending,pending,ממתין לתוצאת משחק,
 51,94,I,00:00 - 22/6,צרפת,עירק,,,pending,,,
 52,95,I,03:00 - 22/6,נורווגיה,סנגל,,,pending,,,
 53,96,I,22:00 - 26/6,נורווגיה,צרפת,,,pending,,,
 54,97,I,22:00 - 26/6,סנגל,עירק,,,pending,,,
-55,102,J,04:00 - 17/6,ארגנטינה,אלג'יריה,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760433
-56,103,J,07:00 - 17/6,אוסטריה,ירדן,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760431
+55,102,J,04:00 - 17/6,ארגנטינה,אלג'יריה,,,pending,pending,ממתין לתוצאת משחק,
+56,103,J,07:00 - 17/6,אוסטריה,ירדן,,,pending,pending,ממתין לתוצאת משחק,
 57,104,J,20:00 - 22/6,ארגנטינה,אוסטריה,,,pending,,,
 58,105,J,06:00 - 23/6,ירדן,אלג'יריה,,,pending,,,
 59,106,J,05:00 - 28/6,אלג'יריה,אוסטריה,,,pending,,,
 60,107,J,05:00 - 28/6,ירדן,ארגנטינה,,,pending,,,
-61,112,K,20:00 - 17/6,פורטוגל,קונגו,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760435
-62,113,K,05:00 - 18/6,אוזבקיסטן,קולומביה,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760436
+61,112,K,20:00 - 17/6,פורטוגל,קונגו,,,pending,pending,ממתין לתוצאת משחק,
+62,113,K,05:00 - 18/6,אוזבקיסטן,קולומביה,,,pending,pending,ממתין לתוצאת משחק,
 63,114,K,20:00 - 23/6,פורטוגל,אוזבקיסטן,,,pending,,,
 64,115,K,05:00 - 24/6,קולומביה,קונגו,,,pending,,,
 65,116,K,02:30 - 28/6,קולומביה,פורטוגל,,,pending,,,
 66,117,K,02:30 - 28/6,קונגו,אוזבקיסטן,,,pending,,,
-67,122,L,23:00 - 17/6,אנגליה,קרואטיה,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760437
-68,123,L,02:00 - 18/6,גאנה,פנמה,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760434
+67,122,L,23:00 - 17/6,אנגליה,קרואטיה,,,pending,pending,ממתין לתוצאת משחק,
+68,123,L,02:00 - 18/6,גאנה,פנמה,,,pending,pending,ממתין לתוצאת משחק,
 69,124,L,23:00 - 23/6,אנגליה,גאנה,,,pending,,,
 70,125,L,02:00 - 24/6,פנמה,קרואטיה,,,pending,,,
 71,126,L,00:00 - 28/6,קרואטיה,גאנה,,,pending,,,

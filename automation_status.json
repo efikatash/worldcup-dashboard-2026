@@ -1,89 +1,16 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-15T13:04:48Z",
+  "updated_at_utc": "2026-06-15T14:56:00Z",
   "completed_matches": 12,
-  "live_matches": 12,
+  "live_matches": 0,
   "cache_size_before": 12,
   "cache_size_after": 12,
   "restored_from_cache": [],
   "final_updates": [],
-  "live_updates": [
-    {
-      "matchId": 37,
-      "match": "בלגיה - מצרים",
-      "score": "0-0",
-      "status": "live"
-    },
-    {
-      "matchId": 38,
-      "match": "איראן - ניו זילנד",
-      "score": "0-0",
-      "status": "live"
-    },
-    {
-      "matchId": 43,
-      "match": "ספרד - קייפ ורדה",
-      "score": "0-0",
-      "status": "live"
-    },
-    {
-      "matchId": 44,
-      "match": "ערב הסעודית - אורוגוואי",
-      "score": "0-0",
-      "status": "live"
-    },
-    {
-      "matchId": 49,
-      "match": "צרפת - סנגל",
-      "score": "0-0",
-      "status": "live"
-    },
-    {
-      "matchId": 50,
-      "match": "עירק - נורווגיה",
-      "score": "0-0",
-      "status": "live"
-    },
-    {
-      "matchId": 55,
-      "match": "ארגנטינה - אלג'יריה",
-      "score": "0-0",
-      "status": "live"
-    },
-    {
-      "matchId": 56,
-      "match": "אוסטריה - ירדן",
-      "score": "0-0",
-      "status": "live"
-    },
-    {
-      "matchId": 61,
-      "match": "פורטוגל - קונגו",
-      "score": "0-0",
-      "status": "live"
-    },
-    {
-      "matchId": 62,
-      "match": "אוזבקיסטן - קולומביה",
-      "score": "0-0",
-      "status": "live"
-    },
-    {
-      "matchId": 67,
-      "match": "אנגליה - קרואטיה",
-      "score": "0-0",
-      "status": "live"
-    },
-    {
-      "matchId": 68,
-      "match": "גאנה - פנמה",
-      "score": "0-0",
-      "status": "live"
-    }
-  ],
+  "live_updates": [],
   "conflicts": [],
   "warnings": [],
-  "leader": "מיטל יצחקי",
-  "leader_points": 129
+  "leader": "ירין יוסף",
+  "leader_points": 94
 }

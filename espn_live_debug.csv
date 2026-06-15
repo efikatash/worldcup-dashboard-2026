@@ -35,38 +35,38 @@
 34,טוניסיה - יפן,pending,None-None,,,,not_found,,,
 35,טוניסיה - הולנד,pending,None-None,,,,not_found,,,
 36,יפן - שבדיה,pending,None-None,,,,not_found,,,
-37,בלגיה - מצרים,live,0-0,760426,Egypt at Belgium,0-0,live,0',https://www.espn.com/soccer/match/_/gameId/760426,Scheduled
-38,איראן - ניו זילנד,live,0-0,760427,New Zealand at Iran,0-0,live,0',https://www.espn.com/soccer/match/_/gameId/760427,Scheduled
+37,בלגיה - מצרים,live,0-0,,,,not_found,,,
+38,איראן - ניו זילנד,live,0-0,,,,not_found,,,
 39,בלגיה - איראן,pending,None-None,,,,not_found,,,
 40,ניו זילנד - מצרים,pending,None-None,,,,not_found,,,
 41,מצרים - איראן,pending,None-None,,,,not_found,,,
 42,ניו זילנד - בלגיה,pending,None-None,,,,not_found,,,
-43,ספרד - קייפ ורדה,live,0-0,760428,Cape Verde at Spain,0-0,live,0',https://www.espn.com/soccer/match/_/gameId/760428,Scheduled
-44,ערב הסעודית - אורוגוואי,live,0-0,760429,Uruguay at Saudi Arabia,0-0,live,0',https://www.espn.com/soccer/match/_/gameId/760429,Scheduled
+43,ספרד - קייפ ורדה,live,0-0,,,,not_found,,,
+44,ערב הסעודית - אורוגוואי,live,0-0,,,,not_found,,,
 45,ספרד - ערב הסעודית,pending,None-None,,,,not_found,,,
 46,אורוגוואי - קייפ ורדה,pending,None-None,,,,not_found,,,
 47,אורוגוואי - ספרד,pending,None-None,,,,not_found,,,
 48,קייפ ורדה - ערב הסעודית,pending,None-None,,,,not_found,,,
-49,צרפת - סנגל,live,0-0,760432,Senegal at France,0-0,live,0',https://www.espn.com/soccer/match/_/gameId/760432,Scheduled
-50,עירק - נורווגיה,live,0-0,760430,Norway at Iraq,0-0,live,0',https://www.espn.com/soccer/match/_/gameId/760430,Scheduled
+49,צרפת - סנגל,live,0-0,,,,not_found,,,
+50,עירק - נורווגיה,live,0-0,,,,not_found,,,
 51,צרפת - עירק,pending,None-None,,,,not_found,,,
 52,נורווגיה - סנגל,pending,None-None,,,,not_found,,,
 53,נורווגיה - צרפת,pending,None-None,,,,not_found,,,
 54,סנגל - עירק,pending,None-None,,,,not_found,,,
-55,ארגנטינה - אלג'יריה,live,0-0,760433,Algeria at Argentina,0-0,live,0',https://www.espn.com/soccer/match/_/gameId/760433,Scheduled
-56,אוסטריה - ירדן,live,0-0,760431,Jordan at Austria,0-0,live,0',https://www.espn.com/soccer/match/_/gameId/760431,Scheduled
+55,ארגנטינה - אלג'יריה,live,0-0,,,,not_found,,,
+56,אוסטריה - ירדן,live,0-0,,,,not_found,,,
 57,ארגנטינה - אוסטריה,pending,None-None,,,,not_found,,,
 58,ירדן - אלג'יריה,pending,None-None,,,,not_found,,,
 59,אלג'יריה - אוסטריה,pending,None-None,,,,not_found,,,
 60,ירדן - ארגנטינה,pending,None-None,,,,not_found,,,
-61,פורטוגל - קונגו,live,0-0,760435,Congo DR at Portugal,0-0,live,0',https://www.espn.com/soccer/match/_/gameId/760435,Scheduled
-62,אוזבקיסטן - קולומביה,live,0-0,760436,Colombia at Uzbekistan,0-0,live,0',https://www.espn.com/soccer/match/_/gameId/760436,Scheduled
+61,פורטוגל - קונגו,live,0-0,,,,not_found,,,
+62,אוזבקיסטן - קולומביה,live,0-0,,,,not_found,,,
 63,פורטוגל - אוזבקיסטן,pending,None-None,,,,not_found,,,
 64,קולומביה - קונגו,pending,None-None,,,,not_found,,,
 65,קולומביה - פורטוגל,pending,None-None,,,,not_found,,,
 66,קונגו - אוזבקיסטן,pending,None-None,,,,not_found,,,
-67,אנגליה - קרואטיה,live,0-0,760437,Croatia at England,0-0,live,0',https://www.espn.com/soccer/match/_/gameId/760437,Scheduled
-68,גאנה - פנמה,live,0-0,760434,Panama at Ghana,0-0,live,0',https://www.espn.com/soccer/match/_/gameId/760434,Scheduled
+67,אנגליה - קרואטיה,live,0-0,,,,not_found,,,
+68,גאנה - פנמה,live,0-0,,,,not_found,,,
 69,אנגליה - גאנה,pending,None-None,,,,not_found,,,
 70,פנמה - קרואטיה,pending,None-None,,,,not_found,,,
 71,קרואטיה - גאנה,pending,None-None,,,,not_found,,,
