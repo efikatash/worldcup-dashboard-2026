@@ -403,11 +403,19 @@ def apply_espn(data: Dict[str, Any], scores: Dict[int, Dict[str, Any]], cache: D
                     m["sourceUrl"] = ""
             continue
 
-        nh, na = s["actualHome"], s["actualAway"]
+                nh, na = s["actualHome"], s["actualAway"]
         if str(m.get("status") or "") == "verified" and m.get("actualHome") is not None:
             oh, oa = parse_int(m.get("actualHome")), parse_int(m.get("actualAway"))
             if oh != nh or oa != na:
                 conflicts.append({"matchId": mid, "match": f"{m.get('home')} - {m.get('away')}", "current": f"{oh}-{oa}", "espn": f"{nh}-{na}"})
+            elif s.get("status") == "verified":
+                ss = str(m.get("sourceStatus") or "")
+                url = str(m.get("sourceUrl") or "").lower()
+                title = str(m.get("sourceTitle") or "").lower()
+                if "verified_fifa" not in ss and "fifa.com" not in url and "fifa" not in title:
+                    m["sourceStatus"] = "verified_espn_final"
+                    m["sourceUrl"] = s.get("sourceUrl") or m.get("sourceUrl") or ""
+                    m["sourceTitle"] = "ESPN final scoreboard"
             continue
 
         m["actualHome"] = nh
