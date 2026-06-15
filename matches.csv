@@ -1,73 +1,73 @@
-﻿id,row,group,date,home,away,actualHome,actualAway,status,sourceTitle,sourceUrl
-1,12,A,22:00 - 11/6,מקסיקו,דרום אפריקה,2,0,verified,Mexico 2-0 South Africa | Match report and highlights,https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-south-africa-highlights-match-report
-2,13,A,05:00 - 12/6,דרום קוריאה,צ'כיה,2,1,verified,Korea Republic 2-1 Czechia | Match report and highlights,https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/korea-republic-czechia-highlights-match-report
-3,14,A,19:00 - 18/6,צ'כיה,דרום אפריקה,,,pending,,
-4,15,A,04:00 - 19/6,מקסיקו,דרום קוריאה,,,pending,,
-5,16,A,04:00 - 25/6,דרום אפריקה,דרום קוריאה,,,pending,,
-6,17,A,04:00 - 25/6,צ'כיה,מקסיקו,,,pending,,
-7,22,B,22:00 - 12/6,קנדה,בוסניה,1,1,verified,Canada 1-1 Bosnia and Herzegovina | Match report and highlights,https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/canada-bosnia-and-herzegovina-highlights-match-report
-8,23,B,22:00 - 13/6,קטאר,שווייץ,1,1,verified,Qatar 1-1 Switzerland | Match report and highlights,https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/qatar-switzerland-highlights-match-report
-9,24,B,22:00 - 18/6,שווייץ,בוסניה,,,pending,,
-10,25,B,01:00 - 19/6,קנדה,קטאר,,,pending,,
-11,26,B,22:00 - 24/6,שווייץ,קנדה,,,pending,,
-12,27,B,22:00 - 24/6,בוסניה,קטאר,,,pending,,
-13,32,C,01:00 - 14/6,ברזיל,מרוקו,1,1,verified,Brazil 1-1 Morocco | Match report and highlights,https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/brazil-morocco-highlights-match-report
-14,33,C,04:00 - 14/6,האיטי,סקוטלנד,0,1,verified,"Scots edge Haiti as Morocco, Qatar earn battling draws | FIFA",https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/matchday-3-round-up-review-highlights
-15,34,C,01:00 - 20/6,סקוטלנד,מרוקו,,,pending,,
-16,35,C,03:30 - 20/6,ברזיל,האיטי,,,pending,,
-17,36,C,01:00 - 25/6,סקוטלנד,ברזיל,,,pending,,
-18,37,C,01:00 - 25/6,מרוקו,האיטי,,,pending,,
-19,42,D,04:00 - 13/6,"ארה""ב",פרגוואי,4,1,verified,USA 4-1 Paraguay | Match report and highlights,https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/usa-paraguay-highlights-match-report
-20,43,D,07:00 - 14/6,אוסטרליה,טורקיה,2,0,verified,Australia 2-0 Türkiye | FIFA Match Centre,https://www.fifa.com/en/match-centre/match/17/285023/289273/400021463
-21,44,D,22:00 - 19/6,"ארה""ב",אוסטרליה,,,pending,,
-22,45,D,06:00 - 20/6,טורקיה,פרגוואי,,,pending,,
-23,46,D,05:00 - 26/6,פרגוואי,אוסטרליה,,,pending,,
-24,47,D,05:00 - 26/6,טורקיה,"ארה""ב",,,pending,,
-25,52,E,20:00 - 14/6,גרמניה,קורסאו,7,1,verified,קובץ ניחושים מעודכן - תוצאות משחקי היום הרביעי 14.6.26,
-26,53,E,02:00 - 15/6,חוף השנהב,אקוואדור,1,0,verified,קובץ ניחושים מעודכן - תוצאות משחקי היום הרביעי 14.6.26,
-27,54,E,23:00 - 20/6,גרמניה,חוף השנהב,,,pending,,
-28,55,E,03:00 - 21/6,אקוואדור,קורסאו,,,pending,,
-29,56,E,23:00 - 25/6,אקוואדור,גרמניה,,,pending,,
-30,57,E,23:00 - 25/6,קורסאו,חוף השנהב,,,pending,,
-31,62,F,23:00 - 14/6,הולנד,יפן,2,2,verified,קובץ ניחושים מעודכן - תוצאות משחקי היום הרביעי 14.6.26,
-32,63,F,05:00 - 15/6,שבדיה,טוניסיה,5,1,verified,קובץ ניחושים מעודכן - תוצאות משחקי היום הרביעי 14.6.26,
-33,64,F,22:00 - 20/6,הולנד,שבדיה,,,pending,,
-34,65,F,07:00 - 21/6,טוניסיה,יפן,,,pending,,
-35,66,F,02:00 - 26/6,טוניסיה,הולנד,,,pending,,
-36,67,F,02:00 - 26/6,יפן,שבדיה,,,pending,,
-37,72,G,22:00 - 15/6,בלגיה,מצרים,,,pending,,
-38,73,G,04:00 - 16/6,איראן,ניו זילנד,,,pending,,
-39,74,G,22:00 - 21/6,בלגיה,איראן,,,pending,,
-40,75,G,04:00 - 22/6,ניו זילנד,מצרים,,,pending,,
-41,76,G,06:00 - 27/6,מצרים,איראן,,,pending,,
-42,77,G,06:00 - 27/6,ניו זילנד,בלגיה,,,pending,,
-43,82,H,19:00 - 15/6,ספרד,קייפ ורדה,,,pending,,
-44,83,H,01:00 - 16/6,ערב הסעודית,אורוגוואי,,,pending,,
-45,84,H,19:00 - 21/6,ספרד,ערב הסעודית,,,pending,,
-46,85,H,01:00 - 22/6,אורוגוואי,קייפ ורדה,,,pending,,
-47,86,H,03:00 - 27/6,אורוגוואי,ספרד,,,pending,,
-48,87,H,03:00 - 27/6,קייפ ורדה,ערב הסעודית,,,pending,,
-49,92,I,22:00 - 16/6,צרפת,סנגל,,,pending,,
-50,93,I,01:00 - 17/6,עירק,נורווגיה,,,pending,,
-51,94,I,00:00 - 22/6,צרפת,עירק,,,pending,,
-52,95,I,03:00 - 22/6,נורווגיה,סנגל,,,pending,,
-53,96,I,22:00 - 26/6,נורווגיה,צרפת,,,pending,,
-54,97,I,22:00 - 26/6,סנגל,עירק,,,pending,,
-55,102,J,04:00 - 17/6,ארגנטינה,אלג'יריה,,,pending,,
-56,103,J,07:00 - 17/6,אוסטריה,ירדן,,,pending,,
-57,104,J,20:00 - 22/6,ארגנטינה,אוסטריה,,,pending,,
-58,105,J,06:00 - 23/6,ירדן,אלג'יריה,,,pending,,
-59,106,J,05:00 - 28/6,אלג'יריה,אוסטריה,,,pending,,
-60,107,J,05:00 - 28/6,ירדן,ארגנטינה,,,pending,,
-61,112,K,20:00 - 17/6,פורטוגל,קונגו,,,pending,,
-62,113,K,05:00 - 18/6,אוזבקיסטן,קולומביה,,,pending,,
-63,114,K,20:00 - 23/6,פורטוגל,אוזבקיסטן,,,pending,,
-64,115,K,05:00 - 24/6,קולומביה,קונגו,,,pending,,
-65,116,K,02:30 - 28/6,קולומביה,פורטוגל,,,pending,,
-66,117,K,02:30 - 28/6,קונגו,אוזבקיסטן,,,pending,,
-67,122,L,23:00 - 17/6,אנגליה,קרואטיה,,,pending,,
-68,123,L,02:00 - 18/6,גאנה,פנמה,,,pending,,
-69,124,L,23:00 - 23/6,אנגליה,גאנה,,,pending,,
-70,125,L,02:00 - 24/6,פנמה,קרואטיה,,,pending,,
-71,126,L,00:00 - 28/6,קרואטיה,גאנה,,,pending,,
-72,127,L,00:00 - 28/6,פנמה,אנגליה,,,pending,,
+﻿id,row,group,date,home,away,actualHome,actualAway,status,sourceStatus,sourceTitle,sourceUrl
+1,12,A,22:00 - 11/6,מקסיקו,דרום אפריקה,2,0,verified,,Mexico 2-0 South Africa | Match report and highlights,https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-south-africa-highlights-match-report
+2,13,A,05:00 - 12/6,דרום קוריאה,צ'כיה,2,1,verified,,Korea Republic 2-1 Czechia | Match report and highlights,https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/korea-republic-czechia-highlights-match-report
+3,14,A,19:00 - 18/6,צ'כיה,דרום אפריקה,,,pending,,,
+4,15,A,04:00 - 19/6,מקסיקו,דרום קוריאה,,,pending,,,
+5,16,A,04:00 - 25/6,דרום אפריקה,דרום קוריאה,,,pending,,,
+6,17,A,04:00 - 25/6,צ'כיה,מקסיקו,,,pending,,,
+7,22,B,22:00 - 12/6,קנדה,בוסניה,1,1,verified,,Canada 1-1 Bosnia and Herzegovina | Match report and highlights,https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/canada-bosnia-and-herzegovina-highlights-match-report
+8,23,B,22:00 - 13/6,קטאר,שווייץ,1,1,verified,,Qatar 1-1 Switzerland | Match report and highlights,https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/qatar-switzerland-highlights-match-report
+9,24,B,22:00 - 18/6,שווייץ,בוסניה,,,pending,,,
+10,25,B,01:00 - 19/6,קנדה,קטאר,,,pending,,,
+11,26,B,22:00 - 24/6,שווייץ,קנדה,,,pending,,,
+12,27,B,22:00 - 24/6,בוסניה,קטאר,,,pending,,,
+13,32,C,01:00 - 14/6,ברזיל,מרוקו,1,1,verified,,Brazil 1-1 Morocco | Match report and highlights,https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/brazil-morocco-highlights-match-report
+14,33,C,04:00 - 14/6,האיטי,סקוטלנד,0,1,verified,,"Scots edge Haiti as Morocco, Qatar earn battling draws | FIFA",https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/matchday-3-round-up-review-highlights
+15,34,C,01:00 - 20/6,סקוטלנד,מרוקו,,,pending,,,
+16,35,C,03:30 - 20/6,ברזיל,האיטי,,,pending,,,
+17,36,C,01:00 - 25/6,סקוטלנד,ברזיל,,,pending,,,
+18,37,C,01:00 - 25/6,מרוקו,האיטי,,,pending,,,
+19,42,D,04:00 - 13/6,"ארה""ב",פרגוואי,4,1,verified,,USA 4-1 Paraguay | Match report and highlights,https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/usa-paraguay-highlights-match-report
+20,43,D,07:00 - 14/6,אוסטרליה,טורקיה,2,0,verified,,Australia 2-0 Türkiye | FIFA Match Centre,https://www.fifa.com/en/match-centre/match/17/285023/289273/400021463
+21,44,D,22:00 - 19/6,"ארה""ב",אוסטרליה,,,pending,,,
+22,45,D,06:00 - 20/6,טורקיה,פרגוואי,,,pending,,,
+23,46,D,05:00 - 26/6,פרגוואי,אוסטרליה,,,pending,,,
+24,47,D,05:00 - 26/6,טורקיה,"ארה""ב",,,pending,,,
+25,52,E,20:00 - 14/6,גרמניה,קורסאו,7,1,verified,,קובץ ניחושים מעודכן - תוצאות משחקי היום הרביעי 14.6.26,
+26,53,E,02:00 - 15/6,חוף השנהב,אקוואדור,1,0,verified,,קובץ ניחושים מעודכן - תוצאות משחקי היום הרביעי 14.6.26,
+27,54,E,23:00 - 20/6,גרמניה,חוף השנהב,,,pending,,,
+28,55,E,03:00 - 21/6,אקוואדור,קורסאו,,,pending,,,
+29,56,E,23:00 - 25/6,אקוואדור,גרמניה,,,pending,,,
+30,57,E,23:00 - 25/6,קורסאו,חוף השנהב,,,pending,,,
+31,62,F,23:00 - 14/6,הולנד,יפן,2,2,verified,,קובץ ניחושים מעודכן - תוצאות משחקי היום הרביעי 14.6.26,
+32,63,F,05:00 - 15/6,שבדיה,טוניסיה,5,1,verified,,קובץ ניחושים מעודכן - תוצאות משחקי היום הרביעי 14.6.26,
+33,64,F,22:00 - 20/6,הולנד,שבדיה,,,pending,,,
+34,65,F,07:00 - 21/6,טוניסיה,יפן,,,pending,,,
+35,66,F,02:00 - 26/6,טוניסיה,הולנד,,,pending,,,
+36,67,F,02:00 - 26/6,יפן,שבדיה,,,pending,,,
+37,72,G,22:00 - 15/6,בלגיה,מצרים,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760426
+38,73,G,04:00 - 16/6,איראן,ניו זילנד,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760427
+39,74,G,22:00 - 21/6,בלגיה,איראן,,,pending,,,
+40,75,G,04:00 - 22/6,ניו זילנד,מצרים,,,pending,,,
+41,76,G,06:00 - 27/6,מצרים,איראן,,,pending,,,
+42,77,G,06:00 - 27/6,ניו זילנד,בלגיה,,,pending,,,
+43,82,H,19:00 - 15/6,ספרד,קייפ ורדה,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760428
+44,83,H,01:00 - 16/6,ערב הסעודית,אורוגוואי,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760429
+45,84,H,19:00 - 21/6,ספרד,ערב הסעודית,,,pending,,,
+46,85,H,01:00 - 22/6,אורוגוואי,קייפ ורדה,,,pending,,,
+47,86,H,03:00 - 27/6,אורוגוואי,ספרד,,,pending,,,
+48,87,H,03:00 - 27/6,קייפ ורדה,ערב הסעודית,,,pending,,,
+49,92,I,22:00 - 16/6,צרפת,סנגל,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760432
+50,93,I,01:00 - 17/6,עירק,נורווגיה,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760430
+51,94,I,00:00 - 22/6,צרפת,עירק,,,pending,,,
+52,95,I,03:00 - 22/6,נורווגיה,סנגל,,,pending,,,
+53,96,I,22:00 - 26/6,נורווגיה,צרפת,,,pending,,,
+54,97,I,22:00 - 26/6,סנגל,עירק,,,pending,,,
+55,102,J,04:00 - 17/6,ארגנטינה,אלג'יריה,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760433
+56,103,J,07:00 - 17/6,אוסטריה,ירדן,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760431
+57,104,J,20:00 - 22/6,ארגנטינה,אוסטריה,,,pending,,,
+58,105,J,06:00 - 23/6,ירדן,אלג'יריה,,,pending,,,
+59,106,J,05:00 - 28/6,אלג'יריה,אוסטריה,,,pending,,,
+60,107,J,05:00 - 28/6,ירדן,ארגנטינה,,,pending,,,
+61,112,K,20:00 - 17/6,פורטוגל,קונגו,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760435
+62,113,K,05:00 - 18/6,אוזבקיסטן,קולומביה,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760436
+63,114,K,20:00 - 23/6,פורטוגל,אוזבקיסטן,,,pending,,,
+64,115,K,05:00 - 24/6,קולומביה,קונגו,,,pending,,,
+65,116,K,02:30 - 28/6,קולומביה,פורטוגל,,,pending,,,
+66,117,K,02:30 - 28/6,קונגו,אוזבקיסטן,,,pending,,,
+67,122,L,23:00 - 17/6,אנגליה,קרואטיה,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760437
+68,123,L,02:00 - 18/6,גאנה,פנמה,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760434
+69,124,L,23:00 - 23/6,אנגליה,גאנה,,,pending,,,
+70,125,L,02:00 - 24/6,פנמה,קרואטיה,,,pending,,,
+71,126,L,00:00 - 28/6,קרואטיה,גאנה,,,pending,,,
+72,127,L,00:00 - 28/6,פנמה,אנגליה,,,pending,,,
