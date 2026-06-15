@@ -403,7 +403,7 @@ def apply_espn(data: Dict[str, Any], scores: Dict[int, Dict[str, Any]], cache: D
                     m["sourceUrl"] = ""
             continue
 
-                nh, na = s["actualHome"], s["actualAway"]
+        nh, na = s["actualHome"], s["actualAway"]
         if str(m.get("status") or "") == "verified" and m.get("actualHome") is not None:
             oh, oa = parse_int(m.get("actualHome")), parse_int(m.get("actualAway"))
             if oh != nh or oa != na:
