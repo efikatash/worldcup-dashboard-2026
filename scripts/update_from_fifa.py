@@ -1282,7 +1282,7 @@ def recompute_scores(data: Dict[str, Any]) -> None:
             if match_status == "live" and ah is not None and aa is not None:
                 label = "לייב - " + label
             elif match_status == "espn_final_pending_fifa" and ah is not None and aa is not None:
-                label = "הסתיים - ממתין FIFA - " + label
+                label = "סופי ESPN - " + label
             md["points"] = pts
             md["exact"] = ex
             md["partial"] = pa
@@ -1345,7 +1345,8 @@ def recompute_scores(data: Dict[str, Any]) -> None:
     meta["matchesCount"] = len(data.get("matches", []))
     meta["completedFifaMatches"] = sum(1 for m in data.get("matches", []) if m.get("status") == "verified")
     meta["liveFifaMatches"] = sum(1 for m in data.get("matches", []) if m.get("status") == "live")
-    meta["provisionalFinalMatches"] = sum(1 for m in data.get("matches", []) if m.get("status") == "espn_final_pending_fifa")
+    meta["provisionalFinalMatches"] = 0
+    meta["espnFinalMatches"] = sum(1 for m in data.get("matches", []) if m.get("sourceStatus") == "verified_espn_final")
     meta["scoredMatchesForLeaderboard"] = meta["completedFifaMatches"] + meta["liveFifaMatches"] + meta["provisionalFinalMatches"]
     meta["pendingMatches"] = meta["matchesCount"] - meta["completedFifaMatches"] - meta["liveFifaMatches"] - meta["provisionalFinalMatches"]
     meta["openQuestionsCount"] = len(data.get("openQuestions", []))
@@ -1580,13 +1581,13 @@ def main() -> int:
             m["status"] = "verified"
             m["sourceStatus"] = hit.get("sourceStatus") or "verified_fifa_locked"
         elif hit_status == "espn_final_pending_fifa":
-            m["status"] = "espn_final_pending_fifa"
-            m["sourceStatus"] = "espn_final_pending_fifa"
+            m["status"] = "verified"
+            m["sourceStatus"] = "verified_espn_final"
         else:
             m["status"] = "live"
             m["sourceStatus"] = hit.get("sourceStatus") or "live_espn"
         m["sourceUrl"] = hit.get("sourceUrl") or FIFA_SCORES_URL
-        m["sourceTitle"] = hit.get("sourceTitle") or ("ESPN full-time score - final fallback" if hit_status == "verified" else ("ESPN full-time score - awaiting FIFA verification" if hit_status == "espn_final_pending_fifa" else ("ESPN live score - temporary" if hit_status == "live" else "FIFA official final result")))
+        m["sourceTitle"] = hit.get("sourceTitle") or ("ESPN full-time score - final fallback" if hit_status == "verified" else ("ESPN full-time score - final fallback" if hit_status == "espn_final_pending_fifa" else ("ESPN live score - temporary" if hit_status == "live" else "FIFA official final result")))
 
         payload = {
             "matchId": mid,
