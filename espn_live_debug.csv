@@ -6,13 +6,13 @@
 5,דרום אפריקה - דרום קוריאה,pending,None-None,,,,not_found,,,
 6,צ'כיה - מקסיקו,pending,None-None,,,,not_found,,,
 7,קנדה - בוסניה,verified,1-1,,,,not_found,,,
-8,קטאר - שווייץ,verified,1-1,760420,Switzerland at Qatar,1-1,final_espn,FT,https://www.espn.com/soccer/match/_/gameId/760420/switzerland-qatar,matched by home/away teams from ESPN structured JSON
+8,קטאר - שווייץ,verified,1-1,,,,not_found,,,
 9,שווייץ - בוסניה,pending,None-None,,,,not_found,,,
 10,קנדה - קטאר,pending,None-None,,,,not_found,,,
 11,שווייץ - קנדה,pending,None-None,,,,not_found,,,
 12,בוסניה - קטאר,pending,None-None,,,,not_found,,,
-13,ברזיל - מרוקו,verified,1-1,760419,Morocco at Brazil,1-1,final_espn,FT,https://www.espn.com/soccer/match/_/gameId/760419/morocco-brazil,matched by home/away teams from ESPN structured JSON
-14,האיטי - סקוטלנד,verified,0-1,760418,Scotland at Haiti,0-1,final_espn,FT,https://www.espn.com/soccer/match/_/gameId/760418/scotland-haiti,matched by home/away teams from ESPN structured JSON
+13,ברזיל - מרוקו,verified,1-1,,,,not_found,,,
+14,האיטי - סקוטלנד,verified,0-1,,,,not_found,,,
 15,סקוטלנד - מרוקו,pending,None-None,,,,not_found,,,
 16,ברזיל - האיטי,pending,None-None,,,,not_found,,,
 17,סקוטלנד - ברזיל,pending,None-None,,,,not_found,,,
@@ -24,12 +24,12 @@
 23,פרגוואי - אוסטרליה,pending,None-None,,,,not_found,,,
 24,"טורקיה - ארה""ב",pending,None-None,,,,not_found,,,
 25,גרמניה - קורסאו,verified,7-1,760422,Curaçao at Germany,7-1,final_espn,FT,https://www.espn.com/soccer/match/_/gameId/760422/curacao-germany,matched by home/away teams from ESPN structured JSON
-26,חוף השנהב - אקוואדור,pending,None-None,760423,Ecuador at Ivory Coast,,pre,"Sun, June 14th at 7:00 PM EDT",,matched upcoming ESPN fixture; ignored
+26,חוף השנהב - אקוואדור,pending,None-None,760423,Ecuador at Ivory Coast,1-0,final_espn,FT,https://www.espn.com/soccer/match/_/gameId/760423/ecuador-ivory-coast,matched by home/away teams from ESPN structured JSON
 27,גרמניה - חוף השנהב,pending,None-None,,,,not_found,,,
 28,אקוואדור - קורסאו,pending,None-None,,,,not_found,,,
 29,אקוואדור - גרמניה,pending,None-None,,,,not_found,,,
 30,קורסאו - חוף השנהב,pending,None-None,,,,not_found,,,
-31,הולנד - יפן,live,0-0,760425,Japan at Netherlands,2-2,final_espn,FT,https://www.espn.com/soccer/match/_/gameId/760425/japan-netherlands,matched by home/away teams from ESPN structured JSON
+31,הולנד - יפן,verified,2-2,760425,Japan at Netherlands,2-2,final_espn,FT,https://www.espn.com/soccer/match/_/gameId/760425/japan-netherlands,matched by home/away teams from ESPN structured JSON
 32,שבדיה - טוניסיה,pending,None-None,760424,Tunisia at Sweden,,pre,"Sun, June 14th at 10:00 PM EDT",,matched upcoming ESPN fixture; ignored
 33,הולנד - שבדיה,pending,None-None,,,,not_found,,,
 34,טוניסיה - יפן,pending,None-None,,,,not_found,,,
@@ -47,13 +47,13 @@
 46,אורוגוואי - קייפ ורדה,pending,None-None,,,,not_found,,,
 47,אורוגוואי - ספרד,pending,None-None,,,,not_found,,,
 48,קייפ ורדה - ערב הסעודית,pending,None-None,,,,not_found,,,
-49,צרפת - סנגל,pending,None-None,,,,not_found,,,
-50,עירק - נורווגיה,pending,None-None,,,,not_found,,,
+49,צרפת - סנגל,pending,None-None,760432,Senegal at France,,pre,"Tue, June 16th at 3:00 PM EDT",,matched upcoming ESPN fixture; ignored
+50,עירק - נורווגיה,pending,None-None,760430,Norway at Iraq,,pre,"Tue, June 16th at 6:00 PM EDT",,matched upcoming ESPN fixture; ignored
 51,צרפת - עירק,pending,None-None,,,,not_found,,,
 52,נורווגיה - סנגל,pending,None-None,,,,not_found,,,
 53,נורווגיה - צרפת,pending,None-None,,,,not_found,,,
 54,סנגל - עירק,pending,None-None,,,,not_found,,,
-55,ארגנטינה - אלג'יריה,pending,None-None,,,,not_found,,,
+55,ארגנטינה - אלג'יריה,pending,None-None,760433,Algeria at Argentina,,pre,"Tue, June 16th at 9:00 PM EDT",,matched upcoming ESPN fixture; ignored
 56,אוסטריה - ירדן,pending,None-None,,,,not_found,,,
 57,ארגנטינה - אוסטריה,pending,None-None,,,,not_found,,,
 58,ירדן - אלג'יריה,pending,None-None,,,,not_found,,,

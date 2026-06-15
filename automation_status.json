@@ -1,15 +1,15 @@
 {
   "status": "ok",
   "message": "Dashboard checked against FIFA finals and ESPN live/final fallback. Unconfirmed temporary scores were cleaned. Added 1 new final match result(s). Fast-track daily review prepared for 24 question(s).",
-  "updated_at_utc": "2026-06-14T22:38:02Z",
+  "updated_at_utc": "2026-06-15T01:08:06Z",
   "updates": [
     {
-      "matchId": 31,
-      "match": "הולנד - יפן",
-      "score": "2-2",
+      "matchId": 26,
+      "match": "חוף השנהב - אקוואדור",
+      "score": "1-0",
       "status": "verified",
-      "source": "https://www.espn.com/soccer/match/_/gameId/760425/japan-netherlands",
-      "evidence": "ESPN event 760425 Japan at Netherlands 2-2 FT"
+      "source": "https://www.espn.com/soccer/match/_/gameId/760423/ecuador-ivory-coast",
+      "evidence": "ESPN event 760423 Ecuador at Ivory Coast 1-0 FT"
     }
   ],
   "live_updates": [],
@@ -2164,7 +2164,7 @@
       }
     ]
   },
-  "completed_matches": 10,
+  "completed_matches": 11,
   "live_matches": 0,
   "provisional_final_matches": 0,
   "live_open_questions": 0,
