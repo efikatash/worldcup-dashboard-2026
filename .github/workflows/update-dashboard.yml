@@ -29,6 +29,6 @@ jobs:
         run: |
           git config user.name "worldcup-dashboard-bot"
           git config user.email "worldcup-dashboard-bot@users.noreply.github.com"
-          git add data.json leaderboard.csv matches.csv open_questions.csv open_question_review.csv fast_track_review.csv sources_all.csv sources_fifa.csv efi_katash_audit.csv automation_status.json fifa_live_debug.csv espn_live_debug.csv
+          git add data.json leaderboard.csv matches.csv open_questions.csv open_question_review.csv fast_track_review.csv sources_all.csv sources_fifa.csv efi_katash_audit.csv automation_status.json fifa_live_debug.csv espn_live_debug.csv match_results_cache.json
           git commit -m "Auto-update dashboard results, ESPN live scores and open questions" || echo "No changes to commit"
           git push
