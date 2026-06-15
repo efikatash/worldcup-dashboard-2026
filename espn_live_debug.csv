@@ -1,23 +1,23 @@
 ﻿matchId,match,currentStatus,currentScore,espnEventId,espnName,candidateScore,candidateStatus,clock,sourceUrl,note
-1,מקסיקו - דרום אפריקה,verified,2-0,,,,not_found,,,
-2,דרום קוריאה - צ'כיה,verified,2-1,,,,not_found,,,
+1,מקסיקו - דרום אפריקה,verified,2-0,760415,South Africa at Mexico,2-0,final_espn,FT,https://www.espn.com/soccer/match/_/gameId/760415/south-africa-mexico,matched by home/away teams from ESPN structured JSON
+2,דרום קוריאה - צ'כיה,verified,2-1,760414,Czechia at South Korea,2-1,final_espn,FT,https://www.espn.com/soccer/match/_/gameId/760414/czechia-south-korea,matched by home/away teams from ESPN structured JSON
 3,צ'כיה - דרום אפריקה,pending,None-None,,,,not_found,,,
 4,מקסיקו - דרום קוריאה,pending,None-None,,,,not_found,,,
 5,דרום אפריקה - דרום קוריאה,pending,None-None,,,,not_found,,,
 6,צ'כיה - מקסיקו,pending,None-None,,,,not_found,,,
-7,קנדה - בוסניה,verified,1-1,,,,not_found,,,
-8,קטאר - שווייץ,verified,1-1,,,,not_found,,,
+7,קנדה - בוסניה,verified,1-1,760416,Bosnia-Herzegovina at Canada,1-1,final_espn,FT,https://www.espn.com/soccer/match/_/gameId/760416/bosnia-herzegovina-canada,matched by home/away teams from ESPN structured JSON
+8,קטאר - שווייץ,verified,1-1,760420,Switzerland at Qatar,1-1,final_espn,FT,https://www.espn.com/soccer/match/_/gameId/760420/switzerland-qatar,matched by home/away teams from ESPN structured JSON
 9,שווייץ - בוסניה,pending,None-None,,,,not_found,,,
 10,קנדה - קטאר,pending,None-None,,,,not_found,,,
 11,שווייץ - קנדה,pending,None-None,,,,not_found,,,
 12,בוסניה - קטאר,pending,None-None,,,,not_found,,,
-13,ברזיל - מרוקו,verified,1-1,,,,not_found,,,
-14,האיטי - סקוטלנד,verified,0-1,,,,not_found,,,
+13,ברזיל - מרוקו,verified,1-1,760419,Morocco at Brazil,1-1,final_espn,FT,https://www.espn.com/soccer/match/_/gameId/760419/morocco-brazil,matched by home/away teams from ESPN structured JSON
+14,האיטי - סקוטלנד,verified,0-1,760418,Scotland at Haiti,0-1,final_espn,FT,https://www.espn.com/soccer/match/_/gameId/760418/scotland-haiti,matched by home/away teams from ESPN structured JSON
 15,סקוטלנד - מרוקו,pending,None-None,,,,not_found,,,
 16,ברזיל - האיטי,pending,None-None,,,,not_found,,,
 17,סקוטלנד - ברזיל,pending,None-None,,,,not_found,,,
 18,מרוקו - האיטי,pending,None-None,,,,not_found,,,
-19,"ארה""ב - פרגוואי",verified,4-1,,,,not_found,,,
+19,"ארה""ב - פרגוואי",verified,4-1,760417,Paraguay at United States,4-1,final_espn,FT,https://www.espn.com/soccer/match/_/gameId/760417/paraguay-united-states,matched by home/away teams from ESPN structured JSON
 20,אוסטרליה - טורקיה,verified,2-0,760421,Türkiye at Australia,2-0,final_espn,FT,https://www.espn.com/soccer/match/_/gameId/760421/turkiye-australia,matched by home/away teams from ESPN structured JSON
 21,"ארה""ב - אוסטרליה",pending,None-None,,,,not_found,,,
 22,טורקיה - פרגוואי,pending,None-None,,,,not_found,,,
@@ -54,19 +54,19 @@
 53,נורווגיה - צרפת,pending,None-None,,,,not_found,,,
 54,סנגל - עירק,pending,None-None,,,,not_found,,,
 55,ארגנטינה - אלג'יריה,pending,None-None,760433,Algeria at Argentina,,pre,"Tue, June 16th at 9:00 PM EDT",,matched upcoming ESPN fixture; ignored
-56,אוסטריה - ירדן,pending,None-None,,,,not_found,,,
+56,אוסטריה - ירדן,pending,None-None,760431,Jordan at Austria,,pre,"Wed, June 16th at 12:00 AM EDT",,matched upcoming ESPN fixture; ignored
 57,ארגנטינה - אוסטריה,pending,None-None,,,,not_found,,,
 58,ירדן - אלג'יריה,pending,None-None,,,,not_found,,,
 59,אלג'יריה - אוסטריה,pending,None-None,,,,not_found,,,
 60,ירדן - ארגנטינה,pending,None-None,,,,not_found,,,
-61,פורטוגל - קונגו,pending,None-None,,,,not_found,,,
-62,אוזבקיסטן - קולומביה,pending,None-None,,,,not_found,,,
+61,פורטוגל - קונגו,pending,None-None,760435,Congo DR at Portugal,,pre,"Wed, June 17th at 1:00 PM EDT",,matched upcoming ESPN fixture; ignored
+62,אוזבקיסטן - קולומביה,pending,None-None,760436,Colombia at Uzbekistan,,pre,"Wed, June 17th at 10:00 PM EDT",,matched upcoming ESPN fixture; ignored
 63,פורטוגל - אוזבקיסטן,pending,None-None,,,,not_found,,,
 64,קולומביה - קונגו,pending,None-None,,,,not_found,,,
 65,קולומביה - פורטוגל,pending,None-None,,,,not_found,,,
 66,קונגו - אוזבקיסטן,pending,None-None,,,,not_found,,,
-67,אנגליה - קרואטיה,pending,None-None,,,,not_found,,,
-68,גאנה - פנמה,pending,None-None,,,,not_found,,,
+67,אנגליה - קרואטיה,pending,None-None,760437,Croatia at England,,pre,"Wed, June 17th at 4:00 PM EDT",,matched upcoming ESPN fixture; ignored
+68,גאנה - פנמה,pending,None-None,760434,Panama at Ghana,,pre,"Wed, June 17th at 7:00 PM EDT",,matched upcoming ESPN fixture; ignored
 69,אנגליה - גאנה,pending,None-None,,,,not_found,,,
 70,פנמה - קרואטיה,pending,None-None,,,,not_found,,,
 71,קרואטיה - גאנה,pending,None-None,,,,not_found,,,

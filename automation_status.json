@@ -1,9 +1,11 @@
 {
   "status": "ok",
   "message": "Dashboard checked against FIFA finals and ESPN live/final fallback. Unconfirmed temporary scores were cleaned. No new final match results found. Fast-track daily review prepared for 24 question(s).",
-  "updated_at_utc": "2026-06-15T08:48:14Z",
+  "updated_at_utc": "2026-06-15T09:57:55Z",
   "updates": [],
   "live_updates": [],
+  "restored_from_cache": [],
+  "cache_size": 12,
   "cleared_live": [],
   "conflicts": [],
   "warnings": [],
@@ -74,9 +76,9 @@
         "policyStatus": "locked_not_answered_now",
         "question": "הבית עם מס' השערים הנמוך ביותר",
         "engineStatus": "locked_not_answered_now",
-        "actualAnswer": "לא ידוע",
+        "actualAnswer": "לא ידוע | מס' השערים שיובקעו: לא ידוע",
         "nextAction": "לא נענה עכשיו לפי החלטת מנהל; ייסגר רק בסיום השלב/האירוע המתאים או עם override מפורש",
-        "sourceStatus": "locked_not_answered_now"
+        "sourceStatus": "pending"
       },
       {
         "id": 6,
@@ -87,9 +89,9 @@
         "policyStatus": "locked_not_answered_now",
         "question": "הבית עם מס' השערים הרב ביותר",
         "engineStatus": "locked_not_answered_now",
-        "actualAnswer": "לא ידוע",
+        "actualAnswer": "לא ידוע | מס' השערים שיובקעו: לא ידוע",
         "nextAction": "לא נענה עכשיו לפי החלטת מנהל; ייסגר רק בסיום השלב/האירוע המתאים או עם override מפורש",
-        "sourceStatus": "locked_not_answered_now"
+        "sourceStatus": "pending"
       },
       {
         "id": 7,
@@ -100,9 +102,9 @@
         "policyStatus": "locked_not_answered_now",
         "question": "הנבחרת שתבקיע את מס' השערים הגדול ביותר בשלב הבתים",
         "engineStatus": "locked_not_answered_now",
-        "actualAnswer": "לא ידוע",
+        "actualAnswer": "לא ידוע | מס' השערים שתבקיע: לא ידוע",
         "nextAction": "לא נענה עכשיו לפי החלטת מנהל; ייסגר רק בסיום השלב/האירוע המתאים או עם override מפורש",
-        "sourceStatus": "locked_not_answered_now"
+        "sourceStatus": "pending"
       },
       {
         "id": 8,
@@ -113,9 +115,9 @@
         "policyStatus": "locked_not_answered_now",
         "question": "הנבחרת שתספוג את מס' השערים הגדול ביותר בשלב הבתים",
         "engineStatus": "locked_not_answered_now",
-        "actualAnswer": "לא ידוע",
+        "actualAnswer": "לא ידוע | מס' השערים שתספוג: לא ידוע",
         "nextAction": "לא נענה עכשיו לפי החלטת מנהל; ייסגר רק בסיום השלב/האירוע המתאים או עם override מפורש",
-        "sourceStatus": "locked_not_answered_now"
+        "sourceStatus": "pending"
       },
       {
         "id": 9,
@@ -126,9 +128,9 @@
         "policyStatus": "locked_not_answered_now",
         "question": "הנבחרת שתבקיע את מס' השערים הקטן ביותר בשלב הבתים",
         "engineStatus": "locked_not_answered_now",
-        "actualAnswer": "לא ידוע",
+        "actualAnswer": "לא ידוע | מס' השערים שתבקיע: לא ידוע",
         "nextAction": "לא נענה עכשיו לפי החלטת מנהל; ייסגר רק בסיום השלב/האירוע המתאים או עם override מפורש",
-        "sourceStatus": "locked_not_answered_now"
+        "sourceStatus": "pending"
       },
       {
         "id": 10,
@@ -139,9 +141,9 @@
         "policyStatus": "locked_not_answered_now",
         "question": "הנבחרת שתספוג את מס' השערים הקטן ביותר בשלב הבתים",
         "engineStatus": "locked_not_answered_now",
-        "actualAnswer": "לא ידוע",
+        "actualAnswer": "לא ידוע | מס' השערים שתספוג: לא ידוע",
         "nextAction": "לא נענה עכשיו לפי החלטת מנהל; ייסגר רק בסיום השלב/האירוע המתאים או עם override מפורש",
-        "sourceStatus": "locked_not_answered_now"
+        "sourceStatus": "pending"
       },
       {
         "id": 11,
@@ -152,9 +154,9 @@
         "policyStatus": "locked_not_answered_now",
         "question": "הנבחרת בעלת הכי הרבה תוצאות תיקו בשלב הבתים",
         "engineStatus": "locked_not_answered_now",
-        "actualAnswer": "לא ידוע",
+        "actualAnswer": "לא ידוע | מס' תוצאות תיקו: לא ידוע",
         "nextAction": "לא נענה עכשיו לפי החלטת מנהל; ייסגר רק בסיום השלב/האירוע המתאים או עם override מפורש",
-        "sourceStatus": "locked_not_answered_now"
+        "sourceStatus": "pending"
       },
       {
         "id": 12,
@@ -167,7 +169,7 @@
         "engineStatus": "locked_not_answered_now",
         "actualAnswer": "לא ידוע",
         "nextAction": "לא נענה עכשיו לפי החלטת מנהל; ייסגר רק בסיום השלב/האירוע המתאים או עם override מפורש",
-        "sourceStatus": "locked_not_answered_now"
+        "sourceStatus": "pending"
       },
       {
         "id": 13,
@@ -371,7 +373,7 @@
         "block": "ראש בראש כוכבים - התותחים הכבדים",
         "ruleType": "specific_player_group_manual",
         "policyStatus": "locked_not_answered_now",
-        "question": "האם  יישלף כרטיס אדום לאחד מהשחקנים בשלב הבתים ?",
+        "question": "האם יישלף כרטיס אדום לאחד מהשחקנים בשלב הבתים ?",
         "engineStatus": "locked_not_answered_now",
         "actualAnswer": "לא ידוע",
         "nextAction": "לא נענה עכשיו לפי החלטת מנהל; ייסגר רק בסיום השלב/האירוע המתאים או עם override מפורש",
@@ -984,7 +986,7 @@
         "policyStatus": "locked_not_answered_now",
         "question": "מלך השערים של הטורניר",
         "engineStatus": "locked_not_answered_now",
-        "actualAnswer": "לא ידוע + מס' השערים שיבקיע: לא ידוע",
+        "actualAnswer": "לא ידוע + מס' השערים שיבקיע",
         "nextAction": "לא נענה עכשיו לפי החלטת מנהל; ייסגר רק בסיום השלב/האירוע המתאים או עם override מפורש",
         "sourceStatus": "pending"
       },
@@ -997,7 +999,7 @@
         "policyStatus": "locked_not_answered_now",
         "question": "מלך הבישולים של הטורניר",
         "engineStatus": "locked_not_answered_now",
-        "actualAnswer": "לא ידוע + מס' השערים שיבשל: לא ידוע",
+        "actualAnswer": "לא ידוע + מס' השערים שיבשל",
         "nextAction": "לא נענה עכשיו לפי החלטת מנהל; ייסגר רק בסיום השלב/האירוע המתאים או עם override מפורש",
         "sourceStatus": "pending"
       },
@@ -1619,7 +1621,7 @@
         "block": "לא מסווג - דורש בדיקת מנהל",
         "ruleType": "threshold_or_yes_no_manual",
         "policyStatus": "fast_track_daily_check",
-        "question": "האם תהינה לפחות 2 קבוצות בטורניר שיצליחו להבקיע שער זכות לאחר שיורחק להן שחקן בכרטיס אדום (כולל הארכה)  ?",
+        "question": "האם תהינה לפחות 2 קבוצות בטורניר שיצליחו להבקיע שער זכות לאחר שיורחק להן שחקן בכרטיס אדום (כולל הארכה) ?",
         "engineStatus": "fast_track_daily_check_required",
         "actualAnswer": "לא ידוע",
         "nextAction": "לבדוק אחרי יום משחקים; לסגור רק אם התנאי קרה בוודאות עם מקור",
@@ -2126,7 +2128,7 @@
       {
         "id": 124,
         "row": 496,
-        "question": "האם תהינה לפחות 2 קבוצות בטורניר שיצליחו להבקיע שער זכות לאחר שיורחק להן שחקן בכרטיס אדום (כולל הארכה)  ?",
+        "question": "האם תהינה לפחות 2 קבוצות בטורניר שיצליחו להבקיע שער זכות לאחר שיורחק להן שחקן בכרטיס אדום (כולל הארכה) ?",
         "status": "pending",
         "actualAnswer": "לא ידוע",
         "nextAction": "בדיקה יומית לאחר משחקים; אם התקיים - להוסיף ל-open_question_manual_answers.json עם expectedSectionContains=המסלול המהיר",
