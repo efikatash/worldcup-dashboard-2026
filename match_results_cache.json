@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAtUtc": "2026-06-15T09:57:55Z",
+  "updatedAtUtc": "2026-06-15T10:05:32Z",
   "matches": {
     "1": {
       "id": 1,
@@ -10,10 +10,10 @@
       "actualHome": 2,
       "actualAway": 0,
       "status": "verified",
-      "sourceStatus": "verified_espn_final",
+      "sourceStatus": "verified_imported_or_espn_final",
       "sourceTitle": "Mexico 2-0 South Africa | Match report and highlights",
       "sourceUrl": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-south-africa-highlights-match-report",
-      "cachedAtUtc": "2026-06-15T09:57:55Z"
+      "cachedAtUtc": "2026-06-15T10:05:32Z"
     },
     "2": {
       "id": 2,
@@ -23,10 +23,10 @@
       "actualHome": 2,
       "actualAway": 1,
       "status": "verified",
-      "sourceStatus": "verified_espn_final",
+      "sourceStatus": "verified_imported_or_espn_final",
       "sourceTitle": "Korea Republic 2-1 Czechia | Match report and highlights",
       "sourceUrl": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/korea-republic-czechia-highlights-match-report",
-      "cachedAtUtc": "2026-06-15T09:57:55Z"
+      "cachedAtUtc": "2026-06-15T10:05:32Z"
     },
     "7": {
       "id": 7,
@@ -36,10 +36,10 @@
       "actualHome": 1,
       "actualAway": 1,
       "status": "verified",
-      "sourceStatus": "verified_espn_final",
+      "sourceStatus": "verified_imported_or_espn_final",
       "sourceTitle": "Canada 1-1 Bosnia and Herzegovina | Match report and highlights",
       "sourceUrl": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/canada-bosnia-and-herzegovina-highlights-match-report",
-      "cachedAtUtc": "2026-06-15T09:57:55Z"
+      "cachedAtUtc": "2026-06-15T10:05:32Z"
     },
     "8": {
       "id": 8,
@@ -49,10 +49,10 @@
       "actualHome": 1,
       "actualAway": 1,
       "status": "verified",
-      "sourceStatus": "verified_espn_final",
+      "sourceStatus": "verified_imported_or_espn_final",
       "sourceTitle": "Qatar 1-1 Switzerland | Match report and highlights",
       "sourceUrl": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/qatar-switzerland-highlights-match-report",
-      "cachedAtUtc": "2026-06-15T09:57:55Z"
+      "cachedAtUtc": "2026-06-15T10:05:32Z"
     },
     "13": {
       "id": 13,
@@ -62,10 +62,10 @@
       "actualHome": 1,
       "actualAway": 1,
       "status": "verified",
-      "sourceStatus": "verified_espn_final",
+      "sourceStatus": "verified_imported_or_espn_final",
       "sourceTitle": "Brazil 1-1 Morocco | Match report and highlights",
       "sourceUrl": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/brazil-morocco-highlights-match-report",
-      "cachedAtUtc": "2026-06-15T09:57:55Z"
+      "cachedAtUtc": "2026-06-15T10:05:32Z"
     },
     "14": {
       "id": 14,
@@ -75,10 +75,10 @@
       "actualHome": 0,
       "actualAway": 1,
       "status": "verified",
-      "sourceStatus": "verified_espn_final",
+      "sourceStatus": "verified_imported_or_espn_final",
       "sourceTitle": "Scots edge Haiti as Morocco, Qatar earn battling draws | FIFA",
       "sourceUrl": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/matchday-3-round-up-review-highlights",
-      "cachedAtUtc": "2026-06-15T09:57:55Z"
+      "cachedAtUtc": "2026-06-15T10:05:32Z"
     },
     "19": {
       "id": 19,
@@ -88,10 +88,10 @@
       "actualHome": 4,
       "actualAway": 1,
       "status": "verified",
-      "sourceStatus": "verified_espn_final",
+      "sourceStatus": "verified_imported_or_espn_final",
       "sourceTitle": "USA 4-1 Paraguay | Match report and highlights",
       "sourceUrl": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/usa-paraguay-highlights-match-report",
-      "cachedAtUtc": "2026-06-15T09:57:55Z"
+      "cachedAtUtc": "2026-06-15T10:05:32Z"
     },
     "20": {
       "id": 20,
@@ -101,10 +101,10 @@
       "actualHome": 2,
       "actualAway": 0,
       "status": "verified",
-      "sourceStatus": "verified_espn_final",
+      "sourceStatus": "verified_imported_or_espn_final",
       "sourceTitle": "Australia 2-0 Türkiye | FIFA Match Centre",
       "sourceUrl": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021463",
-      "cachedAtUtc": "2026-06-15T09:57:55Z"
+      "cachedAtUtc": "2026-06-15T10:05:32Z"
     },
     "25": {
       "id": 25,
@@ -114,10 +114,10 @@
       "actualHome": 7,
       "actualAway": 1,
       "status": "verified",
-      "sourceStatus": "verified_espn_final",
+      "sourceStatus": "verified_imported_or_espn_final",
       "sourceTitle": "קובץ ניחושים מעודכן - תוצאות משחקי היום הרביעי 14.6.26",
       "sourceUrl": "",
-      "cachedAtUtc": "2026-06-15T09:57:55Z"
+      "cachedAtUtc": "2026-06-15T10:05:32Z"
     },
     "26": {
       "id": 26,
@@ -127,10 +127,10 @@
       "actualHome": 1,
       "actualAway": 0,
       "status": "verified",
-      "sourceStatus": "verified_espn_final",
+      "sourceStatus": "verified_imported_or_espn_final",
       "sourceTitle": "קובץ ניחושים מעודכן - תוצאות משחקי היום הרביעי 14.6.26",
       "sourceUrl": "",
-      "cachedAtUtc": "2026-06-15T09:57:55Z"
+      "cachedAtUtc": "2026-06-15T10:05:32Z"
     },
     "31": {
       "id": 31,
@@ -140,10 +140,10 @@
       "actualHome": 2,
       "actualAway": 2,
       "status": "verified",
-      "sourceStatus": "verified_espn_final",
+      "sourceStatus": "verified_imported_or_espn_final",
       "sourceTitle": "קובץ ניחושים מעודכן - תוצאות משחקי היום הרביעי 14.6.26",
       "sourceUrl": "",
-      "cachedAtUtc": "2026-06-15T09:57:55Z"
+      "cachedAtUtc": "2026-06-15T10:05:32Z"
     },
     "32": {
       "id": 32,
@@ -153,10 +153,10 @@
       "actualHome": 5,
       "actualAway": 1,
       "status": "verified",
-      "sourceStatus": "verified_espn_final",
+      "sourceStatus": "verified_imported_or_espn_final",
       "sourceTitle": "קובץ ניחושים מעודכן - תוצאות משחקי היום הרביעי 14.6.26",
       "sourceUrl": "",
-      "cachedAtUtc": "2026-06-15T09:57:55Z"
+      "cachedAtUtc": "2026-06-15T10:05:32Z"
     }
   }
 }
