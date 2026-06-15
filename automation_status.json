@@ -1,8 +1,17 @@
 {
   "status": "ok",
-  "message": "Dashboard checked against FIFA finals and ESPN live/final fallback. Unconfirmed temporary scores were cleaned. No new final match results found. Fast-track daily review prepared for 24 question(s).",
-  "updated_at_utc": "2026-06-15T01:42:34Z",
-  "updates": [],
+  "message": "Dashboard checked against FIFA finals and ESPN live/final fallback. Unconfirmed temporary scores were cleaned. Added 1 new final match result(s). Fast-track daily review prepared for 24 question(s).",
+  "updated_at_utc": "2026-06-15T07:55:51Z",
+  "updates": [
+    {
+      "matchId": 32,
+      "match": "שבדיה - טוניסיה",
+      "score": "5-1",
+      "status": "verified",
+      "source": "https://www.espn.com/soccer/match/_/gameId/760424/tunisia-sweden",
+      "evidence": "ESPN event 760424 Tunisia at Sweden 5-1 FT"
+    }
+  ],
   "live_updates": [],
   "cleared_live": [],
   "conflicts": [],
@@ -2155,11 +2164,11 @@
       }
     ]
   },
-  "completed_matches": 11,
+  "completed_matches": 12,
   "live_matches": 0,
   "provisional_final_matches": 0,
   "live_open_questions": 0,
   "resolved_open_questions": 6,
-  "leader": "יובל אברהם",
-  "leader_points": 92
+  "leader": "ירין יוסף",
+  "leader_points": 94
 }
