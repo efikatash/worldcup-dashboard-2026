@@ -333,10 +333,19 @@ def discover_espn_scores(data: Dict[str, Any]) -> Tuple[Dict[int, Dict[str, Any]
             desc = str(st.get("description") or st.get("detail") or "")
             clock = str((ev.get("status") or {}).get("displayClock") or "")
             source_url = "https://www.espn.com/soccer/match/_/gameId/" + str(ev.get("id") or "")
-            status = "pending"
-            if completed or state == "post" or name.upper() in {"STATUS_FINAL", "STATUS_FULL_TIME", "STATUS_FINAL_PEN", "FT"}:
+                        status = "pending"
+            name_u = name.upper()
+            desc_l = desc.lower()
+            is_scheduled = (
+                state == "pre"
+                or name_u in {"STATUS_SCHEDULED", "STATUS_PRE", "PRE"}
+                or "schedul" in desc_l
+            )
+            if completed or state == "post" or name_u in {"STATUS_FINAL", "STATUS_FULL_TIME", "STATUS_FINAL_PEN", "FT"}:
                 status = "verified"
-            elif state == "in" or "half" in desc.lower() or clock:
+            elif is_scheduled:
+                continue
+            elif state == "in" or "half" in desc_l or clock:
                 status = "live"
             else:
                 continue
