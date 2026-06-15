@@ -48,6 +48,7 @@ FIFA_MATCH_CENTRE_LIVE_ROOT_URL = "https://www.fifa.com/live"
 # FIFA remains the official reference in the public sources, but the bot does not rely on heavy browser rendering.
 ESPN_SCOREBOARD_BASE = "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard"
 ESPN_LIVE_DEBUG_CSV_PATH = os.path.join(ROOT, "espn_live_debug.csv")
+RESULTS_CACHE_PATH = os.path.join(ROOT, "match_results_cache.json")
 
 MANILA_TZ = ZoneInfo("Asia/Manila") if ZoneInfo else dt.timezone(dt.timedelta(hours=8))
 
@@ -550,17 +551,123 @@ def team_matches_espn(team_he: str, comp: Dict[str, Any]) -> bool:
 
 
 def espn_scoreboard_urls() -> List[str]:
-    # ESPN date is event-date based. Fetch yesterday/today/tomorrow in UTC to cover Philippines evening matches.
+    # ESPN date is event-date based.
+    # IMPORTANT: data.json can be manually replaced when prediction corrections are uploaded.
+    # Therefore this updater must be able to restore recently completed matches too, not only
+    # today's live fixtures. Fetch a rolling window and keep a committed result cache.
     today = dt.datetime.now(dt.timezone.utc).date()
-    dates = [(today + dt.timedelta(days=offset)).strftime("%Y%m%d") for offset in (-1, 0, 1)]
-    urls = [ESPN_SCOREBOARD_BASE + "?limit=100"]
-    urls += [ESPN_SCOREBOARD_BASE + "?limit=100&dates=" + d for d in dates]
+    tournament_start = dt.date(2026, 6, 11)
+    rolling_start = max(tournament_start, today - dt.timedelta(days=14))
+    dates = []
+    cur = rolling_start
+    while cur <= today + dt.timedelta(days=2):
+        dates.append(cur.strftime("%Y%m%d"))
+        cur += dt.timedelta(days=1)
+    urls = [ESPN_SCOREBOARD_BASE + "?limit=300"]
+    urls += [ESPN_SCOREBOARD_BASE + "?limit=300&dates=" + d for d in dates]
     # De-duplicate while preserving order.
     result = []
     for u in urls:
         if u not in result:
             result.append(u)
     return result
+
+
+def load_results_cache() -> Dict[str, Any]:
+    try:
+        if os.path.exists(RESULTS_CACHE_PATH):
+            with open(RESULTS_CACHE_PATH, "r", encoding="utf-8") as f:
+                payload = json.load(f)
+            if isinstance(payload, dict):
+                payload.setdefault("matches", {})
+                return payload
+    except Exception:
+        pass
+    return {"version": 1, "updatedAtUtc": utc_now(), "matches": {}}
+
+
+def save_results_cache(cache: Dict[str, Any]) -> None:
+    cache["version"] = 1
+    cache["updatedAtUtc"] = utc_now()
+    cache.setdefault("matches", {})
+    with open(RESULTS_CACHE_PATH, "w", encoding="utf-8") as f:
+        json.dump(cache, f, ensure_ascii=False, indent=2)
+
+
+def cacheable_final_match(match: Dict[str, Any]) -> bool:
+    if match.get("actualHome") is None or match.get("actualAway") is None:
+        return False
+    status = str(match.get("status") or "")
+    source_status = str(match.get("sourceStatus") or "")
+    # Cache finals only, never live. ESPN final fallback is accepted as final for dashboard continuity.
+    return status in ("verified", "known") or source_status in ("verified_espn_final", "verified_fifa_locked", "manual_verified_fifa")
+
+
+def update_results_cache_from_data(data: Dict[str, Any]) -> Dict[str, Any]:
+    cache = load_results_cache()
+    matches = cache.setdefault("matches", {})
+    for m in data.get("matches", []):
+        if not cacheable_final_match(m):
+            continue
+        mid = str(int(m.get("id", 0) or 0))
+        if mid == "0":
+            continue
+        matches[mid] = {
+            "id": int(m.get("id", 0) or 0),
+            "row": m.get("row"),
+            "home": m.get("home"),
+            "away": m.get("away"),
+            "actualHome": int(m.get("actualHome")),
+            "actualAway": int(m.get("actualAway")),
+            "status": "verified",
+            "sourceStatus": m.get("sourceStatus") or "verified_espn_final",
+            "sourceTitle": m.get("sourceTitle") or "Cached final result",
+            "sourceUrl": m.get("sourceUrl") or "",
+            "cachedAtUtc": utc_now(),
+        }
+    save_results_cache(cache)
+    return cache
+
+
+def apply_results_cache_to_data(data: Dict[str, Any]) -> List[Dict[str, Any]]:
+    """Restore final results after a manual prediction-data upload.
+
+    This is the big guardrail: prediction corrections must never roll the tournament back.
+    If data.json was replaced with a workbook-generated file that contains fewer results,
+    committed finals in match_results_cache.json are applied before new live/final discovery.
+    """
+    cache = load_results_cache()
+    matches = cache.get("matches", {}) if isinstance(cache.get("matches"), dict) else {}
+    restored: List[Dict[str, Any]] = []
+    for m in data.get("matches", []):
+        mid = str(int(m.get("id", 0) or 0))
+        cached = matches.get(mid)
+        if not isinstance(cached, dict):
+            continue
+        ch = cached.get("actualHome")
+        ca = cached.get("actualAway")
+        if ch is None or ca is None:
+            continue
+        current_has_score = m.get("actualHome") is not None and m.get("actualAway") is not None
+        current_same = current_has_score and int(m.get("actualHome")) == int(ch) and int(m.get("actualAway")) == int(ca)
+        if current_same and str(m.get("status") or "") == "verified":
+            continue
+        # Do not overwrite a different verified score. That would be a conflict for manual review.
+        if current_has_score and str(m.get("status") or "") == "verified" and not current_same:
+            continue
+        m["actualHome"] = int(ch)
+        m["actualAway"] = int(ca)
+        m["status"] = "verified"
+        m["sourceStatus"] = cached.get("sourceStatus") or "verified_espn_final"
+        m["sourceTitle"] = cached.get("sourceTitle") or "Cached final result"
+        m["sourceUrl"] = cached.get("sourceUrl") or ""
+        restored.append({
+            "matchId": int(mid),
+            "match": f"{m.get('home')} - {m.get('away')}",
+            "score": f"{m.get('actualHome')}-{m.get('actualAway')}",
+            "reason": "restored from committed final-results cache",
+        })
+    return restored
 
 
 def discover_espn_live_scores(data: Dict[str, Any]) -> Tuple[Dict[int, Dict[str, Any]], List[str]]:
@@ -1522,6 +1629,8 @@ def main() -> int:
     with open(DATA_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
 
+    restored_from_cache = apply_results_cache_to_data(data)
+
     fifa_discovered, warnings = discover_fifa_results(data)
     espn_discovered, espn_warnings = discover_espn_live_scores(data)
     warnings.extend(espn_warnings)
@@ -1614,6 +1723,8 @@ def main() -> int:
     with open(DATA_PATH, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
+    result_cache = update_results_cache_from_data(data)
+
     status = "ok" if not conflicts else "needs_review"
     msg = "Dashboard checked against FIFA finals and ESPN live/final fallback. Unconfirmed temporary scores were cleaned."
     if updates:
@@ -1635,7 +1746,7 @@ def main() -> int:
     if conflicts:
         msg += f" {len(conflicts)} conflict(s) need manual review."
 
-    write_status(status, msg, updates=updates, live_updates=live_updates, cleared_live=cleared_live, conflicts=conflicts, warnings=warnings, open_questions=open_result, completed_matches=data.get("meta", {}).get("completedFifaMatches"), live_matches=data.get("meta", {}).get("liveFifaMatches"), provisional_final_matches=data.get("meta", {}).get("provisionalFinalMatches"), live_open_questions=data.get("meta", {}).get("liveOpenQuestions"), resolved_open_questions=data.get("meta", {}).get("resolvedOpenQuestions"), leader=data.get("participants", [{}])[0].get("name"), leader_points=data.get("participants", [{}])[0].get("total"))
+    write_status(status, msg, updates=updates, live_updates=live_updates, restored_from_cache=restored_from_cache, cache_size=len(result_cache.get("matches", {})), cleared_live=cleared_live, conflicts=conflicts, warnings=warnings, open_questions=open_result, completed_matches=data.get("meta", {}).get("completedFifaMatches"), live_matches=data.get("meta", {}).get("liveFifaMatches"), provisional_final_matches=data.get("meta", {}).get("provisionalFinalMatches"), live_open_questions=data.get("meta", {}).get("liveOpenQuestions"), resolved_open_questions=data.get("meta", {}).get("resolvedOpenQuestions"), leader=data.get("participants", [{}])[0].get("name"), leader_points=data.get("participants", [{}])[0].get("total"))
     print(msg)
     if warnings:
         print("Warnings:")
