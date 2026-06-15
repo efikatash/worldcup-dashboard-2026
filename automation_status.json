@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-15T10:25:01Z",
+  "updated_at_utc": "2026-06-15T13:04:48Z",
   "completed_matches": 12,
   "live_matches": 12,
   "cache_size_before": 12,
