@@ -1,17 +1,8 @@
 {
   "status": "ok",
-  "message": "Dashboard checked against FIFA finals and ESPN live/final fallback. Unconfirmed temporary scores were cleaned. Added 1 new final match result(s). Fast-track daily review prepared for 24 question(s).",
-  "updated_at_utc": "2026-06-15T07:55:51Z",
-  "updates": [
-    {
-      "matchId": 32,
-      "match": "שבדיה - טוניסיה",
-      "score": "5-1",
-      "status": "verified",
-      "source": "https://www.espn.com/soccer/match/_/gameId/760424/tunisia-sweden",
-      "evidence": "ESPN event 760424 Tunisia at Sweden 5-1 FT"
-    }
-  ],
+  "message": "Dashboard checked against FIFA finals and ESPN live/final fallback. Unconfirmed temporary scores were cleaned. No new final match results found. Fast-track daily review prepared for 24 question(s).",
+  "updated_at_utc": "2026-06-15T08:02:25Z",
+  "updates": [],
   "live_updates": [],
   "cleared_live": [],
   "conflicts": [],
