@@ -1,13 +1,20 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-15T15:11:27Z",
-  "completed_matches": 12,
+  "updated_at_utc": "2026-06-15T18:00:53Z",
+  "completed_matches": 13,
   "live_matches": 0,
   "cache_size_before": 12,
-  "cache_size_after": 12,
+  "cache_size_after": 13,
   "restored_from_cache": [],
-  "final_updates": [],
+  "final_updates": [
+    {
+      "matchId": 43,
+      "match": "ספרד - קייפ ורדה",
+      "score": "0-0",
+      "status": "verified"
+    }
+  ],
   "live_updates": [],
   "conflicts": [],
   "warnings": [],
