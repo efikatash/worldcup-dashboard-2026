@@ -23,6 +23,10 @@ import sys
 import time
 import urllib.parse
 import urllib.request
+try:
+    from zoneinfo import ZoneInfo
+except Exception:
+    ZoneInfo = None
 from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -44,6 +48,37 @@ FIFA_MATCH_CENTRE_LIVE_ROOT_URL = "https://www.fifa.com/live"
 # FIFA remains the official reference in the public sources, but the bot does not rely on heavy browser rendering.
 ESPN_SCOREBOARD_BASE = "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard"
 ESPN_LIVE_DEBUG_CSV_PATH = os.path.join(ROOT, "espn_live_debug.csv")
+
+MANILA_TZ = ZoneInfo("Asia/Manila") if ZoneInfo else dt.timezone(dt.timedelta(hours=8))
+
+
+def parse_match_kickoff_manila(match: Dict[str, Any]) -> Optional[dt.datetime]:
+    raw = str(match.get("date", "") or "")
+    hit = re.search(r"(\d{1,2})\s*:\s*(\d{2})\s*-\s*(\d{1,2})\s*/\s*(\d{1,2})", raw)
+    if not hit:
+        return None
+    hour, minute, day, month = map(int, hit.groups())
+    try:
+        return dt.datetime(2026, month, day, hour, minute, tzinfo=MANILA_TZ)
+    except ValueError:
+        return None
+
+
+def is_before_kickoff_manila(match: Dict[str, Any], grace_minutes: int = 0) -> bool:
+    kickoff = parse_match_kickoff_manila(match)
+    if not kickoff:
+        return False
+    return dt.datetime.now(MANILA_TZ) < kickoff - dt.timedelta(minutes=grace_minutes)
+
+
+def reset_match_to_pending(match: Dict[str, Any]) -> None:
+    match["actualHome"] = None
+    match["actualAway"] = None
+    match["status"] = "pending"
+    match["sourceStatus"] = "pending"
+    match["sourceUrl"] = ""
+    match["sourceTitle"] = "ממתין לתוצאת משחק"
+
 
 # Hebrew names in the dashboard -> possible official/English names on FIFA.
 TEAM_ALIASES: Dict[str, List[str]] = {
@@ -1445,7 +1480,22 @@ def clear_untrusted_nonfinal_scores(data: Dict[str, Any], fifa_final_discovered:
 
         source_status = m.get("sourceStatus")
 
-        # Preserve original/legacy verified finals, but do not preserve automated temporary/fake finals.
+        # Nuclear guard: a fixture scheduled for the future in the Manila schedule cannot keep
+        # any stale score unless this exact run confirms it through ESPN or FIFA. This is what
+        # permanently prevents USA-Turkey / other future fixtures from appearing in scoring views.
+        if is_before_kickoff_manila(m, 0):
+            cleared.append({
+                "matchId": mid,
+                "match": f"{m.get('home')} - {m.get('away')}",
+                "oldScore": f"{m.get('actualHome', '')}-{m.get('actualAway', '')}",
+                "oldStatus": current_status,
+                "oldSourceStatus": source_status,
+                "reason": "fixture kickoff time is still in the future; stale score cleared",
+            })
+            reset_match_to_pending(m)
+            continue
+
+        # Preserve original/legacy verified finals only after kickoff.
         if current_status in ("verified", "known") and source_status in trusted_legacy_final_statuses:
             continue
 
@@ -1459,12 +1509,7 @@ def clear_untrusted_nonfinal_scores(data: Dict[str, Any], fifa_final_discovered:
                 "oldSourceStatus": source_status,
                 "reason": "score was not confirmed by current ESPN live feed and not verified as final by FIFA",
             })
-            m["actualHome"] = None
-            m["actualAway"] = None
-            m["status"] = "pending"
-            m["sourceStatus"] = "pending"
-            m["sourceUrl"] = ""
-            m["sourceTitle"] = "ממתין לתוצאת משחק"
+            reset_match_to_pending(m)
     return cleared
 
 
