@@ -333,7 +333,7 @@ def discover_espn_scores(data: Dict[str, Any]) -> Tuple[Dict[int, Dict[str, Any]
             desc = str(st.get("description") or st.get("detail") or "")
             clock = str((ev.get("status") or {}).get("displayClock") or "")
             source_url = "https://www.espn.com/soccer/match/_/gameId/" + str(ev.get("id") or "")
-                        status = "pending"
+            status = "pending"
             name_u = name.upper()
             desc_l = desc.lower()
             is_scheduled = (
