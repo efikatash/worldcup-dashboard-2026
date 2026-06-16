@@ -1,17 +1,23 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-15T18:00:53Z",
-  "completed_matches": 13,
+  "updated_at_utc": "2026-06-16T00:05:42Z",
+  "completed_matches": 15,
   "live_matches": 0,
-  "cache_size_before": 12,
-  "cache_size_after": 13,
+  "cache_size_before": 13,
+  "cache_size_after": 15,
   "restored_from_cache": [],
   "final_updates": [
     {
-      "matchId": 43,
-      "match": "ספרד - קייפ ורדה",
-      "score": "0-0",
+      "matchId": 37,
+      "match": "בלגיה - מצרים",
+      "score": "1-1",
+      "status": "verified"
+    },
+    {
+      "matchId": 44,
+      "match": "ערב הסעודית - אורוגוואי",
+      "score": "1-1",
       "status": "verified"
     }
   ],
@@ -19,5 +25,5 @@
   "conflicts": [],
   "warnings": [],
   "leader": "ירין יוסף",
-  "leader_points": 94
+  "leader_points": 104
 }
