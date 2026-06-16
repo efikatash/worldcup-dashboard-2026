@@ -537,6 +537,24 @@ def recompute(data: Dict[str, Any]) -> None:
             last_total = total
         p["rank"] = current_rank
 
+    # Rank change over the last matchday: rank everyone by their total minus
+    # the points earned on the last matchday (their standing before it), then
+    # compare to the current rank. Positive = climbed, negative = dropped.
+    prev_sorted = sorted(
+        data.get("participants", []),
+        key=lambda x: (-(int(x.get("total") or 0) - int(x.get("pointsChange") or 0)), str(x.get("name") or "")),
+    )
+    prev_rank = 0
+    last_prev_total = None
+    for p in prev_sorted:
+        prev_total = int(p.get("total") or 0) - int(p.get("pointsChange") or 0)
+        if last_prev_total is None or prev_total != last_prev_total:
+            prev_rank += 1
+            last_prev_total = prev_total
+        p["prevRank"] = prev_rank
+    for p in data.get("participants", []):
+        p["rankChange"] = int(p.get("prevRank") or 0) - int(p.get("rank") or 0)
+
     # Persist participants in ranked order so the UI's "current leader" card
     # (which reads participants[0]) shows the real #1 instead of file order.
     data["participants"] = sorted(
