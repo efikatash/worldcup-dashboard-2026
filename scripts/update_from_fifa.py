@@ -537,6 +537,13 @@ def recompute(data: Dict[str, Any]) -> None:
             last_total = total
         p["rank"] = current_rank
 
+    # Persist participants in ranked order so the UI's "current leader" card
+    # (which reads participants[0]) shows the real #1 instead of file order.
+    data["participants"] = sorted(
+        data.get("participants", []),
+        key=lambda x: (int(x.get("rank") or 9999), str(x.get("name") or "")),
+    )
+
     completed = sum(1 for m in data.get("matches", []) if m.get("actualHome") is not None and m.get("actualAway") is not None and str(m.get("status") or "") == "verified")
     live = sum(1 for m in data.get("matches", []) if str(m.get("status") or "") == "live")
     meta = data.setdefault("meta", {})
