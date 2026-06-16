@@ -1,21 +1,21 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-16T02:45:40Z",
-  "completed_matches": 15,
-  "live_matches": 1,
+  "updated_at_utc": "2026-06-16T03:07:48Z",
+  "completed_matches": 16,
+  "live_matches": 0,
   "cache_size_before": 15,
-  "cache_size_after": 15,
+  "cache_size_after": 16,
   "restored_from_cache": [],
-  "final_updates": [],
-  "live_updates": [
+  "final_updates": [
     {
       "matchId": 38,
       "match": "איראן - ניו זילנד",
       "score": "2-2",
-      "status": "live"
+      "status": "verified"
     }
   ],
+  "live_updates": [],
   "conflicts": [],
   "warnings": [],
   "leader": "מיטל יצחקי",
