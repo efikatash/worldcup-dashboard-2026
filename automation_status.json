@@ -1,16 +1,23 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-16T18:22:07Z",
+  "updated_at_utc": "2026-06-16T20:31:10Z",
   "completed_matches": 16,
-  "live_matches": 0,
+  "live_matches": 1,
   "cache_size_before": 16,
   "cache_size_after": 16,
   "restored_from_cache": [],
   "final_updates": [],
-  "live_updates": [],
+  "live_updates": [
+    {
+      "matchId": 49,
+      "match": "צרפת - סנגל",
+      "score": "1-0",
+      "status": "live"
+    }
+  ],
   "conflicts": [],
   "warnings": [],
   "leader": "מיטל יצחקי",
-  "leader_points": 111
+  "leader_points": 116
 }
