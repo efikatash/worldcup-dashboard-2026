@@ -544,7 +544,9 @@ def recompute(data: Dict[str, Any]) -> None:
     meta["completedMatches"] = completed
     meta["liveMatches"] = live
     meta["pendingMatches"] = len(data.get("matches", [])) - completed - live
-    meta["dashboardBuiltAt"] = manila_now().strftime("%Y-%m-%d %H:%M")
+    now_str = manila_now().strftime("%Y-%m-%d %H:%M")
+    meta["dashboardBuiltAt"] = now_str
+    meta["generatedAt"] = now_str  # Keep in sync so the UI shows current time
 
 
 def write_csv(path: str, rows: List[Dict[str, Any]], fields: List[str]) -> None:
