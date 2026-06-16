@@ -1,26 +1,13 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-16T00:05:42Z",
+  "updated_at_utc": "2026-06-16T00:15:30Z",
   "completed_matches": 15,
   "live_matches": 0,
-  "cache_size_before": 13,
+  "cache_size_before": 15,
   "cache_size_after": 15,
   "restored_from_cache": [],
-  "final_updates": [
-    {
-      "matchId": 37,
-      "match": "בלגיה - מצרים",
-      "score": "1-1",
-      "status": "verified"
-    },
-    {
-      "matchId": 44,
-      "match": "ערב הסעודית - אורוגוואי",
-      "score": "1-1",
-      "status": "verified"
-    }
-  ],
+  "final_updates": [],
   "live_updates": [],
   "conflicts": [],
   "warnings": [],
