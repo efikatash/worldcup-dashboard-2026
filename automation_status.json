@@ -1,23 +1,23 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-17T06:08:42Z",
-  "completed_matches": 19,
-  "live_matches": 1,
+  "updated_at_utc": "2026-06-17T07:11:40Z",
+  "completed_matches": 20,
+  "live_matches": 0,
   "cache_size_before": 19,
-  "cache_size_after": 19,
+  "cache_size_after": 20,
   "restored_from_cache": [],
-  "final_updates": [],
-  "live_updates": [
+  "final_updates": [
     {
       "matchId": 56,
       "match": "אוסטריה - ירדן",
       "score": "3-1",
-      "status": "live"
+      "status": "verified"
     }
   ],
+  "live_updates": [],
   "conflicts": [],
   "warnings": [],
   "leader": "גל+סייבה גורליק",
-  "leader_points": 154
+  "leader_points": 164
 }
