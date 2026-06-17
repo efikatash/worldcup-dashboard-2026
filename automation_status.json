@@ -1,23 +1,23 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-17T21:20:46Z",
-  "completed_matches": 21,
-  "live_matches": 1,
+  "updated_at_utc": "2026-06-17T22:41:30Z",
+  "completed_matches": 22,
+  "live_matches": 0,
   "cache_size_before": 21,
-  "cache_size_after": 21,
+  "cache_size_after": 22,
   "restored_from_cache": [],
-  "final_updates": [],
-  "live_updates": [
+  "final_updates": [
     {
       "matchId": 67,
       "match": "אנגליה - קרואטיה",
-      "score": "3-2",
-      "status": "live"
+      "score": "4-2",
+      "status": "verified"
     }
   ],
+  "live_updates": [],
   "conflicts": [],
   "warnings": [],
   "leader": "יובל אברהם",
-  "leader_points": 168
+  "leader_points": 166
 }
