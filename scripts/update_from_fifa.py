@@ -101,16 +101,31 @@ def manila_now() -> dt.datetime:
 _ISRAEL_TO_MANILA = dt.timedelta(hours=5)  # EEST (UTC+3) → PHT (UTC+8)
 
 
-def match_manila_date(date_str: str) -> Optional[dt.date]:
-    """Convert a match date string 'HH:MM - DD/M' (Israel EEST) to a Philippines calendar date."""
+def match_manila_datetime(date_str: str) -> Optional[dt.datetime]:
+    """Convert a match date string 'HH:MM - DD/M' (Israel EEST) to a Philippines datetime."""
     m = re.match(r'(\d{1,2}):(\d{2})\s*-\s*(\d+)/(\d+)', date_str.strip())
     if not m:
         return None
     hour, minute, day, month = int(m.group(1)), int(m.group(2)), int(m.group(3)), int(m.group(4))
     try:
-        return (dt.datetime(2026, month, day, hour, minute) + _ISRAEL_TO_MANILA).date()
+        return dt.datetime(2026, month, day, hour, minute, tzinfo=dt.timezone.utc) + _ISRAEL_TO_MANILA
     except Exception:
         return None
+
+
+def match_manila_date(date_str: str) -> Optional[dt.date]:
+    """Convert a match date string 'HH:MM - DD/M' (Israel EEST) to a Philippines calendar date."""
+    d = match_manila_datetime(date_str)
+    return d.date() if d else None
+
+
+def current_matchday(data: Dict[str, Any]) -> Optional[dt.date]:
+    """The latest Philippines matchday that has already begun (a match has kicked off)."""
+    now = manila_now()
+    started = [d.date() for m in data.get("matches", [])
+               if (d := match_manila_datetime(str(m.get("date", "")))) and d <= now]
+    return max(started) if started else None
+
 
 
 def norm(s: Any) -> str:
@@ -508,23 +523,33 @@ def recompute(data: Dict[str, Any]) -> None:
         p["openResolved"] = sum(1 for o in p.get("open", []) if "ממתין" not in str(o.get("label") or ""))
 
     # ── Last-matchday points change ─────────────────────────────────────────
-    # Group verified match IDs by Philippines calendar date, then credit each
-    # participant with the points earned on the most recent matchday.
-    verified_ids_by_day: Dict[dt.date, set] = {}
-    for m in data.get("matches", []):
-        if str(m.get("status")) == "verified" and m.get("id") is not None:
-            d = match_manila_date(str(m.get("date", "")))
-            if d:
-                verified_ids_by_day.setdefault(d, set()).add(int(m["id"]))
+    # Points (and rank) change reflect everything earned during the current
+    # matchday: match points from matches that day PLUS open-question points
+    # for questions resolved that day (tagged with resolvedMatchday).
+    last_day = current_matchday(data)
+    last_day_iso = last_day.isoformat() if last_day else None
 
-    last_day_ids = verified_ids_by_day[max(verified_ids_by_day)] if verified_ids_by_day else set()
+    last_day_match_ids = {
+        int(m["id"]) for m in data.get("matches", [])
+        if m.get("id") is not None and match_manila_date(str(m.get("date", ""))) == last_day
+    }
+    last_day_open_ids = {
+        int(q["id"]) for q in data.get("openQuestions", [])
+        if q.get("id") is not None and str(q.get("resolvedMatchday") or "") == (last_day_iso or "")
+    }
 
     for p in data.get("participants", []):
-        p["pointsChange"] = sum(
+        match_change = sum(
             int(pm.get("points") or 0)
             for pm in p.get("matches", [])
-            if int(pm.get("matchId") or 0) in last_day_ids
+            if int(pm.get("matchId") or 0) in last_day_match_ids
         )
+        open_change = sum(
+            int(o.get("points") or 0)
+            for o in p.get("open", [])
+            if int(o.get("qId") or 0) in last_day_open_ids
+        )
+        p["pointsChange"] = match_change + open_change
     # ───────────────────────────────────────────────────────────────────────
 
     sorted_players = sorted(data.get("participants", []), key=lambda x: (-int(x.get("total") or 0), str(x.get("name") or "")))
