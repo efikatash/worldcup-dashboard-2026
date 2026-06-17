@@ -1,30 +1,23 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-17T04:04:16Z",
+  "updated_at_utc": "2026-06-17T04:24:18Z",
   "completed_matches": 19,
   "live_matches": 1,
-  "cache_size_before": 18,
+  "cache_size_before": 19,
   "cache_size_after": 19,
   "restored_from_cache": [],
-  "final_updates": [
-    {
-      "matchId": 55,
-      "match": "ארגנטינה - אלג'יריה",
-      "score": "3-0",
-      "status": "verified"
-    }
-  ],
+  "final_updates": [],
   "live_updates": [
     {
       "matchId": 56,
       "match": "אוסטריה - ירדן",
-      "score": "0-0",
+      "score": "1-0",
       "status": "live"
     }
   ],
   "conflicts": [],
   "warnings": [],
-  "leader": "יובל אברהם",
-  "leader_points": 158
+  "leader": "גל+סייבה גורליק",
+  "leader_points": 159
 }
