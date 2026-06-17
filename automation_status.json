@@ -1,16 +1,23 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-17T00:09:59Z",
+  "updated_at_utc": "2026-06-17T01:23:08Z",
   "completed_matches": 18,
-  "live_matches": 0,
+  "live_matches": 1,
   "cache_size_before": 18,
   "cache_size_after": 18,
   "restored_from_cache": [],
   "final_updates": [],
-  "live_updates": [],
+  "live_updates": [
+    {
+      "matchId": 55,
+      "match": "ארגנטינה - אלג'יריה",
+      "score": "1-0",
+      "status": "live"
+    }
+  ],
   "conflicts": [],
   "warnings": [],
-  "leader": "גל+סייבה גורליק",
-  "leader_points": 134
+  "leader": "מיטל יצחקי",
+  "leader_points": 141
 }
