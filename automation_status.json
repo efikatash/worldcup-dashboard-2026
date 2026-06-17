@@ -1,23 +1,16 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-17T00:05:09Z",
+  "updated_at_utc": "2026-06-17T00:09:59Z",
   "completed_matches": 18,
   "live_matches": 0,
-  "cache_size_before": 17,
+  "cache_size_before": 18,
   "cache_size_after": 18,
   "restored_from_cache": [],
-  "final_updates": [
-    {
-      "matchId": 50,
-      "match": "עירק - נורווגיה",
-      "score": "1-4",
-      "status": "verified"
-    }
-  ],
+  "final_updates": [],
   "live_updates": [],
   "conflicts": [],
   "warnings": [],
   "leader": "גל+סייבה גורליק",
-  "leader_points": 124
+  "leader_points": 134
 }
