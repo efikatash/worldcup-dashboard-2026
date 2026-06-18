@@ -14,12 +14,15 @@
 
   // ── state ──────────────────────────────────────────────────────────────
   var _init      = false;
-  var _bracket   = [];   // enriched with live scores
+  var _rawBracket   = [];   // frozen rows (from #ycBracket)
+  var _bracket   = [];   // enriched with live scores + provisional winners
   var _participants = [];
   var _rounds    = [];
   var _rules     = {};
   var _search    = '';
   var _filter    = 'all'; // 'all' | 'bye' | 'active'
+  var _activeRound = 1;   // first round not yet closed
+  var _lastUpdate  = null;
 
   // ── boot ───────────────────────────────────────────────────────────────
   function _loadData() {
@@ -29,15 +32,30 @@
       var rEl = document.getElementById('ycRounds');
       var ruEl= document.getElementById('ycRules');
       _participants = pEl ? JSON.parse(pEl.textContent) : [];
-      var raw       = bEl ? JSON.parse(bEl.textContent) : [];
+      _rawBracket   = bEl ? JSON.parse(bEl.textContent) : [];
       _rounds       = rEl ? JSON.parse(rEl.textContent) : [];
       _rules        = ruEl? JSON.parse(ruEl.textContent): {};
-      // enrich bracket with live scores from DATA
-      var live = (window.DATA && window.DATA.participants) || [];
-      _bracket = (yc.buildCupBracket || function (b) { return b; })(raw, live);
+      _activeRound  = _computeActiveRound();
+      _recomputeLive();
     } catch (e) {
       console.error('[YossiCup] data load error', e);
     }
+  }
+
+  // first round whose stored status is not 'closed' = the round currently in play
+  function _computeActiveRound() {
+    for (var i = 0; i < _rounds.length; i++) {
+      if (_rounds[i] && _rounds[i].status !== 'closed') return _rounds[i].round;
+    }
+    return 1;
+  }
+
+  // recompute the live/provisional bracket from the latest DATA snapshot
+  function _recomputeLive() {
+    var live = (window.DATA && window.DATA.participants) || [];
+    _bracket = (yc.buildCupBracket || function (b) { return b; })(
+      _rawBracket, live, _participants, { activeRound: _activeRound });
+    _lastUpdate = new Date();
   }
 
   function _bindEvents() {
@@ -96,7 +114,9 @@
           '<div class="yc-badges">' +
             '<span class="pill gold">פיילוט</span>' +
             '<span class="pill blue">סיבוב ראשון</span>' +
-            '<span class="pill">ממתין לניקוד יוסי</span>' +
+            ((_bracket.filter(function(m){return m.isProvisional;}).length > 0)
+              ? '<span class="pill orange yc-live-pill"><span class="yc-live-dot"></span> חי</span>'
+              : '<span class="pill">ממתין לניקוד יוסי</span>') +
           '</div>' +
         '</div>' +
       '</div>';
@@ -166,8 +186,10 @@
         '<div class="sectionHead"><h2>מפת הסיבובים</h2></div>' +
         '<div class="yc-timeline-row">' +
           _rounds.map(function (r) {
-            var statusClass = r.status === 'closed' ? 'green' : r.status === 'live' ? 'orange' : r.status === 'upcoming' ? 'gray' : '';
-            var statusLabel = r.status === 'closed' ? 'סגור' : r.status === 'live' ? 'פעיל' : r.status === 'upcoming' ? 'עתידי' : 'ממתין';
+            var isActive = (r.round === _activeRound) && r.status !== 'closed';
+            var st = isActive ? 'live' : r.status;
+            var statusClass = st === 'closed' ? 'green' : st === 'live' ? 'orange' : st === 'upcoming' ? 'gray' : '';
+            var statusLabel = st === 'closed' ? 'סגור' : st === 'live' ? 'פעיל · חי' : st === 'upcoming' ? 'עתידי' : 'ממתין';
             return '<div class="yc-timeline-card">' +
               '<div class="yc-tl-round">סיבוב ' + (r.round === 99 ? 'גמר' : r.round) + '</div>' +
               '<div class="yc-tl-name">' + esc(r.name) + '</div>' +
@@ -209,9 +231,15 @@
     return true;
   }
 
-  function _scoreBadge(live) {
-    if (live === null || live === undefined) return '<span class="hint">—</span>';
-    return '<span class="yc-live-score">' + live + '</span>';
+  function _fmtScore(v) {
+    return (v === null || v === undefined) ? '—' : String(v);
+  }
+
+  // round-score badge with a tooltip showing the live total + round baseline
+  function _roundScore(rs, total, init) {
+    if (rs === null || rs === undefined) return '<span class="hint">—</span>';
+    var tip = 'סה״כ ' + _fmtScore(total) + ' · נקודת פתיחה ' + _fmtScore(init) + ' · במחזור ' + rs;
+    return '<span class="yc-mscore" title="' + esc(tip) + '">' + (rs > 0 ? '+' : '') + rs + '</span>';
   }
 
   function _matchCard(m) {
@@ -219,36 +247,48 @@
       return '<div class="yc-card yc-bye-card">' +
         '<div class="yc-card-seed">#' + esc(m.playerASeed) + '</div>' +
         '<div class="yc-card-name">' + esc(m.playerAName) + '</div>' +
-        (m.liveScoreA !== null ? '<div class="yc-card-score">' + _scoreBadge(m.liveScoreA) + '<span class="hint" style="font-size:11px;margin-right:4px">נק׳ כרגע</span></div>' : '') +
+        (m.roundScoreA !== null ? '<div class="yc-card-score">' + _roundScore(m.roundScoreA, m.liveScoreA, m.initialScoreA) + '<span class="hint" style="font-size:11px;margin-right:4px">נק׳ במחזור</span></div>' : '') +
         '<div class="yc-bye-label">' +
           '<span class="pill green">✓ עלה אוטומטית לסיבוב השני</span>' +
         '</div>' +
         '</div>';
     }
-    var scoreA = m.liveScoreA !== null ? m.liveScoreA : null;
-    var scoreB = m.liveScoreB !== null ? m.liveScoreB : null;
-    var leadClass = '';
-    if (scoreA !== null && scoreB !== null) {
-      if (scoreA > scoreB) leadClass = 'yc-lead-a';
-      else if (scoreB > scoreA) leadClass = 'yc-lead-b';
+    var leadA = m.isProvisional && m.provisionalWinnerSeed === m.playerASeed;
+    var leadB = m.isProvisional && m.provisionalWinnerSeed === m.playerBSeed;
+    var leadClass = leadA ? 'yc-lead-a' : leadB ? 'yc-lead-b' : '';
+    var provClass = m.isProvisional ? ' yc-provisional' : '';
+
+    var status;
+    if (m.winnerSeed) {
+      status = '<span class="pill green">✓ הוכרז מנצח' + (m.winnerName ? ': ' + esc(m.winnerName) : '') + '</span>' +
+        (m.tieBreakerUsed ? '<span class="pill gold" title="הוכרע לפי שובר שוויון ' + esc(m.tieBreakerUsed) + '">שוב״ש ' + esc(m.tieBreakerUsed) + '</span>' : '');
+    } else if (m.isProvisional) {
+      var tbNote = (m.provisionalTieBreaker && m.provisionalTieBreaker !== 'A')
+        ? '<span class="pill gold" title="תיקו בניקוד המחזור — מוביל לפי שובר שוויון ' + esc(m.provisionalTieBreaker) + '">שובר שוויון ' + esc(m.provisionalTieBreaker) + '</span>'
+        : '';
+      status = '<span class="pill orange yc-live-pill"><span class="yc-live-dot"></span> חי</span>' +
+        '<span class="pill">מוביל כרגע: ' + esc(m.provisionalWinnerName) + '</span>' +
+        tbNote +
+        '<span class="hint" style="font-size:11px;width:100%">לא סופי · ייסגר לפי מייל הסיכום של יוסי</span>';
+    } else {
+      status = '<span class="pill">ממתין לניקוד</span>' +
+        '<span class="hint" style="font-size:11px;width:100%">טרם נצברו נקודות במחזור</span>';
     }
-    return '<div class="yc-card yc-match-card ' + leadClass + '">' +
+
+    return '<div class="yc-card yc-match-card ' + leadClass + provClass + '">' +
       '<div class="yc-match-num">#' + esc(m.matchNumber) + '</div>' +
       '<div class="yc-match-row yc-row-a">' +
         '<span class="yc-seed">' + esc(m.playerASeed) + '</span>' +
-        '<span class="yc-name">' + esc(m.playerAName) + '</span>' +
-        '<span class="yc-mscore">' + _scoreBadge(scoreA) + '</span>' +
+        '<span class="yc-name">' + esc(m.playerAName) + (leadA ? ' <span class="yc-lead-chip">▲</span>' : '') + '</span>' +
+        _roundScore(m.roundScoreA, m.liveScoreA, m.initialScoreA) +
       '</div>' +
       '<div class="yc-vs">vs</div>' +
       '<div class="yc-match-row yc-row-b">' +
         '<span class="yc-seed">' + esc(m.playerBSeed) + '</span>' +
-        '<span class="yc-name">' + esc(m.playerBName) + '</span>' +
-        '<span class="yc-mscore">' + _scoreBadge(scoreB) + '</span>' +
+        '<span class="yc-name">' + esc(m.playerBName) + (leadB ? ' <span class="yc-lead-chip">▲</span>' : '') + '</span>' +
+        _roundScore(m.roundScoreB, m.liveScoreB, m.initialScoreB) +
       '</div>' +
-      '<div class="yc-match-status">' +
-        (m.winnerSeed ? '<span class="pill green">הוכרז מנצח</span>' : '<span class="pill">ממתין לניקוד סופי</span>') +
-        (m.tieBreakerUsed ? '<span class="pill gold" title="הוכרע לפי שובר שוויון ' + esc(m.tieBreakerUsed) + '">שוב״ש ' + esc(m.tieBreakerUsed) + '</span>' : '') +
-      '</div>' +
+      '<div class="yc-match-status">' + status + '</div>' +
       '</div>';
   }
 
@@ -277,6 +317,22 @@
     el.innerHTML = html;
   }
 
+  function _renderLiveStatus() {
+    var el = document.getElementById('yc-live-status');
+    if (!el) return;
+    var liveCount = _bracket.filter(function (m) { return m.isProvisional; }).length;
+    var t = _lastUpdate ? _lastUpdate.toLocaleTimeString('he-IL', { hour: '2-digit', minute: '2-digit' }) : '';
+    if (liveCount > 0) {
+      el.innerHTML =
+        '<span class="pill orange yc-live-pill"><span class="yc-live-dot"></span> ' + liveCount + ' דו-קרבים חיים</span>' +
+        (t ? '<span class="hint" style="margin-right:8px">עודכן ' + esc(t) + '</span>' : '');
+    } else {
+      el.innerHTML =
+        '<span class="pill">ממתין לתחילת המחזור</span>' +
+        (t ? '<span class="hint" style="margin-right:8px">עודכן ' + esc(t) + '</span>' : '');
+    }
+  }
+
   function _renderBracketShell() {
     var el = document.getElementById('yc-bracket');
     if (!el) return;
@@ -284,11 +340,14 @@
       '<section class="card section yc-section">' +
         '<div class="sectionHead">' +
           '<h2>בראקט — סיבוב ראשון</h2>' +
-          '<div class="hint">הניקוד המוצג הוא הדירוג החי הנוכחי. הניקוד הקובע לדו-קרב הוא ניקוד מייל הסיכום של יוסי.</div>' +
+          '<div id="yc-live-status" class="yc-live-status"></div>' +
         '</div>' +
+        '<div class="notice yc-live-note">📡 המספרים מתעדכנים <b>חי</b> לפי משחקי הטוטו ומציגים כמה נקודות כל משתתף צבר <b>במחזור הנוכחי</b>. ' +
+          'הניקוד <b>הקובע</b> לכל דו-קרב הוא ניקוד מייל הסיכום הראשון של יוסי בסוף המחזור — נתון חי = <b>לא סופי</b>.</div>' +
         '<div id="yc-bracket-body"></div>' +
       '</section>';
     _renderBracket();
+    _renderLiveStatus();
   }
 
   // ── public render entry point ──────────────────────────────────────────
@@ -298,17 +357,8 @@
       _loadData();
       _init = true;
     } else {
-      // Refresh live scores on each tab visit (DATA may have updated)
-      var live = (window.DATA && window.DATA.participants) || [];
-      var raw = _bracket.map(function (m) {
-        return { playerASeed: m.playerASeed, playerAName: m.playerAName,
-                 playerBSeed: m.playerBSeed, playerBName: m.playerBName,
-                 isBye: m.isBye, matchNumber: m.matchNumber, id: m.id,
-                 status: m.status, winnerSeed: m.winnerSeed, winnerName: m.winnerName,
-                 winnerReason: m.winnerReason, round: m.round, tieBreakerUsed: m.tieBreakerUsed,
-                 roundScoreA: m.roundScoreA, roundScoreB: m.roundScoreB };
-      });
-      _bracket = (yc.buildCupBracket || function (b) { return b; })(raw, live);
+      // Refresh provisional cup scores from the latest DATA snapshot (called every ~30 s)
+      _recomputeLive();
     }
 
     var result = (yc.validateYossiCupData || function () { return { ok: true, errors: [], warnings: [] }; })(_participants, _bracket);

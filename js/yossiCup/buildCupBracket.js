@@ -2,40 +2,114 @@
 (function (exports) {
 
   /**
-   * buildCupBracket — attach live scores from DATA.participants to frozen bracket rows.
+   * buildCupBracket — attach live scores AND a provisional (live, non-final) winner
+   * to each frozen bracket row.
    *
-   * @param {object[]} bracketRows  — from round1Bracket.json
-   * @param {object[]} participants — DATA.participants (live leaderboard)
-   * @returns {object[]} enriched bracket rows with liveScoreA, liveScoreB, liveRankA, liveRankB
+   * A cup duel is decided by the ROUND SCORE — the points a participant earns during
+   * the current cup round window — NOT their lifetime total. For Round 1 the round
+   * window starts at the frozen "initialScore" snapshot, so:
+   *
+   *     roundScore = liveTotal − initialScore        (Round 1: baseline = initialScore)
+   *
+   * The provisional winner is computed with the same determineCupMatchWinner tie-break
+   * chain used for the official result, but it is ALWAYS marked provisional/not-final
+   * (isProvisional) and never written back as the official winnerSeed. The official
+   * result is only set when Yossi's summary email closes the round.
+   *
+   * @param {object[]} bracketRows        — frozen rows from round1Bracket.json
+   * @param {object[]} participants       — DATA.participants (live leaderboard, has .total)
+   * @param {object[]} [frozenParticipants] — participants.json (has .seed, .initialScore)
+   * @param {object}   [opts]             — { activeRound, baselineBySeed }
+   * @returns {object[]} enriched rows
    */
-  function buildCupBracket(bracketRows, participants) {
-    var norm = (window.YC && window.YC.normalizeParticipantName) ||
+  function buildCupBracket(bracketRows, participants, frozenParticipants, opts) {
+    opts = opts || {};
+    var hasWin = (typeof window !== 'undefined');
+    var norm = (hasWin && window.YC && window.YC.normalizeParticipantName) ||
                (typeof require !== 'undefined' && require('./normalizeParticipantName').normalizeParticipantName) ||
                function (s) { return String(s || '').toLowerCase().trim(); };
+    var determine = (hasWin && window.YC && window.YC.determineCupMatchWinner) ||
+               (typeof require !== 'undefined' && require('./determineCupMatchWinner').determineCupMatchWinner) ||
+               null;
 
-    // Build lookup: normalizedName → participant
+    // live participant by normalized name → has .total / .displayRank
     var byName = {};
     if (Array.isArray(participants)) {
-      participants.forEach(function (p) {
-        var k = norm(p.name);
-        if (k) byName[k] = p;
+      participants.forEach(function (p) { var k = norm(p.name); if (k) byName[k] = p; });
+    }
+
+    // frozen initialScore lookups (by seed and by name) — the Round 1 baseline.
+    var initBySeed = {}, initByName = {};
+    if (Array.isArray(frozenParticipants)) {
+      frozenParticipants.forEach(function (fp) {
+        if (fp.seed != null) initBySeed[fp.seed] = Number(fp.initialScore);
+        var k = norm(fp.name); if (k) initByName[k] = Number(fp.initialScore);
       });
     }
 
-    function lookup(name) {
-      if (!name) return null;
-      return byName[norm(name)] || null;
+    // Optional per-round baseline override (for rounds > 1, supplied after a round closes).
+    var baselineBySeed = opts.baselineBySeed || null;
+
+    function liveOf(name) { return name ? (byName[norm(name)] || null) : null; }
+    function baselineOf(seed, name) {
+      if (baselineBySeed && baselineBySeed[seed] != null && !isNaN(baselineBySeed[seed])) return baselineBySeed[seed];
+      if (initBySeed[seed] != null && !isNaN(initBySeed[seed])) return initBySeed[seed];
+      var k = norm(name);
+      if (k && initByName[k] != null && !isNaN(initByName[k])) return initByName[k];
+      return null;
+    }
+    function initOf(seed, name) {
+      if (initBySeed[seed] != null && !isNaN(initBySeed[seed])) return initBySeed[seed];
+      var k = norm(name);
+      if (k && initByName[k] != null && !isNaN(initByName[k])) return initByName[k];
+      return null;
     }
 
     return bracketRows.map(function (row) {
-      var pA = lookup(row.playerAName);
-      var pB = lookup(row.playerBName);
-      return Object.assign({}, row, {
-        liveScoreA  : pA ? (pA.total || 0) : null,
-        liveRankA   : pA ? (pA.displayRank || pA.rank || null) : null,
-        liveScoreB  : pB ? (pB.total || 0) : null,
-        liveRankB   : pB ? (pB.displayRank || pB.rank || null) : null
+      var pA = liveOf(row.playerAName), pB = liveOf(row.playerBName);
+      var totA = pA ? (Number(pA.total) || 0) : null;
+      var totB = pB ? (Number(pB.total) || 0) : null;
+      var baseA = baselineOf(row.playerASeed, row.playerAName);
+      var baseB = baselineOf(row.playerBSeed, row.playerBName);
+      var initA = initOf(row.playerASeed, row.playerAName);
+      var initB = initOf(row.playerBSeed, row.playerBName);
+      var rsA = (totA != null && baseA != null) ? (totA - baseA) : null; // round score
+      var rsB = (totB != null && baseB != null) ? (totB - baseB) : null;
+
+      var out = Object.assign({}, row, {
+        liveScoreA: totA, liveScoreB: totB,
+        liveRankA: pA ? (pA.displayRank || pA.rank || null) : null,
+        liveRankB: pB ? (pB.displayRank || pB.rank || null) : null,
+        initialScoreA: initA, initialScoreB: initB,
+        roundScoreA: rsA, roundScoreB: rsB,
+        hasLiveData: false,
+        provisionalWinnerSeed: null, provisionalWinnerName: null,
+        provisionalTieBreaker: null, provisionalMargin: null, isProvisional: false
       });
+
+      // Provisional winner — only for active duels with no official result yet, and only
+      // once at least one side has earned points in the current round.
+      var noOfficialWinner = (row.winnerSeed == null);
+      if (!row.isBye && noOfficialWinner && rsA != null && rsB != null && determine) {
+        var hasLive = (rsA > 0 || rsB > 0);
+        out.hasLiveData = hasLive;
+        if (hasLive) {
+          var res = determine({
+            playerA: row.playerASeed, playerB: row.playerBSeed,
+            roundScoreA: rsA, roundScoreB: rsB,
+            cumulativeCupScoreA: rsA, cumulativeCupScoreB: rsB, // Round 1: cumulative == round
+            initialScoreA: initA, initialScoreB: initB,
+            previousRoundMarginsA: [], previousRoundMarginsB: [],
+            seedA: row.playerASeed, seedB: row.playerBSeed
+          });
+          out.provisionalWinnerSeed = res.winnerId;
+          out.provisionalWinnerName = (res.winnerId === row.playerASeed) ? row.playerAName : row.playerBName;
+          out.provisionalTieBreaker = res.tieBreakerUsed;
+          out.provisionalMargin = res.margin;
+          out.isProvisional = true;
+        }
+      }
+      return out;
     });
   }
 

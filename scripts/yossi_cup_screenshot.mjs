@@ -25,7 +25,7 @@ try {
   ({ chromium } = require('playwright'));
 }
 
-const baseUrl = process.argv[2] || 'http://127.0.0.1:8000/';
+const baseUrl = process.argv[2] || 'http://127.0.0.1:8001/';
 const outDir = process.argv[3] || path.resolve('scripts/screenshots');
 mkdirSync(outDir, { recursive: true });
 

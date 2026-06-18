@@ -12,6 +12,7 @@ const { normalizeParticipantName }  = require(path.join(base, 'normalizeParticip
 const { detectBye }                  = require(path.join(base, 'detectBye.js'));
 const { determineCupMatchWinner }    = require(path.join(base, 'determineCupMatchWinner.js'));
 const { validateYossiCupData }       = require(path.join(base, 'validateYossiCupData.js'));
+const { buildCupBracket }            = require(path.join(base, 'buildCupBracket.js'));
 
 let passed = 0; let failed = 0;
 function test(name, fn) {
@@ -172,6 +173,99 @@ test('empty participants → error', () => {
 test('empty bracket → error', () => {
   const r = validateYossiCupData(mockParticipants, []);
   assert.strictEqual(r.ok, false);
+});
+
+// ──────────────────────────────────────────────────
+// buildCupBracket — round-score + provisional winner
+// ──────────────────────────────────────────────────
+console.log('\n── buildCupBracket ──');
+
+const frozenParticipants = [
+  { seed: 1, name: 'Player One',   initialScore: 100 },
+  { seed: 2, name: 'Player Two',   initialScore: 80  },
+  { seed: 3, name: 'Player Three', initialScore: 90  },
+];
+
+const rawBracket = [
+  // BYE
+  { id: 'r1-m1', round: 1, matchNumber: 1,
+    playerASeed: 1, playerAName: 'Player One',
+    playerBSeed: 256, playerBName: null,
+    isBye: true, status: 'bye', winnerSeed: 1, winnerName: 'Player One', winnerReason: 'automatic', tieBreakerUsed: null },
+  // Active duel: A leads on round score
+  { id: 'r1-m2', round: 1, matchNumber: 2,
+    playerASeed: 2, playerAName: 'Player Two',
+    playerBSeed: 3, playerBName: 'Player Three',
+    isBye: false, status: 'pending', winnerSeed: null, winnerName: null, winnerReason: null, tieBreakerUsed: null },
+];
+
+const liveParts = [
+  { name: 'Player One',   total: 130 },  // round score = 130 - 100 = 30
+  { name: 'Player Two',   total: 100 },  // round score = 100 - 80  = 20
+  { name: 'Player Three', total: 95  },  // round score = 95  - 90  = 5
+];
+
+const built = buildCupBracket(rawBracket, liveParts, frozenParticipants, { activeRound: 1 });
+
+test('BYE row: roundScoreA = liveTotal - initialScore', () => {
+  const bye = built.find(m => m.isBye);
+  assert.strictEqual(bye.roundScoreA, 30, 'roundScoreA should be 30');
+  assert.strictEqual(bye.initialScoreA, 100, 'initialScoreA should be 100');
+  assert.strictEqual(bye.liveScoreA, 130, 'liveScoreA should be 130');
+});
+
+test('BYE row: hasLiveData false (bye rows excluded from provisional logic)', () => {
+  const bye = built.find(m => m.isBye);
+  assert.strictEqual(bye.isProvisional, false);
+});
+
+test('Active duel: roundScoreA/B computed from initialScore baseline', () => {
+  const duel = built.find(m => !m.isBye);
+  assert.strictEqual(duel.roundScoreA, 20, 'seed-2 round score = 100-80');
+  assert.strictEqual(duel.roundScoreB, 5,  'seed-3 round score = 95-90');
+});
+
+test('Active duel: provisional winner set when round points exist', () => {
+  const duel = built.find(m => !m.isBye);
+  assert.strictEqual(duel.isProvisional, true);
+  assert.strictEqual(duel.provisionalWinnerSeed, 2, 'seed-2 leads with 20 vs 5');
+  assert.strictEqual(duel.provisionalWinnerName, 'Player Two');
+});
+
+test('Active duel: provisional tie-breaker A (round score dominates)', () => {
+  const duel = built.find(m => !m.isBye);
+  assert.strictEqual(duel.provisionalTieBreaker, 'A');
+  assert.strictEqual(duel.provisionalMargin, 15);
+});
+
+// Duel with zero round points on both sides: no provisional winner yet
+const zeroBracket = [
+  { id: 'r1-m3', round: 1, matchNumber: 3,
+    playerASeed: 2, playerAName: 'Player Two',
+    playerBSeed: 3, playerBName: 'Player Three',
+    isBye: false, status: 'pending', winnerSeed: null, winnerName: null, winnerReason: null, tieBreakerUsed: null },
+];
+const zeroParts = [
+  { name: 'Player Two',   total: 80 },  // round score = 0
+  { name: 'Player Three', total: 90 },  // round score = 0
+];
+const zeroBuilt = buildCupBracket(zeroBracket, zeroParts, frozenParticipants, { activeRound: 1 });
+test('Active duel: no provisional winner when both round scores are 0', () => {
+  const duel = zeroBuilt[0];
+  assert.strictEqual(duel.isProvisional, false);
+  assert.strictEqual(duel.provisionalWinnerSeed, null);
+});
+
+test('Active duel with official winner: provisional not set', () => {
+  const officialBracket = [
+    { id: 'r1-m4', round: 1, matchNumber: 4,
+      playerASeed: 2, playerAName: 'Player Two',
+      playerBSeed: 3, playerBName: 'Player Three',
+      isBye: false, status: 'closed', winnerSeed: 3, winnerName: 'Player Three', winnerReason: 'round_score', tieBreakerUsed: 'A' },
+  ];
+  const result = buildCupBracket(officialBracket, liveParts, frozenParticipants, { activeRound: 1 });
+  assert.strictEqual(result[0].isProvisional, false, 'official winner → no provisional override');
+  assert.strictEqual(result[0].winnerSeed, 3, 'official winner preserved');
 });
 
 // ──────────────────────────────────────────────────
