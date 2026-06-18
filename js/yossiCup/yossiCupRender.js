@@ -205,19 +205,25 @@
   function _renderSearch() {
     var el = document.getElementById('yc-search');
     if (!el) return;
-    el.innerHTML =
-      '<div class="yc-search-bar">' +
-        '<div class="inputWrap" style="flex:1;min-width:220px">' +
-          '<span class="searchIcon">🔎</span>' +
-          '<input id="ycSearch" autocomplete="off" placeholder="חפש שם משתתף..." style="width:100%;padding-right:44px">' +
-        '</div>' +
-        '<div class="yc-filters">' +
-          '<button class="yc-filter-btn secondary active" data-filter="all">הכל (128)</button>' +
-          '<button class="yc-filter-btn secondary" data-filter="bye">עולים אוטומטית (14)</button>' +
-          '<button class="yc-filter-btn secondary" data-filter="active">דו-קרבים (114)</button>' +
-        '</div>' +
-      '</div>';
-    _bindEvents();
+    // Only build the shell once; on subsequent renders just re-bind events.
+    if (!document.getElementById('ycSearch')) {
+      el.innerHTML =
+        '<div class="yc-search-bar">' +
+          '<div class="inputWrap" style="flex:1;min-width:220px">' +
+            '<span class="searchIcon">🔎</span>' +
+            '<input id="ycSearch" autocomplete="off" placeholder="חפש שם משתתף..." style="width:100%;padding-right:44px">' +
+          '</div>' +
+          '<div class="yc-filters">' +
+            '<button class="yc-filter-btn secondary active" data-filter="all">הכל (128)</button>' +
+            '<button class="yc-filter-btn secondary" data-filter="bye">עולים אוטומטית (14)</button>' +
+            '<button class="yc-filter-btn secondary" data-filter="active">דו-קרבים (114)</button>' +
+          '</div>' +
+        '</div>';
+      _bindEvents();
+    }
+    // Restore the current search value so the input doesn't flicker.
+    var inp = document.getElementById('ycSearch');
+    if (inp && inp.value !== _search) inp.value = _search;
   }
 
   function _matchVisible(m) {
