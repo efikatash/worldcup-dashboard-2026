@@ -1,0 +1,55 @@
+name: Live Score Loop
+
+# Self-running "live mode": updates the dashboard every 10 minutes during the
+# nightly match window (00:00–07:00 Philippines time = 16:00–23:00 UTC),
+# entirely on GitHub's runner — no dependency on any chat session.
+#
+# GitHub-hosted jobs are capped at 6h, so two scheduled starts cover the full
+# 7-hour window; concurrency makes the later start cleanly replace the earlier.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 16 * * *"   # 00:00 PHT — start of the night window
+    - cron: "0 19 * * *"   # 03:00 PHT — safety restart if the first run was skipped
+    - cron: "0 22 * * *"   # 06:00 PHT — covers the final hour past the 6h job limit
+
+permissions:
+  contents: write
+
+concurrency:
+  group: live-score-loop
+  cancel-in-progress: true
+
+jobs:
+  live-loop:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Update every 10 minutes until 07:00 PHT (23:00 UTC)
+        run: |
+          set +e
+          END=$(date -u -d 'today 23:00' +%s)
+          git config user.name "worldcup-dashboard-bot"
+          git config user.email "worldcup-dashboard-bot@users.noreply.github.com"
+          while [ "$(date -u +%s)" -lt "$END" ]; do
+            echo "=== update $(date -u +'%H:%M') UTC ==="
+            python scripts/update_from_fifa.py
+            git add data.json leaderboard.csv matches.csv open_questions.csv open_question_review.csv fast_track_review.csv sources_all.csv sources_fifa.csv efi_katash_audit.csv automation_status.json espn_live_debug.csv match_results_cache.json
+            git commit -m "Live auto-update dashboard data" || echo "No changes to commit"
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push && break
+              echo "push retry $i"; sleep 5
+            done
+            [ "$(date -u +%s)" -ge "$END" ] && break
+            sleep 600
+          done
+          echo "Live loop window ended at $(date -u +'%H:%M') UTC"
