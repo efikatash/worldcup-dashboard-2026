@@ -235,11 +235,21 @@
     return (v === null || v === undefined) ? '—' : String(v);
   }
 
-  // round-score badge with a tooltip showing the live total + round baseline
-  function _roundScore(rs, total, init) {
-    if (rs === null || rs === undefined) return '<span class="hint">—</span>';
-    var tip = 'סה״כ ' + _fmtScore(total) + ' · נקודת פתיחה ' + _fmtScore(init) + ' · במחזור ' + rs;
-    return '<span class="yc-mscore" title="' + esc(tip) + '">' + (rs > 0 ? '+' : '') + rs + '</span>';
+  // score badge: shows round-delta (+N) when the round has started, total otherwise
+  function _scoreCell(m, side) {
+    var rs    = side === 'A' ? m.roundScoreA    : m.roundScoreB;
+    var total = side === 'A' ? m.liveScoreA     : m.liveScoreB;
+    var init  = side === 'A' ? m.initialScoreA  : m.initialScoreB;
+    if (total === null || total === undefined) return '<span class="hint">—</span>';
+    if (m.roundStarted && rs !== null && rs >= 0) {
+      // Cup round has games: show round delta prominently
+      var tip = 'סה״כ ' + _fmtScore(total) + ' · נקודת פתיחה ' + _fmtScore(init) + ' · במחזור ' + rs;
+      return '<span class="yc-mscore" title="' + esc(tip) + '">' + (rs > 0 ? '+' : '') + rs + ' <span class="yc-tot-hint">(' + total + ')</span></span>';
+    }
+    // Pre-round or stale baseline: show total score as main metric
+    var tip2 = 'ניקוד כולל · שלב הבתים';
+    if (init !== null) tip2 += ' · נקודת פתיחה לגביע ' + _fmtScore(init);
+    return '<span class="yc-mscore" title="' + esc(tip2) + '">' + _fmtScore(total) + '</span>';
   }
 
   function _matchCard(m) {
@@ -247,7 +257,7 @@
       return '<div class="yc-card yc-bye-card">' +
         '<div class="yc-card-seed">#' + esc(m.playerASeed) + '</div>' +
         '<div class="yc-card-name">' + esc(m.playerAName) + '</div>' +
-        (m.roundScoreA !== null ? '<div class="yc-card-score">' + _roundScore(m.roundScoreA, m.liveScoreA, m.initialScoreA) + '<span class="hint" style="font-size:11px;margin-right:4px">נק׳ במחזור</span></div>' : '') +
+        (m.liveScoreA !== null ? '<div class="yc-card-score">' + _scoreCell(m, 'A') + '<span class="hint" style="font-size:11px;margin-right:4px">נק׳</span></div>' : '') +
         '<div class="yc-bye-label">' +
           '<span class="pill green">✓ עלה אוטומטית לסיבוב השני</span>' +
         '</div>' +
@@ -263,16 +273,19 @@
       status = '<span class="pill green">✓ הוכרז מנצח' + (m.winnerName ? ': ' + esc(m.winnerName) : '') + '</span>' +
         (m.tieBreakerUsed ? '<span class="pill gold" title="הוכרע לפי שובר שוויון ' + esc(m.tieBreakerUsed) + '">שוב״ש ' + esc(m.tieBreakerUsed) + '</span>' : '');
     } else if (m.isProvisional) {
+      var roundLabel = m.roundStarted ? ' חי' : ' נוכחי';
       var tbNote = (m.provisionalTieBreaker && m.provisionalTieBreaker !== 'A')
-        ? '<span class="pill gold" title="תיקו בניקוד המחזור — מוביל לפי שובר שוויון ' + esc(m.provisionalTieBreaker) + '">שובר שוויון ' + esc(m.provisionalTieBreaker) + '</span>'
+        ? '<span class="pill gold" title="תיקו בניקוד — מוביל לפי שובר שוויון ' + esc(m.provisionalTieBreaker) + '">שובר שוויון ' + esc(m.provisionalTieBreaker) + '</span>'
         : '';
-      status = '<span class="pill orange yc-live-pill"><span class="yc-live-dot"></span> חי</span>' +
+      var hint = m.roundStarted
+        ? 'לא סופי · ייסגר לפי מייל הסיכום של יוסי'
+        : 'ניקוד לפני תחילת המחזור · יתעדכן עם התחלת משחקי הסיבוב';
+      status = '<span class="pill orange yc-live-pill"><span class="yc-live-dot"></span>' + roundLabel + '</span>' +
         '<span class="pill">מוביל כרגע: ' + esc(m.provisionalWinnerName) + '</span>' +
         tbNote +
-        '<span class="hint" style="font-size:11px;width:100%">לא סופי · ייסגר לפי מייל הסיכום של יוסי</span>';
+        '<span class="hint" style="font-size:11px;width:100%">' + esc(hint) + '</span>';
     } else {
-      status = '<span class="pill">ממתין לניקוד</span>' +
-        '<span class="hint" style="font-size:11px;width:100%">טרם נצברו נקודות במחזור</span>';
+      status = '<span class="pill">ממתין לנתונים</span>';
     }
 
     return '<div class="yc-card yc-match-card ' + leadClass + provClass + '">' +
@@ -280,13 +293,13 @@
       '<div class="yc-match-row yc-row-a">' +
         '<span class="yc-seed">' + esc(m.playerASeed) + '</span>' +
         '<span class="yc-name">' + esc(m.playerAName) + (leadA ? ' <span class="yc-lead-chip">▲</span>' : '') + '</span>' +
-        _roundScore(m.roundScoreA, m.liveScoreA, m.initialScoreA) +
+        _scoreCell(m, 'A') +
       '</div>' +
       '<div class="yc-vs">vs</div>' +
       '<div class="yc-match-row yc-row-b">' +
         '<span class="yc-seed">' + esc(m.playerBSeed) + '</span>' +
         '<span class="yc-name">' + esc(m.playerBName) + (leadB ? ' <span class="yc-lead-chip">▲</span>' : '') + '</span>' +
-        _roundScore(m.roundScoreB, m.liveScoreB, m.initialScoreB) +
+        _scoreCell(m, 'B') +
       '</div>' +
       '<div class="yc-match-status">' + status + '</div>' +
       '</div>';

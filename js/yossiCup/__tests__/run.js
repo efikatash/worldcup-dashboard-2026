@@ -238,7 +238,7 @@ test('Active duel: provisional tie-breaker A (round score dominates)', () => {
   assert.strictEqual(duel.provisionalMargin, 15);
 });
 
-// Duel with zero round points on both sides: no provisional winner yet
+// Duel with zero round points (totals == initialScore): still provisional via tie-breaker
 const zeroBracket = [
   { id: 'r1-m3', round: 1, matchNumber: 3,
     playerASeed: 2, playerAName: 'Player Two',
@@ -250,10 +250,28 @@ const zeroParts = [
   { name: 'Player Three', total: 90 },  // round score = 0
 ];
 const zeroBuilt = buildCupBracket(zeroBracket, zeroParts, frozenParticipants, { activeRound: 1 });
-test('Active duel: no provisional winner when both round scores are 0', () => {
+test('Active duel with zero round scores: isProvisional=true (tie-break by seed/initialScore)', () => {
   const duel = zeroBuilt[0];
-  assert.strictEqual(duel.isProvisional, false);
-  assert.strictEqual(duel.provisionalWinnerSeed, null);
+  assert.strictEqual(duel.isProvisional, true, 'should show provisional via tie-breaker');
+  assert.strictEqual(duel.roundStarted, false, 'roundStarted should be false');
+});
+
+// Duel where live total < initialScore (stale baseline / embedded fallback data)
+const staleBracket = [
+  { id: 'r1-m5', round: 1, matchNumber: 5,
+    playerASeed: 2, playerAName: 'Player Two',
+    playerBSeed: 3, playerBName: 'Player Three',
+    isBye: false, status: 'pending', winnerSeed: null, winnerName: null, winnerReason: null, tieBreakerUsed: null },
+];
+const staleParts = [
+  { name: 'Player Two',   total: 30 },  // stale: 30 < initialScore 80
+  { name: 'Player Three', total: 25 },  // stale: 25 < initialScore 90
+];
+const staleBuilt = buildCupBracket(staleBracket, staleParts, frozenParticipants, { activeRound: 1 });
+test('Stale data (total < initialScore): still shows provisional using total as fallback', () => {
+  const duel = staleBuilt[0];
+  assert.strictEqual(duel.isProvisional, true, 'still provisional with stale data');
+  assert.strictEqual(duel.provisionalWinnerSeed, 2, 'seed-2 wins (total 30 > seed-3 total 25)');
 });
 
 test('Active duel with official winner: provisional not set', () => {

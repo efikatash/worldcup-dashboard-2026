@@ -87,27 +87,34 @@
         provisionalTieBreaker: null, provisionalMargin: null, isProvisional: false
       });
 
-      // Provisional winner — only for active duels with no official result yet, and only
-      // once at least one side has earned points in the current round.
+      // Provisional winner — for any active duel with no official result and live totals
+      // available. When round scores are negative (stale baseline) we fall back to
+      // comparing the raw live totals so the cup always mirrors the leaderboard.
       var noOfficialWinner = (row.winnerSeed == null);
-      if (!row.isBye && noOfficialWinner && rsA != null && rsB != null && determine) {
-        var hasLive = (rsA > 0 || rsB > 0);
-        out.hasLiveData = hasLive;
-        if (hasLive) {
-          var res = determine({
-            playerA: row.playerASeed, playerB: row.playerBSeed,
-            roundScoreA: rsA, roundScoreB: rsB,
-            cumulativeCupScoreA: rsA, cumulativeCupScoreB: rsB, // Round 1: cumulative == round
-            initialScoreA: initA, initialScoreB: initB,
-            previousRoundMarginsA: [], previousRoundMarginsB: [],
-            seedA: row.playerASeed, seedB: row.playerBSeed
-          });
-          out.provisionalWinnerSeed = res.winnerId;
-          out.provisionalWinnerName = (res.winnerId === row.playerASeed) ? row.playerAName : row.playerBName;
-          out.provisionalTieBreaker = res.tieBreakerUsed;
-          out.provisionalMargin = res.margin;
-          out.isProvisional = true;
-        }
+      if (!row.isBye && noOfficialWinner && totA != null && totB != null && determine) {
+        out.hasLiveData = true;
+        // Effective round scores: use computed delta when non-negative; fall back to the
+        // live total itself when the snapshot pre-dates the current data (rsX < 0).
+        var effA = (rsA != null && rsA >= 0) ? rsA : totA;
+        var effB = (rsB != null && rsB >= 0) ? rsB : totB;
+        // Only suppress provisional display when the round hasn't moved at all AND
+        // we have a valid baseline (i.e. data is fresh but no cup-round games yet).
+        var roundStarted = (rsA !== null && rsB !== null) ? (rsA > 0 || rsB > 0) : true;
+        // Always compute a provisional result so the bracket shows current standings.
+        var res = determine({
+          playerA: row.playerASeed, playerB: row.playerBSeed,
+          roundScoreA: effA, roundScoreB: effB,
+          cumulativeCupScoreA: effA, cumulativeCupScoreB: effB,
+          initialScoreA: initA, initialScoreB: initB,
+          previousRoundMarginsA: [], previousRoundMarginsB: [],
+          seedA: row.playerASeed, seedB: row.playerBSeed
+        });
+        out.provisionalWinnerSeed = res.winnerId;
+        out.provisionalWinnerName = (res.winnerId === row.playerASeed) ? row.playerAName : row.playerBName;
+        out.provisionalTieBreaker = res.tieBreakerUsed;
+        out.provisionalMargin = res.margin;
+        out.isProvisional = true;
+        out.roundStarted = roundStarted; // false → using initialScore tie-break before any cup games
       }
       return out;
     });
