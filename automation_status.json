@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-18T17:35:10Z",
+  "updated_at_utc": "2026-06-18T17:45:15Z",
   "completed_matches": 24,
   "live_matches": 1,
   "cache_size_before": 24,
@@ -12,12 +12,12 @@
     {
       "matchId": 3,
       "match": "צ'כיה - דרום אפריקה",
-      "score": "1-0",
+      "score": "1-1",
       "status": "live"
     }
   ],
   "conflicts": [],
   "warnings": [],
   "leader": "יובל אברהם",
-  "leader_points": 180
+  "leader_points": 187
 }
