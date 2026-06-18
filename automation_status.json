@@ -1,23 +1,23 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-17T23:03:49Z",
-  "completed_matches": 22,
-  "live_matches": 1,
+  "updated_at_utc": "2026-06-18T01:21:52Z",
+  "completed_matches": 23,
+  "live_matches": 0,
   "cache_size_before": 22,
-  "cache_size_after": 22,
+  "cache_size_after": 23,
   "restored_from_cache": [],
-  "final_updates": [],
-  "live_updates": [
+  "final_updates": [
     {
       "matchId": 68,
       "match": "גאנה - פנמה",
-      "score": "0-0",
-      "status": "live"
+      "score": "1-0",
+      "status": "verified"
     }
   ],
+  "live_updates": [],
   "conflicts": [],
   "warnings": [],
-  "leader": "שגיא אברמסון",
-  "leader_points": 172
+  "leader": "יובל אברהם",
+  "leader_points": 173
 }
