@@ -1,0 +1,67 @@
+[
+  {
+    "round": 1,
+    "name": "סיבוב ראשון",
+    "description": "מחזור שני של שלב הבתים",
+    "status": "pending",
+    "participantCountStart": 242,
+    "activeMatchCount": 114,
+    "byeCount": 14,
+    "participantCountEnd": 128,
+    "closedBySummaryEmail": false,
+    "summaryEmailDate": null,
+    "roundScoreSnapshots": {}
+  },
+  {
+    "round": 2,
+    "name": "סיבוב שני",
+    "description": "מחזור שלישי בתים 1–6",
+    "status": "upcoming",
+    "participantCountStart": 128,
+    "activeMatchCount": 64,
+    "byeCount": 0,
+    "participantCountEnd": 64,
+    "closedBySummaryEmail": false,
+    "summaryEmailDate": null,
+    "roundScoreSnapshots": {}
+  },
+  {
+    "round": 3,
+    "name": "סיבוב שלישי",
+    "description": "מחזור שלישי בתים 7–12",
+    "status": "upcoming",
+    "participantCountStart": 64,
+    "activeMatchCount": 32,
+    "byeCount": 0,
+    "participantCountEnd": 32,
+    "closedBySummaryEmail": false,
+    "summaryEmailDate": null,
+    "roundScoreSnapshots": {}
+  },
+  {
+    "round": 4,
+    "name": "שלב הנוק-אאוט",
+    "description": "המשך המפעל עם שלב הנוק-אאוט",
+    "status": "upcoming",
+    "participantCountStart": 32,
+    "activeMatchCount": null,
+    "byeCount": 0,
+    "participantCountEnd": null,
+    "closedBySummaryEmail": false,
+    "summaryEmailDate": null,
+    "roundScoreSnapshots": {}
+  },
+  {
+    "round": 99,
+    "name": "גמר גביע יוסי",
+    "description": "הגמר הגדול — שני המשתתפים הנותרים יתמודדו על תואר מחזיק גביע יוסי הראשון",
+    "status": "upcoming",
+    "participantCountStart": 2,
+    "activeMatchCount": 1,
+    "byeCount": 0,
+    "participantCountEnd": 1,
+    "closedBySummaryEmail": false,
+    "summaryEmailDate": null,
+    "roundScoreSnapshots": {}
+  }
+]
