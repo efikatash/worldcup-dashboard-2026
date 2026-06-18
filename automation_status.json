@@ -1,17 +1,17 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-18T18:01:39Z",
-  "completed_matches": 25,
+  "updated_at_utc": "2026-06-18T21:15:13Z",
+  "completed_matches": 26,
   "live_matches": 0,
-  "cache_size_before": 24,
-  "cache_size_after": 25,
+  "cache_size_before": 25,
+  "cache_size_after": 26,
   "restored_from_cache": [],
   "final_updates": [
     {
-      "matchId": 3,
-      "match": "צ'כיה - דרום אפריקה",
-      "score": "1-1",
+      "matchId": 9,
+      "match": "שווייץ - בוסניה",
+      "score": "4-1",
       "status": "verified"
     }
   ],
