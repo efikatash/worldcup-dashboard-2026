@@ -1,7 +1,7 @@
 ﻿id,row,group,date,home,away,actualHome,actualAway,status,sourceStatus,sourceTitle,sourceUrl
 1,12,A,22:00 - 11/6,מקסיקו,דרום אפריקה,2,0,verified,,Mexico 2-0 South Africa | Match report and highlights,https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-south-africa-highlights-match-report
 2,13,A,05:00 - 12/6,דרום קוריאה,צ'כיה,2,1,verified,,Korea Republic 2-1 Czechia | Match report and highlights,https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/korea-republic-czechia-highlights-match-report
-3,14,A,19:00 - 18/6,צ'כיה,דרום אפריקה,,,pending,,,
+3,14,A,19:00 - 18/6,צ'כיה,דרום אפריקה,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760438
 4,15,A,04:00 - 19/6,מקסיקו,דרום קוריאה,,,pending,,,
 5,16,A,04:00 - 25/6,דרום אפריקה,דרום קוריאה,,,pending,,,
 6,17,A,04:00 - 25/6,צ'כיה,מקסיקו,,,pending,,,
