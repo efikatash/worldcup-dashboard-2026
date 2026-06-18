@@ -1,7 +1,7 @@
 ﻿matchId,match,currentStatus,currentScore,espnEventId,espnName,candidateScore,candidateStatus,clock,sourceUrl,note
 1,מקסיקו - דרום אפריקה,verified,2-0,760415,South Africa at Mexico,2-0,verified,90'+8',https://www.espn.com/soccer/match/_/gameId/760415,Full Time
 2,דרום קוריאה - צ'כיה,verified,2-1,760414,Czechia at South Korea,2-1,verified,90'+7',https://www.espn.com/soccer/match/_/gameId/760414,Full Time
-3,צ'כיה - דרום אפריקה,live,0-0,760438,South Africa at Czechia,1-0,live,6',https://www.espn.com/soccer/match/_/gameId/760438,First Half
+3,צ'כיה - דרום אפריקה,live,1-0,760438,South Africa at Czechia,1-0,live,16',https://www.espn.com/soccer/match/_/gameId/760438,First Half
 4,מקסיקו - דרום קוריאה,pending,None-None,,,,not_found,,,
 5,דרום אפריקה - דרום קוריאה,pending,None-None,,,,not_found,,,
 6,צ'כיה - מקסיקו,pending,None-None,,,,not_found,,,
