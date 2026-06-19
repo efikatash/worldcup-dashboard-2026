@@ -537,6 +537,12 @@ def recompute(data: Dict[str, Any]) -> None:
         int(q["id"]) for q in data.get("openQuestions", [])
         if q.get("id") is not None and str(q.get("resolvedMatchday") or "") == (last_day_iso or "")
     }
+    # Group-advancement bonuses resolved on the current matchday (tagged per group
+    # in data.groupResults[<group>].resolvedMatchday).
+    last_day_bonus_groups = {
+        g for g, gr in (data.get("groupResults") or {}).items()
+        if str((gr or {}).get("resolvedMatchday") or "") == (last_day_iso or "")
+    }
 
     for p in data.get("participants", []):
         match_change = sum(
@@ -549,7 +555,12 @@ def recompute(data: Dict[str, Any]) -> None:
             for o in p.get("open", [])
             if int(o.get("qId") or 0) in last_day_open_ids
         )
-        p["pointsChange"] = match_change + open_change
+        bonus_change = sum(
+            int(b.get("points") or 0)
+            for b in p.get("bonuses", [])
+            if b.get("group") in last_day_bonus_groups
+        )
+        p["pointsChange"] = match_change + open_change + bonus_change
     # ───────────────────────────────────────────────────────────────────────
 
     sorted_players = sorted(data.get("participants", []), key=lambda x: (-int(x.get("total") or 0), str(x.get("name") or "")))
