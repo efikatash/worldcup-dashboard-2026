@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-19T01:16:27Z",
+  "updated_at_utc": "2026-06-19T02:21:13Z",
   "completed_matches": 27,
   "live_matches": 1,
   "cache_size_before": 27,
@@ -12,12 +12,12 @@
     {
       "matchId": 4,
       "match": "מקסיקו - דרום קוריאה",
-      "score": "0-0",
+      "score": "1-0",
       "status": "live"
     }
   ],
   "conflicts": [],
   "warnings": [],
   "leader": "יובל אברהם",
-  "leader_points": 202
+  "leader_points": 212
 }
