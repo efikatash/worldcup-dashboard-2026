@@ -1,21 +1,21 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-19T00:01:18Z",
-  "completed_matches": 26,
-  "live_matches": 1,
+  "updated_at_utc": "2026-06-19T00:16:25Z",
+  "completed_matches": 27,
+  "live_matches": 0,
   "cache_size_before": 26,
-  "cache_size_after": 26,
+  "cache_size_after": 27,
   "restored_from_cache": [],
-  "final_updates": [],
-  "live_updates": [
+  "final_updates": [
     {
       "matchId": 10,
       "match": "קנדה - קטאר",
       "score": "6-0",
-      "status": "live"
+      "status": "verified"
     }
   ],
+  "live_updates": [],
   "conflicts": [],
   "warnings": [],
   "leader": "יובל אברהם",
