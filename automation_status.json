@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-19T19:15:45Z",
+  "updated_at_utc": "2026-06-19T20:53:50Z",
   "completed_matches": 28,
   "live_matches": 1,
   "cache_size_before": 28,
@@ -12,12 +12,12 @@
     {
       "matchId": 21,
       "match": "ארה\"ב - אוסטרליה",
-      "score": "1-0",
+      "score": "2-0",
       "status": "live"
     }
   ],
   "conflicts": [],
   "warnings": [],
   "leader": "יובל אברהם",
-  "leader_points": 247
+  "leader_points": 242
 }
