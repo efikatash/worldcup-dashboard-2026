@@ -1,16 +1,23 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-19T21:54:21Z",
+  "updated_at_utc": "2026-06-19T22:04:26Z",
   "completed_matches": 29,
-  "live_matches": 0,
+  "live_matches": 1,
   "cache_size_before": 29,
   "cache_size_after": 29,
   "restored_from_cache": [],
   "final_updates": [],
-  "live_updates": [],
+  "live_updates": [
+    {
+      "matchId": 15,
+      "match": "סקוטלנד - מרוקו",
+      "score": "0-1",
+      "status": "live"
+    }
+  ],
   "conflicts": [],
   "warnings": [],
   "leader": "יובל אברהם",
-  "leader_points": 242
+  "leader_points": 252
 }
