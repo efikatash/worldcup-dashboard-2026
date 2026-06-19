@@ -1,20 +1,13 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-19T00:16:25Z",
+  "updated_at_utc": "2026-06-19T00:26:29Z",
   "completed_matches": 27,
   "live_matches": 0,
-  "cache_size_before": 26,
+  "cache_size_before": 27,
   "cache_size_after": 27,
   "restored_from_cache": [],
-  "final_updates": [
-    {
-      "matchId": 10,
-      "match": "קנדה - קטאר",
-      "score": "6-0",
-      "status": "verified"
-    }
-  ],
+  "final_updates": [],
   "live_updates": [],
   "conflicts": [],
   "warnings": [],
