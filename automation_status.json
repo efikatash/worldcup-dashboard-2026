@@ -1,20 +1,13 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-19T21:14:01Z",
+  "updated_at_utc": "2026-06-19T21:24:06Z",
   "completed_matches": 29,
   "live_matches": 0,
-  "cache_size_before": 28,
+  "cache_size_before": 29,
   "cache_size_after": 29,
   "restored_from_cache": [],
-  "final_updates": [
-    {
-      "matchId": 21,
-      "match": "ארה\"ב - אוסטרליה",
-      "score": "2-0",
-      "status": "verified"
-    }
-  ],
+  "final_updates": [],
   "live_updates": [],
   "conflicts": [],
   "warnings": [],
