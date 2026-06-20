@@ -1,18 +1,25 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-20T17:30:06Z",
-  "completed_matches": 32,
+  "updated_at_utc": "2026-06-20T20:19:44Z",
+  "completed_matches": 33,
   "live_matches": 1,
   "cache_size_before": 32,
-  "cache_size_after": 32,
+  "cache_size_after": 33,
   "restored_from_cache": [],
-  "final_updates": [],
-  "live_updates": [
+  "final_updates": [
     {
       "matchId": 33,
       "match": "הולנד - שבדיה",
-      "score": "2-0",
+      "score": "5-1",
+      "status": "verified"
+    }
+  ],
+  "live_updates": [
+    {
+      "matchId": 27,
+      "match": "גרמניה - חוף השנהב",
+      "score": "0-0",
       "status": "live"
     }
   ],
