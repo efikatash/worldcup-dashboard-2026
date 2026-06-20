@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-20T21:32:06Z",
+  "updated_at_utc": "2026-06-20T21:33:29Z",
   "completed_matches": 33,
   "live_matches": 1,
   "cache_size_before": 33,
@@ -12,7 +12,7 @@
     {
       "matchId": 27,
       "match": "גרמניה - חוף השנהב",
-      "score": "0-1",
+      "score": "1-1",
       "status": "live"
     }
   ],
