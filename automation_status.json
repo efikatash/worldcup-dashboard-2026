@@ -1,25 +1,18 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-21T04:34:53Z",
+  "updated_at_utc": "2026-06-21T05:51:41Z",
   "completed_matches": 35,
   "live_matches": 1,
-  "cache_size_before": 34,
+  "cache_size_before": 35,
   "cache_size_after": 35,
   "restored_from_cache": [],
-  "final_updates": [
-    {
-      "matchId": 28,
-      "match": "אקוואדור - קורסאו",
-      "score": "0-0",
-      "status": "verified"
-    }
-  ],
+  "final_updates": [],
   "live_updates": [
     {
       "matchId": 34,
       "match": "טוניסיה - יפן",
-      "score": "0-2",
+      "score": "0-4",
       "status": "live"
     }
   ],
