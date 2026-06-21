@@ -1,21 +1,21 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-21T20:55:10Z",
-  "completed_matches": 37,
-  "live_matches": 1,
+  "updated_at_utc": "2026-06-21T21:05:15Z",
+  "completed_matches": 38,
+  "live_matches": 0,
   "cache_size_before": 37,
-  "cache_size_after": 37,
+  "cache_size_after": 38,
   "restored_from_cache": [],
-  "final_updates": [],
-  "live_updates": [
+  "final_updates": [
     {
       "matchId": 39,
       "match": "בלגיה - איראן",
       "score": "0-0",
-      "status": "live"
+      "status": "verified"
     }
   ],
+  "live_updates": [],
   "conflicts": [],
   "warnings": [],
   "leader": "יובל אברהם",
