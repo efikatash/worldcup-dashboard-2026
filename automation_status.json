@@ -1,20 +1,13 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-21T21:05:15Z",
+  "updated_at_utc": "2026-06-21T21:15:19Z",
   "completed_matches": 38,
   "live_matches": 0,
-  "cache_size_before": 37,
+  "cache_size_before": 38,
   "cache_size_after": 38,
   "restored_from_cache": [],
-  "final_updates": [
-    {
-      "matchId": 39,
-      "match": "בלגיה - איראן",
-      "score": "0-0",
-      "status": "verified"
-    }
-  ],
+  "final_updates": [],
   "live_updates": [],
   "conflicts": [],
   "warnings": [],
