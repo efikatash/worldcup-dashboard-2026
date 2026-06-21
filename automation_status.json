@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-21T22:19:16Z",
+  "updated_at_utc": "2026-06-21T22:35:25Z",
   "completed_matches": 38,
   "live_matches": 1,
   "cache_size_before": 38,
@@ -12,7 +12,7 @@
     {
       "matchId": 46,
       "match": "אורוגוואי - קייפ ורדה",
-      "score": "0-0",
+      "score": "0-1",
       "status": "live"
     }
   ],

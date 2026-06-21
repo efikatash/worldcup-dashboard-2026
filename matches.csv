@@ -44,7 +44,7 @@
 43,82,H,19:00 - 15/6,ספרד,קייפ ורדה,0,0,verified,verified_espn_final,ESPN final scoreboard,https://www.espn.com/soccer/match/_/gameId/760428
 44,83,H,01:00 - 16/6,ערב הסעודית,אורוגוואי,1,1,verified,verified_espn_final,ESPN final scoreboard,https://www.espn.com/soccer/match/_/gameId/760429
 45,84,H,19:00 - 21/6,ספרד,ערב הסעודית,4,0,verified,verified_espn_final,ESPN final scoreboard,https://www.espn.com/soccer/match/_/gameId/760453
-46,85,H,01:00 - 22/6,אורוגוואי,קייפ ורדה,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760450
+46,85,H,01:00 - 22/6,אורוגוואי,קייפ ורדה,0,1,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760450
 47,86,H,03:00 - 27/6,אורוגוואי,ספרד,,,pending,,,
 48,87,H,03:00 - 27/6,קייפ ורדה,ערב הסעודית,,,pending,,,
 49,92,I,22:00 - 16/6,צרפת,סנגל,3,1,verified,verified_espn_final,ESPN final scoreboard,https://www.espn.com/soccer/match/_/gameId/760432
