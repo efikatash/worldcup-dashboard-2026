@@ -1,20 +1,13 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-21T10:46:29Z",
+  "updated_at_utc": "2026-06-21T10:54:24Z",
   "completed_matches": 36,
   "live_matches": 0,
-  "cache_size_before": 35,
+  "cache_size_before": 36,
   "cache_size_after": 36,
   "restored_from_cache": [],
-  "final_updates": [
-    {
-      "matchId": 34,
-      "match": "טוניסיה - יפן",
-      "score": "0-4",
-      "status": "verified"
-    }
-  ],
+  "final_updates": [],
   "live_updates": [],
   "conflicts": [],
   "warnings": [],
