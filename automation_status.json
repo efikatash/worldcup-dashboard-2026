@@ -1,14 +1,21 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-20T22:52:36Z",
+  "updated_at_utc": "2026-06-21T01:05:06Z",
   "completed_matches": 34,
-  "live_matches": 0,
+  "live_matches": 1,
   "cache_size_before": 34,
   "cache_size_after": 34,
   "restored_from_cache": [],
   "final_updates": [],
-  "live_updates": [],
+  "live_updates": [
+    {
+      "matchId": 28,
+      "match": "אקוואדור - קורסאו",
+      "score": "0-0",
+      "status": "live"
+    }
+  ],
   "conflicts": [],
   "warnings": [],
   "leader": "יובל אברהם",
