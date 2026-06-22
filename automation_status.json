@@ -1,23 +1,23 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-22T18:59:04Z",
-  "completed_matches": 40,
-  "live_matches": 1,
+  "updated_at_utc": "2026-06-22T19:09:08Z",
+  "completed_matches": 41,
+  "live_matches": 0,
   "cache_size_before": 40,
-  "cache_size_after": 40,
+  "cache_size_after": 41,
   "restored_from_cache": [],
-  "final_updates": [],
-  "live_updates": [
+  "final_updates": [
     {
       "matchId": 57,
       "match": "ארגנטינה - אוסטריה",
-      "score": "1-0",
-      "status": "live"
+      "score": "2-0",
+      "status": "verified"
     }
   ],
+  "live_updates": [],
   "conflicts": [],
   "warnings": [],
   "leader": "יובל אברהם",
-  "leader_points": 361
+  "leader_points": 359
 }
