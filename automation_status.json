@@ -1,20 +1,13 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-23T22:03:45Z",
+  "updated_at_utc": "2026-06-23T22:13:49Z",
   "completed_matches": 46,
   "live_matches": 0,
-  "cache_size_before": 45,
+  "cache_size_before": 46,
   "cache_size_after": 46,
   "restored_from_cache": [],
-  "final_updates": [
-    {
-      "matchId": 69,
-      "match": "אנגליה - גאנה",
-      "score": "0-0",
-      "status": "verified"
-    }
-  ],
+  "final_updates": [],
   "live_updates": [],
   "conflicts": [],
   "warnings": [],
