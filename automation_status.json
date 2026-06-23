@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-23T00:12:47Z",
+  "updated_at_utc": "2026-06-23T00:25:16Z",
   "completed_matches": 41,
   "live_matches": 2,
   "cache_size_before": 41,
@@ -12,7 +12,7 @@
     {
       "matchId": 51,
       "match": "צרפת - עירק",
-      "score": "2-0",
+      "score": "3-0",
       "status": "live"
     },
     {
@@ -25,5 +25,5 @@
   "conflicts": [],
   "warnings": [],
   "leader": "יובל אברהם",
-  "leader_points": 364
+  "leader_points": 374
 }
