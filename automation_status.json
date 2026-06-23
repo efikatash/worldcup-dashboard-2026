@@ -1,21 +1,21 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-23T22:00:34Z",
-  "completed_matches": 45,
-  "live_matches": 1,
+  "updated_at_utc": "2026-06-23T22:03:45Z",
+  "completed_matches": 46,
+  "live_matches": 0,
   "cache_size_before": 45,
-  "cache_size_after": 45,
+  "cache_size_after": 46,
   "restored_from_cache": [],
-  "final_updates": [],
-  "live_updates": [
+  "final_updates": [
     {
       "matchId": 69,
       "match": "אנגליה - גאנה",
       "score": "0-0",
-      "status": "live"
+      "status": "verified"
     }
   ],
+  "live_updates": [],
   "conflicts": [],
   "warnings": [],
   "leader": "יובל אברהם",
