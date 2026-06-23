@@ -1,24 +1,25 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-23T00:45:31Z",
-  "completed_matches": 41,
-  "live_matches": 2,
+  "updated_at_utc": "2026-06-23T01:21:09Z",
+  "completed_matches": 42,
+  "live_matches": 1,
   "cache_size_before": 41,
-  "cache_size_after": 41,
+  "cache_size_after": 42,
   "restored_from_cache": [],
-  "final_updates": [],
-  "live_updates": [
+  "final_updates": [
     {
       "matchId": 51,
       "match": "צרפת - עירק",
       "score": "3-0",
-      "status": "live"
-    },
+      "status": "verified"
+    }
+  ],
+  "live_updates": [
     {
       "matchId": 52,
       "match": "נורווגיה - סנגל",
-      "score": "1-0",
+      "score": "3-1",
       "status": "live"
     }
   ],
