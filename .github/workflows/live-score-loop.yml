@@ -53,7 +53,10 @@ jobs:
             for i in 1 2 3 4 5 6; do
               git fetch origin main && git reset --hard origin/main || { echo "fetch/reset retry $i"; sleep 4; continue; }
               python scripts/update_from_fifa.py
-              git add $FILES
+              # Heartbeat: guarantees a visible commit every 10 minutes even when
+              # no match data changed, and lets liveness be observed from git alone.
+              date -u +'%Y-%m-%dT%H:%M:%SZ' > live_heartbeat.txt
+              git add $FILES live_heartbeat.txt
               git commit -m "Live auto-update dashboard data" || { echo "No changes to commit"; break; }
               git push origin HEAD:main && break
               echo "push retry $i"; sleep 4
