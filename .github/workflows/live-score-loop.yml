@@ -44,14 +44,19 @@ jobs:
           END=$(date -u -d '2026-06-24 05:00' +%s)   # 13:00 PHT 24/6, ~1h after Colombia–Congo (10:00) ends
           git config user.name "worldcup-dashboard-bot"
           git config user.email "worldcup-dashboard-bot@users.noreply.github.com"
+          FILES="data.json leaderboard.csv matches.csv open_questions.csv open_question_review.csv fast_track_review.csv sources_all.csv sources_fifa.csv efi_katash_audit.csv automation_status.json espn_live_debug.csv match_results_cache.json"
           while [ "$(date -u +%s)" -lt "$END" ]; do
             echo "=== update $(date -u +'%H:%M') UTC ==="
-            python scripts/update_from_fifa.py
-            git add data.json leaderboard.csv matches.csv open_questions.csv open_question_review.csv fast_track_review.csv sources_all.csv sources_fifa.csv efi_katash_audit.csv automation_status.json espn_live_debug.csv match_results_cache.json
-            git commit -m "Live auto-update dashboard data" || echo "No changes to commit"
-            for i in 1 2 3 4 5; do
-              git pull --rebase origin main && git push && break
-              echo "push retry $i"; sleep 5
+            # Always start from the latest origin so a concurrent writer can never
+            # wedge a half-finished rebase. update_from_fifa.py regenerates the
+            # data files from scratch, so a hard reset loses nothing.
+            for i in 1 2 3 4 5 6; do
+              git fetch origin main && git reset --hard origin/main || { echo "fetch/reset retry $i"; sleep 4; continue; }
+              python scripts/update_from_fifa.py
+              git add $FILES
+              git commit -m "Live auto-update dashboard data" || { echo "No changes to commit"; break; }
+              git push origin HEAD:main && break
+              echo "push retry $i"; sleep 4
             done
             [ "$(date -u +%s)" -ge "$END" ] && break
             sleep 600
