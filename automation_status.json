@@ -1,20 +1,13 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-23T20:12:58Z",
+  "updated_at_utc": "2026-06-23T20:27:09Z",
   "completed_matches": 45,
   "live_matches": 1,
-  "cache_size_before": 44,
+  "cache_size_before": 45,
   "cache_size_after": 45,
   "restored_from_cache": [],
-  "final_updates": [
-    {
-      "matchId": 63,
-      "match": "פורטוגל - אוזבקיסטן",
-      "score": "5-0",
-      "status": "verified"
-    }
-  ],
+  "final_updates": [],
   "live_updates": [
     {
       "matchId": 69,
