@@ -1,21 +1,21 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-23T01:44:33Z",
-  "completed_matches": 42,
-  "live_matches": 1,
+  "updated_at_utc": "2026-06-23T02:03:43Z",
+  "completed_matches": 43,
+  "live_matches": 0,
   "cache_size_before": 42,
-  "cache_size_after": 42,
+  "cache_size_after": 43,
   "restored_from_cache": [],
-  "final_updates": [],
-  "live_updates": [
+  "final_updates": [
     {
       "matchId": 52,
       "match": "נורווגיה - סנגל",
-      "score": "3-1",
-      "status": "live"
+      "score": "3-2",
+      "status": "verified"
     }
   ],
+  "live_updates": [],
   "conflicts": [],
   "warnings": [],
   "leader": "יובל אברהם",
