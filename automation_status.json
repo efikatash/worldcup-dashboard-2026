@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-23T04:44:58Z",
+  "updated_at_utc": "2026-06-23T04:46:51Z",
   "completed_matches": 43,
   "live_matches": 1,
   "cache_size_before": 43,
@@ -12,12 +12,12 @@
     {
       "matchId": 58,
       "match": "ירדן - אלג'יריה",
-      "score": "1-1",
+      "score": "1-2",
       "status": "live"
     }
   ],
   "conflicts": [],
   "warnings": [],
   "leader": "יובל אברהם",
-  "leader_points": 384
+  "leader_points": 389
 }
