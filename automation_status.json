@@ -1,20 +1,13 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-23T05:06:12Z",
+  "updated_at_utc": "2026-06-23T10:48:38Z",
   "completed_matches": 44,
   "live_matches": 0,
-  "cache_size_before": 43,
+  "cache_size_before": 44,
   "cache_size_after": 44,
   "restored_from_cache": [],
-  "final_updates": [
-    {
-      "matchId": 58,
-      "match": "ירדן - אלג'יריה",
-      "score": "1-2",
-      "status": "verified"
-    }
-  ],
+  "final_updates": [],
   "live_updates": [],
   "conflicts": [],
   "warnings": [],
