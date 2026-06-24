@@ -184,13 +184,10 @@
     if (m.winnerSeed && rs !== null) {
       var won = (side === 'A' && m.winnerSeed === m.playerASeed) ||
                 (side === 'B' && m.winnerSeed === m.playerBSeed);
-      // Round 1: show full tournament total (initialScore + roundScore) — "כל הנקודות מתחילת הטורניר"
-      // Round 2+: show round-only delta (+N)
-      var isR1 = (m.round === 1);
-      var displayScore = (isR1 && init != null) ? (init + rs) : rs;
-      var prefix = (!isR1 && rs > 0) ? '+' : '';
+      // All rounds show round-only delta (+N) — no carryover from previous rounds
+      var prefix = (rs > 0) ? '+' : '';
       return '<span class="yc-mscore' + (won ? ' yc-mscore-win' : ' yc-mscore-lose') + '">' +
-        prefix + displayScore + '</span>';
+        prefix + rs + '</span>';
     }
 
     // Round hasn't started yet — hide all scores
@@ -471,18 +468,7 @@
     var el = document.getElementById('yc-bracket-body');
     if (!el) return;
 
-    // Enrich frozen rows with initialScoreA/B so _scoreCell can show full
-    // tournament totals for Round 1 (init + roundScore)
-    var initBySeed = {};
-    _participants.forEach(function (p) { initBySeed[p.seed] = p.initialScore; });
-    var enriched = bracket.map(function (m) {
-      return Object.assign({}, m, {
-        initialScoreA: initBySeed[m.playerASeed],
-        initialScoreB: initBySeed[m.playerBSeed]
-      });
-    });
-
-    var visible = enriched.filter(function (m) {
+    var visible = bracket.filter(function (m) {
       if (!_search) return true;
       var nA = String(m.playerAName || '').toLowerCase();
       var nB = String(m.playerBName || '').toLowerCase();
