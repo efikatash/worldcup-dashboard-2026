@@ -1,29 +1,16 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-24T20:59:57Z",
+  "updated_at_utc": "2026-06-24T21:12:14Z",
   "completed_matches": 50,
   "live_matches": 0,
-  "cache_size_before": 48,
+  "cache_size_before": 50,
   "cache_size_after": 50,
   "restored_from_cache": [],
-  "final_updates": [
-    {
-      "matchId": 11,
-      "match": "שווייץ - קנדה",
-      "score": "2-1",
-      "status": "verified"
-    },
-    {
-      "matchId": 12,
-      "match": "בוסניה - קטאר",
-      "score": "3-1",
-      "status": "verified"
-    }
-  ],
+  "final_updates": [],
   "live_updates": [],
   "conflicts": [],
   "warnings": [],
-  "leader": "יובל אברהם",
-  "leader_points": 429
+  "leader": "קובי ששון",
+  "leader_points": 461
 }
