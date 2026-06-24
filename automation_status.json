@@ -1,20 +1,13 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-24T05:20:03Z",
+  "updated_at_utc": "2026-06-24T07:02:46Z",
   "completed_matches": 48,
   "live_matches": 0,
-  "cache_size_before": 47,
+  "cache_size_before": 48,
   "cache_size_after": 48,
   "restored_from_cache": [],
-  "final_updates": [
-    {
-      "matchId": 64,
-      "match": "קולומביה - קונגו",
-      "score": "1-0",
-      "status": "verified"
-    }
-  ],
+  "final_updates": [],
   "live_updates": [],
   "conflicts": [],
   "warnings": [],
