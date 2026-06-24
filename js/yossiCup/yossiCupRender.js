@@ -1,8 +1,7 @@
 'use strict';
 /* ───────────────────────────────────────────────────────────────────────
-   גביע יוסי — Render Module
+   גביע יוסי — Render Module  (multi-round, mobile-first)
    window.YossiCup.render() is called every time the 'yossicup' tab is shown.
-   All DOM mutation is inside this file; all logic lives in YC.* utilities.
    ─────────────────────────────────────────────────────────────────────── */
 (function () {
 
@@ -13,69 +12,102 @@
   };
 
   // ── state ──────────────────────────────────────────────────────────────
-  var _init      = false;
-  var _rawBracket   = [];   // frozen rows (from #ycBracket)
-  var _bracket   = [];   // enriched with live scores + provisional winners
-  var _participants = [];
-  var _rounds    = [];
-  var _rules     = {};
-  var _search    = '';
-  var _filter    = 'all'; // 'all' | 'bye' | 'active'
-  var _activeRound = 1;   // first round not yet closed
-  var _lastUpdate  = null;
+  var _init         = false;
+  var _rawBracket   = [];   // frozen R1 rows (from #ycBracket)
+  var _rawBracketR2 = [];   // frozen R2 rows (from #ycBracketR2)
+  var _bracket      = [];   // enriched active-round bracket (live scores + provisional)
+  var _participants = [];   // from #ycParticipants
+  var _rounds       = [];
+  var _rules        = {};
+  var _search       = '';
+  var _filter       = 'all';
+  var _activeRound  = 1;    // first round not yet closed
+  var _viewRound    = null; // which round the user is currently viewing (null = active)
+  var _lastUpdate   = null;
 
   // ── boot ───────────────────────────────────────────────────────────────
   function _loadData() {
     try {
-      var pEl = document.getElementById('ycParticipants');
-      var bEl = document.getElementById('ycBracket');
-      var rEl = document.getElementById('ycRounds');
-      var ruEl= document.getElementById('ycRules');
-      _participants = pEl ? JSON.parse(pEl.textContent) : [];
-      _rawBracket   = bEl ? JSON.parse(bEl.textContent) : [];
-      _rounds       = rEl ? JSON.parse(rEl.textContent) : [];
-      _rules        = ruEl? JSON.parse(ruEl.textContent): {};
+      _participants = _parse('ycParticipants') || [];
+      _rawBracket   = _parse('ycBracket')      || [];
+      _rawBracketR2 = _parse('ycBracketR2')    || [];
+      _rounds       = _parse('ycRounds')       || [];
+      _rules        = _parse('ycRules')        || {};
       _activeRound  = _computeActiveRound();
+      _viewRound    = _activeRound;   // default: show the current active round
       _recomputeLive();
     } catch (e) {
       console.error('[YossiCup] data load error', e);
     }
   }
 
-  // first round whose stored status is not 'closed' = the round currently in play
+  function _parse(id) {
+    var el = document.getElementById(id);
+    return el ? JSON.parse(el.textContent) : null;
+  }
+
   function _computeActiveRound() {
     for (var i = 0; i < _rounds.length; i++) {
       if (_rounds[i] && _rounds[i].status !== 'closed') return _rounds[i].round;
     }
-    return 1;
+    return _rounds.length ? _rounds[_rounds.length - 1].round : 1;
   }
 
-  // recompute the live/provisional bracket from the latest DATA snapshot
+  function _bracketForRound(round) {
+    return round === 1 ? _rawBracket : _rawBracketR2;
+  }
+
+  // ── live recompute ─────────────────────────────────────────────────────
   function _recomputeLive() {
-    var live = (window.DATA && window.DATA.participants) || [];
+    var live = (typeof DATA !== 'undefined' ? DATA : (window.DATA || null));
+    var liveParts = (live && live.participants) || [];
+
+    // Build per-seed baseline for rounds > 1 (use baselineScoreR2 from participants.json)
+    var baselineBySeed = {};
+    if (_activeRound >= 2) {
+      _participants.forEach(function (p) {
+        if (p.baselineScoreR2 != null) baselineBySeed[p.seed] = p.baselineScoreR2;
+      });
+    }
+
+    var activeBracket = _bracketForRound(_activeRound);
     _bracket = (yc.buildCupBracket || function (b) { return b; })(
-      _rawBracket, live, _participants, { activeRound: _activeRound });
+      activeBracket, liveParts, _participants,
+      { activeRound: _activeRound, baselineBySeed: _activeRound >= 2 ? baselineBySeed : null });
     _lastUpdate = new Date();
   }
 
+  // ── event binding ──────────────────────────────────────────────────────
   function _bindEvents() {
     var searchEl = document.getElementById('ycSearch');
-    if (searchEl) {
+    if (searchEl && !searchEl._ycBound) {
+      searchEl._ycBound = true;
       searchEl.oninput = function () {
         _search = (this.value || '').trim().toLowerCase();
-        _renderBracket();
+        _renderBracketBody();
       };
     }
     document.querySelectorAll('.yc-filter-btn').forEach(function (btn) {
+      if (btn._ycBound) return;
+      btn._ycBound = true;
       btn.onclick = function () {
         document.querySelectorAll('.yc-filter-btn').forEach(function (b) { b.classList.remove('active'); });
         this.classList.add('active');
         _filter = this.dataset.filter || 'all';
-        _renderBracket();
+        _renderBracketBody();
+      };
+    });
+    document.querySelectorAll('.yc-round-tab').forEach(function (btn) {
+      if (btn._ycBound) return;
+      btn._ycBound = true;
+      btn.onclick = function () {
+        _viewRound = Number(this.dataset.round);
+        _renderRoundView();
       };
     });
     var rulesToggle = document.getElementById('ycRulesToggle');
-    if (rulesToggle) {
+    if (rulesToggle && !rulesToggle._ycBound) {
+      rulesToggle._ycBound = true;
       rulesToggle.onclick = function () {
         var body = document.getElementById('ycRulesBody');
         if (body) {
@@ -85,13 +117,129 @@
         }
       };
     }
+    var explToggle = document.getElementById('ycExplToggle');
+    if (explToggle && !explToggle._ycBound) {
+      explToggle._ycBound = true;
+      explToggle.onclick = function () {
+        var body = document.getElementById('ycExplBody');
+        if (body) {
+          var open = body.style.display !== 'none';
+          body.style.display = open ? 'none' : 'block';
+          this.textContent = open ? '▼ הסבר' : '▲ הסתר';
+        }
+      };
+    }
   }
 
-  // ── sections ──────────────────────────────────────────────────────────
+  // ── helpers ────────────────────────────────────────────────────────────
+  function _fmtScore(v) { return (v === null || v === undefined) ? '—' : String(v); }
+
+  function _roundLabel(round, short) {
+    var r = _rounds.find(function (x) { return x.round === round; });
+    if (short) return r ? r.name : 'סיבוב ' + round;
+    return r ? r.name + ' — ' + r.description : 'סיבוב ' + round;
+  }
+
+  // Score cell: for COMPLETED matches shows the final round score; for live shows provisional
+  function _scoreCell(m, side) {
+    var rs    = side === 'A' ? m.roundScoreA    : m.roundScoreB;
+    var total = side === 'A' ? m.liveScoreA     : m.liveScoreB;
+    var init  = side === 'A' ? m.initialScoreA  : m.initialScoreB;
+
+    // Completed round — show official round score
+    if (m.winnerSeed && rs !== null) {
+      var won = (side === 'A' && m.winnerSeed === m.playerASeed) ||
+                (side === 'B' && m.winnerSeed === m.playerBSeed);
+      return '<span class="yc-mscore' + (won ? ' yc-mscore-win' : ' yc-mscore-lose') + '">' +
+        (rs > 0 ? '+' : '') + rs + '</span>';
+    }
+
+    // No live data
+    if (total === null || total === undefined)
+      return '<span class="hint">—</span>';
+
+    // Live / pending round
+    if (m.roundStarted && rs !== null && rs >= 0) {
+      var tip = 'סה״כ ' + _fmtScore(total) + ' · נקודת פתיחה ' + _fmtScore(init) + ' · במחזור ' + rs;
+      return '<span class="yc-mscore" title="' + esc(tip) + '">' +
+        (rs > 0 ? '+' : '') + rs +
+        ' <span class="yc-tot-hint">(' + total + ')</span></span>';
+    }
+    var tip2 = 'ניקוד כולל · נקודת פתיחה לגביע ' + _fmtScore(init);
+    return '<span class="yc-mscore" title="' + esc(tip2) + '">' + _fmtScore(total) + '</span>';
+  }
+
+  function _matchCard(m, roundIsClosed) {
+    if (m.isBye) {
+      return '<div class="yc-card yc-bye-card">' +
+        '<div class="yc-card-top">' +
+          '<span class="yc-match-num">#' + esc(m.playerASeed) + '</span>' +
+          '<span class="pill green" style="font-size:11px">עלה אוטומטית</span>' +
+        '</div>' +
+        '<div class="yc-card-name">' + esc(m.playerAName) + '</div>' +
+        '</div>';
+    }
+
+    var leadA = m.isProvisional && m.provisionalWinnerSeed === m.playerASeed;
+    var leadB = m.isProvisional && m.provisionalWinnerSeed === m.playerBSeed;
+    var winA  = m.winnerSeed === m.playerASeed;
+    var winB  = m.winnerSeed === m.playerBSeed;
+    var provClass = m.isProvisional ? ' yc-provisional' : '';
+    var closedClass = roundIsClosed ? ' yc-closed-card' : '';
+
+    // Status line
+    var status;
+    if (m.winnerSeed) {
+      // Official result
+      var wName = m.winnerName || (winA ? m.playerAName : m.playerBName);
+      var tbBadge = (m.tieBreakerUsed && m.tieBreakerUsed !== 'A')
+        ? ' <span class="pill gold" style="font-size:10px" title="שובר שוויון ' + esc(m.tieBreakerUsed) + '">שוב״ש ' + esc(m.tieBreakerUsed) + '</span>' : '';
+      status = '<span class="pill green">✓ ' + esc(wName) + ' ניצח</span>' + tbBadge;
+    } else if (m.isProvisional) {
+      var roundLabel = m.roundStarted ? 'חי' : 'לפני המחזור';
+      var tbNote = (m.provisionalTieBreaker && m.provisionalTieBreaker !== 'A')
+        ? '<span class="pill gold" style="font-size:10px">שוב״ש ' + esc(m.provisionalTieBreaker) + '</span> ' : '';
+      status =
+        '<span class="pill orange" style="font-size:11px"><span class="yc-live-dot"></span> ' + roundLabel + '</span> ' +
+        tbNote +
+        '<b>' + esc(m.provisionalWinnerName) + '</b> מוביל';
+    } else {
+      status = '<span class="pill" style="font-size:11px">ממתין לנתונים</span>';
+    }
+
+    return '<div class="yc-card yc-match-card' + provClass + closedClass + '">' +
+      '<div class="yc-card-top">' +
+        '<span class="yc-match-num">#' + esc(m.matchNumber) + '</span>' +
+        '<div class="yc-status-line">' + status + '</div>' +
+      '</div>' +
+      '<div class="yc-player-row' + (winA ? ' yc-winner-row' : '') + (leadA ? ' yc-lead-row' : '') + '">' +
+        '<div class="yc-player-info">' +
+          '<span class="yc-seed-badge">' + esc(m.playerASeed) + '</span>' +
+          '<span class="yc-player-name">' + esc(m.playerAName) + (winA ? ' <span class="yc-crown">👑</span>' : '') + '</span>' +
+        '</div>' +
+        _scoreCell(m, 'A') +
+      '</div>' +
+      '<div class="yc-vs-line">נגד</div>' +
+      '<div class="yc-player-row' + (winB ? ' yc-winner-row' : '') + (leadB ? ' yc-lead-row' : '') + '">' +
+        '<div class="yc-player-info">' +
+          '<span class="yc-seed-badge">' + esc(m.playerBSeed) + '</span>' +
+          '<span class="yc-player-name">' + esc(m.playerBName) + (winB ? ' <span class="yc-crown">👑</span>' : '') + '</span>' +
+        '</div>' +
+        _scoreCell(m, 'B') +
+      '</div>' +
+    '</div>';
+  }
+
+  // ── section renderers ──────────────────────────────────────────────────
 
   function _renderHero() {
     var el = document.getElementById('yc-hero');
     if (!el) return;
+    var liveCount = _bracket.filter(function (m) { return m.isProvisional; }).length;
+    var statusBadge = liveCount > 0
+      ? '<span class="pill orange yc-live-pill"><span class="yc-live-dot"></span> ' + liveCount + ' דו-קרבים חיים</span>'
+      : (_activeRound > 1 ? '<span class="pill blue">סיבוב ' + _activeRound + ' פעיל</span>'
+                           : '<span class="pill">ממתין לתחילת המחזור</span>');
     el.innerHTML =
       '<div class="yc-hero-inner card">' +
         '<div class="yc-hero-left">' +
@@ -108,29 +256,66 @@
           '</div>' +
         '</div>' +
         '<div class="yc-hero-right">' +
-          '<div class="yc-eyebrow">🏆 פיילוט · מפעל נוק-אאוט</div>' +
+          '<div class="yc-eyebrow">מפעל נוק-אאוט · מונדיאל 2026</div>' +
           '<h1 class="yc-title">גביע יוסי</h1>' +
-          '<div class="yc-subtitle">מפעל נוק-אאוט על בסיס משחק טוטו מונדיאל 2026</div>' +
           '<div class="yc-badges">' +
             '<span class="pill gold">פיילוט</span>' +
-            '<span class="pill blue">סיבוב ראשון</span>' +
-            ((_bracket.filter(function(m){return m.isProvisional;}).length > 0)
-              ? '<span class="pill orange yc-live-pill"><span class="yc-live-dot"></span> חי</span>'
-              : '<span class="pill">ממתין לניקוד יוסי</span>') +
+            statusBadge +
           '</div>' +
         '</div>' +
       '</div>';
   }
 
+  function _renderExplanation() {
+    var el = document.getElementById('yc-explanation');
+    if (!el) return;
+    el.innerHTML =
+      '<section class="card section yc-section yc-explainer">' +
+        '<div class="sectionHead">' +
+          '<h2>🎯 מה זה גביע יוסי?</h2>' +
+          '<button id="ycExplToggle" class="secondary" style="font-size:13px;padding:7px 12px">▼ הסבר</button>' +
+        '</div>' +
+        '<div id="ycExplBody" style="display:none">' +
+          '<div class="yc-expl-grid">' +
+            '<div class="yc-expl-item">' +
+              '<div class="yc-expl-icon">⚔️</div>' +
+              '<div><b>דו-קרב אחד-על-אחד</b><br>' +
+              '<span class="hint">כל משתתף מוצמד ליריב אחד. הם נלחמים ביניהם על ניקוד שיצברו במהלך המחזור.</span></div>' +
+            '</div>' +
+            '<div class="yc-expl-item">' +
+              '<div class="yc-expl-icon">📊</div>' +
+              '<div><b>מנצח = יותר נקודות במחזור</b><br>' +
+              '<span class="hint">רק הניקוד שנצבר <em>בתוך</em> מחזור הגביע קובע — לא הניקוד הכולל מתחילת הטוטו.</span></div>' +
+            '</div>' +
+            '<div class="yc-expl-item">' +
+              '<div class="yc-expl-icon">📧</div>' +
+              '<div><b>הניקוד הקובע</b><br>' +
+              '<span class="hint">הניצחון נקבע לפי הניקוד במייל הסיכום הראשון של יוסי בסוף המחזור — לא לפי עדכונים חיים.</span></div>' +
+            '</div>' +
+            '<div class="yc-expl-item">' +
+              '<div class="yc-expl-icon">🔢</div>' +
+              '<div><b>שוברי שוויון</b><br>' +
+              '<span class="hint">תיקו בניקוד → שובר שוויון לפי ניקוד כולל, ניקוד פתיחה לגביע, ופרמטרים נוספים. מספר הסיד גובר בסוף.</span></div>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+      '</section>';
+    _bindEvents();
+  }
+
   function _renderKpis() {
     var el = document.getElementById('yc-kpis');
     if (!el) return;
+    var roundNum = _activeRound;
+    var advancing = 128;
+    if (roundNum === 2) advancing = 64;
+    else if (roundNum === 3) advancing = 32;
     var kpis = [
-      { num: '242',   label: 'משתתפים' },
-      { num: '14',    label: 'עולים אוטומטית' },
-      { num: '114',   label: 'דו-קרבים' },
-      { num: '128',   label: 'בסיבוב הבא' },
-      { num: '1',     label: 'מנצח אחד בסוף' }
+      { num: '242',         label: 'משתתפים מקוריים' },
+      { num: '128',         label: 'עלו לסיבוב 2' },
+      { num: String(64),    label: 'דו-קרבים בסיבוב 2' },
+      { num: '36',          label: 'הפתעות בסיבוב 1' },
+      { num: '1',           label: 'מנצח אחד בסוף' }
     ];
     el.innerHTML = '<div class="yc-kpis-grid">' +
       kpis.map(function (k) {
@@ -138,6 +323,158 @@
                '<div class="label">' + esc(k.label) + '</div></div>';
       }).join('') +
       '</div>';
+  }
+
+  function _renderRoundTabs() {
+    var el = document.getElementById('yc-round-tabs');
+    if (!el) return;
+    var closedRounds = _rounds.filter(function (r) { return r.status === 'closed'; });
+    var pendingRounds = _rounds.filter(function (r) { return r.status !== 'closed' && r.participantCountStart; });
+    var tabRounds = closedRounds.concat(pendingRounds.slice(0, 1));
+
+    if (tabRounds.length < 2) { el.innerHTML = ''; return; }
+
+    el.innerHTML = '<div class="yc-round-tabs-row">' +
+      tabRounds.map(function (r) {
+        var isClosed = r.status === 'closed';
+        var isActive = r.round === (_viewRound || _activeRound);
+        var badge = isClosed ? ' ✓' : ' 🔴';
+        return '<button class="yc-round-tab secondary' + (isActive ? ' active' : '') + '" data-round="' + r.round + '">' +
+          esc(r.name) + badge +
+          '</button>';
+      }).join('') +
+    '</div>';
+    _bindEvents();
+  }
+
+  function _renderRoundView() {
+    _renderRoundTabs();
+
+    var vr = _viewRound || _activeRound;
+    var roundInfo = _rounds.find(function (r) { return r.round === vr; });
+    var isClosed = roundInfo && roundInfo.status === 'closed';
+    var isActive = vr === _activeRound;
+
+    var el = document.getElementById('yc-bracket');
+    if (!el) return;
+
+    if (isClosed && !isActive) {
+      // Show closed round results
+      _renderClosedRound(el, vr, roundInfo);
+    } else if (isActive) {
+      // Show active round live bracket
+      _renderActiveBracket(el, vr, roundInfo);
+    } else {
+      // Future round
+      el.innerHTML =
+        '<section class="card section yc-section">' +
+          '<h2>סיבוב ' + vr + ' — עתידי</h2>' +
+          '<div class="empty" style="padding:40px 0">הסיבוב ייפתח לאחר סגירת הסיבוב הקודם.</div>' +
+        '</section>';
+    }
+  }
+
+  function _renderClosedRound(el, round, roundInfo) {
+    var bracket = _bracketForRound(round);
+    var active  = bracket.filter(function (m) { return !m.isBye; });
+    var byes    = bracket.filter(function (m) { return m.isBye; });
+
+    el.innerHTML =
+      '<section class="card section yc-section">' +
+        '<div class="sectionHead">' +
+          '<h2>' + esc(_roundLabel(round, true)) + ' — תוצאות סופיות</h2>' +
+          '<span class="pill green">✓ סגור</span>' +
+        '</div>' +
+        '<div class="notice yc-live-note" style="margin-bottom:16px">📋 ' +
+          active.length + ' דו-קרבים + ' + byes.length + ' עליות אוטומטיות · ' +
+          '36 הפתעות (משתתף עם דירוג נמוך יותר ניצח)' +
+        '</div>' +
+        (byes.length ? '<div class="yc-group-label">עלו אוטומטית לסיבוב הבא (' + byes.length + ')</div>' +
+          '<div class="yc-bye-grid">' + byes.map(function (m) { return _matchCard(m, true); }).join('') + '</div>' : '') +
+        '<div class="yc-group-label">תוצאות דו-קרבים (' + active.length + ')</div>' +
+        '<div class="yc-duels-grid">' + active.map(function (m) { return _matchCard(m, true); }).join('') + '</div>' +
+      '</section>';
+  }
+
+  function _renderActiveBracket(el, round, roundInfo) {
+    var liveCount = _bracket.filter(function (m) { return m.isProvisional; }).length;
+    var t = _lastUpdate ? _lastUpdate.toLocaleTimeString('he-IL', { hour: '2-digit', minute: '2-digit' }) : '';
+
+    var liveStatus;
+    if (liveCount > 0) {
+      liveStatus = '<span class="pill orange yc-live-pill"><span class="yc-live-dot"></span> ' + liveCount + ' דו-קרבים חיים</span>' +
+        (t ? '<span class="hint" style="margin-right:8px">עודכן ' + esc(t) + '</span>' : '');
+    } else {
+      liveStatus = '<span class="pill">ממתין לתחילת המחזור</span>' +
+        (t ? '<span class="hint" style="margin-right:8px">עודכן ' + esc(t) + '</span>' : '');
+    }
+
+    var searchHtml = '';
+    if (!document.getElementById('ycSearch')) {
+      searchHtml =
+        '<div class="yc-search-bar">' +
+          '<div class="inputWrap" style="flex:1;min-width:180px">' +
+            '<span class="searchIcon">🔎</span>' +
+            '<input id="ycSearch" autocomplete="off" placeholder="חפש שם משתתף..." ' +
+              'value="' + esc(_search) + '" style="width:100%;padding-right:44px">' +
+          '</div>' +
+          '<div class="yc-filters">' +
+            '<button class="yc-filter-btn secondary' + (_filter === 'all' ? ' active' : '') + '" data-filter="all">הכל</button>' +
+            '<button class="yc-filter-btn secondary' + (_filter === 'active' ? ' active' : '') + '" data-filter="active">דו-קרבים</button>' +
+          '</div>' +
+        '</div>';
+    } else {
+      var inp = document.getElementById('ycSearch');
+      if (inp && inp.value !== _search) inp.value = _search;
+    }
+
+    el.innerHTML =
+      '<section class="card section yc-section">' +
+        '<div class="sectionHead">' +
+          '<h2>' + esc(_roundLabel(round, true)) + '</h2>' +
+          '<div class="yc-live-status">' + liveStatus + '</div>' +
+        '</div>' +
+        '<div class="notice yc-live-note">📡 הניקוד מתעדכן <b>חי</b> כל 30 שניות. ' +
+          'הניצחון <b>הרשמי</b> נקבע לפי מייל הסיכום של יוסי בסוף המחזור — עדכון חי = <b>לא סופי</b>.</div>' +
+        (searchHtml ? '<div class="yc-search-wrap" id="yc-search">' + searchHtml + '</div>' : '') +
+        '<div id="yc-bracket-body"></div>' +
+      '</section>';
+
+    _bindEvents();
+    _renderBracketBody();
+  }
+
+  function _matchVisible(m) {
+    if (_filter === 'bye' && !m.isBye) return false;
+    if (_filter === 'active' && m.isBye) return false;
+    if (_search) {
+      var nA = String(m.playerAName || '').toLowerCase();
+      var nB = String(m.playerBName || '').toLowerCase();
+      if (!nA.includes(_search) && !nB.includes(_search)) return false;
+    }
+    return true;
+  }
+
+  function _renderBracketBody() {
+    var el = document.getElementById('yc-bracket-body');
+    if (!el) return;
+    var visible = _bracket.filter(_matchVisible);
+    if (visible.length === 0) {
+      el.innerHTML = '<div class="empty" style="padding:40px 0">אין תוצאות לחיפוש זה</div>';
+      return;
+    }
+    var byes   = visible.filter(function (m) { return m.isBye; });
+    var active = visible.filter(function (m) { return !m.isBye; });
+    var html   = '';
+    if (byes.length && active.length) {
+      html += '<div class="yc-group-label">עולים אוטומטית (' + byes.length + ')</div>' +
+        '<div class="yc-bye-grid">' + byes.map(function (m) { return _matchCard(m, false); }).join('') + '</div>';
+    }
+    if (active.length) {
+      if (byes.length) html += '<div class="yc-group-label">דו-קרבים (' + active.length + ')</div>';
+      html += '<div class="yc-duels-grid">' + active.map(function (m) { return _matchCard(m, false); }).join('') + '</div>';
+    }
+    el.innerHTML = html;
   }
 
   function _renderRules() {
@@ -154,7 +491,6 @@
             '<div class="yc-rule-block">' +
               '<h3>איך זה עובד</h3>' +
               '<ul>' + (_rules.general || []).map(function (g) { return '<li>' + esc(g) + '</li>'; }).join('') + '</ul>' +
-              '<ul>' + (_rules.bye || []).map(function (b) { return '<li>' + esc(b) + '</li>'; }).join('') + '</ul>' +
             '</div>' +
             '<div class="yc-rule-block">' +
               '<h3>סגירת סיבוב</h3>' +
@@ -162,7 +498,7 @@
               '<div class="notice" style="margin-top:12px"><b>פיילוט:</b> ' + esc(_rules.pilot || '') + '</div>' +
             '</div>' +
             '<div class="yc-rule-block yc-rule-tiebreak">' +
-              '<h3>שוברי שוויון — לפי סדר קדימויות</h3>' +
+              '<h3>שוברי שוויון</h3>' +
               '<div class="yc-tiebreak-list">' +
                 (_rules.tieBreakerRules || []).map(function (t) {
                   return '<div class="yc-tiebreak-row">' +
@@ -175,198 +511,7 @@
           '</div>' +
         '</div>' +
       '</section>';
-    _bindEvents(); // re-bind after DOM insert
-  }
-
-  function _renderTimeline() {
-    var el = document.getElementById('yc-timeline');
-    if (!el || !_rounds.length) return;
-    el.innerHTML =
-      '<section class="card section yc-section">' +
-        '<div class="sectionHead"><h2>מפת הסיבובים</h2></div>' +
-        '<div class="yc-timeline-row">' +
-          _rounds.map(function (r) {
-            var isActive = (r.round === _activeRound) && r.status !== 'closed';
-            var st = isActive ? 'live' : r.status;
-            var statusClass = st === 'closed' ? 'green' : st === 'live' ? 'orange' : st === 'upcoming' ? 'gray' : '';
-            var statusLabel = st === 'closed' ? 'סגור' : st === 'live' ? 'פעיל · חי' : st === 'upcoming' ? 'עתידי' : 'ממתין';
-            return '<div class="yc-timeline-card">' +
-              '<div class="yc-tl-round">סיבוב ' + (r.round === 99 ? 'גמר' : r.round) + '</div>' +
-              '<div class="yc-tl-name">' + esc(r.name) + '</div>' +
-              '<div class="yc-tl-desc hint">' + esc(r.description) + '</div>' +
-              (r.participantCountStart ? '<div class="yc-tl-stat">' + r.participantCountStart + ' משתתפים</div>' : '') +
-              '<div class="yc-tl-status"><span class="pill ' + statusClass + '">' + statusLabel + '</span></div>' +
-              '</div>';
-          }).join('<div class="yc-tl-arrow">→</div>') +
-        '</div>' +
-      '</section>';
-  }
-
-  function _renderSearch() {
-    var el = document.getElementById('yc-search');
-    if (!el) return;
-    // Only build the shell once; on subsequent renders just re-bind events.
-    if (!document.getElementById('ycSearch')) {
-      el.innerHTML =
-        '<div class="yc-search-bar">' +
-          '<div class="inputWrap" style="flex:1;min-width:220px">' +
-            '<span class="searchIcon">🔎</span>' +
-            '<input id="ycSearch" autocomplete="off" placeholder="חפש שם משתתף..." style="width:100%;padding-right:44px">' +
-          '</div>' +
-          '<div class="yc-filters">' +
-            '<button class="yc-filter-btn secondary active" data-filter="all">הכל (128)</button>' +
-            '<button class="yc-filter-btn secondary" data-filter="bye">עולים אוטומטית (14)</button>' +
-            '<button class="yc-filter-btn secondary" data-filter="active">דו-קרבים (114)</button>' +
-          '</div>' +
-        '</div>';
-      _bindEvents();
-    }
-    // Restore the current search value so the input doesn't flicker.
-    var inp = document.getElementById('ycSearch');
-    if (inp && inp.value !== _search) inp.value = _search;
-  }
-
-  function _matchVisible(m) {
-    if (_filter === 'bye' && !m.isBye) return false;
-    if (_filter === 'active' && m.isBye) return false;
-    if (_search) {
-      var nA = String(m.playerAName || '').toLowerCase();
-      var nB = String(m.playerBName || '').toLowerCase();
-      if (!nA.includes(_search) && !nB.includes(_search)) return false;
-    }
-    return true;
-  }
-
-  function _fmtScore(v) {
-    return (v === null || v === undefined) ? '—' : String(v);
-  }
-
-  // score badge: shows round-delta (+N) when the round has started, total otherwise
-  function _scoreCell(m, side) {
-    var rs    = side === 'A' ? m.roundScoreA    : m.roundScoreB;
-    var total = side === 'A' ? m.liveScoreA     : m.liveScoreB;
-    var init  = side === 'A' ? m.initialScoreA  : m.initialScoreB;
-    if (total === null || total === undefined) return '<span class="hint">—</span>';
-    if (m.roundStarted && rs !== null && rs >= 0) {
-      // Cup round has games: show round delta prominently
-      var tip = 'סה״כ ' + _fmtScore(total) + ' · נקודת פתיחה ' + _fmtScore(init) + ' · במחזור ' + rs;
-      return '<span class="yc-mscore" title="' + esc(tip) + '">' + (rs > 0 ? '+' : '') + rs + ' <span class="yc-tot-hint">(' + total + ')</span></span>';
-    }
-    // Pre-round or stale baseline: show total score as main metric
-    var tip2 = 'ניקוד כולל · שלב הבתים';
-    if (init !== null) tip2 += ' · נקודת פתיחה לגביע ' + _fmtScore(init);
-    return '<span class="yc-mscore" title="' + esc(tip2) + '">' + _fmtScore(total) + '</span>';
-  }
-
-  function _matchCard(m) {
-    if (m.isBye) {
-      return '<div class="yc-card yc-bye-card">' +
-        '<div class="yc-card-seed">#' + esc(m.playerASeed) + '</div>' +
-        '<div class="yc-card-name">' + esc(m.playerAName) + '</div>' +
-        (m.liveScoreA !== null ? '<div class="yc-card-score">' + _scoreCell(m, 'A') + '<span class="hint" style="font-size:11px;margin-right:4px">נק׳</span></div>' : '') +
-        '<div class="yc-bye-label">' +
-          '<span class="pill green">✓ עלה אוטומטית לסיבוב השני</span>' +
-        '</div>' +
-        '</div>';
-    }
-    var leadA = m.isProvisional && m.provisionalWinnerSeed === m.playerASeed;
-    var leadB = m.isProvisional && m.provisionalWinnerSeed === m.playerBSeed;
-    var leadClass = leadA ? 'yc-lead-a' : leadB ? 'yc-lead-b' : '';
-    var provClass = m.isProvisional ? ' yc-provisional' : '';
-
-    var status;
-    if (m.winnerSeed) {
-      status = '<span class="pill green">✓ הוכרז מנצח' + (m.winnerName ? ': ' + esc(m.winnerName) : '') + '</span>' +
-        (m.tieBreakerUsed ? '<span class="pill gold" title="הוכרע לפי שובר שוויון ' + esc(m.tieBreakerUsed) + '">שוב״ש ' + esc(m.tieBreakerUsed) + '</span>' : '');
-    } else if (m.isProvisional) {
-      var roundLabel = m.roundStarted ? ' חי' : ' נוכחי';
-      var tbNote = (m.provisionalTieBreaker && m.provisionalTieBreaker !== 'A')
-        ? '<span class="pill gold" title="תיקו בניקוד — מוביל לפי שובר שוויון ' + esc(m.provisionalTieBreaker) + '">שובר שוויון ' + esc(m.provisionalTieBreaker) + '</span>'
-        : '';
-      var hint = m.roundStarted
-        ? 'לא סופי · ייסגר לפי מייל הסיכום של יוסי'
-        : 'ניקוד לפני תחילת המחזור · יתעדכן עם התחלת משחקי הסיבוב';
-      status = '<span class="pill orange yc-live-pill"><span class="yc-live-dot"></span>' + roundLabel + '</span>' +
-        '<span class="pill">מוביל כרגע: ' + esc(m.provisionalWinnerName) + '</span>' +
-        tbNote +
-        '<span class="hint" style="font-size:11px;width:100%">' + esc(hint) + '</span>';
-    } else {
-      status = '<span class="pill">ממתין לנתונים</span>';
-    }
-
-    return '<div class="yc-card yc-match-card ' + leadClass + provClass + '">' +
-      '<div class="yc-match-num">#' + esc(m.matchNumber) + '</div>' +
-      '<div class="yc-match-row yc-row-a">' +
-        '<span class="yc-seed">' + esc(m.playerASeed) + '</span>' +
-        '<span class="yc-name">' + esc(m.playerAName) + (leadA ? ' <span class="yc-lead-chip">▲</span>' : '') + '</span>' +
-        _scoreCell(m, 'A') +
-      '</div>' +
-      '<div class="yc-vs">vs</div>' +
-      '<div class="yc-match-row yc-row-b">' +
-        '<span class="yc-seed">' + esc(m.playerBSeed) + '</span>' +
-        '<span class="yc-name">' + esc(m.playerBName) + (leadB ? ' <span class="yc-lead-chip">▲</span>' : '') + '</span>' +
-        _scoreCell(m, 'B') +
-      '</div>' +
-      '<div class="yc-match-status">' + status + '</div>' +
-      '</div>';
-  }
-
-  function _renderBracket() {
-    var el = document.getElementById('yc-bracket-body');
-    if (!el) return;
-    var visible = _bracket.filter(_matchVisible);
-    if (visible.length === 0) {
-      el.innerHTML = '<div class="empty" style="padding:40px 0">אין תוצאות לחיפוש זה</div>';
-      return;
-    }
-    // Group: BYEs first, then active duels — each group with a sub-header if mixed
-    var byes   = visible.filter(function (m) { return m.isBye; });
-    var active = visible.filter(function (m) { return !m.isBye; });
-    var html   = '';
-    if (byes.length && active.length) {
-      html += '<div class="yc-group-label">עולים אוטומטית לסיבוב השני (' + byes.length + ')</div>';
-    }
-    if (byes.length) {
-      html += '<div class="yc-bye-grid">' + byes.map(_matchCard).join('') + '</div>';
-    }
-    if (active.length) {
-      if (byes.length) html += '<div class="yc-group-label">דו-קרבים פעילים (' + active.length + ')</div>';
-      html += '<div class="yc-duels-grid">' + active.map(_matchCard).join('') + '</div>';
-    }
-    el.innerHTML = html;
-  }
-
-  function _renderLiveStatus() {
-    var el = document.getElementById('yc-live-status');
-    if (!el) return;
-    var liveCount = _bracket.filter(function (m) { return m.isProvisional; }).length;
-    var t = _lastUpdate ? _lastUpdate.toLocaleTimeString('he-IL', { hour: '2-digit', minute: '2-digit' }) : '';
-    if (liveCount > 0) {
-      el.innerHTML =
-        '<span class="pill orange yc-live-pill"><span class="yc-live-dot"></span> ' + liveCount + ' דו-קרבים חיים</span>' +
-        (t ? '<span class="hint" style="margin-right:8px">עודכן ' + esc(t) + '</span>' : '');
-    } else {
-      el.innerHTML =
-        '<span class="pill">ממתין לתחילת המחזור</span>' +
-        (t ? '<span class="hint" style="margin-right:8px">עודכן ' + esc(t) + '</span>' : '');
-    }
-  }
-
-  function _renderBracketShell() {
-    var el = document.getElementById('yc-bracket');
-    if (!el) return;
-    el.innerHTML =
-      '<section class="card section yc-section">' +
-        '<div class="sectionHead">' +
-          '<h2>בראקט — סיבוב ראשון</h2>' +
-          '<div id="yc-live-status" class="yc-live-status"></div>' +
-        '</div>' +
-        '<div class="notice yc-live-note">📡 המספרים מתעדכנים <b>חי</b> לפי משחקי הטוטו ומציגים כמה נקודות כל משתתף צבר <b>במחזור הנוכחי</b>. ' +
-          'הניקוד <b>הקובע</b> לכל דו-קרב הוא ניקוד מייל הסיכום הראשון של יוסי בסוף המחזור — נתון חי = <b>לא סופי</b>.</div>' +
-        '<div id="yc-bracket-body"></div>' +
-      '</section>';
-    _renderBracket();
-    _renderLiveStatus();
+    _bindEvents();
   }
 
   // ── public render entry point ──────────────────────────────────────────
@@ -376,30 +521,22 @@
       _loadData();
       _init = true;
     } else {
-      // Refresh provisional cup scores from the latest DATA snapshot (called every ~30 s)
       _recomputeLive();
-    }
-
-    var result = (yc.validateYossiCupData || function () { return { ok: true, errors: [], warnings: [] }; })(_participants, _bracket);
-    if (!result.ok) {
-      console.warn('[YossiCup] validation errors:', result.errors);
     }
 
     _renderHero();
     _renderKpis();
-    _renderTimeline();
+    _renderExplanation();
+    _renderRoundTabs();
+    _renderRoundView();
     _renderRules();
-    _renderSearch();
-    _renderBracketShell();
 
-    // bind hero image fallback
+    // hero image fallback
     var img = document.querySelector('.yc-crest-img');
     var svg = document.getElementById('yc-crest-svg');
-    if (img && svg) {
-      if (img.complete && img.naturalWidth === 0) {
-        img.style.display = 'none';
-        svg.style.display = 'flex';
-      }
+    if (img && svg && img.complete && img.naturalWidth === 0) {
+      img.style.display = 'none';
+      svg.style.display = 'flex';
     }
   };
 
