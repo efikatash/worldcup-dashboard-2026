@@ -11,7 +11,8 @@
     "status": "bye",
     "winnerSeed": 1,
     "winnerName": "יובל אברהם",
-    "winnerReason": "automatic_round_2_qualification"
+    "winnerReason": "automatic_round_2_qualification",
+    "roundScoreA": 0
   },
   {
     "id": "r1-m002",
@@ -25,10 +26,10 @@
     "status": "completed",
     "winnerSeed": 128,
     "winnerName": "אמרי צידון",
-    "winnerReason": "F",
-    "roundScoreA": 15,
-    "roundScoreB": 15,
-    "tieBreakerUsed": "F"
+    "winnerReason": "A",
+    "roundScoreA": 234,
+    "roundScoreB": 189,
+    "tieBreakerUsed": "A"
   },
   {
     "id": "r1-m003",
@@ -40,11 +41,11 @@
     "playerBName": "יואב מאור",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 64,
-    "winnerName": "איתמר שנפ+עידו כנען",
+    "winnerSeed": 193,
+    "winnerName": "יואב מאור",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 10,
+    "roundScoreA": 187,
+    "roundScoreB": 204,
     "tieBreakerUsed": "A"
   },
   {
@@ -60,8 +61,8 @@
     "winnerSeed": 65,
     "winnerName": "מור גרשגורן",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 15,
+    "roundScoreA": 234,
+    "roundScoreB": 226,
     "tieBreakerUsed": "A"
   },
   {
@@ -77,8 +78,8 @@
     "winnerSeed": 32,
     "winnerName": "יריב וישנו",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 19,
+    "roundScoreA": 234,
+    "roundScoreB": 223,
     "tieBreakerUsed": "A"
   },
   {
@@ -94,8 +95,8 @@
     "winnerSeed": 97,
     "winnerName": "ברק קפ",
     "winnerReason": "A",
-    "roundScoreA": 20,
-    "roundScoreB": 15,
+    "roundScoreA": 213,
+    "roundScoreB": 194,
     "tieBreakerUsed": "A"
   },
   {
@@ -111,8 +112,8 @@
     "winnerSeed": 33,
     "winnerName": "רועי זגה",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 15,
+    "roundScoreA": 209,
+    "roundScoreB": 198,
     "tieBreakerUsed": "A"
   },
   {
@@ -125,11 +126,11 @@
     "playerBName": "אילן בן דוד",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 96,
-    "winnerName": "אורי הנדלר",
+    "winnerSeed": 161,
+    "winnerName": "אילן בן דוד",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 15,
+    "roundScoreA": 202,
+    "roundScoreB": 209,
     "tieBreakerUsed": "A"
   },
   {
@@ -142,11 +143,11 @@
     "playerBName": "ליאור רוזן",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 16,
-    "winnerName": "ירין יוסף",
+    "winnerSeed": 241,
+    "winnerName": "ליאור רוזן",
     "winnerReason": "A",
-    "roundScoreA": 12,
-    "roundScoreB": 15,
+    "roundScoreA": 205,
+    "roundScoreB": 222,
     "tieBreakerUsed": "A"
   },
   {
@@ -161,10 +162,10 @@
     "status": "completed",
     "winnerSeed": 113,
     "winnerName": "ליאור קורן",
-    "winnerReason": "C",
-    "roundScoreA": 10,
-    "roundScoreB": 17,
-    "tieBreakerUsed": "C"
+    "winnerReason": "A",
+    "roundScoreA": 241,
+    "roundScoreB": 206,
+    "tieBreakerUsed": "A"
   },
   {
     "id": "r1-m011",
@@ -179,8 +180,8 @@
     "winnerSeed": 49,
     "winnerName": "דולב קרקו",
     "winnerReason": "A",
-    "roundScoreA": 25,
-    "roundScoreB": 10,
+    "roundScoreA": 232,
+    "roundScoreB": 199,
     "tieBreakerUsed": "A"
   },
   {
@@ -196,8 +197,8 @@
     "winnerSeed": 80,
     "winnerName": "רועי עזרא",
     "winnerReason": "A",
-    "roundScoreA": 17,
-    "roundScoreB": 10,
+    "roundScoreA": 223,
+    "roundScoreB": 199,
     "tieBreakerUsed": "A"
   },
   {
@@ -213,8 +214,8 @@
     "winnerSeed": 17,
     "winnerName": "מיכל עובדיה",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 5,
+    "roundScoreA": 228,
+    "roundScoreB": 171,
     "tieBreakerUsed": "A"
   },
   {
@@ -230,8 +231,8 @@
     "winnerSeed": 112,
     "winnerName": "איתי שפרן",
     "winnerReason": "A",
-    "roundScoreA": 17,
-    "roundScoreB": 12,
+    "roundScoreA": 246,
+    "roundScoreB": 209,
     "tieBreakerUsed": "A"
   },
   {
@@ -247,8 +248,8 @@
     "winnerSeed": 48,
     "winnerName": "רובי מערבי",
     "winnerReason": "A",
-    "roundScoreA": 20,
-    "roundScoreB": 25,
+    "roundScoreA": 253,
+    "roundScoreB": 219,
     "tieBreakerUsed": "A"
   },
   {
@@ -264,8 +265,8 @@
     "winnerSeed": 81,
     "winnerName": "כפיר אטס",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 15,
+    "roundScoreA": 194,
+    "roundScoreB": 166,
     "tieBreakerUsed": "A"
   },
   {
@@ -280,7 +281,8 @@
     "status": "bye",
     "winnerSeed": 8,
     "winnerName": "פאפאספורט",
-    "winnerReason": "automatic_round_2_qualification"
+    "winnerReason": "automatic_round_2_qualification",
+    "roundScoreA": 0
   },
   {
     "id": "r1-m018",
@@ -295,8 +297,8 @@
     "winnerSeed": 121,
     "winnerName": "אורי גלבוע",
     "winnerReason": "A",
-    "roundScoreA": 20,
-    "roundScoreB": 10,
+    "roundScoreA": 233,
+    "roundScoreB": 207,
     "tieBreakerUsed": "A"
   },
   {
@@ -312,8 +314,8 @@
     "winnerSeed": 57,
     "winnerName": "אלעד+איתי שניידר",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 22,
+    "roundScoreA": 204,
+    "roundScoreB": 178,
     "tieBreakerUsed": "A"
   },
   {
@@ -329,8 +331,8 @@
     "winnerSeed": 72,
     "winnerName": "שגיא דגול",
     "winnerReason": "A",
-    "roundScoreA": 12,
-    "roundScoreB": 0,
+    "roundScoreA": 203,
+    "roundScoreB": 197,
     "tieBreakerUsed": "A"
   },
   {
@@ -346,8 +348,8 @@
     "winnerSeed": 25,
     "winnerName": "עוז וישנו",
     "winnerReason": "A",
-    "roundScoreA": 5,
-    "roundScoreB": 5,
+    "roundScoreA": 203,
+    "roundScoreB": 171,
     "tieBreakerUsed": "A"
   },
   {
@@ -363,8 +365,8 @@
     "winnerSeed": 104,
     "winnerName": "לידן דלויה",
     "winnerReason": "A",
-    "roundScoreA": 13,
-    "roundScoreB": 12,
+    "roundScoreA": 240,
+    "roundScoreB": 225,
     "tieBreakerUsed": "A"
   },
   {
@@ -377,11 +379,11 @@
     "playerBName": "ענת+עמית עובדיה",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 40,
-    "winnerName": "איתי ברק",
+    "winnerSeed": 217,
+    "winnerName": "ענת+עמית עובדיה",
     "winnerReason": "A",
-    "roundScoreA": 0,
-    "roundScoreB": 25,
+    "roundScoreA": 167,
+    "roundScoreB": 211,
     "tieBreakerUsed": "A"
   },
   {
@@ -394,11 +396,11 @@
     "playerBName": "מיקי דלויה",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 89,
-    "winnerName": "נדב גרשמן",
+    "winnerSeed": 168,
+    "winnerName": "מיקי דלויה",
     "winnerReason": "A",
-    "roundScoreA": 25,
-    "roundScoreB": 10,
+    "roundScoreA": 206,
+    "roundScoreB": 217,
     "tieBreakerUsed": "A"
   },
   {
@@ -413,7 +415,8 @@
     "status": "bye",
     "winnerSeed": 9,
     "winnerName": "אייל חסון",
-    "winnerReason": "automatic_round_2_qualification"
+    "winnerReason": "automatic_round_2_qualification",
+    "roundScoreA": 0
   },
   {
     "id": "r1-m026",
@@ -425,11 +428,11 @@
     "playerBName": "כפיר רוטברט",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 120,
-    "winnerName": "דניאל מערבי",
+    "winnerSeed": 137,
+    "winnerName": "כפיר רוטברט",
     "winnerReason": "A",
-    "roundScoreA": 17,
-    "roundScoreB": 5,
+    "roundScoreA": 205,
+    "roundScoreB": 206,
     "tieBreakerUsed": "A"
   },
   {
@@ -445,8 +448,8 @@
     "winnerSeed": 56,
     "winnerName": "נוי מרינה",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 5,
+    "roundScoreA": 224,
+    "roundScoreB": 175,
     "tieBreakerUsed": "A"
   },
   {
@@ -462,8 +465,8 @@
     "winnerSeed": 73,
     "winnerName": "דני אוקון",
     "winnerReason": "A",
-    "roundScoreA": 12,
-    "roundScoreB": 15,
+    "roundScoreA": 221,
+    "roundScoreB": 199,
     "tieBreakerUsed": "A"
   },
   {
@@ -479,8 +482,8 @@
     "winnerSeed": 24,
     "winnerName": "כפיר כהן",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 5,
+    "roundScoreA": 214,
+    "roundScoreB": 182,
     "tieBreakerUsed": "A"
   },
   {
@@ -493,11 +496,11 @@
     "playerBName": "אלון יוסף+דני שוורצמן",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 105,
-    "winnerName": "איציק מזרחי",
+    "winnerSeed": 152,
+    "winnerName": "אלון יוסף+דני שוורצמן",
     "winnerReason": "A",
-    "roundScoreA": 12,
-    "roundScoreB": 5,
+    "roundScoreA": 221,
+    "roundScoreB": 235,
     "tieBreakerUsed": "A"
   },
   {
@@ -513,8 +516,8 @@
     "winnerSeed": 41,
     "winnerName": "אייל מנסור",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 10,
+    "roundScoreA": 214,
+    "roundScoreB": 172,
     "tieBreakerUsed": "A"
   },
   {
@@ -527,11 +530,11 @@
     "playerBName": "יהודה איאש",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 88,
-    "winnerName": "גלעד מרטין",
+    "winnerSeed": 169,
+    "winnerName": "יהודה איאש",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 15,
+    "roundScoreA": 189,
+    "roundScoreB": 211,
     "tieBreakerUsed": "A"
   },
   {
@@ -546,7 +549,8 @@
     "status": "bye",
     "winnerSeed": 4,
     "winnerName": "אביב רחמים",
-    "winnerReason": "automatic_round_2_qualification"
+    "winnerReason": "automatic_round_2_qualification",
+    "roundScoreA": 0
   },
   {
     "id": "r1-m034",
@@ -561,8 +565,8 @@
     "winnerSeed": 125,
     "winnerName": "אביחי+יואב קראבץ",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 12,
+    "roundScoreA": 223,
+    "roundScoreB": 188,
     "tieBreakerUsed": "A"
   },
   {
@@ -578,8 +582,8 @@
     "winnerSeed": 61,
     "winnerName": "איתן גלאי",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 10,
+    "roundScoreA": 202,
+    "roundScoreB": 177,
     "tieBreakerUsed": "A"
   },
   {
@@ -592,11 +596,11 @@
     "playerBName": "תומר עמבר",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 68,
-    "winnerName": "אבינועם דהן",
+    "winnerSeed": 189,
+    "winnerName": "תומר עמבר",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 20,
+    "roundScoreA": 204,
+    "roundScoreB": 223,
     "tieBreakerUsed": "A"
   },
   {
@@ -609,11 +613,11 @@
     "playerBName": "ליעד קרמר",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 29,
-    "winnerName": "מיטל יצחקי",
+    "winnerSeed": 228,
+    "winnerName": "ליעד קרמר",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 5,
+    "roundScoreA": 194,
+    "roundScoreB": 217,
     "tieBreakerUsed": "A"
   },
   {
@@ -629,8 +633,8 @@
     "winnerSeed": 100,
     "winnerName": "צלי גרשגורן",
     "winnerReason": "A",
-    "roundScoreA": 17,
-    "roundScoreB": 15,
+    "roundScoreA": 231,
+    "roundScoreB": 219,
     "tieBreakerUsed": "A"
   },
   {
@@ -646,8 +650,8 @@
     "winnerSeed": 36,
     "winnerName": "דור יטח",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 10,
+    "roundScoreA": 221,
+    "roundScoreB": 196,
     "tieBreakerUsed": "A"
   },
   {
@@ -663,8 +667,8 @@
     "winnerSeed": 93,
     "winnerName": "עדי בן סימון",
     "winnerReason": "A",
-    "roundScoreA": 20,
-    "roundScoreB": 15,
+    "roundScoreA": 246,
+    "roundScoreB": 208,
     "tieBreakerUsed": "A"
   },
   {
@@ -679,7 +683,8 @@
     "status": "bye",
     "winnerSeed": 13,
     "winnerName": "שמעון לוקאל קפה",
-    "winnerReason": "automatic_round_2_qualification"
+    "winnerReason": "automatic_round_2_qualification",
+    "roundScoreA": 0
   },
   {
     "id": "r1-m042",
@@ -694,8 +699,8 @@
     "winnerSeed": 116,
     "winnerName": "אבי עיני+ניסים שלום",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 15,
+    "roundScoreA": 235,
+    "roundScoreB": 201,
     "tieBreakerUsed": "A"
   },
   {
@@ -708,11 +713,11 @@
     "playerBName": "שני בארד",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 52,
-    "winnerName": "עומר אברמסון",
+    "winnerSeed": 205,
+    "winnerName": "שני בארד",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 10,
+    "roundScoreA": 211,
+    "roundScoreB": 221,
     "tieBreakerUsed": "A"
   },
   {
@@ -725,11 +730,11 @@
     "playerBName": "תומר כהן",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 77,
-    "winnerName": "אושרי ברזילי",
+    "winnerSeed": 180,
+    "winnerName": "תומר כהן",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 5,
+    "roundScoreA": 215,
+    "roundScoreB": 216,
     "tieBreakerUsed": "A"
   },
   {
@@ -745,8 +750,8 @@
     "winnerSeed": 20,
     "winnerName": "ליאון זוכוביצקי+ירון פרסלר",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 0,
+    "roundScoreA": 229,
+    "roundScoreB": 167,
     "tieBreakerUsed": "A"
   },
   {
@@ -762,8 +767,8 @@
     "winnerSeed": 109,
     "winnerName": "בוריס גורובוי+לירן בר זאב",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 15,
+    "roundScoreA": 226,
+    "roundScoreB": 204,
     "tieBreakerUsed": "A"
   },
   {
@@ -776,11 +781,11 @@
     "playerBName": "ראול קופרברג",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 45,
-    "winnerName": "רואי אברמוב",
+    "winnerSeed": 212,
+    "winnerName": "ראול קופרברג",
     "winnerReason": "A",
-    "roundScoreA": 25,
-    "roundScoreB": 12,
+    "roundScoreA": 209,
+    "roundScoreB": 216,
     "tieBreakerUsed": "A"
   },
   {
@@ -796,8 +801,8 @@
     "winnerSeed": 84,
     "winnerName": "אורי קיין",
     "winnerReason": "A",
-    "roundScoreA": 22,
-    "roundScoreB": 10,
+    "roundScoreA": 201,
+    "roundScoreB": 200,
     "tieBreakerUsed": "A"
   },
   {
@@ -812,7 +817,8 @@
     "status": "bye",
     "winnerSeed": 5,
     "winnerName": "רועי שטרק",
-    "winnerReason": "automatic_round_2_qualification"
+    "winnerReason": "automatic_round_2_qualification",
+    "roundScoreA": 0
   },
   {
     "id": "r1-m050",
@@ -827,8 +833,8 @@
     "winnerSeed": 124,
     "winnerName": "אסף יצחקי",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 15,
+    "roundScoreA": 222,
+    "roundScoreB": 206,
     "tieBreakerUsed": "A"
   },
   {
@@ -844,8 +850,8 @@
     "winnerSeed": 60,
     "winnerName": "ניר שטמלר",
     "winnerReason": "A",
-    "roundScoreA": 17,
-    "roundScoreB": 17,
+    "roundScoreA": 224,
+    "roundScoreB": 191,
     "tieBreakerUsed": "A"
   },
   {
@@ -861,8 +867,8 @@
     "winnerSeed": 69,
     "winnerName": "ניר הייזלר",
     "winnerReason": "A",
-    "roundScoreA": 12,
-    "roundScoreB": 5,
+    "roundScoreA": 218,
+    "roundScoreB": 194,
     "tieBreakerUsed": "A"
   },
   {
@@ -878,8 +884,8 @@
     "winnerSeed": 28,
     "winnerName": "איתי+אופק מניביץ",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 15,
+    "roundScoreA": 234,
+    "roundScoreB": 167,
     "tieBreakerUsed": "A"
   },
   {
@@ -895,8 +901,8 @@
     "winnerSeed": 101,
     "winnerName": "יהונתן+אלון קירו",
     "winnerReason": "A",
-    "roundScoreA": 12,
-    "roundScoreB": 10,
+    "roundScoreA": 213,
+    "roundScoreB": 209,
     "tieBreakerUsed": "A"
   },
   {
@@ -912,8 +918,8 @@
     "winnerSeed": 37,
     "winnerName": "רותם בן חמו+ מורלי",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 5,
+    "roundScoreA": 209,
+    "roundScoreB": 190,
     "tieBreakerUsed": "A"
   },
   {
@@ -926,11 +932,11 @@
     "playerBName": "איתי בן סימון",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 92,
-    "winnerName": "אלעד נטוביץ",
+    "winnerSeed": 165,
+    "winnerName": "איתי בן סימון",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 15,
+    "roundScoreA": 229,
+    "roundScoreB": 233,
     "tieBreakerUsed": "A"
   },
   {
@@ -945,7 +951,8 @@
     "status": "bye",
     "winnerSeed": 12,
     "winnerName": "יוסי מיזלר",
-    "winnerReason": "automatic_round_2_qualification"
+    "winnerReason": "automatic_round_2_qualification",
+    "roundScoreA": 0
   },
   {
     "id": "r1-m058",
@@ -957,11 +964,11 @@
     "playerBName": "איל לוי",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 117,
-    "winnerName": "אלירן נוי",
+    "winnerSeed": 140,
+    "winnerName": "איל לוי",
     "winnerReason": "A",
-    "roundScoreA": 25,
-    "roundScoreB": 10,
+    "roundScoreA": 220,
+    "roundScoreB": 229,
     "tieBreakerUsed": "A"
   },
   {
@@ -977,8 +984,8 @@
     "winnerSeed": 53,
     "winnerName": "שלום שאער",
     "winnerReason": "A",
-    "roundScoreA": 5,
-    "roundScoreB": 15,
+    "roundScoreA": 223,
+    "roundScoreB": 157,
     "tieBreakerUsed": "A"
   },
   {
@@ -994,8 +1001,8 @@
     "winnerSeed": 76,
     "winnerName": "עידו שנפ",
     "winnerReason": "A",
-    "roundScoreA": 12,
-    "roundScoreB": 20,
+    "roundScoreA": 229,
+    "roundScoreB": 226,
     "tieBreakerUsed": "A"
   },
   {
@@ -1011,8 +1018,8 @@
     "winnerSeed": 21,
     "winnerName": "מיקי+רום שכטמן",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 12,
+    "roundScoreA": 244,
+    "roundScoreB": 193,
     "tieBreakerUsed": "A"
   },
   {
@@ -1028,8 +1035,8 @@
     "winnerSeed": 108,
     "winnerName": "קובי ארליך",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 15,
+    "roundScoreA": 217,
+    "roundScoreB": 189,
     "tieBreakerUsed": "A"
   },
   {
@@ -1045,8 +1052,8 @@
     "winnerSeed": 44,
     "winnerName": "עומר עובדיה",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 10,
+    "roundScoreA": 233,
+    "roundScoreB": 201,
     "tieBreakerUsed": "A"
   },
   {
@@ -1062,8 +1069,8 @@
     "winnerSeed": 85,
     "winnerName": "יובל שדות",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 10,
+    "roundScoreA": 242,
+    "roundScoreB": 209,
     "tieBreakerUsed": "A"
   },
   {
@@ -1078,7 +1085,8 @@
     "status": "bye",
     "winnerSeed": 2,
     "winnerName": "שגיא אברמסון",
-    "winnerReason": "automatic_round_2_qualification"
+    "winnerReason": "automatic_round_2_qualification",
+    "roundScoreA": 0
   },
   {
     "id": "r1-m066",
@@ -1093,8 +1101,8 @@
     "winnerSeed": 127,
     "winnerName": "שלומי+הראל ביגר",
     "winnerReason": "A",
-    "roundScoreA": 20,
-    "roundScoreB": 10,
+    "roundScoreA": 241,
+    "roundScoreB": 204,
     "tieBreakerUsed": "A"
   },
   {
@@ -1110,8 +1118,8 @@
     "winnerSeed": 63,
     "winnerName": "שלומי נטוביץ",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 12,
+    "roundScoreA": 236,
+    "roundScoreB": 209,
     "tieBreakerUsed": "A"
   },
   {
@@ -1127,8 +1135,8 @@
     "winnerSeed": 66,
     "winnerName": "אודי שריקי",
     "winnerReason": "A",
-    "roundScoreA": 5,
-    "roundScoreB": 15,
+    "roundScoreA": 228,
+    "roundScoreB": 199,
     "tieBreakerUsed": "A"
   },
   {
@@ -1144,8 +1152,8 @@
     "winnerSeed": 31,
     "winnerName": "אריק גליקמן",
     "winnerReason": "A",
-    "roundScoreA": 25,
-    "roundScoreB": 10,
+    "roundScoreA": 244,
+    "roundScoreB": 196,
     "tieBreakerUsed": "A"
   },
   {
@@ -1158,11 +1166,11 @@
     "playerBName": "ליאור פלג",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 98,
-    "winnerName": "חן יעקב",
+    "winnerSeed": 159,
+    "winnerName": "ליאור פלג",
     "winnerReason": "A",
-    "roundScoreA": 25,
-    "roundScoreB": 5,
+    "roundScoreA": 206,
+    "roundScoreB": 212,
     "tieBreakerUsed": "A"
   },
   {
@@ -1178,8 +1186,8 @@
     "winnerSeed": 34,
     "winnerName": "אלעד מור+אבירן",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 15,
+    "roundScoreA": 223,
+    "roundScoreB": 217,
     "tieBreakerUsed": "A"
   },
   {
@@ -1195,8 +1203,8 @@
     "winnerSeed": 95,
     "winnerName": "יוסי מצרי",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 25,
+    "roundScoreA": 216,
+    "roundScoreB": 204,
     "tieBreakerUsed": "A"
   },
   {
@@ -1212,8 +1220,8 @@
     "winnerSeed": 15,
     "winnerName": "יוני דלאל",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 15,
+    "roundScoreA": 209,
+    "roundScoreB": 189,
     "tieBreakerUsed": "A"
   },
   {
@@ -1229,8 +1237,8 @@
     "winnerSeed": 114,
     "winnerName": "אלעד שניידר+נבו הרשקוביץ",
     "winnerReason": "A",
-    "roundScoreA": 12,
-    "roundScoreB": 0,
+    "roundScoreA": 224,
+    "roundScoreB": 209,
     "tieBreakerUsed": "A"
   },
   {
@@ -1246,8 +1254,8 @@
     "winnerSeed": 50,
     "winnerName": "יובל גרשון",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 20,
+    "roundScoreA": 248,
+    "roundScoreB": 192,
     "tieBreakerUsed": "A"
   },
   {
@@ -1263,8 +1271,8 @@
     "winnerSeed": 79,
     "winnerName": "יואב יוקלסון",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 10,
+    "roundScoreA": 206,
+    "roundScoreB": 199,
     "tieBreakerUsed": "A"
   },
   {
@@ -1280,8 +1288,8 @@
     "winnerSeed": 18,
     "winnerName": "דני שוורצמן+אלון יוסף",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 12,
+    "roundScoreA": 202,
+    "roundScoreB": 193,
     "tieBreakerUsed": "A"
   },
   {
@@ -1294,11 +1302,11 @@
     "playerBName": "רועי חביה",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 146,
-    "winnerName": "רועי חביה",
+    "winnerSeed": 111,
+    "winnerName": "רוני גליק",
     "winnerReason": "A",
-    "roundScoreA": 5,
-    "roundScoreB": 15,
+    "roundScoreA": 234,
+    "roundScoreB": 181,
     "tieBreakerUsed": "A"
   },
   {
@@ -1313,10 +1321,10 @@
     "status": "completed",
     "winnerSeed": 47,
     "winnerName": "יאיר אללוף",
-    "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 5,
-    "tieBreakerUsed": "A"
+    "winnerReason": "C",
+    "roundScoreA": 206,
+    "roundScoreB": 206,
+    "tieBreakerUsed": "C"
   },
   {
     "id": "r1-m080",
@@ -1328,11 +1336,11 @@
     "playerBName": "רועי הדר",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 82,
-    "winnerName": "עמרי חובב",
+    "winnerSeed": 175,
+    "winnerName": "רועי הדר",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 16,
+    "roundScoreA": 174,
+    "roundScoreB": 217,
     "tieBreakerUsed": "A"
   },
   {
@@ -1347,7 +1355,8 @@
     "status": "bye",
     "winnerSeed": 7,
     "winnerName": "שמוליק תמיר",
-    "winnerReason": "automatic_round_2_qualification"
+    "winnerReason": "automatic_round_2_qualification",
+    "roundScoreA": 0
   },
   {
     "id": "r1-m082",
@@ -1362,8 +1371,8 @@
     "winnerSeed": 122,
     "winnerName": "יובל קליין",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 5,
+    "roundScoreA": 207,
+    "roundScoreB": 194,
     "tieBreakerUsed": "A"
   },
   {
@@ -1379,8 +1388,8 @@
     "winnerSeed": 58,
     "winnerName": "שי קוקוש",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 20,
+    "roundScoreA": 227,
+    "roundScoreB": 187,
     "tieBreakerUsed": "A"
   },
   {
@@ -1393,11 +1402,11 @@
     "playerBName": "אריק הרץ",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 71,
-    "winnerName": "גל עובדיה",
+    "winnerSeed": 186,
+    "winnerName": "אריק הרץ",
     "winnerReason": "A",
-    "roundScoreA": 12,
-    "roundScoreB": 12,
+    "roundScoreA": 209,
+    "roundScoreB": 236,
     "tieBreakerUsed": "A"
   },
   {
@@ -1413,8 +1422,8 @@
     "winnerSeed": 26,
     "winnerName": "דרור רסקין+ניר לוגסי",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 12,
+    "roundScoreA": 214,
+    "roundScoreB": 199,
     "tieBreakerUsed": "A"
   },
   {
@@ -1427,11 +1436,11 @@
     "playerBName": "נתן ברויטמן+רן טננברג",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 103,
-    "winnerName": "קוסטה הופמן",
+    "winnerSeed": 154,
+    "winnerName": "נתן ברויטמן+רן טננברג",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 17,
+    "roundScoreA": 206,
+    "roundScoreB": 217,
     "tieBreakerUsed": "A"
   },
   {
@@ -1444,11 +1453,11 @@
     "playerBName": "מאריק ברסטוביצקי",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 39,
-    "winnerName": "אבי יעקובינסקי",
+    "winnerSeed": 218,
+    "winnerName": "מאריק ברסטוביצקי",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 5,
+    "roundScoreA": 181,
+    "roundScoreB": 228,
     "tieBreakerUsed": "A"
   },
   {
@@ -1464,8 +1473,8 @@
     "winnerSeed": 90,
     "winnerName": "איתי שנפ",
     "winnerReason": "A",
-    "roundScoreA": 12,
-    "roundScoreB": 10,
+    "roundScoreA": 229,
+    "roundScoreB": 206,
     "tieBreakerUsed": "A"
   },
   {
@@ -1480,7 +1489,8 @@
     "status": "bye",
     "winnerSeed": 10,
     "winnerName": "גל+סייבה גורליק",
-    "winnerReason": "automatic_round_2_qualification"
+    "winnerReason": "automatic_round_2_qualification",
+    "roundScoreA": 0
   },
   {
     "id": "r1-m090",
@@ -1492,11 +1502,11 @@
     "playerBName": "נדב ברגר",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 119,
-    "winnerName": "משה בלאיש",
+    "winnerSeed": 138,
+    "winnerName": "נדב ברגר",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 15,
+    "roundScoreA": 204,
+    "roundScoreB": 240,
     "tieBreakerUsed": "A"
   },
   {
@@ -1512,8 +1522,8 @@
     "winnerSeed": 55,
     "winnerName": "דני שין",
     "winnerReason": "A",
-    "roundScoreA": 19,
-    "roundScoreB": 17,
+    "roundScoreA": 247,
+    "roundScoreB": 223,
     "tieBreakerUsed": "A"
   },
   {
@@ -1526,11 +1536,11 @@
     "playerBName": "ליאור חודרה",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 74,
-    "winnerName": "אלון הרשקוביץ",
+    "winnerSeed": 183,
+    "winnerName": "ליאור חודרה",
     "winnerReason": "A",
-    "roundScoreA": 19,
-    "roundScoreB": 15,
+    "roundScoreA": 192,
+    "roundScoreB": 219,
     "tieBreakerUsed": "A"
   },
   {
@@ -1546,8 +1556,8 @@
     "winnerSeed": 23,
     "winnerName": "עידן+רום מנייביץ",
     "winnerReason": "A",
-    "roundScoreA": 22,
-    "roundScoreB": 12,
+    "roundScoreA": 196,
+    "roundScoreB": 172,
     "tieBreakerUsed": "A"
   },
   {
@@ -1560,11 +1570,11 @@
     "playerBName": "אביעד צרפתי",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 106,
-    "winnerName": "שמוליק בראזני",
+    "winnerSeed": 151,
+    "winnerName": "אביעד צרפתי",
     "winnerReason": "A",
-    "roundScoreA": 12,
-    "roundScoreB": 12,
+    "roundScoreA": 214,
+    "roundScoreB": 229,
     "tieBreakerUsed": "A"
   },
   {
@@ -1580,8 +1590,8 @@
     "winnerSeed": 42,
     "winnerName": "רועי איזן",
     "winnerReason": "A",
-    "roundScoreA": 22,
-    "roundScoreB": 12,
+    "roundScoreA": 236,
+    "roundScoreB": 223,
     "tieBreakerUsed": "A"
   },
   {
@@ -1597,8 +1607,8 @@
     "winnerSeed": 87,
     "winnerName": "נימרוד רון",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 15,
+    "roundScoreA": 247,
+    "roundScoreB": 238,
     "tieBreakerUsed": "A"
   },
   {
@@ -1613,7 +1623,8 @@
     "status": "bye",
     "winnerSeed": 3,
     "winnerName": "ניר כהן",
-    "winnerReason": "automatic_round_2_qualification"
+    "winnerReason": "automatic_round_2_qualification",
+    "roundScoreA": 0
   },
   {
     "id": "r1-m098",
@@ -1625,11 +1636,11 @@
     "playerBName": "עוז גורן",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 131,
-    "winnerName": "עוז גורן",
+    "winnerSeed": 126,
+    "winnerName": "אריה ציבוטרו",
     "winnerReason": "A",
-    "roundScoreA": 7,
-    "roundScoreB": 15,
+    "roundScoreA": 234,
+    "roundScoreB": 224,
     "tieBreakerUsed": "A"
   },
   {
@@ -1645,8 +1656,8 @@
     "winnerSeed": 62,
     "winnerName": "גל פרגר",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 5,
+    "roundScoreA": 202,
+    "roundScoreB": 179,
     "tieBreakerUsed": "A"
   },
   {
@@ -1659,11 +1670,11 @@
     "playerBName": "מאיה רון",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 67,
-    "winnerName": "עודד רגב",
+    "winnerSeed": 190,
+    "winnerName": "מאיה רון",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 25,
+    "roundScoreA": 244,
+    "roundScoreB": 257,
     "tieBreakerUsed": "A"
   },
   {
@@ -1676,11 +1687,11 @@
     "playerBName": "אופיר ניב",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 30,
-    "winnerName": "אבירן זינו",
+    "winnerSeed": 227,
+    "winnerName": "אופיר ניב",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 10,
+    "roundScoreA": 193,
+    "roundScoreB": 195,
     "tieBreakerUsed": "A"
   },
   {
@@ -1696,8 +1707,8 @@
     "winnerSeed": 99,
     "winnerName": "תומר פרי",
     "winnerReason": "A",
-    "roundScoreA": 12,
-    "roundScoreB": 5,
+    "roundScoreA": 196,
+    "roundScoreB": 184,
     "tieBreakerUsed": "A"
   },
   {
@@ -1713,8 +1724,8 @@
     "winnerSeed": 35,
     "winnerName": "אלברט אברמוב",
     "winnerReason": "A",
-    "roundScoreA": 5,
-    "roundScoreB": 10,
+    "roundScoreA": 234,
+    "roundScoreB": 219,
     "tieBreakerUsed": "A"
   },
   {
@@ -1727,11 +1738,11 @@
     "playerBName": "משה בישור",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 94,
-    "winnerName": "אריאל אנגל",
+    "winnerSeed": 163,
+    "winnerName": "משה בישור",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 10,
+    "roundScoreA": 227,
+    "roundScoreB": 247,
     "tieBreakerUsed": "A"
   },
   {
@@ -1746,7 +1757,8 @@
     "status": "bye",
     "winnerSeed": 14,
     "winnerName": "אוראל ויצמן",
-    "winnerReason": "automatic_round_2_qualification"
+    "winnerReason": "automatic_round_2_qualification",
+    "roundScoreA": 0
   },
   {
     "id": "r1-m106",
@@ -1760,10 +1772,10 @@
     "status": "completed",
     "winnerSeed": 115,
     "winnerName": "ויטלי גורביץ",
-    "winnerReason": "C",
-    "roundScoreA": 5,
-    "roundScoreB": 10,
-    "tieBreakerUsed": "C"
+    "winnerReason": "A",
+    "roundScoreA": 217,
+    "roundScoreB": 186,
+    "tieBreakerUsed": "A"
   },
   {
     "id": "r1-m107",
@@ -1778,8 +1790,8 @@
     "winnerSeed": 51,
     "winnerName": "עדי אדיוס",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 10,
+    "roundScoreA": 196,
+    "roundScoreB": 172,
     "tieBreakerUsed": "A"
   },
   {
@@ -1795,8 +1807,8 @@
     "winnerSeed": 78,
     "winnerName": "אילן קאלי",
     "winnerReason": "A",
-    "roundScoreA": 7,
-    "roundScoreB": 10,
+    "roundScoreA": 224,
+    "roundScoreB": 206,
     "tieBreakerUsed": "A"
   },
   {
@@ -1812,8 +1824,8 @@
     "winnerSeed": 19,
     "winnerName": "קובי ששון",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 10,
+    "roundScoreA": 244,
+    "roundScoreB": 199,
     "tieBreakerUsed": "A"
   },
   {
@@ -1829,8 +1841,8 @@
     "winnerSeed": 110,
     "winnerName": "אסף קדם",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 10,
+    "roundScoreA": 221,
+    "roundScoreB": 201,
     "tieBreakerUsed": "A"
   },
   {
@@ -1843,11 +1855,11 @@
     "playerBName": "צפריר+עילי פיקס",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 46,
-    "winnerName": "אורטל שלומי",
+    "winnerSeed": 211,
+    "winnerName": "צפריר+עילי פיקס",
     "winnerReason": "A",
-    "roundScoreA": 25,
-    "roundScoreB": 15,
+    "roundScoreA": 199,
+    "roundScoreB": 213,
     "tieBreakerUsed": "A"
   },
   {
@@ -1860,11 +1872,11 @@
     "playerBName": "תום אבני",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 83,
-    "winnerName": "מורן יטח",
+    "winnerSeed": 174,
+    "winnerName": "תום אבני",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 10,
+    "roundScoreA": 222,
+    "roundScoreB": 235,
     "tieBreakerUsed": "A"
   },
   {
@@ -1879,7 +1891,8 @@
     "status": "bye",
     "winnerSeed": 6,
     "winnerName": "אפי קטש",
-    "winnerReason": "automatic_round_2_qualification"
+    "winnerReason": "automatic_round_2_qualification",
+    "roundScoreA": 0
   },
   {
     "id": "r1-m114",
@@ -1894,8 +1907,8 @@
     "winnerSeed": 123,
     "winnerName": "עמוס גויכמן",
     "winnerReason": "A",
-    "roundScoreA": 20,
-    "roundScoreB": 15,
+    "roundScoreA": 189,
+    "roundScoreB": 173,
     "tieBreakerUsed": "A"
   },
   {
@@ -1908,11 +1921,11 @@
     "playerBName": "אלי גזית",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 59,
-    "winnerName": "גיא טוויג",
+    "winnerSeed": 198,
+    "winnerName": "אלי גזית",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 15,
+    "roundScoreA": 182,
+    "roundScoreB": 191,
     "tieBreakerUsed": "A"
   },
   {
@@ -1928,8 +1941,8 @@
     "winnerSeed": 70,
     "winnerName": "חוני במנולקר+רן בטאט",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 12,
+    "roundScoreA": 214,
+    "roundScoreB": 176,
     "tieBreakerUsed": "A"
   },
   {
@@ -1945,8 +1958,8 @@
     "winnerSeed": 27,
     "winnerName": "שלום אברהם",
     "winnerReason": "A",
-    "roundScoreA": 5,
-    "roundScoreB": 10,
+    "roundScoreA": 213,
+    "roundScoreB": 191,
     "tieBreakerUsed": "A"
   },
   {
@@ -1962,8 +1975,8 @@
     "winnerSeed": 102,
     "winnerName": "משה אילוז",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 5,
+    "roundScoreA": 218,
+    "roundScoreB": 212,
     "tieBreakerUsed": "A"
   },
   {
@@ -1979,8 +1992,8 @@
     "winnerSeed": 38,
     "winnerName": "גיא טלסניק",
     "winnerReason": "A",
-    "roundScoreA": 15,
-    "roundScoreB": 15,
+    "roundScoreA": 237,
+    "roundScoreB": 170,
     "tieBreakerUsed": "A"
   },
   {
@@ -1996,8 +2009,8 @@
     "winnerSeed": 91,
     "winnerName": "אורי מירו",
     "winnerReason": "A",
-    "roundScoreA": 22,
-    "roundScoreB": 5,
+    "roundScoreA": 208,
+    "roundScoreB": 185,
     "tieBreakerUsed": "A"
   },
   {
@@ -2012,7 +2025,8 @@
     "status": "bye",
     "winnerSeed": 11,
     "winnerName": "רני רחמים",
-    "winnerReason": "automatic_round_2_qualification"
+    "winnerReason": "automatic_round_2_qualification",
+    "roundScoreA": 0
   },
   {
     "id": "r1-m122",
@@ -2027,8 +2041,8 @@
     "winnerSeed": 118,
     "winnerName": "לידור עטרי",
     "winnerReason": "A",
-    "roundScoreA": 17,
-    "roundScoreB": 0,
+    "roundScoreA": 206,
+    "roundScoreB": 184,
     "tieBreakerUsed": "A"
   },
   {
@@ -2044,8 +2058,8 @@
     "winnerSeed": 54,
     "winnerName": "תומר אמינפור",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 5,
+    "roundScoreA": 221,
+    "roundScoreB": 201,
     "tieBreakerUsed": "A"
   },
   {
@@ -2058,11 +2072,11 @@
     "playerBName": "צחי אנטן",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 75,
-    "winnerName": "אוראל לוי",
+    "winnerSeed": 182,
+    "winnerName": "צחי אנטן",
     "winnerReason": "A",
-    "roundScoreA": 7,
-    "roundScoreB": 10,
+    "roundScoreA": 196,
+    "roundScoreB": 211,
     "tieBreakerUsed": "A"
   },
   {
@@ -2075,11 +2089,11 @@
     "playerBName": "בן סולומון",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 22,
-    "winnerName": "שי זגורי",
+    "winnerSeed": 235,
+    "winnerName": "בן סולומון",
     "winnerReason": "A",
-    "roundScoreA": 5,
-    "roundScoreB": 20,
+    "roundScoreA": 179,
+    "roundScoreB": 216,
     "tieBreakerUsed": "A"
   },
   {
@@ -2095,8 +2109,8 @@
     "winnerSeed": 107,
     "winnerName": "עומר מנור+גיל ויובל שדות",
     "winnerReason": "A",
-    "roundScoreA": 10,
-    "roundScoreB": 15,
+    "roundScoreA": 221,
+    "roundScoreB": 210,
     "tieBreakerUsed": "A"
   },
   {
@@ -2109,11 +2123,11 @@
     "playerBName": "אילון אלחיאני+יותם סגל",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 43,
-    "winnerName": "עידן כהן",
+    "winnerSeed": 214,
+    "winnerName": "אילון אלחיאני+יותם סגל",
     "winnerReason": "A",
-    "roundScoreA": 5,
-    "roundScoreB": 20,
+    "roundScoreA": 202,
+    "roundScoreB": 221,
     "tieBreakerUsed": "A"
   },
   {
@@ -2126,11 +2140,11 @@
     "playerBName": "יוסי אדרי",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 86,
-    "winnerName": "רון יוסף",
+    "winnerSeed": 171,
+    "winnerName": "יוסי אדרי",
     "winnerReason": "A",
-    "roundScoreA": 12,
-    "roundScoreB": 7,
+    "roundScoreA": 182,
+    "roundScoreB": 187,
     "tieBreakerUsed": "A"
   }
 ]
