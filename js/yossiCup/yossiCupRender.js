@@ -158,14 +158,21 @@
     if (total === null || total === undefined)
       return '<span class="hint">—</span>';
 
-    // Live / pending round
-    if (m.roundStarted && rs !== null && rs >= 0) {
-      var tip = 'סה״כ ' + _fmtScore(total) + ' · נקודת פתיחה ' + _fmtScore(init) + ' · במחזור ' + rs;
-      return '<span class="yc-mscore" title="' + esc(tip) + '">' +
-        (rs > 0 ? '+' : '') + rs +
-        ' <span class="yc-tot-hint">(' + total + ')</span></span>';
+    // Live / pending round — always show round delta (never cumulative total)
+    // Compute round baseline: total - roundScore = score at start of this round
+    var roundBaseline = (rs !== null) ? (total - rs) : null;
+    if (rs !== null && rs >= 0) {
+      var tip = 'סה״כ ' + _fmtScore(total) + ' · פתיחת סיבוב ' + _fmtScore(roundBaseline) + ' · רווח במחזור +' + rs;
+      if (m.roundStarted) {
+        return '<span class="yc-mscore" title="' + esc(tip) + '">' +
+          (rs > 0 ? '+' : '') + rs +
+          ' <span class="yc-tot-hint">(' + total + ')</span></span>';
+      }
+      // Round not started yet (rs=0 for both) — show +0 muted to avoid confusion with cumulative scores
+      return '<span class="yc-mscore hint" title="' + esc(tip) + '">+0</span>';
     }
-    var tip2 = 'ניקוד כולל · נקודת פתיחה לגביע ' + _fmtScore(init);
+    // No valid baseline yet — show total as fallback
+    var tip2 = 'ניקוד כולל · פתיחת הגביע ' + _fmtScore(init);
     return '<span class="yc-mscore" title="' + esc(tip2) + '">' + _fmtScore(total) + '</span>';
   }
 
