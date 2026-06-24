@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-24T03:36:27Z",
+  "updated_at_utc": "2026-06-24T03:46:32Z",
   "completed_matches": 47,
   "live_matches": 1,
   "cache_size_before": 47,
@@ -12,12 +12,12 @@
     {
       "matchId": 64,
       "match": "קולומביה - קונגו",
-      "score": "0-0",
+      "score": "1-0",
       "status": "live"
     }
   ],
   "conflicts": [],
   "warnings": [],
   "leader": "יובל אברהם",
-  "leader_points": 414
+  "leader_points": 419
 }
