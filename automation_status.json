@@ -1,20 +1,13 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-24T00:55:07Z",
+  "updated_at_utc": "2026-06-24T01:05:11Z",
   "completed_matches": 47,
   "live_matches": 0,
-  "cache_size_before": 46,
+  "cache_size_before": 47,
   "cache_size_after": 47,
   "restored_from_cache": [],
-  "final_updates": [
-    {
-      "matchId": 70,
-      "match": "פנמה - קרואטיה",
-      "score": "0-1",
-      "status": "verified"
-    }
-  ],
+  "final_updates": [],
   "live_updates": [],
   "conflicts": [],
   "warnings": [],
