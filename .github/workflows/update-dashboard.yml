@@ -2,8 +2,11 @@ name: Update World Cup Dashboard
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "*/5 * * * *"
+  # Scheduled runs disabled: the Live Score Loop owns dashboard updates and a
+  # second writer pushing to main at the same time wedges its rebase. Re-enable
+  # only when the live loop is off.
+  # schedule:
+  #   - cron: "*/5 * * * *"
 
 permissions:
   contents: write

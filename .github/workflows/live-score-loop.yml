@@ -1,18 +1,22 @@
 name: Live Score Loop
 
-# Self-running "live mode": updates the dashboard every 10 minutes during the
-# nightly match window (00:00–07:00 Philippines time = 16:00–23:00 UTC),
-# entirely on GitHub's runner — no dependency on any chat session.
+# Self-running "live mode": updates the dashboard every 10 minutes on GitHub's
+# runner — no dependency on any chat session.
 #
-# GitHub-hosted jobs are capped at 6h, so two scheduled starts cover the full
-# 7-hour window; concurrency makes the later start cleanly replace the earlier.
+# Configured for the 24/6 match day (4 matches, all morning PHT):
+# Portugal–Uzbekistan 01:00, England–Ghana 04:00, Panama–Croatia 07:00,
+# Colombia–Congo 10:00. The loop runs from 01:00 PHT 24/6 (17:00 UTC 23/6) until
+# ~13:00 PHT 24/6 (05:00 UTC 24/6), ~1h after the last match (10:00) finishes.
+#
+# GitHub-hosted jobs are capped at 6h, so several scheduled starts cover the
+# full window; concurrency makes the later start cleanly replace the earlier one.
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 16 * * *"   # 00:00 PHT — start of the night window
-    - cron: "0 19 * * *"   # 03:00 PHT — safety restart if the first run was skipped
-    - cron: "0 22 * * *"   # 06:00 PHT — covers the final hour past the 6h job limit
+    # Every 2h across the window (17:00 UTC 23/6 → 05:00 UTC 24/6) so a fresh
+    # start always beats the 6h job cap, even if some scheduled runs are dropped.
+    - cron: "0 1,3,5,17,19,21,23 * * *"
 
 permissions:
   contents: write
@@ -34,20 +38,28 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Update every 10 minutes until 07:00 PHT (23:00 UTC)
+      - name: Update every 10 minutes until the 24/6 match day ends (05:00 UTC 24/6)
         run: |
           set +e
-          END=$(date -u -d 'today 23:00' +%s)
+          END=$(date -u -d '2026-06-24 05:00' +%s)   # 13:00 PHT 24/6, ~1h after Colombia–Congo (10:00) ends
           git config user.name "worldcup-dashboard-bot"
           git config user.email "worldcup-dashboard-bot@users.noreply.github.com"
+          FILES="data.json leaderboard.csv matches.csv open_questions.csv open_question_review.csv fast_track_review.csv sources_all.csv sources_fifa.csv efi_katash_audit.csv automation_status.json espn_live_debug.csv match_results_cache.json"
           while [ "$(date -u +%s)" -lt "$END" ]; do
             echo "=== update $(date -u +'%H:%M') UTC ==="
-            python scripts/update_from_fifa.py
-            git add data.json leaderboard.csv matches.csv open_questions.csv open_question_review.csv fast_track_review.csv sources_all.csv sources_fifa.csv efi_katash_audit.csv automation_status.json espn_live_debug.csv match_results_cache.json
-            git commit -m "Live auto-update dashboard data" || echo "No changes to commit"
-            for i in 1 2 3 4 5; do
-              git pull --rebase origin main && git push && break
-              echo "push retry $i"; sleep 5
+            # Always start from the latest origin so a concurrent writer can never
+            # wedge a half-finished rebase. update_from_fifa.py regenerates the
+            # data files from scratch, so a hard reset loses nothing.
+            for i in 1 2 3 4 5 6; do
+              git fetch origin main && git reset --hard origin/main || { echo "fetch/reset retry $i"; sleep 4; continue; }
+              python scripts/update_from_fifa.py
+              # Heartbeat: guarantees a visible commit every 10 minutes even when
+              # no match data changed, and lets liveness be observed from git alone.
+              date -u +'%Y-%m-%dT%H:%M:%SZ' > live_heartbeat.txt
+              git add $FILES live_heartbeat.txt
+              git commit -m "Live auto-update dashboard data" || { echo "No changes to commit"; break; }
+              git push origin HEAD:main && break
+              echo "push retry $i"; sleep 4
             done
             [ "$(date -u +%s)" -ge "$END" ] && break
             sleep 600
