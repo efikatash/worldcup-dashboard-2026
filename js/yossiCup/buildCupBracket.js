@@ -94,13 +94,16 @@
       var roundHasStarted = (opts.roundHasStarted !== false); // default true if not supplied
       if (!row.isBye && noOfficialWinner && totA != null && totB != null && determine && roundHasStarted) {
         out.hasLiveData = true;
-        // Effective round scores: use computed delta when non-negative; fall back to the
-        // live total itself when the snapshot pre-dates the current data (rsX < 0).
-        var effA = (rsA != null && rsA >= 0) ? rsA : totA;
-        var effB = (rsB != null && rsB >= 0) ? rsB : totB;
-        // Only suppress provisional display when the round hasn't moved at all AND
-        // we have a valid baseline (i.e. data is fresh but no cup-round games yet).
-        var roundStarted = (rsA !== null && rsB !== null) ? (rsA > 0 || rsB > 0) : true;
+        // Effective round scores: always use the computed delta (even when negative —
+        // negative deltas occur when open-question corrections lower scores after the
+        // baseline snapshot was taken).  Fall back to live total only when baseline
+        // is entirely missing (rsX === null).
+        var effA = (rsA != null) ? rsA : totA;
+        var effB = (rsB != null) ? rsB : totB;
+        // Round is considered "started" (scores have moved) when at least one delta is
+        // non-zero.  Both-zero means no cup-round games have been played yet.
+        // Negative deltas count as "moved" (baseline correction, not a stale gate).
+        var roundStarted = (rsA !== null && rsB !== null) ? (rsA !== 0 || rsB !== 0) : true;
         var res = determine({
           playerA: row.playerASeed, playerB: row.playerBSeed,
           roundScoreA: effA, roundScoreB: effB,
