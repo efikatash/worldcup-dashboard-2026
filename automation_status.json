@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-24T19:44:35Z",
+  "updated_at_utc": "2026-06-24T20:20:13Z",
   "completed_matches": 48,
   "live_matches": 2,
   "cache_size_before": 48,
@@ -12,7 +12,7 @@
     {
       "matchId": 11,
       "match": "שווייץ - קנדה",
-      "score": "0-0",
+      "score": "2-0",
       "status": "live"
     },
     {
