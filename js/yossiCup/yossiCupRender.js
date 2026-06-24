@@ -69,10 +69,10 @@
     if (!info || !info.roundStart) return null;
     var d = new Date(info.roundStart);
     return d.toLocaleString('he-IL', {
-      timeZone: 'Asia/Manila',
+      timeZone: 'Asia/Jerusalem',
       day: '2-digit', month: '2-digit', year: 'numeric',
       hour: '2-digit', minute: '2-digit'
-    }) + ' (פיליפינים)';
+    }) + ' (שעון ישראל)';
   }
 
   function _recomputeLive() {
@@ -507,10 +507,12 @@
         (t ? '<span class="hint" style="margin-right:8px">עודכן ' + esc(t) + '</span>' : '');
     }
 
+    var roundInfo2 = _rounds.find(function (r) { return r.round === round; });
     var preStartNote = !started && startLabel
       ? '<div class="notice" style="background:rgba(247,201,72,.1);border-color:#f7c948;margin-bottom:12px">' +
-          '⏳ הסיבוב יתחיל ב-<b>' + esc(startLabel) + '</b>. ' +
-          'ניקוד הסיבוב יתאפס ויחושב מהרגע שהמחזור הראשון יתחיל — ניקוד המונדיאל הנוכחי אינו נספר לסיבוב זה.' +
+          '⏳ הסיבוב יתחיל ב-<b>' + esc(startLabel) + '</b>' +
+          (roundInfo2 && roundInfo2.description ? ' ויכלול את <b>' + esc(roundInfo2.description) + '</b>' : '') + '. ' +
+          'ניקוד הסיבוב יתאפס ויחושב רק מנקודות שנצברו במחזור זה — ניקוד מסיבובים קודמים אינו נספר.' +
         '</div>'
       : '';
 
