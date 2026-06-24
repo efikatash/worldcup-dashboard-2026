@@ -78,13 +78,26 @@
   }
 
   // ── event binding ──────────────────────────────────────────────────────
+
+  // Refresh whichever bracket body is currently shown (closed or active round)
+  function _refreshBracketBody() {
+    var vr = _viewRound || _activeRound;
+    var roundInfo = _rounds.find(function (r) { return r.round === vr; });
+    var isClosed = roundInfo && roundInfo.status === 'closed' && vr !== _activeRound;
+    if (isClosed) {
+      _renderClosedBracketBody(_bracketForRound(vr));
+    } else {
+      _renderBracketBody();
+    }
+  }
+
   function _bindEvents() {
     var searchEl = document.getElementById('ycSearch');
     if (searchEl && !searchEl._ycBound) {
       searchEl._ycBound = true;
       searchEl.oninput = function () {
         _search = (this.value || '').trim().toLowerCase();
-        _renderBracketBody();
+        _refreshBracketBody();
       };
     }
     document.querySelectorAll('.yc-filter-btn').forEach(function (btn) {
@@ -94,7 +107,7 @@
         document.querySelectorAll('.yc-filter-btn').forEach(function (b) { b.classList.remove('active'); });
         this.classList.add('active');
         _filter = this.dataset.filter || 'all';
-        _renderBracketBody();
+        _refreshBracketBody();
       };
     });
     document.querySelectorAll('.yc-round-tab').forEach(function (btn) {
@@ -381,10 +394,29 @@
     }
   }
 
+  function _searchBarHtml(withFilters) {
+    var filters = withFilters
+      ? '<div class="yc-filters">' +
+          '<button class="yc-filter-btn secondary' + (_filter === 'all'    ? ' active' : '') + '" data-filter="all">הכל</button>' +
+          '<button class="yc-filter-btn secondary' + (_filter === 'active' ? ' active' : '') + '" data-filter="active">דו-קרבים</button>' +
+        '</div>'
+      : '';
+    return '<div class="yc-search-wrap" id="yc-search">' +
+      '<div class="yc-search-bar">' +
+        '<div class="inputWrap" style="flex:1;min-width:180px">' +
+          '<span class="searchIcon">🔎</span>' +
+          '<input id="ycSearch" autocomplete="off" placeholder="חפש שם משתתף..." ' +
+            'value="' + esc(_search) + '" style="width:100%;padding-right:44px">' +
+        '</div>' +
+        filters +
+      '</div>' +
+    '</div>';
+  }
+
   function _renderClosedRound(el, round, roundInfo) {
-    var bracket = _bracketForRound(round);
-    var active  = bracket.filter(function (m) { return !m.isBye; });
-    var byes    = bracket.filter(function (m) { return m.isBye; });
+    var bracket   = _bracketForRound(round);
+    var allActive = bracket.filter(function (m) { return !m.isBye; });
+    var allByes   = bracket.filter(function (m) { return m.isBye; });
 
     el.innerHTML =
       '<section class="card section yc-section">' +
@@ -393,14 +425,41 @@
           '<span class="pill green">✓ סגור</span>' +
         '</div>' +
         '<div class="notice yc-live-note" style="margin-bottom:16px">📋 ' +
-          active.length + ' דו-קרבים + ' + byes.length + ' עליות אוטומטיות · ' +
-          '36 הפתעות (משתתף עם דירוג נמוך יותר ניצח)' +
+          allActive.length + ' דו-קרבים + ' + allByes.length + ' עליות אוטומטיות' +
         '</div>' +
-        (byes.length ? '<div class="yc-group-label">עלו אוטומטית לסיבוב הבא (' + byes.length + ')</div>' +
-          '<div class="yc-bye-grid">' + byes.map(function (m) { return _matchCard(m, true); }).join('') + '</div>' : '') +
-        '<div class="yc-group-label">תוצאות דו-קרבים (' + active.length + ')</div>' +
-        '<div class="yc-duels-grid">' + active.map(function (m) { return _matchCard(m, true); }).join('') + '</div>' +
+        _searchBarHtml(false) +
+        '<div id="yc-bracket-body"></div>' +
       '</section>';
+
+    _bindEvents();
+    _renderClosedBracketBody(bracket);
+  }
+
+  function _renderClosedBracketBody(bracket) {
+    var el = document.getElementById('yc-bracket-body');
+    if (!el) return;
+    var visible = bracket.filter(function (m) {
+      if (!_search) return true;
+      var nA = String(m.playerAName || '').toLowerCase();
+      var nB = String(m.playerBName || '').toLowerCase();
+      return nA.includes(_search) || nB.includes(_search);
+    });
+    if (visible.length === 0) {
+      el.innerHTML = '<div class="empty" style="padding:40px 0">אין תוצאות לחיפוש זה</div>';
+      return;
+    }
+    var byes   = visible.filter(function (m) { return m.isBye; });
+    var active = visible.filter(function (m) { return !m.isBye; });
+    var html   = '';
+    if (byes.length) {
+      html += '<div class="yc-group-label">עלו אוטומטית לסיבוב הבא (' + byes.length + ')</div>' +
+        '<div class="yc-bye-grid">' + byes.map(function (m) { return _matchCard(m, true); }).join('') + '</div>';
+    }
+    if (active.length) {
+      if (byes.length) html += '<div class="yc-group-label">תוצאות דו-קרבים (' + active.length + ')</div>';
+      html += '<div class="yc-duels-grid">' + active.map(function (m) { return _matchCard(m, true); }).join('') + '</div>';
+    }
+    el.innerHTML = html;
   }
 
   function _renderActiveBracket(el, round, roundInfo) {
@@ -416,25 +475,6 @@
         (t ? '<span class="hint" style="margin-right:8px">עודכן ' + esc(t) + '</span>' : '');
     }
 
-    var searchHtml = '';
-    if (!document.getElementById('ycSearch')) {
-      searchHtml =
-        '<div class="yc-search-bar">' +
-          '<div class="inputWrap" style="flex:1;min-width:180px">' +
-            '<span class="searchIcon">🔎</span>' +
-            '<input id="ycSearch" autocomplete="off" placeholder="חפש שם משתתף..." ' +
-              'value="' + esc(_search) + '" style="width:100%;padding-right:44px">' +
-          '</div>' +
-          '<div class="yc-filters">' +
-            '<button class="yc-filter-btn secondary' + (_filter === 'all' ? ' active' : '') + '" data-filter="all">הכל</button>' +
-            '<button class="yc-filter-btn secondary' + (_filter === 'active' ? ' active' : '') + '" data-filter="active">דו-קרבים</button>' +
-          '</div>' +
-        '</div>';
-    } else {
-      var inp = document.getElementById('ycSearch');
-      if (inp && inp.value !== _search) inp.value = _search;
-    }
-
     el.innerHTML =
       '<section class="card section yc-section">' +
         '<div class="sectionHead">' +
@@ -443,7 +483,7 @@
         '</div>' +
         '<div class="notice yc-live-note">📡 הניקוד מתעדכן <b>חי</b> כל 30 שניות. ' +
           'הניצחון <b>הרשמי</b> נקבע לפי מייל הסיכום של יוסי בסוף המחזור — עדכון חי = <b>לא סופי</b>.</div>' +
-        (searchHtml ? '<div class="yc-search-wrap" id="yc-search">' + searchHtml + '</div>' : '') +
+        _searchBarHtml(true) +
         '<div id="yc-bracket-body"></div>' +
       '</section>';
 
