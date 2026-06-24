@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-24T23:31:10Z",
+  "updated_at_utc": "2026-06-24T23:41:16Z",
   "completed_matches": 50,
   "live_matches": 2,
   "cache_size_before": 50,
@@ -18,12 +18,12 @@
     {
       "matchId": 18,
       "match": "מרוקו - האיטי",
-      "score": "2-2",
+      "score": "3-2",
       "status": "live"
     }
   ],
   "conflicts": [],
   "warnings": [],
   "leader": "קובי ששון",
-  "leader_points": 466
+  "leader_points": 471
 }
