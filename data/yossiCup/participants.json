@@ -15,7 +15,7 @@
     "initialScore": 170,
     "status": "active",
     "autoQualifiedRound2": true,
-    "baselineScoreR2": 374
+    "baselineScoreR2": 379
   },
   {
     "id": "seed-003",
@@ -24,7 +24,7 @@
     "initialScore": 170,
     "status": "active",
     "autoQualifiedRound2": true,
-    "baselineScoreR2": 377
+    "baselineScoreR2": 389
   },
   {
     "id": "seed-004",
@@ -33,7 +33,7 @@
     "initialScore": 168,
     "status": "active",
     "autoQualifiedRound2": true,
-    "baselineScoreR2": 372
+    "baselineScoreR2": 379
   },
   {
     "id": "seed-005",
@@ -42,7 +42,7 @@
     "initialScore": 167,
     "status": "active",
     "autoQualifiedRound2": true,
-    "baselineScoreR2": 384
+    "baselineScoreR2": 389
   },
   {
     "id": "seed-006",
@@ -60,7 +60,7 @@
     "initialScore": 165,
     "status": "active",
     "autoQualifiedRound2": true,
-    "baselineScoreR2": 366
+    "baselineScoreR2": 378
   },
   {
     "id": "seed-008",
@@ -69,7 +69,7 @@
     "initialScore": 165,
     "status": "active",
     "autoQualifiedRound2": true,
-    "baselineScoreR2": 384
+    "baselineScoreR2": 398
   },
   {
     "id": "seed-009",
@@ -78,7 +78,7 @@
     "initialScore": 165,
     "status": "active",
     "autoQualifiedRound2": true,
-    "baselineScoreR2": 404
+    "baselineScoreR2": 421
   },
   {
     "id": "seed-010",
@@ -87,7 +87,7 @@
     "initialScore": 164,
     "status": "active",
     "autoQualifiedRound2": true,
-    "baselineScoreR2": 403
+    "baselineScoreR2": 410
   },
   {
     "id": "seed-011",
@@ -96,7 +96,7 @@
     "initialScore": 164,
     "status": "active",
     "autoQualifiedRound2": true,
-    "baselineScoreR2": 407
+    "baselineScoreR2": 419
   },
   {
     "id": "seed-012",
@@ -105,7 +105,7 @@
     "initialScore": 163,
     "status": "active",
     "autoQualifiedRound2": true,
-    "baselineScoreR2": 397
+    "baselineScoreR2": 404
   },
   {
     "id": "seed-013",
@@ -114,7 +114,7 @@
     "initialScore": 163,
     "status": "active",
     "autoQualifiedRound2": true,
-    "baselineScoreR2": 397
+    "baselineScoreR2": 404
   },
   {
     "id": "seed-014",
@@ -123,7 +123,7 @@
     "initialScore": 163,
     "status": "active",
     "autoQualifiedRound2": true,
-    "baselineScoreR2": 397
+    "baselineScoreR2": 404
   },
   {
     "id": "seed-015",
@@ -133,7 +133,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 371
+    "baselineScoreR2": 383
   },
   {
     "id": "seed-016",
@@ -152,7 +152,7 @@
     "initialScore": 161,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 389
+    "baselineScoreR2": 399
   },
   {
     "id": "seed-018",
@@ -161,7 +161,7 @@
     "initialScore": 160,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 362
+    "baselineScoreR2": 374
   },
   {
     "id": "seed-019",
@@ -170,7 +170,7 @@
     "initialScore": 160,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 404
+    "baselineScoreR2": 409
   },
   {
     "id": "seed-020",
@@ -179,7 +179,7 @@
     "initialScore": 160,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 389
+    "baselineScoreR2": 401
   },
   {
     "id": "seed-021",
@@ -208,7 +208,7 @@
     "initialScore": 159,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 355
+    "baselineScoreR2": 367
   },
   {
     "id": "seed-024",
@@ -217,7 +217,7 @@
     "initialScore": 158,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 372
+    "baselineScoreR2": 384
   },
   {
     "id": "seed-025",
@@ -226,7 +226,7 @@
     "initialScore": 157,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 360
+    "baselineScoreR2": 374
   },
   {
     "id": "seed-026",
@@ -235,7 +235,7 @@
     "initialScore": 157,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 371
+    "baselineScoreR2": 385
   },
   {
     "id": "seed-027",
@@ -245,7 +245,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 370
+    "baselineScoreR2": 377
   },
   {
     "id": "seed-028",
@@ -254,7 +254,7 @@
     "initialScore": 156,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 390
+    "baselineScoreR2": 402
   },
   {
     "id": "seed-029",
@@ -271,9 +271,9 @@
     "seed": 30,
     "name": "אבירן זינו",
     "initialScore": 156,
-    "status": "eliminated",
+    "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 171,
+    "baselineScoreR2": 366,
     "eliminatedRound": 1
   },
   {
@@ -283,7 +283,7 @@
     "initialScore": 156,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 400
+    "baselineScoreR2": 405
   },
   {
     "id": "seed-032",
@@ -293,7 +293,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 390
+    "baselineScoreR2": 402
   },
   {
     "id": "seed-033",
@@ -303,7 +303,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 365
+    "baselineScoreR2": 377
   },
   {
     "id": "seed-034",
@@ -313,7 +313,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 379
+    "baselineScoreR2": 384
   },
   {
     "id": "seed-035",
@@ -323,7 +323,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 389
+    "baselineScoreR2": 394
   },
   {
     "id": "seed-036",
@@ -332,7 +332,7 @@
     "initialScore": 155,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 376
+    "baselineScoreR2": 381
   },
   {
     "id": "seed-037",
@@ -341,7 +341,7 @@
     "initialScore": 155,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 364
+    "baselineScoreR2": 369
   },
   {
     "id": "seed-038",
@@ -350,7 +350,7 @@
     "initialScore": 155,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 392
+    "baselineScoreR2": 409
   },
   {
     "id": "seed-039",
@@ -379,7 +379,7 @@
     "initialScore": 153,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 367
+    "baselineScoreR2": 372
   },
   {
     "id": "seed-042",
@@ -388,7 +388,7 @@
     "initialScore": 153,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 389
+    "baselineScoreR2": 403
   },
   {
     "id": "seed-043",
@@ -407,7 +407,7 @@
     "initialScore": 152,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 385
+    "baselineScoreR2": 402
   },
   {
     "id": "seed-045",
@@ -436,7 +436,7 @@
     "initialScore": 152,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 358
+    "baselineScoreR2": 363
   },
   {
     "id": "seed-048",
@@ -446,7 +446,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 405
+    "baselineScoreR2": 410
   },
   {
     "id": "seed-049",
@@ -455,7 +455,7 @@
     "initialScore": 151,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 383
+    "baselineScoreR2": 388
   },
   {
     "id": "seed-050",
@@ -465,7 +465,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 399
+    "baselineScoreR2": 413
   },
   {
     "id": "seed-051",
@@ -474,7 +474,7 @@
     "initialScore": 151,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 347
+    "baselineScoreR2": 364
   },
   {
     "id": "seed-052",
@@ -494,7 +494,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 373
+    "baselineScoreR2": 378
   },
   {
     "id": "seed-054",
@@ -503,7 +503,7 @@
     "initialScore": 150,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 371
+    "baselineScoreR2": 376
   },
   {
     "id": "seed-055",
@@ -512,7 +512,7 @@
     "initialScore": 149,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 396
+    "baselineScoreR2": 403
   },
   {
     "id": "seed-056",
@@ -531,7 +531,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 353
+    "baselineScoreR2": 365
   },
   {
     "id": "seed-058",
@@ -541,7 +541,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 375
+    "baselineScoreR2": 387
   },
   {
     "id": "seed-059",
@@ -560,7 +560,7 @@
     "initialScore": 148,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 372
+    "baselineScoreR2": 377
   },
   {
     "id": "seed-061",
@@ -569,7 +569,7 @@
     "initialScore": 147,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 349
+    "baselineScoreR2": 361
   },
   {
     "id": "seed-062",
@@ -578,7 +578,7 @@
     "initialScore": 147,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 349
+    "baselineScoreR2": 361
   },
   {
     "id": "seed-063",
@@ -587,7 +587,7 @@
     "initialScore": 147,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 383
+    "baselineScoreR2": 395
   },
   {
     "id": "seed-064",
@@ -604,7 +604,7 @@
     "seed": 65,
     "name": "מור גרשגורן",
     "initialScore": 147,
-    "status": "active",
+    "status": "eliminated",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
     "baselineScoreR2": 381
@@ -617,7 +617,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 374
+    "baselineScoreR2": 381
   },
   {
     "id": "seed-067",
@@ -646,7 +646,7 @@
     "initialScore": 146,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 364
+    "baselineScoreR2": 378
   },
   {
     "id": "seed-070",
@@ -655,7 +655,7 @@
     "initialScore": 146,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 360
+    "baselineScoreR2": 365
   },
   {
     "id": "seed-071",
@@ -672,9 +672,10 @@
     "seed": 72,
     "name": "שגיא דגול",
     "initialScore": 145,
-    "status": "active",
+    "status": "eliminated",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 348
+    "baselineScoreR2": 348,
+    "eliminatedRound": 1
   },
   {
     "id": "seed-073",
@@ -684,7 +685,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 366
+    "baselineScoreR2": 376
   },
   {
     "id": "seed-074",
@@ -714,16 +715,16 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 374
+    "baselineScoreR2": 384
   },
   {
     "id": "seed-077",
     "seed": 77,
     "name": "אושרי ברזילי",
     "initialScore": 144,
-    "status": "eliminated",
+    "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 159,
+    "baselineScoreR2": 366,
     "eliminatedRound": 1
   },
   {
@@ -734,7 +735,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 368
+    "baselineScoreR2": 375
   },
   {
     "id": "seed-079",
@@ -743,7 +744,7 @@
     "initialScore": 143,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 349
+    "baselineScoreR2": 359
   },
   {
     "id": "seed-080",
@@ -762,7 +763,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 337
+    "baselineScoreR2": 349
   },
   {
     "id": "seed-082",
@@ -791,7 +792,7 @@
     "initialScore": 142,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 343
+    "baselineScoreR2": 355
   },
   {
     "id": "seed-085",
@@ -800,7 +801,7 @@
     "initialScore": 142,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 384
+    "baselineScoreR2": 401
   },
   {
     "id": "seed-086",
@@ -820,7 +821,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 389
+    "baselineScoreR2": 401
   },
   {
     "id": "seed-088",
@@ -849,7 +850,7 @@
     "initialScore": 141,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 370
+    "baselineScoreR2": 380
   },
   {
     "id": "seed-091",
@@ -858,7 +859,7 @@
     "initialScore": 141,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 349
+    "baselineScoreR2": 361
   },
   {
     "id": "seed-092",
@@ -877,7 +878,7 @@
     "initialScore": 140,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 386
+    "baselineScoreR2": 391
   },
   {
     "id": "seed-094",
@@ -894,7 +895,7 @@
     "seed": 95,
     "name": "יוסי מצרי",
     "initialScore": 140,
-    "status": "active",
+    "status": "eliminated",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
     "baselineScoreR2": 356
@@ -916,7 +917,7 @@
     "initialScore": 139,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 352
+    "baselineScoreR2": 359
   },
   {
     "id": "seed-098",
@@ -935,7 +936,7 @@
     "initialScore": 139,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 335
+    "baselineScoreR2": 345
   },
   {
     "id": "seed-100",
@@ -944,7 +945,7 @@
     "initialScore": 139,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 370
+    "baselineScoreR2": 380
   },
   {
     "id": "seed-101",
@@ -953,7 +954,7 @@
     "initialScore": 139,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 352
+    "baselineScoreR2": 364
   },
   {
     "id": "seed-102",
@@ -962,7 +963,7 @@
     "initialScore": 138,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 356
+    "baselineScoreR2": 361
   },
   {
     "id": "seed-103",
@@ -981,7 +982,7 @@
     "initialScore": 138,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 378
+    "baselineScoreR2": 383
   },
   {
     "id": "seed-105",
@@ -1011,7 +1012,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 359
+    "baselineScoreR2": 364
   },
   {
     "id": "seed-108",
@@ -1020,7 +1021,7 @@
     "initialScore": 138,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 355
+    "baselineScoreR2": 367
   },
   {
     "id": "seed-109",
@@ -1030,7 +1031,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 363
+    "baselineScoreR2": 368
   },
   {
     "id": "seed-110",
@@ -1039,7 +1040,7 @@
     "initialScore": 137,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 358
+    "baselineScoreR2": 370
   },
   {
     "id": "seed-111",
@@ -1049,7 +1050,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 371
+    "baselineScoreR2": 376
   },
   {
     "id": "seed-112",
@@ -1058,7 +1059,7 @@
     "initialScore": 136,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 382
+    "baselineScoreR2": 387
   },
   {
     "id": "seed-113",
@@ -1068,7 +1069,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 377
+    "baselineScoreR2": 389
   },
   {
     "id": "seed-114",
@@ -1077,7 +1078,7 @@
     "initialScore": 136,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 360
+    "baselineScoreR2": 367
   },
   {
     "id": "seed-115",
@@ -1087,7 +1088,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 353
+    "baselineScoreR2": 370
   },
   {
     "id": "seed-116",
@@ -1096,7 +1097,7 @@
     "initialScore": 135,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 370
+    "baselineScoreR2": 377
   },
   {
     "id": "seed-117",
@@ -1115,7 +1116,7 @@
     "initialScore": 135,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 341
+    "baselineScoreR2": 355
   },
   {
     "id": "seed-119",
@@ -1144,7 +1145,7 @@
     "initialScore": 135,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 368
+    "baselineScoreR2": 373
   },
   {
     "id": "seed-122",
@@ -1153,7 +1154,7 @@
     "initialScore": 134,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 341
+    "baselineScoreR2": 358
   },
   {
     "id": "seed-123",
@@ -1162,7 +1163,7 @@
     "initialScore": 134,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 323
+    "baselineScoreR2": 340
   },
   {
     "id": "seed-124",
@@ -1171,7 +1172,7 @@
     "initialScore": 134,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 356
+    "baselineScoreR2": 368
   },
   {
     "id": "seed-125",
@@ -1180,7 +1181,7 @@
     "initialScore": 134,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 357
+    "baselineScoreR2": 367
   },
   {
     "id": "seed-126",
@@ -1190,7 +1191,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 368
+    "baselineScoreR2": 373
   },
   {
     "id": "seed-127",
@@ -1199,7 +1200,7 @@
     "initialScore": 133,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 374
+    "baselineScoreR2": 388
   },
   {
     "id": "seed-128",
@@ -1208,7 +1209,7 @@
     "initialScore": 133,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 367
+    "baselineScoreR2": 384
   },
   {
     "id": "seed-129",
@@ -1291,7 +1292,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 337
+    "baselineScoreR2": 349
   },
   {
     "id": "seed-138",
@@ -1301,7 +1302,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 371
+    "baselineScoreR2": 388
   },
   {
     "id": "seed-139",
@@ -1320,7 +1321,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 360
+    "baselineScoreR2": 367
   },
   {
     "id": "seed-141",
@@ -1425,7 +1426,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 357
+    "baselineScoreR2": 367
   },
   {
     "id": "seed-152",
@@ -1435,7 +1436,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 363
+    "baselineScoreR2": 368
   },
   {
     "id": "seed-153",
@@ -1453,7 +1454,7 @@
     "initialScore": 127,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 344,
+    "baselineScoreR2": 361,
     "eliminatedRound": 1
   },
   {
@@ -1519,16 +1520,16 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 334
+    "baselineScoreR2": 348
   },
   {
     "id": "seed-162",
     "seed": 162,
     "name": "עידו מונטה",
     "initialScore": 125,
-    "status": "eliminated",
+    "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 150,
+    "baselineScoreR2": 349,
     "eliminatedRound": 1
   },
   {
@@ -1539,7 +1540,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 372
+    "baselineScoreR2": 379
   },
   {
     "id": "seed-164",
@@ -1558,7 +1559,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 357
+    "baselineScoreR2": 362
   },
   {
     "id": "seed-166",
@@ -1586,7 +1587,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 341
+    "baselineScoreR2": 346
   },
   {
     "id": "seed-169",
@@ -1595,7 +1596,7 @@
     "initialScore": 124,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 335,
+    "baselineScoreR2": 345,
     "eliminatedRound": 1
   },
   {
@@ -1616,7 +1617,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 310
+    "baselineScoreR2": 322
   },
   {
     "id": "seed-172",
@@ -1644,7 +1645,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 357
+    "baselineScoreR2": 362
   },
   {
     "id": "seed-175",
@@ -1653,7 +1654,7 @@
     "initialScore": 122,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 339,
+    "baselineScoreR2": 346,
     "eliminatedRound": 1
   },
   {
@@ -1699,7 +1700,7 @@
     "seed": 180,
     "name": "תומר כהן",
     "initialScore": 121,
-    "status": "active",
+    "status": "eliminated",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
     "baselineScoreR2": 337
@@ -1749,9 +1750,10 @@
     "seed": 185,
     "name": "שוהם בן סימון",
     "initialScore": 119,
-    "status": "eliminated",
+    "status": "active",
     "autoQualifiedRound2": false,
-    "eliminatedRound": 1
+    "eliminatedRound": 1,
+    "baselineScoreR2": 323
   },
   {
     "id": "seed-186",
@@ -1761,7 +1763,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 355
+    "baselineScoreR2": 367
   },
   {
     "id": "seed-187",
@@ -1798,7 +1800,7 @@
     "initialScore": 118,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 375,
+    "baselineScoreR2": 382,
     "eliminatedRound": 1
   },
   {
@@ -1816,9 +1818,9 @@
     "seed": 192,
     "name": "צחי כהן",
     "initialScore": 118,
-    "status": "eliminated",
+    "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 133,
+    "baselineScoreR2": 361,
     "eliminatedRound": 1
   },
   {
@@ -1829,7 +1831,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 322
+    "baselineScoreR2": 334
   },
   {
     "id": "seed-194",
@@ -1875,7 +1877,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 307
+    "baselineScoreR2": 314
   },
   {
     "id": "seed-199",
@@ -1942,7 +1944,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 334
+    "baselineScoreR2": 341
   },
   {
     "id": "seed-206",
@@ -2009,7 +2011,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 327
+    "baselineScoreR2": 341
   },
   {
     "id": "seed-213",
@@ -2027,7 +2029,7 @@
     "initialScore": 110,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 331,
+    "baselineScoreR2": 341,
     "eliminatedRound": 1
   },
   {
@@ -2066,7 +2068,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
-    "baselineScoreR2": 337
+    "baselineScoreR2": 344
   },
   {
     "id": "seed-219",
@@ -2149,7 +2151,7 @@
     "seed": 227,
     "name": "אופיר ניב",
     "initialScore": 103,
-    "status": "active",
+    "status": "eliminated",
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
     "baselineScoreR2": 298
@@ -2226,7 +2228,7 @@
     "initialScore": 91,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 307,
+    "baselineScoreR2": 312,
     "eliminatedRound": 1
   },
   {
@@ -2282,7 +2284,7 @@
     "initialScore": 82,
     "status": "active",
     "autoQualifiedRound2": false,
-    "baselineScoreR2": 304,
+    "baselineScoreR2": 309,
     "eliminatedRound": 1
   },
   {
