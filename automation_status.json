@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-24T22:40:40Z",
+  "updated_at_utc": "2026-06-24T22:50:46Z",
   "completed_matches": 50,
   "live_matches": 2,
   "cache_size_before": 50,
@@ -12,18 +12,18 @@
     {
       "matchId": 17,
       "match": "סקוטלנד - ברזיל",
-      "score": "0-1",
+      "score": "0-2",
       "status": "live"
     },
     {
       "matchId": 18,
       "match": "מרוקו - האיטי",
-      "score": "1-1",
+      "score": "2-2",
       "status": "live"
     }
   ],
   "conflicts": [],
   "warnings": [],
-  "leader": "קובי ששון",
-  "leader_points": 466
+  "leader": "יובל אברהם",
+  "leader_points": 469
 }
