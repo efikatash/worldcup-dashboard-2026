@@ -87,11 +87,12 @@
         provisionalTieBreaker: null, provisionalMargin: null, isProvisional: false
       });
 
-      // Provisional winner — for any active duel with no official result and live totals
-      // available. When round scores are negative (stale baseline) we fall back to
-      // comparing the raw live totals so the cup always mirrors the leaderboard.
+      // Provisional winner — only when the round has officially started AND there is no
+      // official result yet. opts.roundHasStarted=false means the round start time has not
+      // been reached; in that case we show no live scores at all (baseline is stale).
       var noOfficialWinner = (row.winnerSeed == null);
-      if (!row.isBye && noOfficialWinner && totA != null && totB != null && determine) {
+      var roundHasStarted = (opts.roundHasStarted !== false); // default true if not supplied
+      if (!row.isBye && noOfficialWinner && totA != null && totB != null && determine && roundHasStarted) {
         out.hasLiveData = true;
         // Effective round scores: use computed delta when non-negative; fall back to the
         // live total itself when the snapshot pre-dates the current data (rsX < 0).
@@ -100,7 +101,6 @@
         // Only suppress provisional display when the round hasn't moved at all AND
         // we have a valid baseline (i.e. data is fresh but no cup-round games yet).
         var roundStarted = (rsA !== null && rsB !== null) ? (rsA > 0 || rsB > 0) : true;
-        // Always compute a provisional result so the bracket shows current standings.
         var res = determine({
           playerA: row.playerASeed, playerB: row.playerBSeed,
           roundScoreA: effA, roundScoreB: effB,
@@ -114,7 +114,7 @@
         out.provisionalTieBreaker = res.tieBreakerUsed;
         out.provisionalMargin = res.margin;
         out.isProvisional = true;
-        out.roundStarted = roundStarted; // false → using initialScore tie-break before any cup games
+        out.roundStarted = roundStarted;
       }
       return out;
     });

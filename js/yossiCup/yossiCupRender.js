@@ -58,6 +58,23 @@
   }
 
   // ── live recompute ─────────────────────────────────────────────────────
+  function _roundHasStarted(roundNum) {
+    var info = _rounds.find(function (r) { return r.round === roundNum; });
+    if (!info || !info.roundStart) return true; // no gate set → treat as started
+    return new Date() >= new Date(info.roundStart);
+  }
+
+  function _roundStartLabel(roundNum) {
+    var info = _rounds.find(function (r) { return r.round === roundNum; });
+    if (!info || !info.roundStart) return null;
+    var d = new Date(info.roundStart);
+    return d.toLocaleString('he-IL', {
+      timeZone: 'Asia/Manila',
+      day: '2-digit', month: '2-digit', year: 'numeric',
+      hour: '2-digit', minute: '2-digit'
+    }) + ' (פיליפינים)';
+  }
+
   function _recomputeLive() {
     var live = (typeof DATA !== 'undefined' ? DATA : (window.DATA || null));
     var liveParts = (live && live.participants) || [];
@@ -73,7 +90,11 @@
     var activeBracket = _bracketForRound(_activeRound);
     _bracket = (yc.buildCupBracket || function (b) { return b; })(
       activeBracket, liveParts, _participants,
-      { activeRound: _activeRound, baselineBySeed: _activeRound >= 2 ? baselineBySeed : null });
+      {
+        activeRound: _activeRound,
+        baselineBySeed: _activeRound >= 2 ? baselineBySeed : null,
+        roundHasStarted: _roundHasStarted(_activeRound)
+      });
     _lastUpdate = new Date();
   }
 
@@ -167,6 +188,10 @@
         (rs > 0 ? '+' : '') + rs + '</span>';
     }
 
+    // Round hasn't started yet — hide all scores
+    if (!m.hasLiveData && !m.winnerSeed)
+      return '<span class="hint">—</span>';
+
     // No live data
     if (total === null || total === undefined)
       return '<span class="hint">—</span>';
@@ -223,6 +248,8 @@
         '<span class="pill orange" style="font-size:11px"><span class="yc-live-dot"></span> ' + roundLabel + '</span> ' +
         tbNote +
         '<b>' + esc(m.provisionalWinnerName) + '</b> מוביל';
+    } else if (!m.hasLiveData) {
+      status = '<span class="pill" style="font-size:11px;background:#444;color:#aaa">⏳ ממתין לתחילת הסיבוב</span>';
     } else {
       status = '<span class="pill" style="font-size:11px">ממתין לנתונים</span>';
     }
@@ -463,11 +490,16 @@
   }
 
   function _renderActiveBracket(el, round, roundInfo) {
-    var liveCount = _bracket.filter(function (m) { return m.isProvisional; }).length;
+    var started    = _roundHasStarted(round);
+    var startLabel = _roundStartLabel(round);
+    var liveCount  = _bracket.filter(function (m) { return m.isProvisional; }).length;
     var t = _lastUpdate ? _lastUpdate.toLocaleTimeString('he-IL', { hour: '2-digit', minute: '2-digit' }) : '';
 
     var liveStatus;
-    if (liveCount > 0) {
+    if (!started) {
+      liveStatus = '<span class="pill" style="background:#555;color:#fff">⏳ טרם התחיל</span>' +
+        (startLabel ? '<span class="hint" style="margin-right:8px">מתחיל ' + esc(startLabel) + '</span>' : '');
+    } else if (liveCount > 0) {
       liveStatus = '<span class="pill orange yc-live-pill"><span class="yc-live-dot"></span> ' + liveCount + ' דו-קרבים חיים</span>' +
         (t ? '<span class="hint" style="margin-right:8px">עודכן ' + esc(t) + '</span>' : '');
     } else {
@@ -475,15 +507,24 @@
         (t ? '<span class="hint" style="margin-right:8px">עודכן ' + esc(t) + '</span>' : '');
     }
 
+    var preStartNote = !started && startLabel
+      ? '<div class="notice" style="background:rgba(247,201,72,.1);border-color:#f7c948;margin-bottom:12px">' +
+          '⏳ הסיבוב יתחיל ב-<b>' + esc(startLabel) + '</b>. ' +
+          'ניקוד הסיבוב יתאפס ויחושב מהרגע שהמחזור הראשון יתחיל — ניקוד המונדיאל הנוכחי אינו נספר לסיבוב זה.' +
+        '</div>'
+      : '';
+
     el.innerHTML =
       '<section class="card section yc-section">' +
         '<div class="sectionHead">' +
           '<h2>' + esc(_roundLabel(round, true)) + '</h2>' +
           '<div class="yc-live-status">' + liveStatus + '</div>' +
         '</div>' +
-        '<div class="notice yc-live-note">📡 הניקוד מתעדכן <b>חי</b> כל 30 שניות. ' +
-          'הניצחון <b>הרשמי</b> נקבע לפי מייל הסיכום של יוסי בסוף המחזור — עדכון חי = <b>לא סופי</b>.</div>' +
-        _searchBarHtml(true) +
+        (started
+          ? '<div class="notice yc-live-note">📡 הניקוד מתעדכן <b>חי</b> כל 30 שניות. ' +
+              'הניצחון <b>הרשמי</b> נקבע לפי מייל הסיכום של יוסי בסוף המחזור — עדכון חי = <b>לא סופי</b>.</div>'
+          : preStartNote) +
+        _searchBarHtml(started) +
         '<div id="yc-bracket-body"></div>' +
       '</section>';
 
