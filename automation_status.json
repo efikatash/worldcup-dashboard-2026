@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-25T01:52:33Z",
+  "updated_at_utc": "2026-06-25T02:02:39Z",
   "completed_matches": 52,
   "live_matches": 2,
   "cache_size_before": 52,
@@ -24,6 +24,6 @@
   ],
   "conflicts": [],
   "warnings": [],
-  "leader": "קובי ששון",
-  "leader_points": 560
+  "leader": "יובל אברהם",
+  "leader_points": 568
 }
