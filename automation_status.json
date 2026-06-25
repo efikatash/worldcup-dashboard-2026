@@ -1,26 +1,13 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-25T03:03:16Z",
+  "updated_at_utc": "2026-06-25T03:13:23Z",
   "completed_matches": 54,
   "live_matches": 0,
-  "cache_size_before": 52,
+  "cache_size_before": 54,
   "cache_size_after": 54,
   "restored_from_cache": [],
-  "final_updates": [
-    {
-      "matchId": 5,
-      "match": "דרום אפריקה - דרום קוריאה",
-      "score": "1-0",
-      "status": "verified"
-    },
-    {
-      "matchId": 6,
-      "match": "צ'כיה - מקסיקו",
-      "score": "0-3",
-      "status": "verified"
-    }
-  ],
+  "final_updates": [],
   "live_updates": [],
   "conflicts": [],
   "warnings": [],
