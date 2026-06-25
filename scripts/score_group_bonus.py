@@ -146,8 +146,8 @@ def score_participant(p, results):
             "points": fp + sp,
             "status": "resolved" if (fst == "resolved" and sst == "resolved") else "pending",
         })
-        advanced_flags.append(fp >= 10)   # this pick's team advanced (10 or 15)
-        advanced_flags.append(sp >= 10)
+        advanced_flags.append(fp >= 7)   # this pick's team advanced (7 = 3rd-place adv, 10/15 = top-2)
+        advanced_flags.append(sp >= 7)
         position_flags.append(fp == 15)   # exact position
         position_flags.append(sp == 15)
 
