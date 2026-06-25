@@ -120,7 +120,37 @@ def _score_third_row(tp, gr):
     return pts, ("resolved" if resolved else "pending")
 
 
-def score_participant(p, results):
+def _match_direction(h, a):
+    """Sign of a scoreline: 0 draw, 1 home win, -1 away win; None if unknown."""
+    if h is None or a is None:
+        return None
+    return 0 if h == a else (1 if h > a else -1)
+
+
+def _score_group_directions(pick_by_mid, group_match_list):
+    """Score the 'כל הכיוונים בבית' bonus for one group.
+
+    +6 if the participant got the direction (1/X/2) right on every match in the
+    group.  group_match_list is [(matchId, actualHome, actualAway), ...].
+    Returns (points, status).  Resolvable only when all matches in the group
+    have a result; otherwise pending.
+    """
+    if not group_match_list or any(ah is None or aa is None for _, ah, aa in group_match_list):
+        return 0, "pending"
+    for mid, ah, aa in group_match_list:
+        pm = pick_by_mid.get(mid)
+        if not pm:
+            return 0, "resolved"
+        try:
+            hp, ap = int(pm.get("homePick")), int(pm.get("awayPick"))
+        except (TypeError, ValueError):
+            return 0, "resolved"
+        if _match_direction(hp, ap) != _match_direction(ah, aa):
+            return 0, "resolved"
+    return 6, "resolved"
+
+
+def score_participant(p, results, group_matches=None):
     """Compute every bonus entry for one participant and return the flat
     p['bonuses'] list (each entry carries a 'points' field that recompute sums)."""
     picks = p.get("bonusPicks") or {}
@@ -182,11 +212,25 @@ def score_participant(p, results):
         "status": "resolved" if all_groups_decided else "pending",
     })
 
+    # --- כל הכיוונים בבית, one entry per group (+6 if every direction in the group hit) ---
+    if group_matches:
+        pick_by_mid = {int(pm.get("matchId")): pm for pm in p.get("matches", []) if pm.get("matchId") is not None}
+        for g in GROUPS:
+            pts, st = _score_group_directions(pick_by_mid, group_matches.get(g, []))
+            bonuses.append({"kind": "group_directions", "group": g, "points": pts, "status": st})
+
     return bonuses
 
 
 def score_all(data):
     """Recompute every participant's bonus entries from picks + groupResults."""
     results = data.get("groupResults") or {}
+    # Build {group: [(matchId, actualHome, actualAway), ...]} for the directions bonus.
+    group_matches = {}
+    for m in data.get("matches", []):
+        g = m.get("group")
+        if not g or m.get("id") is None:
+            continue
+        group_matches.setdefault(g, []).append((int(m["id"]), m.get("actualHome"), m.get("actualAway")))
     for p in data.get("participants", []):
-        p["bonuses"] = score_participant(p, results)
+        p["bonuses"] = score_participant(p, results, group_matches)
