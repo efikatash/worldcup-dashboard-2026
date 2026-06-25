@@ -39,17 +39,25 @@ import re
 
 GROUPS = list("ABCDEFGHIJKL")
 
+# Hebrew spelling variants that must score as the canonical team name (some
+# participants typed a team slightly differently from the official result).
+_SPELLING_CANON = {
+    "שוויץ": "שווייץ",      # Switzerland — one yud vs two
+    "אקוודור": "אקוואדור",  # Ecuador — missing a vav
+}
+
 
 def _norm(name):
-    """Normalise a team name for comparison (collapse spaces, drop quotes)."""
+    """Normalise a team name for comparison (collapse spaces, drop quotes,
+    strip the Hebrew geresh, and canonicalise known spelling variants)."""
     if name is None:
         return None
     s = str(name).strip()
     if not s:
         return None
-    s = s.replace('"', '').replace("'", "").replace("”", "").replace("’", "")
+    s = s.replace('"', '').replace("'", "").replace("”", "").replace("’", "").replace("׳", "").replace("`", "")
     s = re.sub(r"\s+", " ", s)
-    return s
+    return _SPELLING_CANON.get(s, s)
 
 
 def _eq(a, b):
