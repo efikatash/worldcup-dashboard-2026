@@ -512,10 +512,13 @@ def recompute(data: Dict[str, Any]) -> None:
             gd_total += gd
         open_points = sum(int(o.get("points") or 0) for o in p.get("open", []))
         bonus_points = sum(int(b.get("points") or 0) for b in p.get("bonuses", []))
+        # Manual admin adjustment (e.g. game-manager corrections); persisted per
+        # participant so it survives every recompute and live-loop run.
+        admin_adj = int(p.get("adminAdjustment") or 0)
         p["matchPoints"] = match_points
         p["openPoints"] = open_points
         p["bonusPoints"] = bonus_points
-        p["total"] = match_points + open_points + bonus_points
+        p["total"] = match_points + open_points + bonus_points + admin_adj
         p["exact"] = exact
         p["partial"] = partial
         p["gd"] = gd_total
