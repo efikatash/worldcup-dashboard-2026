@@ -522,46 +522,51 @@ def recompute(data: Dict[str, Any]) -> None:
         p["openHits"] = sum(1 for o in p.get("open", []) if int(o.get("points") or 0) > 0)
         p["openResolved"] = sum(1 for o in p.get("open", []) if "ממתין" not in str(o.get("label") or ""))
 
-    # ── Last-matchday points change ─────────────────────────────────────────
-    # Points (and rank) change reflect everything earned during the current
-    # matchday: match points from matches that day PLUS open-question points
-    # for questions resolved that day (tagged with resolvedMatchday).
-    last_day = current_matchday(data)
-    last_day_iso = last_day.isoformat() if last_day else None
+    # ── Points change: round baseline (if set) else last matchday ────────────
+    # When meta.roundBaseline is populated (keyed by participant name),
+    # pointsChange reflects the full delta since that baseline snapshot —
+    # spanning multiple matchdays within the same round.  Falls back to
+    # single-matchday window when no baseline is present.
+    round_baseline = (data.get("meta") or {}).get("roundBaseline") or {}
+    if round_baseline:
+        for p in data.get("participants", []):
+            b = round_baseline.get(p.get("name") or "")
+            prev_pts = int(b.get("pts") or 0) if b else 0
+            p["pointsChange"] = int(p.get("total") or 0) - prev_pts
+    else:
+        last_day = current_matchday(data)
+        last_day_iso = last_day.isoformat() if last_day else None
 
-    last_day_match_ids = {
-        int(m["id"]) for m in data.get("matches", [])
-        if m.get("id") is not None and match_manila_date(str(m.get("date", ""))) == last_day
-    }
-    last_day_open_ids = {
-        int(q["id"]) for q in data.get("openQuestions", [])
-        if q.get("id") is not None and str(q.get("resolvedMatchday") or "") == (last_day_iso or "")
-    }
-    # Group-advancement bonuses resolved on the current matchday (tagged per group
-    # in data.groupResults[<group>].resolvedMatchday).
-    last_day_bonus_groups = {
-        g for g, gr in (data.get("groupResults") or {}).items()
-        if str((gr or {}).get("resolvedMatchday") or "") == (last_day_iso or "")
-    }
-
-    for p in data.get("participants", []):
-        match_change = sum(
-            int(pm.get("points") or 0)
-            for pm in p.get("matches", [])
-            if int(pm.get("matchId") or 0) in last_day_match_ids
-        )
-        open_change = sum(
-            int(o.get("points") or 0)
-            for o in p.get("open", [])
-            if int(o.get("qId") or 0) in last_day_open_ids
-        )
-        bonus_change = sum(
-            int(b.get("points") or 0)
-            for b in p.get("bonuses", [])
-            if b.get("group") in last_day_bonus_groups
-        )
-        p["pointsChange"] = match_change + open_change + bonus_change
-    # ───────────────────────────────────────────────────────────────────────
+        last_day_match_ids = {
+            int(m["id"]) for m in data.get("matches", [])
+            if m.get("id") is not None and match_manila_date(str(m.get("date", ""))) == last_day
+        }
+        last_day_open_ids = {
+            int(q["id"]) for q in data.get("openQuestions", [])
+            if q.get("id") is not None and str(q.get("resolvedMatchday") or "") == (last_day_iso or "")
+        }
+        last_day_bonus_groups = {
+            g for g, gr in (data.get("groupResults") or {}).items()
+            if str((gr or {}).get("resolvedMatchday") or "") == (last_day_iso or "")
+        }
+        for p in data.get("participants", []):
+            match_change = sum(
+                int(pm.get("points") or 0)
+                for pm in p.get("matches", [])
+                if int(pm.get("matchId") or 0) in last_day_match_ids
+            )
+            open_change = sum(
+                int(o.get("points") or 0)
+                for o in p.get("open", [])
+                if int(o.get("qId") or 0) in last_day_open_ids
+            )
+            bonus_change = sum(
+                int(b.get("points") or 0)
+                for b in p.get("bonuses", [])
+                if b.get("group") in last_day_bonus_groups
+            )
+            p["pointsChange"] = match_change + open_change + bonus_change
+    # ──────────────────────────────────────────────────────────────────────────
 
     sorted_players = sorted(data.get("participants", []), key=lambda x: (-int(x.get("total") or 0), str(x.get("name") or "")))
     current_rank = 0
