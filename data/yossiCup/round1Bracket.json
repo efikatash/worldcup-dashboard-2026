@@ -1319,12 +1319,12 @@
     "playerBName": "חן שריקי",
     "isBye": false,
     "status": "completed",
-    "winnerSeed": 47,
-    "winnerName": "יאיר אללוף",
-    "winnerReason": "C",
-    "roundScoreA": 206,
+    "winnerSeed": 210,
+    "winnerName": "חן שריקי",
+    "winnerReason": "A",
+    "roundScoreA": 201,
     "roundScoreB": 206,
-    "tieBreakerUsed": "C"
+    "tieBreakerUsed": null
   },
   {
     "id": "r1-m080",

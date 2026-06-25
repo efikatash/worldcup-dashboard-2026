@@ -416,9 +416,8 @@
     "seed": 47,
     "name": "יאיר אללוף",
     "initialScore": 152,
-    "status": "active",
-    "autoQualifiedRound2": false,
-    "baselineScoreR2": 363
+    "status": "eliminated",
+    "eliminatedRound": 1
   },
   {
     "id": "seed-048",
@@ -1846,8 +1845,10 @@
     "seed": 210,
     "name": "חן שריקי",
     "initialScore": 111,
-    "status": "eliminated",
-    "eliminatedRound": 1
+    "status": "active",
+    "eliminatedRound": 1,
+    "autoQualifiedRound2": false,
+    "baselineScoreR2": 317
   },
   {
     "id": "seed-211",
