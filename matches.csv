@@ -27,7 +27,7 @@
 26,53,E,02:00 - 15/6,חוף השנהב,אקוואדור,1,0,verified,verified_espn_final,ESPN final scoreboard,https://www.espn.com/soccer/match/_/gameId/760423
 27,54,E,23:00 - 20/6,גרמניה,חוף השנהב,2,1,verified,verified_espn_final,ESPN final scoreboard,https://www.espn.com/soccer/match/_/gameId/760448
 28,55,E,03:00 - 21/6,אקוואדור,קורסאו,0,0,verified,verified_espn_final,ESPN final scoreboard,https://www.espn.com/soccer/match/_/gameId/760446
-29,56,E,23:00 - 25/6,אקוואדור,גרמניה,,,pending,,,
+29,56,E,23:00 - 25/6,אקוואדור,גרמניה,0,0,live,live_espn,ESPN live scoreboard,https://www.espn.com/soccer/match/_/gameId/760468
 30,57,E,23:00 - 25/6,קורסאו,חוף השנהב,,,pending,,,
 31,62,F,23:00 - 14/6,הולנד,יפן,2,2,verified,verified_espn_final,ESPN final scoreboard,https://www.espn.com/soccer/match/_/gameId/760425
 32,63,F,05:00 - 15/6,שבדיה,טוניסיה,5,1,verified,verified_espn_final,ESPN final scoreboard,https://www.espn.com/soccer/match/_/gameId/760424
