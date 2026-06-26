@@ -3,21 +3,19 @@ name: Live Score Loop
 # Self-running "live mode": updates the dashboard every 10 minutes on GitHub's
 # runner — no dependency on any chat session.
 #
-# Configured for the 25/6 morning window (4 matches, PHT):
-# Scotland–Brazil 06:00, Morocco–Haiti 06:00, South Africa–South Korea 09:00,
-# Czech–Mexico 09:00. The loop is armed now but stays idle until 06:00 PHT 25/6
-# (22:00 UTC 24/6), then updates every 10 min until ~11:30 PHT 25/6
-# (03:30 UTC 25/6), ~30m after the 09:00 matches finish.
+# Configured for the 26/6 window (PHT): the loop is armed now but stays idle
+# until 04:00 PHT 26/6 (20:00 UTC 25/6), then updates every 10 min until
+# 12:00 PHT 26/6 (04:00 UTC 26/6).
 #
 # GitHub-hosted jobs are capped at 6h, so several scheduled starts cover the
-# full window; concurrency makes the later start cleanly replace the earlier one.
+# full 8h window; concurrency makes the later start cleanly replace the earlier one.
 
 on:
   workflow_dispatch:
   schedule:
-    # Every 2h across the window (22:00 UTC 24/6 → 03:30 UTC 25/6) so a fresh
+    # Every 2h across the window (20:00 UTC 25/6 → 04:00 UTC 26/6) so a fresh
     # start always beats the 6h job cap, even if some scheduled runs are dropped.
-    - cron: "0 1,3,5,17,19,21,23 * * *"
+    - cron: "0 0,2,20,22 * * *"
 
 permissions:
   contents: write
@@ -39,17 +37,17 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Update every 10 minutes across the 25/6 morning window (06:00–11:30 PHT)
+      - name: Update every 10 minutes across the 26/6 window (04:00–12:00 PHT)
         run: |
           set +e
-          START=$(date -u -d '2026-06-24 22:00' +%s)  # 06:00 PHT 25/6 — do nothing before this
-          END=$(date -u -d '2026-06-25 03:30' +%s)    # 11:30 PHT 25/6, ~30m after the 09:00 matches end
+          START=$(date -u -d '2026-06-25 20:00' +%s)  # 04:00 PHT 26/6 — do nothing before this
+          END=$(date -u -d '2026-06-26 04:00' +%s)    # 12:00 PHT 26/6
           git config user.name "worldcup-dashboard-bot"
           git config user.email "worldcup-dashboard-bot@users.noreply.github.com"
           FILES="data.json leaderboard.csv matches.csv open_questions.csv open_question_review.csv fast_track_review.csv sources_all.csv sources_fifa.csv efi_katash_audit.csv automation_status.json espn_live_debug.csv match_results_cache.json"
           # Stay idle until the window opens (the run may be dispatched early).
           while [ "$(date -u +%s)" -lt "$START" ]; do
-            echo "waiting for window: $(date -u +'%H:%M') UTC < 22:00 UTC"
+            echo "waiting for window: $(date -u +'%H:%M') UTC < 20:00 UTC"
             sleep 60
           done
           while [ "$(date -u +%s)" -lt "$END" ]; do
