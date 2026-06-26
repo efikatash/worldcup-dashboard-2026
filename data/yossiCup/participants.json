@@ -338,11 +338,10 @@
     "seed": 35,
     "name": "אלברט אברמוב",
     "initialScore": 155,
-    "status": "active",
+    "status": "eliminated",
     "autoQualifiedRound2": false,
-    "eliminatedRound": 1,
-    "baselineScoreR2": 394,
-    "baselineScoreR3": 557
+    "eliminatedRound": 2,
+    "baselineScoreR2": 394
   },
   {
     "id": "seed-036",
@@ -936,10 +935,10 @@
     "seed": 99,
     "name": "תומר פרי",
     "initialScore": 139,
-    "status": "eliminated",
+    "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 345,
-    "eliminatedRound": 2
+    "baselineScoreR3": 604
   },
   {
     "id": "seed-100",
@@ -1518,10 +1517,10 @@
     "seed": 163,
     "name": "משה בישור",
     "initialScore": 125,
-    "status": "eliminated",
+    "status": "active",
     "autoQualifiedRound2": false,
-    "eliminatedRound": 2,
-    "baselineScoreR2": 379
+    "baselineScoreR2": 379,
+    "baselineScoreR3": 643
   },
   {
     "id": "seed-164",
@@ -2082,11 +2081,10 @@
     "seed": 227,
     "name": "אופיר ניב",
     "initialScore": 103,
-    "status": "active",
+    "status": "eliminated",
     "autoQualifiedRound2": false,
-    "eliminatedRound": 1,
-    "baselineScoreR2": 298,
-    "baselineScoreR3": 463
+    "eliminatedRound": 2,
+    "baselineScoreR2": 298
   },
   {
     "id": "seed-228",
