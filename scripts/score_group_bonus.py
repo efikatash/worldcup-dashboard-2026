@@ -82,11 +82,15 @@ def _score_top2_slot(pick, predicted_pos, gr):
     if _eq(pick, second):
         return (15 if predicted_pos == 2 else 10), "resolved"
     if _eq(pick, third):
+        # Predicted as ראש בית / סגנית but finished 3rd: the consolation award
+        # is 7 ("predicted top-2, advanced from 3rd").  Show the 7 as soon as the
+        # team is known to have finished 3rd; it stays 7 if the team advances and
+        # drops to 0 only if it is ultimately eliminated from the round of 32.
+        if third_adv is False:
+            return 0, "resolved"   # came 3rd, did not advance -> no points
         if third_adv is True:
             return 7, "resolved"   # came 3rd but advanced
-        if third_adv is False:
-            return 0, "resolved"   # came 3rd, did not advance
-        return 0, "pending"        # 3rd place known but advancement undecided
+        return 7, "pending"        # 3rd place known, advancement undecided -> show 7 provisionally
     if _eq(pick, fourth):
         return 0, "resolved"       # finished last
     # pick not matched to any known finisher
