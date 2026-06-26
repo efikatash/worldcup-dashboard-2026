@@ -1,29 +1,30 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-26T02:40:14Z",
-  "completed_matches": 58,
-  "live_matches": 2,
+  "updated_at_utc": "2026-06-26T04:02:15Z",
+  "completed_matches": 59,
+  "live_matches": 1,
   "cache_size_before": 58,
-  "cache_size_after": 58,
+  "cache_size_after": 59,
   "restored_from_cache": [],
-  "final_updates": [],
-  "live_updates": [
+  "final_updates": [
     {
       "matchId": 23,
       "match": "פרגוואי - אוסטרליה",
       "score": "0-0",
-      "status": "live"
-    },
+      "status": "verified"
+    }
+  ],
+  "live_updates": [
     {
       "matchId": 24,
       "match": "טורקיה - ארה\"ב",
-      "score": "2-1",
+      "score": "3-2",
       "status": "live"
     }
   ],
   "conflicts": [],
   "warnings": [],
   "leader": "גל+סייבה גורליק",
-  "leader_points": 686
+  "leader_points": 683
 }
