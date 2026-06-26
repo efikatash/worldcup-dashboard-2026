@@ -52,6 +52,8 @@ var participants = require('../data/yossiCup/participants.json');
 var r1Bracket   = require('../data/yossiCup/round1Bracket.json');
 var r2Bracket   = require('../data/yossiCup/round2Bracket.json');
 var rounds      = require('../data/yossiCup/cupRounds.json');
+var r3BracketPath = path.join(root, 'data', 'yossiCup', 'round3Bracket.json');
+var r3Bracket   = fs.existsSync(r3BracketPath) ? JSON.parse(fs.readFileSync(r3BracketPath, 'utf8')) : null;
 
 // Replace existing blocks
 html = replaceBlock(html, 'ycParticipants', compact(participants));
@@ -60,6 +62,11 @@ html = replaceBlock(html, 'ycRounds',       compact(rounds));
 
 // Add/update R2 bracket block
 html = addBlockAfter(html, 'ycBracket', 'ycBracketR2', compact(r2Bracket));
+
+// Add/update R3 bracket block
+if (r3Bracket) {
+  html = addBlockAfter(html, 'ycBracketR2', 'ycBracketR3', compact(r3Bracket));
+}
 
 fs.writeFileSync(htmlPath, html, 'utf8');
 console.log('\n✅ index.html patched successfully.');
