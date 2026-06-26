@@ -27,7 +27,7 @@
     "status": "active",
     "autoQualifiedRound2": true,
     "baselineScoreR2": 389,
-    "baselineScoreR3": 548
+    "baselineScoreR3": 672
   },
   {
     "id": "seed-004",
@@ -47,7 +47,7 @@
     "status": "active",
     "autoQualifiedRound2": true,
     "baselineScoreR2": 389,
-    "baselineScoreR3": 547
+    "baselineScoreR3": 652
   },
   {
     "id": "seed-006",
@@ -57,7 +57,7 @@
     "status": "active",
     "autoQualifiedRound2": true,
     "baselineScoreR2": 402,
-    "baselineScoreR3": 564
+    "baselineScoreR3": 668
   },
   {
     "id": "seed-007",
@@ -67,7 +67,7 @@
     "status": "active",
     "autoQualifiedRound2": true,
     "baselineScoreR2": 378,
-    "baselineScoreR3": 511
+    "baselineScoreR3": 618
   },
   {
     "id": "seed-008",
@@ -77,7 +77,7 @@
     "status": "active",
     "autoQualifiedRound2": true,
     "baselineScoreR2": 398,
-    "baselineScoreR3": 523
+    "baselineScoreR3": 661
   },
   {
     "id": "seed-009",
@@ -87,7 +87,7 @@
     "status": "active",
     "autoQualifiedRound2": true,
     "baselineScoreR2": 421,
-    "baselineScoreR3": 574
+    "baselineScoreR3": 696
   },
   {
     "id": "seed-010",
@@ -97,7 +97,7 @@
     "status": "active",
     "autoQualifiedRound2": true,
     "baselineScoreR2": 410,
-    "baselineScoreR3": 577
+    "baselineScoreR3": 694
   },
   {
     "id": "seed-011",
@@ -107,7 +107,7 @@
     "status": "active",
     "autoQualifiedRound2": true,
     "baselineScoreR2": 419,
-    "baselineScoreR3": 580
+    "baselineScoreR3": 671
   },
   {
     "id": "seed-012",
@@ -127,7 +127,7 @@
     "status": "active",
     "autoQualifiedRound2": true,
     "baselineScoreR2": 404,
-    "baselineScoreR3": 540
+    "baselineScoreR3": 636
   },
   {
     "id": "seed-014",
@@ -137,7 +137,7 @@
     "status": "active",
     "autoQualifiedRound2": true,
     "baselineScoreR2": 404,
-    "baselineScoreR3": 542
+    "baselineScoreR3": 641
   },
   {
     "id": "seed-015",
@@ -165,7 +165,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 399,
-    "baselineScoreR3": 556
+    "baselineScoreR3": 643
   },
   {
     "id": "seed-018",
@@ -233,7 +233,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 384,
-    "baselineScoreR3": 533
+    "baselineScoreR3": 641
   },
   {
     "id": "seed-025",
@@ -253,7 +253,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 385,
-    "baselineScoreR3": 536
+    "baselineScoreR3": 653
   },
   {
     "id": "seed-027",
@@ -273,7 +273,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 402,
-    "baselineScoreR3": 549
+    "baselineScoreR3": 649
   },
   {
     "id": "seed-029",
@@ -299,7 +299,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 405,
-    "baselineScoreR3": 578
+    "baselineScoreR3": 680
   },
   {
     "id": "seed-032",
@@ -310,7 +310,7 @@
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
     "baselineScoreR2": 402,
-    "baselineScoreR3": 549
+    "baselineScoreR3": 621
   },
   {
     "id": "seed-033",
@@ -331,7 +331,7 @@
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
     "baselineScoreR2": 384,
-    "baselineScoreR3": 550
+    "baselineScoreR3": 647
   },
   {
     "id": "seed-035",
@@ -361,7 +361,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 369,
-    "baselineScoreR3": 528
+    "baselineScoreR3": 628
   },
   {
     "id": "seed-038",
@@ -371,7 +371,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 409,
-    "baselineScoreR3": 549
+    "baselineScoreR3": 656
   },
   {
     "id": "seed-039",
@@ -407,7 +407,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 403,
-    "baselineScoreR3": 545
+    "baselineScoreR3": 644
   },
   {
     "id": "seed-043",
@@ -425,7 +425,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 402,
-    "baselineScoreR3": 544
+    "baselineScoreR3": 622
   },
   {
     "id": "seed-045",
@@ -469,7 +469,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 388,
-    "baselineScoreR3": 550
+    "baselineScoreR3": 664
   },
   {
     "id": "seed-050",
@@ -489,7 +489,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 364,
-    "baselineScoreR3": 496
+    "baselineScoreR3": 612
   },
   {
     "id": "seed-052",
@@ -508,7 +508,7 @@
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
     "baselineScoreR2": 378,
-    "baselineScoreR3": 556
+    "baselineScoreR3": 650
   },
   {
     "id": "seed-054",
@@ -518,7 +518,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 376,
-    "baselineScoreR3": 545
+    "baselineScoreR3": 639
   },
   {
     "id": "seed-055",
@@ -528,7 +528,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 403,
-    "baselineScoreR3": 547
+    "baselineScoreR3": 654
   },
   {
     "id": "seed-056",
@@ -549,7 +549,7 @@
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
     "baselineScoreR2": 365,
-    "baselineScoreR3": 519
+    "baselineScoreR3": 593
   },
   {
     "id": "seed-058",
@@ -577,7 +577,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 377,
-    "baselineScoreR3": 533
+    "baselineScoreR3": 643
   },
   {
     "id": "seed-061",
@@ -587,7 +587,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 361,
-    "baselineScoreR3": 495
+    "baselineScoreR3": 613
   },
   {
     "id": "seed-062",
@@ -607,7 +607,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 395,
-    "baselineScoreR3": 544
+    "baselineScoreR3": 640
   },
   {
     "id": "seed-064",
@@ -626,7 +626,7 @@
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
     "baselineScoreR2": 381,
-    "baselineScoreR3": 552
+    "baselineScoreR3": 663
   },
   {
     "id": "seed-066",
@@ -672,7 +672,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 365,
-    "baselineScoreR3": 528
+    "baselineScoreR3": 640
   },
   {
     "id": "seed-071",
@@ -701,7 +701,7 @@
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
     "baselineScoreR2": 376,
-    "baselineScoreR3": 529
+    "baselineScoreR3": 636
   },
   {
     "id": "seed-074",
@@ -755,7 +755,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 359,
-    "baselineScoreR3": 510
+    "baselineScoreR3": 636
   },
   {
     "id": "seed-080",
@@ -776,7 +776,7 @@
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
     "baselineScoreR2": 349,
-    "baselineScoreR3": 497
+    "baselineScoreR3": 587
   },
   {
     "id": "seed-082",
@@ -802,7 +802,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 355,
-    "baselineScoreR3": 489
+    "baselineScoreR3": 595
   },
   {
     "id": "seed-085",
@@ -856,7 +856,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 380,
-    "baselineScoreR3": 540
+    "baselineScoreR3": 639
   },
   {
     "id": "seed-091",
@@ -884,7 +884,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 391,
-    "baselineScoreR3": 562
+    "baselineScoreR3": 644
   },
   {
     "id": "seed-094",
@@ -948,7 +948,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 380,
-    "baselineScoreR3": 548
+    "baselineScoreR3": 636
   },
   {
     "id": "seed-101",
@@ -968,7 +968,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 361,
-    "baselineScoreR3": 513
+    "baselineScoreR3": 599
   },
   {
     "id": "seed-103",
@@ -986,7 +986,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 383,
-    "baselineScoreR3": 548
+    "baselineScoreR3": 673
   },
   {
     "id": "seed-105",
@@ -1013,7 +1013,7 @@
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
     "baselineScoreR2": 364,
-    "baselineScoreR3": 539
+    "baselineScoreR3": 620
   },
   {
     "id": "seed-108",
@@ -1023,7 +1023,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 367,
-    "baselineScoreR3": 515
+    "baselineScoreR3": 614
   },
   {
     "id": "seed-109",
@@ -1034,7 +1034,7 @@
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
     "baselineScoreR2": 368,
-    "baselineScoreR3": 521
+    "baselineScoreR3": 649
   },
   {
     "id": "seed-110",
@@ -1044,7 +1044,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 370,
-    "baselineScoreR3": 526
+    "baselineScoreR3": 646
   },
   {
     "id": "seed-111",
@@ -1055,7 +1055,7 @@
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
     "baselineScoreR2": 376,
-    "baselineScoreR3": 543
+    "baselineScoreR3": 650
   },
   {
     "id": "seed-112",
@@ -1085,7 +1085,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 367,
-    "baselineScoreR3": 531
+    "baselineScoreR3": 638
   },
   {
     "id": "seed-115",
@@ -1189,7 +1189,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 367,
-    "baselineScoreR3": 527
+    "baselineScoreR3": 626
   },
   {
     "id": "seed-126",
@@ -1209,7 +1209,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 388,
-    "baselineScoreR3": 540
+    "baselineScoreR3": 627
   },
   {
     "id": "seed-128",
@@ -1219,7 +1219,7 @@
     "status": "active",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 384,
-    "baselineScoreR3": 538
+    "baselineScoreR3": 641
   },
   {
     "id": "seed-129",
@@ -1322,7 +1322,7 @@
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
     "baselineScoreR2": 367,
-    "baselineScoreR3": 512
+    "baselineScoreR3": 626
   },
   {
     "id": "seed-141",
@@ -1413,7 +1413,7 @@
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
     "baselineScoreR2": 367,
-    "baselineScoreR3": 522
+    "baselineScoreR3": 593
   },
   {
     "id": "seed-152",
@@ -1502,7 +1502,7 @@
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
     "baselineScoreR2": 348,
-    "baselineScoreR3": 490
+    "baselineScoreR3": 591
   },
   {
     "id": "seed-162",
@@ -1565,7 +1565,7 @@
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
     "baselineScoreR2": 346,
-    "baselineScoreR3": 507
+    "baselineScoreR3": 600
   },
   {
     "id": "seed-169",
@@ -1576,7 +1576,7 @@
     "autoQualifiedRound2": false,
     "baselineScoreR2": 345,
     "eliminatedRound": 1,
-    "baselineScoreR3": 515
+    "baselineScoreR3": 652
   },
   {
     "id": "seed-170",
@@ -1595,7 +1595,7 @@
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
     "baselineScoreR2": 322,
-    "baselineScoreR3": 477
+    "baselineScoreR3": 577
   },
   {
     "id": "seed-172",
@@ -1632,7 +1632,7 @@
     "autoQualifiedRound2": false,
     "baselineScoreR2": 346,
     "eliminatedRound": 1,
-    "baselineScoreR3": 476
+    "baselineScoreR3": 574
   },
   {
     "id": "seed-176",
@@ -1729,7 +1729,7 @@
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
     "baselineScoreR2": 367,
-    "baselineScoreR3": 526
+    "baselineScoreR3": 619
   },
   {
     "id": "seed-187",
@@ -1766,7 +1766,7 @@
     "autoQualifiedRound2": false,
     "baselineScoreR2": 382,
     "eliminatedRound": 1,
-    "baselineScoreR3": 536
+    "baselineScoreR3": 635
   },
   {
     "id": "seed-191",
@@ -1893,7 +1893,7 @@
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
     "baselineScoreR2": 341,
-    "baselineScoreR3": 500
+    "baselineScoreR3": 601
   },
   {
     "id": "seed-206",
@@ -1946,7 +1946,7 @@
     "autoQualifiedRound2": false,
     "eliminatedRound": 1,
     "baselineScoreR2": 324,
-    "baselineScoreR3": 464
+    "baselineScoreR3": 573
   },
   {
     "id": "seed-212",
@@ -2203,7 +2203,7 @@
     "autoQualifiedRound2": false,
     "baselineScoreR2": 309,
     "eliminatedRound": 1,
-    "baselineScoreR3": 471
+    "baselineScoreR3": 577
   },
   {
     "id": "seed-242",
