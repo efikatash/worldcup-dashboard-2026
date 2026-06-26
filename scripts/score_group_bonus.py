@@ -96,7 +96,13 @@ def _score_top2_slot(pick, predicted_pos, gr):
 
 
 def _score_third_row(tp, gr):
-    """Score one row of the 'מעפילות ממקום 3' table. Returns (points, status)."""
+    """Score one row of the 'מעפילות ממקום 3' table.
+
+    The row has two independent components — the team pick (10/7/0) and the
+    advance-or-not pick (+4) — that resolve at different times.  Returns a dict
+    so the UI can show the already-earned team points even while the
+    advancement (+4) is still pending.
+    """
     team = tp.get("team")
     will = _norm(tp.get("willAdvance"))  # 'כן' / 'לא'
     third = gr.get("third")
@@ -104,28 +110,32 @@ def _score_third_row(tp, gr):
     third_adv = gr.get("thirdAdvanced")
     decided = bool(gr.get("decided"))
 
-    pts = 0
-    resolved = True
-
-    # team component
+    # team component (10 if exactly 3rd, 7 if predicted-3rd-but-finished-top-2)
+    team_pts, team_status = 0, "resolved"
     if team:
         if _eq(team, third):
-            pts += 10                                  # finished 3rd exactly
+            team_pts = 10
         elif _eq(team, first) or _eq(team, second):
-            pts += 7                                   # predicted 3rd, advanced as top-2
+            team_pts = 7
         elif decided:
-            pts += 0
+            team_pts = 0
         else:
-            resolved = False                           # team fate unknown
-    # advancement (כן/לא) component
+            team_status = "pending"                     # group not decided yet
+    # advancement (כן/לא) component (+4 if correct)
+    adv_pts, adv_status = 0, "resolved"
     if will in ("כן", "לא"):
         if third_adv is None:
-            resolved = False
+            adv_status = "pending"
         else:
             actual = "כן" if third_adv else "לא"
             if will == actual:
-                pts += 4
-    return pts, ("resolved" if resolved else "pending")
+                adv_pts = 4
+    status = "resolved" if (team_status == "resolved" and adv_status == "resolved") else "pending"
+    return {
+        "points": team_pts + adv_pts, "status": status,
+        "teamPoints": team_pts, "teamStatus": team_status,
+        "advPoints": adv_pts, "advStatus": adv_status,
+    }
 
 
 def _match_direction(h, a):
@@ -206,11 +216,13 @@ def score_participant(p, results, group_matches=None):
     for g in GROUPS:
         gr = results.get(g, {})
         tp = third.get(g, {})
-        pts, st = _score_third_row(tp, gr)
+        r = _score_third_row(tp, gr)
         bonuses.append({
             "kind": "third", "group": g,
             "thirdPick": tp.get("team"), "willAdvance": tp.get("willAdvance"),
-            "points": pts, "status": st,
+            "points": r["points"], "status": r["status"],
+            "teamPoints": r["teamPoints"], "teamStatus": r["teamStatus"],
+            "advPoints": r["advPoints"], "advStatus": r["advStatus"],
         })
         third_exact_flags.append(_eq(tp.get("team"), gr.get("third")))
 
