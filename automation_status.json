@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-26T02:23:09Z",
+  "updated_at_utc": "2026-06-26T02:40:14Z",
   "completed_matches": 58,
   "live_matches": 2,
   "cache_size_before": 58,
@@ -18,12 +18,12 @@
     {
       "matchId": 24,
       "match": "טורקיה - ארה\"ב",
-      "score": "1-1",
+      "score": "2-1",
       "status": "live"
     }
   ],
   "conflicts": [],
   "warnings": [],
-  "leader": "אריק גליקמן",
-  "leader_points": 679
+  "leader": "גל+סייבה גורליק",
+  "leader_points": 686
 }
