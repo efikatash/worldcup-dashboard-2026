@@ -1,16 +1,29 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-26T16:04:43Z",
-  "completed_matches": 60,
+  "updated_at_utc": "2026-06-26T21:55:17Z",
+  "completed_matches": 62,
   "live_matches": 0,
   "cache_size_before": 60,
-  "cache_size_after": 60,
+  "cache_size_after": 62,
   "restored_from_cache": [],
-  "final_updates": [],
+  "final_updates": [
+    {
+      "matchId": 53,
+      "match": "נורווגיה - צרפת",
+      "score": "1-4",
+      "status": "verified"
+    },
+    {
+      "matchId": 54,
+      "match": "סנגל - עירק",
+      "score": "5-0",
+      "status": "verified"
+    }
+  ],
   "live_updates": [],
   "conflicts": [],
   "warnings": [],
   "leader": "אייל חסון",
-  "leader_points": 696
+  "leader_points": 706
 }
