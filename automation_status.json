@@ -1,29 +1,29 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-26T00:59:49Z",
+  "updated_at_utc": "2026-06-26T02:23:09Z",
   "completed_matches": 58,
-  "live_matches": 0,
-  "cache_size_before": 56,
+  "live_matches": 2,
+  "cache_size_before": 58,
   "cache_size_after": 58,
   "restored_from_cache": [],
-  "final_updates": [
+  "final_updates": [],
+  "live_updates": [
     {
-      "matchId": 35,
-      "match": "טוניסיה - הולנד",
-      "score": "1-3",
-      "status": "verified"
+      "matchId": 23,
+      "match": "פרגוואי - אוסטרליה",
+      "score": "0-0",
+      "status": "live"
     },
     {
-      "matchId": 36,
-      "match": "יפן - שבדיה",
+      "matchId": 24,
+      "match": "טורקיה - ארה\"ב",
       "score": "1-1",
-      "status": "verified"
+      "status": "live"
     }
   ],
-  "live_updates": [],
   "conflicts": [],
   "warnings": [],
-  "leader": "קובי ששון",
-  "leader_points": 629
+  "leader": "אריק גליקמן",
+  "leader_points": 679
 }
