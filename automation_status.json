@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-27T00:07:31Z",
+  "updated_at_utc": "2026-06-27T00:45:15Z",
   "completed_matches": 62,
   "live_matches": 2,
   "cache_size_before": 62,
@@ -12,7 +12,7 @@
     {
       "matchId": 47,
       "match": "אורוגוואי - ספרד",
-      "score": "0-0",
+      "score": "0-1",
       "status": "live"
     },
     {
@@ -25,5 +25,5 @@
   "conflicts": [],
   "warnings": [],
   "leader": "אייל חסון",
-  "leader_points": 763
+  "leader_points": 768
 }
