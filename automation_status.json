@@ -1,16 +1,29 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-27T05:49:19Z",
-  "completed_matches": 66,
+  "updated_at_utc": "2026-06-27T23:02:58Z",
+  "completed_matches": 68,
   "live_matches": 0,
   "cache_size_before": 66,
-  "cache_size_after": 66,
+  "cache_size_after": 68,
   "restored_from_cache": [],
-  "final_updates": [],
+  "final_updates": [
+    {
+      "matchId": 71,
+      "match": "קרואטיה - גאנה",
+      "score": "2-1",
+      "status": "verified"
+    },
+    {
+      "matchId": 72,
+      "match": "פנמה - אנגליה",
+      "score": "0-2",
+      "status": "verified"
+    }
+  ],
   "live_updates": [],
   "conflicts": [],
   "warnings": [],
   "leader": "אייל חסון",
-  "leader_points": 863
+  "leader_points": 897
 }
