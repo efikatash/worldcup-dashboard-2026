@@ -1,27 +1,27 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-27T00:58:01Z",
-  "completed_matches": 62,
-  "live_matches": 2,
+  "updated_at_utc": "2026-06-27T02:03:36Z",
+  "completed_matches": 64,
+  "live_matches": 0,
   "cache_size_before": 62,
-  "cache_size_after": 62,
+  "cache_size_after": 64,
   "restored_from_cache": [],
-  "final_updates": [],
-  "live_updates": [
+  "final_updates": [
     {
       "matchId": 47,
       "match": "אורוגוואי - ספרד",
       "score": "0-1",
-      "status": "live"
+      "status": "verified"
     },
     {
       "matchId": 48,
       "match": "קייפ ורדה - ערב הסעודית",
       "score": "0-0",
-      "status": "live"
+      "status": "verified"
     }
   ],
+  "live_updates": [],
   "conflicts": [],
   "warnings": [],
   "leader": "אייל חסון",
