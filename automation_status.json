@@ -1,29 +1,16 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-27T05:15:04Z",
+  "updated_at_utc": "2026-06-27T05:49:19Z",
   "completed_matches": 66,
   "live_matches": 0,
-  "cache_size_before": 64,
+  "cache_size_before": 66,
   "cache_size_after": 66,
   "restored_from_cache": [],
-  "final_updates": [
-    {
-      "matchId": 41,
-      "match": "מצרים - איראן",
-      "score": "1-1",
-      "status": "verified"
-    },
-    {
-      "matchId": 42,
-      "match": "ניו זילנד - בלגיה",
-      "score": "1-5",
-      "status": "verified"
-    }
-  ],
+  "final_updates": [],
   "live_updates": [],
   "conflicts": [],
   "warnings": [],
   "leader": "אייל חסון",
-  "leader_points": 845
+  "leader_points": 863
 }
