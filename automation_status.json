@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-27T03:42:12Z",
+  "updated_at_utc": "2026-06-27T04:50:00Z",
   "completed_matches": 64,
   "live_matches": 2,
   "cache_size_before": 64,
@@ -18,12 +18,12 @@
     {
       "matchId": 42,
       "match": "ניו זילנד - בלגיה",
-      "score": "0-1",
+      "score": "1-4",
       "status": "live"
     }
   ],
   "conflicts": [],
   "warnings": [],
   "leader": "אייל חסון",
-  "leader_points": 809
+  "leader_points": 821
 }
