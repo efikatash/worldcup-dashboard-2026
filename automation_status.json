@@ -1,29 +1,31 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-27T23:02:58Z",
+  "updated_at_utc": "2026-06-27T23:56:03Z",
   "completed_matches": 68,
-  "live_matches": 0,
-  "cache_size_before": 66,
+  "live_matches": 2,
+  "cache_size_before": 68,
   "cache_size_after": 68,
   "restored_from_cache": [],
-  "final_updates": [
+  "final_updates": [],
+  "live_updates": [
     {
-      "matchId": 71,
-      "match": "קרואטיה - גאנה",
-      "score": "2-1",
-      "status": "verified"
+      "matchId": 65,
+      "match": "קולומביה - פורטוגל",
+      "score": "0-0",
+      "status": "live"
     },
     {
-      "matchId": 72,
-      "match": "פנמה - אנגליה",
-      "score": "0-2",
-      "status": "verified"
+      "matchId": 66,
+      "match": "קונגו - אוזבקיסטן",
+      "score": "0-1",
+      "status": "live"
     }
   ],
-  "live_updates": [],
   "conflicts": [],
-  "warnings": [],
+  "warnings": [
+    "ESPN fetch failed: https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?limit=500&dates=20260626 :: <urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1016)>"
+  ],
   "leader": "אייל חסון",
-  "leader_points": 897
+  "leader_points": 954
 }
