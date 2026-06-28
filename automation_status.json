@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-28T06:02:09Z",
+  "updated_at_utc": "2026-06-28T06:20:33Z",
   "completed_matches": 72,
   "live_matches": 0,
   "cache_size_before": 72,
@@ -11,6 +11,6 @@
   "live_updates": [],
   "conflicts": [],
   "warnings": [],
-  "leader": "מיקי+רום שכטמן",
-  "leader_points": 1113
+  "leader": "מור גרשגורן",
+  "leader_points": 1117
 }
