@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-27T23:56:03Z",
+  "updated_at_utc": "2026-06-28T01:18:42Z",
   "completed_matches": 68,
   "live_matches": 2,
   "cache_size_before": 68,
@@ -18,14 +18,12 @@
     {
       "matchId": 66,
       "match": "קונגו - אוזבקיסטן",
-      "score": "0-1",
+      "score": "2-1",
       "status": "live"
     }
   ],
   "conflicts": [],
-  "warnings": [
-    "ESPN fetch failed: https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?limit=500&dates=20260626 :: <urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1016)>"
-  ],
+  "warnings": [],
   "leader": "אייל חסון",
-  "leader_points": 954
+  "leader_points": 961
 }
