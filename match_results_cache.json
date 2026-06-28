@@ -917,13 +917,11 @@
       "row": 106,
       "home": "אלג'יריה",
       "away": "אוסטריה",
-      "actualHome": 3,
-      "actualAway": 3,
+      "actualHome": 2,
+      "actualAway": 2,
       "status": "verified",
-      "sourceStatus": "verified_espn_final",
-      "sourceTitle": "ESPN final scoreboard",
-      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/760484",
-      "cachedAtUtc": "2026-06-28T04:06:15Z"
+      "sourceStatus": "verified_uploaded_file",
+      "sourceTitle": "טבלה רשמית סופית (מנהל המשחק)"
     },
     "60": {
       "id": 60,
@@ -931,12 +929,10 @@
       "home": "ירדן",
       "away": "ארגנטינה",
       "actualHome": 1,
-      "actualAway": 3,
+      "actualAway": 2,
       "status": "verified",
-      "sourceStatus": "verified_espn_final",
-      "sourceTitle": "ESPN final scoreboard",
-      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/760483",
-      "cachedAtUtc": "2026-06-28T04:06:15Z"
+      "sourceStatus": "verified_uploaded_file",
+      "sourceTitle": "טבלה רשמית סופית (מנהל המשחק)"
     }
   }
 }
