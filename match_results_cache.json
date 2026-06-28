@@ -917,11 +917,11 @@
       "row": 106,
       "home": "אלג'יריה",
       "away": "אוסטריה",
-      "actualHome": 2,
-      "actualAway": 2,
+      "actualHome": 3,
+      "actualAway": 3,
       "status": "verified",
       "sourceStatus": "verified_uploaded_file",
-      "sourceTitle": "טבלה רשמית סופית (מנהל המשחק)"
+      "sourceTitle": "תוצאה רשמית אונליין (FIFA/ESPN)"
     },
     "60": {
       "id": 60,
@@ -929,10 +929,10 @@
       "home": "ירדן",
       "away": "ארגנטינה",
       "actualHome": 1,
-      "actualAway": 2,
+      "actualAway": 3,
       "status": "verified",
       "sourceStatus": "verified_uploaded_file",
-      "sourceTitle": "טבלה רשמית סופית (מנהל המשחק)"
+      "sourceTitle": "תוצאה רשמית אונליין (FIFA/ESPN)"
     }
   }
 }
