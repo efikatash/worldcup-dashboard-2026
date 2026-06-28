@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-28T02:02:07Z",
+  "updated_at_utc": "2026-06-28T02:48:11Z",
   "completed_matches": 70,
   "live_matches": 2,
   "cache_size_before": 70,
@@ -12,18 +12,18 @@
     {
       "matchId": 59,
       "match": "אלג'יריה - אוסטריה",
-      "score": "0-0",
+      "score": "1-1",
       "status": "live"
     },
     {
       "matchId": 60,
       "match": "ירדן - ארגנטינה",
-      "score": "0-0",
+      "score": "0-2",
       "status": "live"
     }
   ],
   "conflicts": [],
   "warnings": [],
   "leader": "אייל חסון",
-  "leader_points": 996
+  "leader_points": 1004
 }
