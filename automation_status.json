@@ -1,29 +1,29 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-28T01:47:44Z",
+  "updated_at_utc": "2026-06-28T02:02:07Z",
   "completed_matches": 70,
-  "live_matches": 0,
-  "cache_size_before": 68,
+  "live_matches": 2,
+  "cache_size_before": 70,
   "cache_size_after": 70,
   "restored_from_cache": [],
-  "final_updates": [
+  "final_updates": [],
+  "live_updates": [
     {
-      "matchId": 65,
-      "match": "קולומביה - פורטוגל",
+      "matchId": 59,
+      "match": "אלג'יריה - אוסטריה",
       "score": "0-0",
-      "status": "verified"
+      "status": "live"
     },
     {
-      "matchId": 66,
-      "match": "קונגו - אוזבקיסטן",
-      "score": "3-1",
-      "status": "verified"
+      "matchId": 60,
+      "match": "ירדן - ארגנטינה",
+      "score": "0-0",
+      "status": "live"
     }
   ],
-  "live_updates": [],
   "conflicts": [],
   "warnings": [],
   "leader": "אייל חסון",
-  "leader_points": 989
+  "leader_points": 996
 }
