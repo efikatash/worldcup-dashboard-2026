@@ -613,6 +613,22 @@ def recompute(data: Dict[str, Any]) -> None:
     meta["completedMatches"] = completed
     meta["liveMatches"] = live
     meta["pendingMatches"] = len(data.get("matches", [])) - completed - live
+
+    # Keep the open-question KPI counters in sync with the actual resolved set
+    # (the dashboard reads meta.resolvedOpenQuestions first, falling back to a
+    # live count only when the field is absent — so a stale value would freeze
+    # the "שאלות פתוחות שנספרו" KPI).
+    def _q_resolved(q):
+        return (str(q.get("status") or "") in ("known", "verified")
+                or str(q.get("sourceStatus") or "") in ("verified_fifa", "verified_external", "verified_uploaded_file"))
+    oqs = data.get("openQuestions", [])
+    resolved_oqs = [q for q in oqs if _q_resolved(q)]
+    meta["openQuestionsCount"] = len(oqs)
+    meta["resolvedOpenQuestions"] = len(resolved_oqs)
+    meta["verifiedOpenQuestions"] = len(resolved_oqs)
+    meta["verifiedFifaOpenQuestions"] = sum(1 for q in resolved_oqs if str(q.get("sourceStatus") or "") == "verified_fifa")
+    meta["verifiedExternalOpenQuestions"] = sum(1 for q in resolved_oqs if str(q.get("sourceStatus") or "") == "verified_external")
+
     now_str = manila_now().strftime("%Y-%m-%d %H:%M")
     meta["dashboardBuiltAt"] = now_str
     meta["generatedAt"] = now_str  # Keep in sync so the UI shows current time
