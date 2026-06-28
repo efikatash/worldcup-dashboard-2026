@@ -43,6 +43,7 @@ GROUPS = list("ABCDEFGHIJKL")
 # participants typed a team slightly differently from the official result).
 _SPELLING_CANON = {
     "שוויץ": "שווייץ",      # Switzerland — one yud vs two
+    "שוייץ": "שווייץ",      # Switzerland — alternate misspelling
     "אקוודור": "אקוואדור",  # Ecuador — missing a vav
 }
 
@@ -172,7 +173,52 @@ def _score_group_directions(pick_by_mid, group_match_list):
     return 6, "resolved"
 
 
-def score_participant(p, results, group_matches=None):
+def _score_r16_advancers(p, knockout):
+    """Score the 'רשימת הנבחרות שיעלו לשמינית גמר' table (16 picks).
+
+    Each correctly-predicted advancer is worth 20 points; a +16 bonus is awarded
+    only if all 16 predicted teams advanced.  Following the organiser's standing
+    rule, a pick earns its 20 only once the team is *confirmed* to have advanced
+    (listed in knockout.r16advancers).  Until a team is confirmed — or the whole
+    round of 32 is decided — the pick stays pending so nothing is assumed.
+
+    Returns a list of bonus entries (one per pick + one all-correct bonus).
+    """
+    picks = (p.get("bonusPicks") or {}).get("r16advance") or []
+    advancers = (knockout or {}).get("r16advancers") or []
+    r32_decided = bool((knockout or {}).get("r32decided"))
+    adv_norm = {_norm(t) for t in advancers if t}
+
+    entries = []
+    correct = 0
+    resolved_picks = 0
+    for i, team in enumerate(picks):
+        advanced = _norm(team) in adv_norm if team else False
+        if advanced:
+            pts, status = 20, "resolved"
+            correct += 1
+            resolved_picks += 1
+        elif r32_decided:
+            pts, status = 0, "resolved"   # round of 32 fully decided -> did not advance
+            resolved_picks += 1
+        else:
+            pts, status = 0, "pending"    # not yet confirmed either way
+        entries.append({
+            "kind": "r16advance", "slot": i + 1, "pick": team,
+            "advanced": advanced, "points": pts, "status": status,
+        })
+
+    # +16 bonus only when every one of the 16 picks advanced (all-or-nothing).
+    all_correct = (len(picks) == 16 and correct == 16)
+    entries.append({
+        "kind": "bonus_r16_all",
+        "points": 16 if all_correct else 0,
+        "status": "resolved" if r32_decided else "pending",
+    })
+    return entries
+
+
+def score_participant(p, results, group_matches=None, knockout=None):
     """Compute every bonus entry for one participant and return the flat
     p['bonuses'] list (each entry carries a 'points' field that recompute sums)."""
     picks = p.get("bonusPicks") or {}
@@ -243,6 +289,9 @@ def score_participant(p, results, group_matches=None):
             pts, st = _score_group_directions(pick_by_mid, group_matches.get(g, []))
             bonuses.append({"kind": "group_directions", "group": g, "points": pts, "status": st})
 
+    # --- רשימת הנבחרות שיעלו לשמינית גמר (16 מעפילות, 20 לכל אחת + בונוס 16) ---
+    bonuses.extend(_score_r16_advancers(p, knockout))
+
     return bonuses
 
 
@@ -256,5 +305,6 @@ def score_all(data):
         if not g or m.get("id") is None:
             continue
         group_matches.setdefault(g, []).append((int(m["id"]), m.get("actualHome"), m.get("actualAway")))
+    knockout = data.get("knockout") or {}
     for p in data.get("participants", []):
-        p["bonuses"] = score_participant(p, results, group_matches)
+        p["bonuses"] = score_participant(p, results, group_matches, knockout)
