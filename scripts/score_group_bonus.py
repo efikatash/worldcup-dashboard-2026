@@ -173,14 +173,16 @@ def _score_group_directions(pick_by_mid, group_match_list):
     return 6, "resolved"
 
 
-def _score_r16_advancers(p, knockout):
+def _score_r16_advancers(p, knockout, results=None):
     """Score the 'רשימת הנבחרות שיעלו לשמינית גמר' table (16 picks).
 
     Each correctly-predicted advancer is worth 20 points; a +16 bonus is awarded
     only if all 16 predicted teams advanced.  Following the organiser's standing
     rule, a pick earns its 20 only once the team is *confirmed* to have advanced
-    (listed in knockout.r16advancers).  Until a team is confirmed — or the whole
-    round of 32 is decided — the pick stays pending so nothing is assumed.
+    (listed in knockout.r16advancers).  A pick is confirmed to have NOT advanced
+    when the team lost its round-of-32 match (knockout.r16eliminated) OR never
+    reached the round of 32 at all (knocked out in the group stage — derived from
+    groupResults).  Otherwise the pick stays pending so nothing is assumed.
 
     Returns a list of bonus entries (one per pick + one all-correct bonus).
     """
@@ -191,19 +193,36 @@ def _score_r16_advancers(p, knockout):
     adv_norm = {_norm(t) for t in advancers if t}
     elim_norm = {_norm(t) for t in eliminated if t}
 
+    # Teams that reached the round of 32 (group winners + runners-up + advancing
+    # 3rd-place teams).  Only trustworthy once every group is decided.
+    results = results or {}
+    group_stage_complete = all(results.get(g, {}).get("decided") for g in GROUPS)
+    r32_teams = set()
+    if group_stage_complete:
+        for g in GROUPS:
+            gr = results.get(g, {})
+            for slot in ("first", "second"):
+                if gr.get(slot):
+                    r32_teams.add(_norm(gr[slot]))
+            if gr.get("thirdAdvanced") is True and gr.get("third"):
+                r32_teams.add(_norm(gr["third"]))
+
     entries = []
     correct = 0
     resolved_picks = 0
     for i, team in enumerate(picks):
-        advanced = _norm(team) in adv_norm if team else False
-        is_out = _norm(team) in elim_norm if team else False
+        tn = _norm(team) if team else None
+        advanced = tn in adv_norm if tn else False
+        lost_r32 = tn in elim_norm if tn else False
+        not_in_r32 = bool(group_stage_complete and tn and tn not in r32_teams)
+        is_out = lost_r32 or not_in_r32
         if advanced:
             pts, status = 20, "resolved"
             correct += 1
             resolved_picks += 1
         elif is_out or r32_decided:
-            # team lost its round-of-32 match (or the whole round is decided) ->
-            # confirmed it did NOT advance to the round of 16.
+            # team lost its round-of-32 match, never reached the round of 32, or
+            # the whole round is decided -> confirmed it did NOT advance.
             pts, status = 0, "resolved"
             resolved_picks += 1
         else:
@@ -295,7 +314,7 @@ def score_participant(p, results, group_matches=None, knockout=None):
             bonuses.append({"kind": "group_directions", "group": g, "points": pts, "status": st})
 
     # --- רשימת הנבחרות שיעלו לשמינית גמר (16 מעפילות, 20 לכל אחת + בונוס 16) ---
-    bonuses.extend(_score_r16_advancers(p, knockout))
+    bonuses.extend(_score_r16_advancers(p, knockout, results))
 
     return bonuses
 
