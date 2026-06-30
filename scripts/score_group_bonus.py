@@ -186,26 +186,31 @@ def _score_r16_advancers(p, knockout):
     """
     picks = (p.get("bonusPicks") or {}).get("r16advance") or []
     advancers = (knockout or {}).get("r16advancers") or []
+    eliminated = (knockout or {}).get("r16eliminated") or []
     r32_decided = bool((knockout or {}).get("r32decided"))
     adv_norm = {_norm(t) for t in advancers if t}
+    elim_norm = {_norm(t) for t in eliminated if t}
 
     entries = []
     correct = 0
     resolved_picks = 0
     for i, team in enumerate(picks):
         advanced = _norm(team) in adv_norm if team else False
+        is_out = _norm(team) in elim_norm if team else False
         if advanced:
             pts, status = 20, "resolved"
             correct += 1
             resolved_picks += 1
-        elif r32_decided:
-            pts, status = 0, "resolved"   # round of 32 fully decided -> did not advance
+        elif is_out or r32_decided:
+            # team lost its round-of-32 match (or the whole round is decided) ->
+            # confirmed it did NOT advance to the round of 16.
+            pts, status = 0, "resolved"
             resolved_picks += 1
         else:
             pts, status = 0, "pending"    # not yet confirmed either way
         entries.append({
             "kind": "r16advance", "slot": i + 1, "pick": team,
-            "advanced": advanced, "points": pts, "status": status,
+            "advanced": advanced, "eliminated": is_out, "points": pts, "status": status,
         })
 
     # +16 bonus only when every one of the 16 picks advanced (all-or-nothing).
