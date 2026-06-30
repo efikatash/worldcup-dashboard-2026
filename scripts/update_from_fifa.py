@@ -531,7 +531,35 @@ def recompute(data: Dict[str, Any]) -> None:
     # spanning multiple matchdays within the same round.  Falls back to
     # single-matchday window when no baseline is present.
     round_baseline = (data.get("meta") or {}).get("roundBaseline") or {}
-    if round_baseline:
+    knockout = data.get("knockout") or {}
+    cur_md = knockout.get("currentMatchday")
+    if cur_md:
+        # Knockout stage: pointsChange reflects ONLY the current tournament
+        # matchday (per the FIFA World Cup schedule), regardless of wall-clock
+        # timezone.  meta.knockout.matchdayAdvancers maps each schedule date to
+        # the teams that advanced that day; the current matchday's R16-advance
+        # points (+ any open question resolved that day) are the day's delta.
+        try:
+            from score_group_bonus import _norm as _knorm
+        except Exception:
+            _knorm = lambda s: (str(s).strip() if s is not None else None)
+        md_adv = (knockout.get("matchdayAdvancers") or {}).get(cur_md) or []
+        adv_norm = {_knorm(t) for t in md_adv if t}
+        md_open_ids = {
+            int(q["id"]) for q in data.get("openQuestions", [])
+            if q.get("id") is not None and str(q.get("resolvedMatchday") or "") == str(cur_md)
+        }
+        for p in data.get("participants", []):
+            r16_change = sum(
+                int(b.get("points") or 0) for b in p.get("bonuses", [])
+                if b.get("kind") == "r16advance" and _knorm(b.get("pick")) in adv_norm
+            )
+            open_change = sum(
+                int(o.get("points") or 0) for o in p.get("open", [])
+                if int(o.get("qId") or 0) in md_open_ids
+            )
+            p["pointsChange"] = r16_change + open_change
+    elif round_baseline:
         for p in data.get("participants", []):
             b = round_baseline.get(p.get("name") or "")
             prev_pts = int(b.get("pts") or 0) if b else 0
