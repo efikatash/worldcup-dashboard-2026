@@ -54,6 +54,8 @@ var r2Bracket   = require('../data/yossiCup/round2Bracket.json');
 var rounds      = require('../data/yossiCup/cupRounds.json');
 var r3BracketPath = path.join(root, 'data', 'yossiCup', 'round3Bracket.json');
 var r3Bracket   = fs.existsSync(r3BracketPath) ? JSON.parse(fs.readFileSync(r3BracketPath, 'utf8')) : null;
+var r4BracketPath = path.join(root, 'data', 'yossiCup', 'round4Bracket.json');
+var r4Bracket   = fs.existsSync(r4BracketPath) ? JSON.parse(fs.readFileSync(r4BracketPath, 'utf8')) : null;
 
 // Replace existing blocks
 html = replaceBlock(html, 'ycParticipants', compact(participants));
@@ -66,6 +68,11 @@ html = addBlockAfter(html, 'ycBracket', 'ycBracketR2', compact(r2Bracket));
 // Add/update R3 bracket block
 if (r3Bracket) {
   html = addBlockAfter(html, 'ycBracketR2', 'ycBracketR3', compact(r3Bracket));
+}
+
+// Add/update R4 bracket block
+if (r4Bracket) {
+  html = addBlockAfter(html, 'ycBracketR3', 'ycBracketR4', compact(r4Bracket));
 }
 
 fs.writeFileSync(htmlPath, html, 'utf8');
