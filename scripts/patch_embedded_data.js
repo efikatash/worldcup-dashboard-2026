@@ -56,6 +56,13 @@ var r3BracketPath = path.join(root, 'data', 'yossiCup', 'round3Bracket.json');
 var r3Bracket   = fs.existsSync(r3BracketPath) ? JSON.parse(fs.readFileSync(r3BracketPath, 'utf8')) : null;
 var r4BracketPath = path.join(root, 'data', 'yossiCup', 'round4Bracket.json');
 var r4Bracket   = fs.existsSync(r4BracketPath) ? JSON.parse(fs.readFileSync(r4BracketPath, 'utf8')) : null;
+var liveDataPath = path.join(root, 'data.json');
+var liveData    = fs.existsSync(liveDataPath) ? JSON.parse(fs.readFileSync(liveDataPath, 'utf8')) : null;
+
+// Update the main live-data fallback so it stays in sync with baselines
+if (liveData) {
+  html = replaceBlock(html, 'embeddedData', compact(liveData));
+}
 
 // Replace existing blocks
 html = replaceBlock(html, 'ycParticipants', compact(participants));
