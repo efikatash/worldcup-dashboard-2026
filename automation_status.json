@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "message": "Clean updater ran. Results cache applied first; ESPN live/final scoreboard applied second; participant totals recalculated.",
-  "updated_at_utc": "2026-06-28T20:58:16Z",
+  "updated_at_utc": "2026-07-02T23:08:45Z",
   "completed_matches": 72,
   "live_matches": 0,
   "cache_size_before": 72,
@@ -11,6 +11,6 @@
   "live_updates": [],
   "conflicts": [],
   "warnings": [],
-  "leader": "מור גרשגורן",
-  "leader_points": 1117
+  "leader": "ליאון זוכוביצקי+ירון פרסלר",
+  "leader_points": 1305
 }
