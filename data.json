@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04 04:53",
+    "generatedAt": "2026-07-04 05:02",
     "timezone": "Asia/Manila",
     "workbookName": "תוצאות משחקי היום הרביעי - 14.6.26.xlsx",
     "participantsCount": 242,
@@ -15,7 +15,7 @@
     "scoringRules": "משחקים: 10 נק׳ לתוצאה מדויקת, 5 לכיוון נכון, ועוד 2 אם גם הפרש השערים נכון. שאלות פתוחות נספרות כשהן מאומתות ממקור FIFA, מקור חיצוני אמין, או קובץ תוצאות מעודכן שסיפקת.",
     "dataPolicy": "הניחושים והניקוד נלקחים מקובץ התוצאות המעודכן שהועלה. תוצאות משחקים נשארות FIFA-only לפי הדרישה המקורית; שאלות פתוחות יכולות להיספר גם ממקור שאינו FIFA.",
     "dashboardVersion": "GitHub Auto FIFA/ESPN Final Fallback + ESPN Live",
-    "dashboardBuiltAt": "2026-07-04 04:53",
+    "dashboardBuiltAt": "2026-07-04 05:02",
     "completedMatches": 72,
     "liveMatches": 0,
     "openQuestionEngine": "enabled_step8_fast_track_only",
@@ -263647,6 +263647,2343 @@
       }
     },
     {
+      "name": "ליאור רוזן",
+      "total": 1211,
+      "matchPoints": 279,
+      "openPoints": 342,
+      "bonusPoints": 590,
+      "exact": 10,
+      "partial": 33,
+      "gd": 7,
+      "openHits": 36,
+      "openResolved": 55,
+      "prevPoints": 37,
+      "pointsChange": 0,
+      "prevRank": 76,
+      "rankChange": 0,
+      "matches": [
+        {
+          "matchId": 1,
+          "row": 12,
+          "homePick": "2",
+          "awayPick": "0",
+          "points": 10,
+          "exact": 1,
+          "partial": 0,
+          "gd": 0,
+          "label": "בול"
+        },
+        {
+          "matchId": 2,
+          "row": 13,
+          "homePick": "1",
+          "awayPick": "1",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 3,
+          "row": 14,
+          "homePick": "1",
+          "awayPick": "1",
+          "points": 10,
+          "exact": 1,
+          "partial": 0,
+          "gd": 0,
+          "label": "בול"
+        },
+        {
+          "matchId": 4,
+          "row": 15,
+          "homePick": "1",
+          "awayPick": "0",
+          "points": 10,
+          "exact": 1,
+          "partial": 0,
+          "gd": 0,
+          "label": "בול"
+        },
+        {
+          "matchId": 5,
+          "row": 16,
+          "homePick": "1",
+          "awayPick": "1",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 6,
+          "row": 17,
+          "homePick": "1",
+          "awayPick": "2",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 7,
+          "row": 22,
+          "homePick": "1",
+          "awayPick": "2",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 8,
+          "row": 23,
+          "homePick": "0",
+          "awayPick": "2",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 9,
+          "row": 24,
+          "homePick": "1",
+          "awayPick": "1",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 10,
+          "row": 25,
+          "homePick": "3",
+          "awayPick": "0",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 11,
+          "row": 26,
+          "homePick": "0",
+          "awayPick": "1",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 12,
+          "row": 27,
+          "homePick": "2",
+          "awayPick": "0",
+          "points": 7,
+          "exact": 0,
+          "partial": 1,
+          "gd": 1,
+          "label": "כיוון + הפרש"
+        },
+        {
+          "matchId": 13,
+          "row": 32,
+          "homePick": "2",
+          "awayPick": "1",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 14,
+          "row": 33,
+          "homePick": "0",
+          "awayPick": "2",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 15,
+          "row": 34,
+          "homePick": "0",
+          "awayPick": "1",
+          "points": 10,
+          "exact": 1,
+          "partial": 0,
+          "gd": 0,
+          "label": "בול"
+        },
+        {
+          "matchId": 16,
+          "row": 35,
+          "homePick": "4",
+          "awayPick": "1",
+          "points": 7,
+          "exact": 0,
+          "partial": 1,
+          "gd": 1,
+          "label": "כיוון + הפרש"
+        },
+        {
+          "matchId": 17,
+          "row": 36,
+          "homePick": "0",
+          "awayPick": "2",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 18,
+          "row": 37,
+          "homePick": "2",
+          "awayPick": "0",
+          "points": 7,
+          "exact": 0,
+          "partial": 1,
+          "gd": 1,
+          "label": "כיוון + הפרש"
+        },
+        {
+          "matchId": 19,
+          "row": 42,
+          "homePick": "2",
+          "awayPick": "1",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 20,
+          "row": 43,
+          "homePick": "0",
+          "awayPick": "3",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 21,
+          "row": 44,
+          "homePick": "2",
+          "awayPick": "0",
+          "points": 10,
+          "exact": 1,
+          "partial": 0,
+          "gd": 0,
+          "label": "בול"
+        },
+        {
+          "matchId": 22,
+          "row": 45,
+          "homePick": "1",
+          "awayPick": "0",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 23,
+          "row": 46,
+          "homePick": "2",
+          "awayPick": "2",
+          "points": 7,
+          "exact": 0,
+          "partial": 1,
+          "gd": 1,
+          "label": "כיוון + הפרש"
+        },
+        {
+          "matchId": 24,
+          "row": 47,
+          "homePick": "2",
+          "awayPick": "0",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 25,
+          "row": 52,
+          "homePick": "4",
+          "awayPick": "0",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 26,
+          "row": 53,
+          "homePick": "0",
+          "awayPick": "3",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 27,
+          "row": 54,
+          "homePick": "2",
+          "awayPick": "0",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 28,
+          "row": 55,
+          "homePick": "3",
+          "awayPick": "0",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 29,
+          "row": 56,
+          "homePick": "1",
+          "awayPick": "1",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 30,
+          "row": 57,
+          "homePick": "0",
+          "awayPick": "1",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 31,
+          "row": 62,
+          "homePick": "3",
+          "awayPick": "2",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 32,
+          "row": 63,
+          "homePick": "0",
+          "awayPick": "1",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 33,
+          "row": 64,
+          "homePick": "2",
+          "awayPick": "0",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 34,
+          "row": 65,
+          "homePick": "1",
+          "awayPick": "2",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 35,
+          "row": 66,
+          "homePick": "0",
+          "awayPick": "2",
+          "points": 7,
+          "exact": 0,
+          "partial": 1,
+          "gd": 1,
+          "label": "כיוון + הפרש"
+        },
+        {
+          "matchId": 36,
+          "row": 67,
+          "homePick": "1",
+          "awayPick": "0",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 37,
+          "row": 72,
+          "homePick": "3",
+          "awayPick": "1",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 38,
+          "row": 73,
+          "homePick": "1",
+          "awayPick": "0",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 39,
+          "row": 74,
+          "homePick": "2",
+          "awayPick": "0",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 40,
+          "row": 75,
+          "homePick": "0",
+          "awayPick": "3",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 41,
+          "row": 76,
+          "homePick": "2",
+          "awayPick": "0",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 42,
+          "row": 77,
+          "homePick": "0",
+          "awayPick": "4",
+          "points": 7,
+          "exact": 0,
+          "partial": 1,
+          "gd": 1,
+          "label": "כיוון + הפרש"
+        },
+        {
+          "matchId": 43,
+          "row": 82,
+          "homePick": "4",
+          "awayPick": "0",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 44,
+          "row": 83,
+          "homePick": "1",
+          "awayPick": "2",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 45,
+          "row": 84,
+          "homePick": "4",
+          "awayPick": "0",
+          "points": 10,
+          "exact": 1,
+          "partial": 0,
+          "gd": 0,
+          "label": "בול"
+        },
+        {
+          "matchId": 46,
+          "row": 85,
+          "homePick": "3",
+          "awayPick": "0",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 47,
+          "row": 86,
+          "homePick": "0",
+          "awayPick": "2",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 48,
+          "row": 87,
+          "homePick": "1",
+          "awayPick": "1",
+          "points": 7,
+          "exact": 0,
+          "partial": 1,
+          "gd": 1,
+          "label": "כיוון + הפרש"
+        },
+        {
+          "matchId": 49,
+          "row": 92,
+          "homePick": "3",
+          "awayPick": "1",
+          "points": 10,
+          "exact": 1,
+          "partial": 0,
+          "gd": 0,
+          "label": "בול"
+        },
+        {
+          "matchId": 50,
+          "row": 93,
+          "homePick": "0",
+          "awayPick": "4",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 51,
+          "row": 94,
+          "homePick": "3",
+          "awayPick": "0",
+          "points": 10,
+          "exact": 1,
+          "partial": 0,
+          "gd": 0,
+          "label": "בול"
+        },
+        {
+          "matchId": 52,
+          "row": 95,
+          "homePick": "4",
+          "awayPick": "0",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 53,
+          "row": 96,
+          "homePick": "1",
+          "awayPick": "1",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 54,
+          "row": 97,
+          "homePick": "2",
+          "awayPick": "2",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 55,
+          "row": 102,
+          "homePick": "2",
+          "awayPick": "1",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 56,
+          "row": 103,
+          "homePick": "4",
+          "awayPick": "1",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 57,
+          "row": 104,
+          "homePick": "2",
+          "awayPick": "0",
+          "points": 10,
+          "exact": 1,
+          "partial": 0,
+          "gd": 0,
+          "label": "בול"
+        },
+        {
+          "matchId": 58,
+          "row": 105,
+          "homePick": "0",
+          "awayPick": "2",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 59,
+          "row": 106,
+          "homePick": "0",
+          "awayPick": "1",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 60,
+          "row": 107,
+          "homePick": "0",
+          "awayPick": "5",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 61,
+          "row": 112,
+          "homePick": "3",
+          "awayPick": "0",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 62,
+          "row": 113,
+          "homePick": "0",
+          "awayPick": "3",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 63,
+          "row": 114,
+          "homePick": "3",
+          "awayPick": "0",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 64,
+          "row": 115,
+          "homePick": "3",
+          "awayPick": "1",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 65,
+          "row": 116,
+          "homePick": "1",
+          "awayPick": "3",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 66,
+          "row": 117,
+          "homePick": "1",
+          "awayPick": "0",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 67,
+          "row": 122,
+          "homePick": "3",
+          "awayPick": "2",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 68,
+          "row": 123,
+          "homePick": "1",
+          "awayPick": "1",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 69,
+          "row": 124,
+          "homePick": "2",
+          "awayPick": "0",
+          "points": 0,
+          "exact": 0,
+          "partial": 0,
+          "gd": 0,
+          "label": "פספוס"
+        },
+        {
+          "matchId": 70,
+          "row": 125,
+          "homePick": "1",
+          "awayPick": "3",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        },
+        {
+          "matchId": 71,
+          "row": 126,
+          "homePick": "2",
+          "awayPick": "1",
+          "points": 10,
+          "exact": 1,
+          "partial": 0,
+          "gd": 0,
+          "label": "בול"
+        },
+        {
+          "matchId": 72,
+          "row": 127,
+          "homePick": "0",
+          "awayPick": "4",
+          "points": 5,
+          "exact": 0,
+          "partial": 1,
+          "gd": 0,
+          "label": "כיוון"
+        }
+      ],
+      "open": [
+        {
+          "qId": 1,
+          "prediction": "מקסיקו",
+          "points": 2,
+          "label": "פגיעה"
+        },
+        {
+          "qId": 2,
+          "prediction": "רגל ימין",
+          "points": 2,
+          "label": "פגיעה"
+        },
+        {
+          "qId": 3,
+          "prediction": "זריקת חוץ",
+          "points": 3,
+          "label": "פגיעה"
+        },
+        {
+          "qId": 4,
+          "prediction": "רגל ימין",
+          "points": 5,
+          "label": "פגיעה"
+        },
+        {
+          "qId": 5,
+          "prediction": "ב | מס' השערים שיובקעו: 11-15",
+          "points": 10,
+          "label": " + מספר(10)"
+        },
+        {
+          "qId": 6,
+          "prediction": "ט | מס' השערים שיובקעו: 21-25",
+          "points": 10,
+          "label": "פגיעה בנבחרת/בית(10)"
+        },
+        {
+          "qId": 7,
+          "prediction": "ספרד | מס' השערים שתבקיע: 6-10",
+          "points": 10,
+          "label": " + מספר(10)"
+        },
+        {
+          "qId": 8,
+          "prediction": "ירדן | מס' השערים שתספוג: 11-15",
+          "points": 10,
+          "label": " + מספר(10)"
+        },
+        {
+          "qId": 9,
+          "prediction": "קורסאו | מס' השערים שתבקיע: 0",
+          "points": 10,
+          "label": " + פגיעה במספר(10)"
+        },
+        {
+          "qId": 10,
+          "prediction": "ספרד | מס' השערים שתספוג: 0",
+          "points": 20,
+          "label": "פגיעה בנבחרת(10) + פגיעה במספר(10)",
+          "teamPick": "ספרד",
+          "numberHit": true
+        },
+        {
+          "qId": 11,
+          "prediction": "דרום קוריאה | מס' תוצאות תיקו: 2",
+          "points": 0,
+          "label": "פספוס"
+        },
+        {
+          "qId": 12,
+          "prediction": "11-13",
+          "points": 0,
+          "label": "פספוס"
+        },
+        {
+          "qId": 13,
+          "prediction": "אלג'יריה | מס' הכרטיסים שתספוג: 2",
+          "points": 10,
+          "label": " + מספר(10)"
+        },
+        {
+          "qId": 14,
+          "prediction": "11-12",
+          "points": 0,
+          "label": "pispus"
+        },
+        {
+          "qId": 15,
+          "prediction": "נורווגיה - האלאנד | מס' השערים שיכבוש: 4",
+          "points": 0,
+          "label": "פספוס"
+        },
+        {
+          "qId": 16,
+          "prediction": "ברזיל + מס' הפנדלים שיישרקו: 2",
+          "points": 10,
+          "label": "pgia"
+        },
+        {
+          "qId": 17,
+          "prediction": "האיטי + מס' הפנדלים שיישרקו: 2",
+          "points": 10,
+          "label": "pgia"
+        },
+        {
+          "qId": 18,
+          "prediction": "13-14",
+          "points": 0,
+          "label": "pispus"
+        },
+        {
+          "qId": 19,
+          "prediction": "אמבפה (צרפת)",
+          "points": 0,
+          "label": "פספוס"
+        },
+        {
+          "qId": 20,
+          "prediction": "אירופה",
+          "points": 0,
+          "label": "פספוס"
+        },
+        {
+          "qId": 21,
+          "prediction": "לא",
+          "points": 0,
+          "label": "פספוס"
+        },
+        {
+          "qId": 22,
+          "prediction": "קיין (אנגליה)",
+          "points": 10,
+          "label": "פגיעה"
+        },
+        {
+          "qId": 23,
+          "prediction": "אפריקה",
+          "points": 0,
+          "label": "פספוס"
+        },
+        {
+          "qId": 24,
+          "prediction": "כן",
+          "points": 10,
+          "label": "פגיעה"
+        },
+        {
+          "qId": 25,
+          "prediction": "קיין (אנגליה)",
+          "points": 0,
+          "label": "פספוס"
+        },
+        {
+          "qId": 26,
+          "prediction": "אירופה",
+          "points": 0,
+          "label": "פספוס"
+        },
+        {
+          "qId": 27,
+          "prediction": "כן",
+          "points": 10,
+          "label": "פגיעה"
+        },
+        {
+          "qId": 28,
+          "prediction": "לא",
+          "points": 10,
+          "label": "פגיעה"
+        },
+        {
+          "qId": 29,
+          "prediction": "אמבפה (צרפת)",
+          "points": 10,
+          "label": "פגיעה"
+        },
+        {
+          "qId": 30,
+          "prediction": "אירופה",
+          "points": 10,
+          "label": "פגיעה"
+        },
+        {
+          "qId": 31,
+          "prediction": "לא",
+          "points": 0,
+          "label": "פספוס"
+        },
+        {
+          "qId": 32,
+          "prediction": "רונאלדו (פורטוגל)",
+          "points": 0,
+          "label": "פספוס"
+        },
+        {
+          "qId": 33,
+          "prediction": "אירופה",
+          "points": 0,
+          "label": "פספוס"
+        },
+        {
+          "qId": 34,
+          "prediction": "דרום אמריקה",
+          "points": 10,
+          "label": "פגיעה"
+        },
+        {
+          "qId": 35,
+          "prediction": "לא",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 36,
+          "prediction": "לא",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 37,
+          "prediction": "4",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 38,
+          "prediction": "5",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 39,
+          "prediction": "לא",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 40,
+          "prediction": "כן",
+          "points": 10,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 41,
+          "prediction": "כן",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 42,
+          "prediction": "דקות 3-4",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 43,
+          "prediction": "דקות 94-95",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 44,
+          "prediction": "כן",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 45,
+          "prediction": "כן",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 46,
+          "prediction": "לא",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 47,
+          "prediction": "3",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 48,
+          "prediction": "5",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 49,
+          "prediction": "לא",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 50,
+          "prediction": "כן",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 51,
+          "prediction": "כן",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 52,
+          "prediction": "דקות 5-6",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 53,
+          "prediction": "דקות 90-91",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 54,
+          "prediction": "כן",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 55,
+          "prediction": "כן",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 56,
+          "prediction": "לא",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 57,
+          "prediction": "3",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 58,
+          "prediction": "5",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 59,
+          "prediction": "כן",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 60,
+          "prediction": "כן",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 61,
+          "prediction": "כן",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 62,
+          "prediction": "דקות 5-6",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 63,
+          "prediction": "דקות 92-93",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 64,
+          "prediction": "כן",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 65,
+          "prediction": "כן",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 66,
+          "prediction": "לא",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 67,
+          "prediction": "3",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 68,
+          "prediction": "4",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 69,
+          "prediction": "כן",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 70,
+          "prediction": "לא",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 71,
+          "prediction": "לא",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 72,
+          "prediction": "אחרי דקה 20",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 73,
+          "prediction": "דקות 90-91",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 74,
+          "prediction": "כן",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 75,
+          "prediction": "נורווגיה - האלאנד | מס' השערים שיבקיע",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 76,
+          "prediction": "פורטוגל -  פרננדש | מס' השערים שיבשל",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 77,
+          "prediction": "פורטוגל + מס' הפנדלים שיישרקו: 3-4",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 78,
+          "prediction": "קורסאו + מס' הפנדלים שיישרקו: פחות מ- 3 פנדלים",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 79,
+          "prediction": "צרפת + מס' השערים שתבקיע: 21-25",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 80,
+          "prediction": "7",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 81,
+          "prediction": "5",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 82,
+          "prediction": "2",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 83,
+          "prediction": "5",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 84,
+          "prediction": "3",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 85,
+          "prediction": "לא יותר מ- 10 שערים",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 86,
+          "prediction": "2-2",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 87,
+          "prediction": "1-1",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 88,
+          "prediction": "0-2",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 89,
+          "prediction": "6",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 90,
+          "prediction": "3",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 91,
+          "prediction": "2",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 92,
+          "prediction": "2",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 93,
+          "prediction": "12",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 94,
+          "prediction": "3",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 95,
+          "prediction": "5",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 96,
+          "prediction": "דקות 3-4",
+          "points": 0,
+          "label": "פספוס"
+        },
+        {
+          "qId": 97,
+          "prediction": "דקות 94-95",
+          "points": 0,
+          "label": "פספוס"
+        },
+        {
+          "qId": 98,
+          "prediction": "דקות 1-15",
+          "points": 10,
+          "label": "פגיעה"
+        },
+        {
+          "qId": 99,
+          "prediction": "דקות 76-90",
+          "points": 0,
+          "label": "פספוס"
+        },
+        {
+          "qId": 100,
+          "prediction": "1",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 101,
+          "prediction": "2",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 102,
+          "prediction": "ספרד",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 103,
+          "prediction": "לא",
+          "points": 10,
+          "label": "pgia"
+        },
+        {
+          "qId": 104,
+          "prediction": "כן",
+          "points": 10,
+          "label": "פגיעה"
+        },
+        {
+          "qId": 105,
+          "prediction": "לא",
+          "points": 10,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 106,
+          "prediction": "כן",
+          "points": 10,
+          "label": "פגיעה"
+        },
+        {
+          "qId": 107,
+          "prediction": "כן",
+          "points": 10,
+          "label": "פגיעה"
+        },
+        {
+          "qId": 108,
+          "prediction": "כן",
+          "points": 10,
+          "label": "פגיעה"
+        },
+        {
+          "qId": 109,
+          "prediction": "כן",
+          "points": 10,
+          "label": "פגיעה"
+        },
+        {
+          "qId": 110,
+          "prediction": "כן",
+          "points": 10,
+          "label": "פגיעה"
+        },
+        {
+          "qId": 111,
+          "prediction": "כן",
+          "points": 10,
+          "label": "פגיעה"
+        },
+        {
+          "qId": 112,
+          "prediction": "לא",
+          "points": 0,
+          "label": "פספוס"
+        },
+        {
+          "qId": 113,
+          "prediction": "כן",
+          "points": 10,
+          "label": "פגיעה"
+        },
+        {
+          "qId": 114,
+          "prediction": "לא",
+          "points": 0,
+          "label": "פספוס"
+        },
+        {
+          "qId": 115,
+          "prediction": "כן",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 116,
+          "prediction": "לא",
+          "points": 0,
+          "label": "פספוס"
+        },
+        {
+          "qId": 117,
+          "prediction": "לא",
+          "points": 0,
+          "label": "פספוס"
+        },
+        {
+          "qId": 118,
+          "prediction": "כן",
+          "points": 10,
+          "label": "פגיעה"
+        },
+        {
+          "qId": 119,
+          "prediction": "כן",
+          "points": 10,
+          "label": "פגיעה"
+        },
+        {
+          "qId": 120,
+          "prediction": "כן",
+          "points": 10,
+          "label": "פגיעה"
+        },
+        {
+          "qId": 121,
+          "prediction": "לא",
+          "points": 0,
+          "label": "פספוס"
+        },
+        {
+          "qId": 122,
+          "prediction": "כן",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 123,
+          "prediction": "כן",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 124,
+          "prediction": "כן",
+          "points": 10,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 125,
+          "prediction": "כן",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 126,
+          "prediction": "לא",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 127,
+          "prediction": "90 דקות",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 128,
+          "prediction": "3",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 129,
+          "prediction": "1-2",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 130,
+          "prediction": "0",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 131,
+          "prediction": "12",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 132,
+          "prediction": "כן",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 133,
+          "prediction": "מחצית 2",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 134,
+          "prediction": "לא",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 135,
+          "prediction": "כן",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 136,
+          "prediction": "כן",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 137,
+          "prediction": "כן",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 138,
+          "prediction": "לא",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 139,
+          "prediction": "לא",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 140,
+          "prediction": "כן",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 141,
+          "prediction": "כן",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 142,
+          "prediction": "לא",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 143,
+          "prediction": "לא",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 144,
+          "prediction": "נגיחה",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 145,
+          "prediction": "זריקת חוץ",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        },
+        {
+          "qId": 146,
+          "prediction": "רגל ימין",
+          "points": 0,
+          "label": "ממתין למקור מאומת"
+        }
+      ],
+      "bonuses": [
+        {
+          "kind": "top2",
+          "group": "A",
+          "firstPick": "מקסיקו",
+          "secondPick": "צ'כיה",
+          "firstPoints": 15,
+          "secondPoints": 0,
+          "firstStatus": "resolved",
+          "secondStatus": "resolved",
+          "points": 15,
+          "status": "resolved"
+        },
+        {
+          "kind": "top2",
+          "group": "B",
+          "firstPick": "בוסניה",
+          "secondPick": "קנדה",
+          "firstPoints": 7,
+          "secondPoints": 15,
+          "firstStatus": "resolved",
+          "secondStatus": "resolved",
+          "points": 22,
+          "status": "resolved"
+        },
+        {
+          "kind": "top2",
+          "group": "C",
+          "firstPick": "ברזיל",
+          "secondPick": "מרוקו",
+          "firstPoints": 15,
+          "secondPoints": 15,
+          "firstStatus": "resolved",
+          "secondStatus": "resolved",
+          "points": 30,
+          "status": "resolved"
+        },
+        {
+          "kind": "top2",
+          "group": "D",
+          "firstPick": "טורקיה",
+          "secondPick": "ארה\"ב",
+          "firstPoints": 0,
+          "secondPoints": 10,
+          "firstStatus": "resolved",
+          "secondStatus": "resolved",
+          "points": 10,
+          "status": "resolved"
+        },
+        {
+          "kind": "top2",
+          "group": "E",
+          "firstPick": "גרמניה",
+          "secondPick": "אקוואדור",
+          "firstPoints": 15,
+          "secondPoints": 7,
+          "firstStatus": "resolved",
+          "secondStatus": "resolved",
+          "points": 22,
+          "status": "resolved"
+        },
+        {
+          "kind": "top2",
+          "group": "F",
+          "firstPick": "הולנד",
+          "secondPick": "יפן",
+          "firstPoints": 15,
+          "secondPoints": 15,
+          "firstStatus": "resolved",
+          "secondStatus": "resolved",
+          "points": 30,
+          "status": "resolved"
+        },
+        {
+          "kind": "top2",
+          "group": "G",
+          "firstPick": "בלגיה",
+          "secondPick": "מצרים",
+          "firstPoints": 15,
+          "secondPoints": 15,
+          "firstStatus": "resolved",
+          "secondStatus": "resolved",
+          "points": 30,
+          "status": "resolved"
+        },
+        {
+          "kind": "top2",
+          "group": "H",
+          "firstPick": "ספרד",
+          "secondPick": "אורוגוואי",
+          "firstPoints": 15,
+          "secondPoints": 0,
+          "firstStatus": "resolved",
+          "secondStatus": "resolved",
+          "points": 15,
+          "status": "resolved"
+        },
+        {
+          "kind": "top2",
+          "group": "I",
+          "firstPick": "נורווגיה",
+          "secondPick": "צרפת",
+          "firstPoints": 10,
+          "secondPoints": 10,
+          "firstStatus": "resolved",
+          "secondStatus": "resolved",
+          "points": 20,
+          "status": "resolved"
+        },
+        {
+          "kind": "top2",
+          "group": "J",
+          "firstPick": "ארגנטינה",
+          "secondPick": "אוסטריה",
+          "firstPoints": 15,
+          "secondPoints": 15,
+          "firstStatus": "resolved",
+          "secondStatus": "resolved",
+          "points": 30,
+          "status": "resolved"
+        },
+        {
+          "kind": "top2",
+          "group": "K",
+          "firstPick": "פורטוגל",
+          "secondPick": "קולומביה",
+          "firstPoints": 10,
+          "secondPoints": 10,
+          "firstStatus": "resolved",
+          "secondStatus": "resolved",
+          "points": 20,
+          "status": "resolved"
+        },
+        {
+          "kind": "top2",
+          "group": "L",
+          "firstPick": "אנגליה",
+          "secondPick": "קרואטיה",
+          "firstPoints": 15,
+          "secondPoints": 15,
+          "firstStatus": "resolved",
+          "secondStatus": "resolved",
+          "points": 30,
+          "status": "resolved"
+        },
+        {
+          "kind": "bonus_all_advanced",
+          "points": 0,
+          "status": "resolved"
+        },
+        {
+          "kind": "bonus_all_position",
+          "points": 0,
+          "status": "resolved"
+        },
+        {
+          "kind": "third",
+          "group": "A",
+          "thirdPick": "דרום קוריאה",
+          "willAdvance": "כן",
+          "points": 10,
+          "status": "resolved",
+          "teamPoints": 10,
+          "teamStatus": "resolved",
+          "advPoints": 0,
+          "advStatus": "resolved"
+        },
+        {
+          "kind": "third",
+          "group": "B",
+          "thirdPick": "שווייץ",
+          "willAdvance": "כן",
+          "points": 11,
+          "status": "resolved",
+          "teamPoints": 7,
+          "teamStatus": "resolved",
+          "advPoints": 4,
+          "advStatus": "resolved"
+        },
+        {
+          "kind": "third",
+          "group": "C",
+          "thirdPick": "סקוטלנד",
+          "willAdvance": "לא",
+          "points": 14,
+          "status": "resolved",
+          "teamPoints": 10,
+          "teamStatus": "resolved",
+          "advPoints": 4,
+          "advStatus": "resolved"
+        },
+        {
+          "kind": "third",
+          "group": "D",
+          "thirdPick": "פרגוואי",
+          "willAdvance": "כן",
+          "points": 14,
+          "status": "resolved",
+          "teamPoints": 10,
+          "teamStatus": "resolved",
+          "advPoints": 4,
+          "advStatus": "resolved"
+        },
+        {
+          "kind": "third",
+          "group": "E",
+          "thirdPick": "חוף השנהב",
+          "willAdvance": "כן",
+          "points": 11,
+          "status": "resolved",
+          "teamPoints": 7,
+          "teamStatus": "resolved",
+          "advPoints": 4,
+          "advStatus": "resolved"
+        },
+        {
+          "kind": "third",
+          "group": "F",
+          "thirdPick": "שבדיה",
+          "willAdvance": "כן",
+          "points": 14,
+          "status": "resolved",
+          "teamPoints": 10,
+          "teamStatus": "resolved",
+          "advPoints": 4,
+          "advStatus": "resolved"
+        },
+        {
+          "kind": "third",
+          "group": "G",
+          "thirdPick": "איראן",
+          "willAdvance": "לא",
+          "points": 14,
+          "status": "resolved",
+          "teamPoints": 10,
+          "teamStatus": "resolved",
+          "advPoints": 4,
+          "advStatus": "resolved"
+        },
+        {
+          "kind": "third",
+          "group": "H",
+          "thirdPick": "ערב הסעודית",
+          "willAdvance": "כן",
+          "points": 0,
+          "status": "resolved",
+          "teamPoints": 0,
+          "teamStatus": "resolved",
+          "advPoints": 0,
+          "advStatus": "resolved"
+        },
+        {
+          "kind": "third",
+          "group": "I",
+          "thirdPick": "סנגל",
+          "willAdvance": "כן",
+          "points": 14,
+          "status": "resolved",
+          "teamPoints": 10,
+          "teamStatus": "resolved",
+          "advPoints": 4,
+          "advStatus": "resolved"
+        },
+        {
+          "kind": "third",
+          "group": "J",
+          "thirdPick": "אלג'יריה",
+          "willAdvance": "לא",
+          "points": 10,
+          "status": "resolved",
+          "teamPoints": 10,
+          "teamStatus": "resolved",
+          "advPoints": 0,
+          "advStatus": "resolved"
+        },
+        {
+          "kind": "third",
+          "group": "K",
+          "thirdPick": "קונגו",
+          "willAdvance": "לא",
+          "points": 10,
+          "status": "resolved",
+          "teamPoints": 10,
+          "teamStatus": "resolved",
+          "advPoints": 0,
+          "advStatus": "resolved"
+        },
+        {
+          "kind": "third",
+          "group": "L",
+          "thirdPick": "גאנה",
+          "willAdvance": "כן",
+          "points": 14,
+          "status": "resolved",
+          "teamPoints": 10,
+          "teamStatus": "resolved",
+          "advPoints": 4,
+          "advStatus": "resolved"
+        },
+        {
+          "kind": "bonus_third_all",
+          "points": 0,
+          "status": "resolved"
+        },
+        {
+          "kind": "group_directions",
+          "group": "A",
+          "points": 0,
+          "status": "resolved"
+        },
+        {
+          "kind": "group_directions",
+          "group": "B",
+          "points": 0,
+          "status": "resolved"
+        },
+        {
+          "kind": "group_directions",
+          "group": "C",
+          "points": 0,
+          "status": "resolved"
+        },
+        {
+          "kind": "group_directions",
+          "group": "D",
+          "points": 0,
+          "status": "resolved"
+        },
+        {
+          "kind": "group_directions",
+          "group": "E",
+          "points": 0,
+          "status": "resolved"
+        },
+        {
+          "kind": "group_directions",
+          "group": "F",
+          "points": 0,
+          "status": "resolved"
+        },
+        {
+          "kind": "group_directions",
+          "group": "G",
+          "points": 0,
+          "status": "resolved"
+        },
+        {
+          "kind": "group_directions",
+          "group": "H",
+          "points": 0,
+          "status": "resolved"
+        },
+        {
+          "kind": "group_directions",
+          "group": "I",
+          "points": 0,
+          "status": "resolved"
+        },
+        {
+          "kind": "group_directions",
+          "group": "J",
+          "points": 0,
+          "status": "resolved"
+        },
+        {
+          "kind": "group_directions",
+          "group": "K",
+          "points": 0,
+          "status": "resolved"
+        },
+        {
+          "kind": "group_directions",
+          "group": "L",
+          "points": 0,
+          "status": "resolved"
+        },
+        {
+          "kind": "r16advance",
+          "slot": 1,
+          "pick": "גרמניה",
+          "advanced": false,
+          "eliminated": true,
+          "points": 0,
+          "status": "resolved"
+        },
+        {
+          "kind": "r16advance",
+          "slot": 2,
+          "pick": "צרפת",
+          "advanced": true,
+          "eliminated": false,
+          "points": 20,
+          "status": "resolved"
+        },
+        {
+          "kind": "r16advance",
+          "slot": 3,
+          "pick": "ארה\"ב",
+          "advanced": true,
+          "eliminated": false,
+          "points": 20,
+          "status": "resolved"
+        },
+        {
+          "kind": "r16advance",
+          "slot": 4,
+          "pick": "הולנד",
+          "advanced": false,
+          "eliminated": true,
+          "points": 0,
+          "status": "resolved"
+        },
+        {
+          "kind": "r16advance",
+          "slot": 5,
+          "pick": "ארגנטינה",
+          "advanced": false,
+          "eliminated": false,
+          "points": 0,
+          "status": "pending"
+        },
+        {
+          "kind": "r16advance",
+          "slot": 6,
+          "pick": "פורטוגל",
+          "advanced": true,
+          "eliminated": false,
+          "points": 20,
+          "status": "resolved"
+        },
+        {
+          "kind": "r16advance",
+          "slot": 7,
+          "pick": "אנגליה",
+          "advanced": true,
+          "eliminated": false,
+          "points": 20,
+          "status": "resolved"
+        },
+        {
+          "kind": "r16advance",
+          "slot": 8,
+          "pick": "מקסיקו",
+          "advanced": true,
+          "eliminated": false,
+          "points": 20,
+          "status": "resolved"
+        },
+        {
+          "kind": "r16advance",
+          "slot": 9,
+          "pick": "ברזיל",
+          "advanced": true,
+          "eliminated": false,
+          "points": 20,
+          "status": "resolved"
+        },
+        {
+          "kind": "r16advance",
+          "slot": 10,
+          "pick": "טורקיה",
+          "advanced": false,
+          "eliminated": true,
+          "points": 0,
+          "status": "resolved"
+        },
+        {
+          "kind": "r16advance",
+          "slot": 11,
+          "pick": "בלגיה",
+          "advanced": true,
+          "eliminated": false,
+          "points": 20,
+          "status": "resolved"
+        },
+        {
+          "kind": "r16advance",
+          "slot": 12,
+          "pick": "קרואטיה",
+          "advanced": false,
+          "eliminated": true,
+          "points": 0,
+          "status": "resolved"
+        },
+        {
+          "kind": "r16advance",
+          "slot": 13,
+          "pick": "צ'כיה",
+          "advanced": false,
+          "eliminated": true,
+          "points": 0,
+          "status": "resolved"
+        },
+        {
+          "kind": "r16advance",
+          "slot": 14,
+          "pick": "ספרד",
+          "advanced": true,
+          "eliminated": false,
+          "points": 20,
+          "status": "resolved"
+        },
+        {
+          "kind": "r16advance",
+          "slot": 15,
+          "pick": "בוסניה",
+          "advanced": false,
+          "eliminated": true,
+          "points": 0,
+          "status": "resolved"
+        },
+        {
+          "kind": "r16advance",
+          "slot": 16,
+          "pick": "נורווגיה",
+          "advanced": true,
+          "eliminated": false,
+          "points": 20,
+          "status": "resolved"
+        },
+        {
+          "kind": "bonus_r16_all",
+          "points": 0,
+          "status": "pending"
+        }
+      ],
+      "rank": 76,
+      "bonusPicks": {
+        "top2": {
+          "A": {
+            "first": "מקסיקו",
+            "second": "צ'כיה"
+          },
+          "B": {
+            "first": "בוסניה",
+            "second": "קנדה"
+          },
+          "C": {
+            "first": "ברזיל",
+            "second": "מרוקו"
+          },
+          "D": {
+            "first": "טורקיה",
+            "second": "ארה\"ב"
+          },
+          "E": {
+            "first": "גרמניה",
+            "second": "אקוואדור"
+          },
+          "F": {
+            "first": "הולנד",
+            "second": "יפן"
+          },
+          "G": {
+            "first": "בלגיה",
+            "second": "מצרים"
+          },
+          "H": {
+            "first": "ספרד",
+            "second": "אורוגוואי"
+          },
+          "I": {
+            "first": "נורווגיה",
+            "second": "צרפת"
+          },
+          "J": {
+            "first": "ארגנטינה",
+            "second": "אוסטריה"
+          },
+          "K": {
+            "first": "פורטוגל",
+            "second": "קולומביה"
+          },
+          "L": {
+            "first": "אנגליה",
+            "second": "קרואטיה"
+          }
+        },
+        "third": {
+          "A": {
+            "team": "דרום קוריאה",
+            "willAdvance": "כן"
+          },
+          "B": {
+            "team": "שווייץ",
+            "willAdvance": "כן"
+          },
+          "C": {
+            "team": "סקוטלנד",
+            "willAdvance": "לא"
+          },
+          "D": {
+            "team": "פרגוואי",
+            "willAdvance": "כן"
+          },
+          "E": {
+            "team": "חוף השנהב",
+            "willAdvance": "כן"
+          },
+          "F": {
+            "team": "שבדיה",
+            "willAdvance": "כן"
+          },
+          "G": {
+            "team": "איראן",
+            "willAdvance": "לא"
+          },
+          "H": {
+            "team": "ערב הסעודית",
+            "willAdvance": "כן"
+          },
+          "I": {
+            "team": "סנגל",
+            "willAdvance": "כן"
+          },
+          "J": {
+            "team": "אלג'יריה",
+            "willAdvance": "לא"
+          },
+          "K": {
+            "team": "קונגו",
+            "willAdvance": "לא"
+          },
+          "L": {
+            "team": "גאנה",
+            "willAdvance": "כן"
+          }
+        },
+        "r16advance": [
+          "גרמניה",
+          "צרפת",
+          "ארה\"ב",
+          "הולנד",
+          "ארגנטינה",
+          "פורטוגל",
+          "אנגליה",
+          "מקסיקו",
+          "ברזיל",
+          "טורקיה",
+          "בלגיה",
+          "קרואטיה",
+          "צ'כיה",
+          "ספרד",
+          "בוסניה",
+          "נורווגיה"
+        ]
+      }
+    },
+    {
       "name": "יאיר אללוף",
       "total": 1206,
       "matchPoints": 286,
@@ -326742,2343 +329079,6 @@
           "קולומביה",
           "טורקיה",
           "מקסיקו"
-        ]
-      }
-    },
-    {
-      "name": "ליאור רוזן",
-      "total": 1191,
-      "matchPoints": 279,
-      "openPoints": 342,
-      "bonusPoints": 570,
-      "exact": 10,
-      "partial": 33,
-      "gd": 7,
-      "openHits": 36,
-      "openResolved": 55,
-      "prevPoints": 37,
-      "pointsChange": 0,
-      "prevRank": 91,
-      "rankChange": 0,
-      "matches": [
-        {
-          "matchId": 1,
-          "row": 12,
-          "homePick": "2",
-          "awayPick": "0",
-          "points": 10,
-          "exact": 1,
-          "partial": 0,
-          "gd": 0,
-          "label": "בול"
-        },
-        {
-          "matchId": 2,
-          "row": 13,
-          "homePick": "1",
-          "awayPick": "1",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 3,
-          "row": 14,
-          "homePick": "1",
-          "awayPick": "1",
-          "points": 10,
-          "exact": 1,
-          "partial": 0,
-          "gd": 0,
-          "label": "בול"
-        },
-        {
-          "matchId": 4,
-          "row": 15,
-          "homePick": "1",
-          "awayPick": "0",
-          "points": 10,
-          "exact": 1,
-          "partial": 0,
-          "gd": 0,
-          "label": "בול"
-        },
-        {
-          "matchId": 5,
-          "row": 16,
-          "homePick": "1",
-          "awayPick": "1",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 6,
-          "row": 17,
-          "homePick": "1",
-          "awayPick": "2",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 7,
-          "row": 22,
-          "homePick": "1",
-          "awayPick": "2",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 8,
-          "row": 23,
-          "homePick": "0",
-          "awayPick": "2",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 9,
-          "row": 24,
-          "homePick": "1",
-          "awayPick": "1",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 10,
-          "row": 25,
-          "homePick": "3",
-          "awayPick": "0",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 11,
-          "row": 26,
-          "homePick": "0",
-          "awayPick": "1",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 12,
-          "row": 27,
-          "homePick": "2",
-          "awayPick": "0",
-          "points": 7,
-          "exact": 0,
-          "partial": 1,
-          "gd": 1,
-          "label": "כיוון + הפרש"
-        },
-        {
-          "matchId": 13,
-          "row": 32,
-          "homePick": "2",
-          "awayPick": "1",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 14,
-          "row": 33,
-          "homePick": "0",
-          "awayPick": "2",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 15,
-          "row": 34,
-          "homePick": "0",
-          "awayPick": "1",
-          "points": 10,
-          "exact": 1,
-          "partial": 0,
-          "gd": 0,
-          "label": "בול"
-        },
-        {
-          "matchId": 16,
-          "row": 35,
-          "homePick": "4",
-          "awayPick": "1",
-          "points": 7,
-          "exact": 0,
-          "partial": 1,
-          "gd": 1,
-          "label": "כיוון + הפרש"
-        },
-        {
-          "matchId": 17,
-          "row": 36,
-          "homePick": "0",
-          "awayPick": "2",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 18,
-          "row": 37,
-          "homePick": "2",
-          "awayPick": "0",
-          "points": 7,
-          "exact": 0,
-          "partial": 1,
-          "gd": 1,
-          "label": "כיוון + הפרש"
-        },
-        {
-          "matchId": 19,
-          "row": 42,
-          "homePick": "2",
-          "awayPick": "1",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 20,
-          "row": 43,
-          "homePick": "0",
-          "awayPick": "3",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 21,
-          "row": 44,
-          "homePick": "2",
-          "awayPick": "0",
-          "points": 10,
-          "exact": 1,
-          "partial": 0,
-          "gd": 0,
-          "label": "בול"
-        },
-        {
-          "matchId": 22,
-          "row": 45,
-          "homePick": "1",
-          "awayPick": "0",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 23,
-          "row": 46,
-          "homePick": "2",
-          "awayPick": "2",
-          "points": 7,
-          "exact": 0,
-          "partial": 1,
-          "gd": 1,
-          "label": "כיוון + הפרש"
-        },
-        {
-          "matchId": 24,
-          "row": 47,
-          "homePick": "2",
-          "awayPick": "0",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 25,
-          "row": 52,
-          "homePick": "4",
-          "awayPick": "0",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 26,
-          "row": 53,
-          "homePick": "0",
-          "awayPick": "3",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 27,
-          "row": 54,
-          "homePick": "2",
-          "awayPick": "0",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 28,
-          "row": 55,
-          "homePick": "3",
-          "awayPick": "0",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 29,
-          "row": 56,
-          "homePick": "1",
-          "awayPick": "1",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 30,
-          "row": 57,
-          "homePick": "0",
-          "awayPick": "1",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 31,
-          "row": 62,
-          "homePick": "3",
-          "awayPick": "2",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 32,
-          "row": 63,
-          "homePick": "0",
-          "awayPick": "1",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 33,
-          "row": 64,
-          "homePick": "2",
-          "awayPick": "0",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 34,
-          "row": 65,
-          "homePick": "1",
-          "awayPick": "2",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 35,
-          "row": 66,
-          "homePick": "0",
-          "awayPick": "2",
-          "points": 7,
-          "exact": 0,
-          "partial": 1,
-          "gd": 1,
-          "label": "כיוון + הפרש"
-        },
-        {
-          "matchId": 36,
-          "row": 67,
-          "homePick": "1",
-          "awayPick": "0",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 37,
-          "row": 72,
-          "homePick": "3",
-          "awayPick": "1",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 38,
-          "row": 73,
-          "homePick": "1",
-          "awayPick": "0",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 39,
-          "row": 74,
-          "homePick": "2",
-          "awayPick": "0",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 40,
-          "row": 75,
-          "homePick": "0",
-          "awayPick": "3",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 41,
-          "row": 76,
-          "homePick": "2",
-          "awayPick": "0",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 42,
-          "row": 77,
-          "homePick": "0",
-          "awayPick": "4",
-          "points": 7,
-          "exact": 0,
-          "partial": 1,
-          "gd": 1,
-          "label": "כיוון + הפרש"
-        },
-        {
-          "matchId": 43,
-          "row": 82,
-          "homePick": "4",
-          "awayPick": "0",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 44,
-          "row": 83,
-          "homePick": "1",
-          "awayPick": "2",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 45,
-          "row": 84,
-          "homePick": "4",
-          "awayPick": "0",
-          "points": 10,
-          "exact": 1,
-          "partial": 0,
-          "gd": 0,
-          "label": "בול"
-        },
-        {
-          "matchId": 46,
-          "row": 85,
-          "homePick": "3",
-          "awayPick": "0",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 47,
-          "row": 86,
-          "homePick": "0",
-          "awayPick": "2",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 48,
-          "row": 87,
-          "homePick": "1",
-          "awayPick": "1",
-          "points": 7,
-          "exact": 0,
-          "partial": 1,
-          "gd": 1,
-          "label": "כיוון + הפרש"
-        },
-        {
-          "matchId": 49,
-          "row": 92,
-          "homePick": "3",
-          "awayPick": "1",
-          "points": 10,
-          "exact": 1,
-          "partial": 0,
-          "gd": 0,
-          "label": "בול"
-        },
-        {
-          "matchId": 50,
-          "row": 93,
-          "homePick": "0",
-          "awayPick": "4",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 51,
-          "row": 94,
-          "homePick": "3",
-          "awayPick": "0",
-          "points": 10,
-          "exact": 1,
-          "partial": 0,
-          "gd": 0,
-          "label": "בול"
-        },
-        {
-          "matchId": 52,
-          "row": 95,
-          "homePick": "4",
-          "awayPick": "0",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 53,
-          "row": 96,
-          "homePick": "1",
-          "awayPick": "1",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 54,
-          "row": 97,
-          "homePick": "2",
-          "awayPick": "2",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 55,
-          "row": 102,
-          "homePick": "2",
-          "awayPick": "1",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 56,
-          "row": 103,
-          "homePick": "4",
-          "awayPick": "1",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 57,
-          "row": 104,
-          "homePick": "2",
-          "awayPick": "0",
-          "points": 10,
-          "exact": 1,
-          "partial": 0,
-          "gd": 0,
-          "label": "בול"
-        },
-        {
-          "matchId": 58,
-          "row": 105,
-          "homePick": "0",
-          "awayPick": "2",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 59,
-          "row": 106,
-          "homePick": "0",
-          "awayPick": "1",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 60,
-          "row": 107,
-          "homePick": "0",
-          "awayPick": "5",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 61,
-          "row": 112,
-          "homePick": "3",
-          "awayPick": "0",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 62,
-          "row": 113,
-          "homePick": "0",
-          "awayPick": "3",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 63,
-          "row": 114,
-          "homePick": "3",
-          "awayPick": "0",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 64,
-          "row": 115,
-          "homePick": "3",
-          "awayPick": "1",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 65,
-          "row": 116,
-          "homePick": "1",
-          "awayPick": "3",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 66,
-          "row": 117,
-          "homePick": "1",
-          "awayPick": "0",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 67,
-          "row": 122,
-          "homePick": "3",
-          "awayPick": "2",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 68,
-          "row": 123,
-          "homePick": "1",
-          "awayPick": "1",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 69,
-          "row": 124,
-          "homePick": "2",
-          "awayPick": "0",
-          "points": 0,
-          "exact": 0,
-          "partial": 0,
-          "gd": 0,
-          "label": "פספוס"
-        },
-        {
-          "matchId": 70,
-          "row": 125,
-          "homePick": "1",
-          "awayPick": "3",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        },
-        {
-          "matchId": 71,
-          "row": 126,
-          "homePick": "2",
-          "awayPick": "1",
-          "points": 10,
-          "exact": 1,
-          "partial": 0,
-          "gd": 0,
-          "label": "בול"
-        },
-        {
-          "matchId": 72,
-          "row": 127,
-          "homePick": "0",
-          "awayPick": "4",
-          "points": 5,
-          "exact": 0,
-          "partial": 1,
-          "gd": 0,
-          "label": "כיוון"
-        }
-      ],
-      "open": [
-        {
-          "qId": 1,
-          "prediction": "מקסיקו",
-          "points": 2,
-          "label": "פגיעה"
-        },
-        {
-          "qId": 2,
-          "prediction": "רגל ימין",
-          "points": 2,
-          "label": "פגיעה"
-        },
-        {
-          "qId": 3,
-          "prediction": "זריקת חוץ",
-          "points": 3,
-          "label": "פגיעה"
-        },
-        {
-          "qId": 4,
-          "prediction": "רגל ימין",
-          "points": 5,
-          "label": "פגיעה"
-        },
-        {
-          "qId": 5,
-          "prediction": "ב | מס' השערים שיובקעו: 11-15",
-          "points": 10,
-          "label": " + מספר(10)"
-        },
-        {
-          "qId": 6,
-          "prediction": "ט | מס' השערים שיובקעו: 21-25",
-          "points": 10,
-          "label": "פגיעה בנבחרת/בית(10)"
-        },
-        {
-          "qId": 7,
-          "prediction": "ספרד | מס' השערים שתבקיע: 6-10",
-          "points": 10,
-          "label": " + מספר(10)"
-        },
-        {
-          "qId": 8,
-          "prediction": "ירדן | מס' השערים שתספוג: 11-15",
-          "points": 10,
-          "label": " + מספר(10)"
-        },
-        {
-          "qId": 9,
-          "prediction": "קורסאו | מס' השערים שתבקיע: 0",
-          "points": 10,
-          "label": " + פגיעה במספר(10)"
-        },
-        {
-          "qId": 10,
-          "prediction": "ספרד | מס' השערים שתספוג: 0",
-          "points": 20,
-          "label": "פגיעה בנבחרת(10) + פגיעה במספר(10)",
-          "teamPick": "ספרד",
-          "numberHit": true
-        },
-        {
-          "qId": 11,
-          "prediction": "דרום קוריאה | מס' תוצאות תיקו: 2",
-          "points": 0,
-          "label": "פספוס"
-        },
-        {
-          "qId": 12,
-          "prediction": "11-13",
-          "points": 0,
-          "label": "פספוס"
-        },
-        {
-          "qId": 13,
-          "prediction": "אלג'יריה | מס' הכרטיסים שתספוג: 2",
-          "points": 10,
-          "label": " + מספר(10)"
-        },
-        {
-          "qId": 14,
-          "prediction": "11-12",
-          "points": 0,
-          "label": "pispus"
-        },
-        {
-          "qId": 15,
-          "prediction": "נורווגיה - האלאנד | מס' השערים שיכבוש: 4",
-          "points": 0,
-          "label": "פספוס"
-        },
-        {
-          "qId": 16,
-          "prediction": "ברזיל + מס' הפנדלים שיישרקו: 2",
-          "points": 10,
-          "label": "pgia"
-        },
-        {
-          "qId": 17,
-          "prediction": "האיטי + מס' הפנדלים שיישרקו: 2",
-          "points": 10,
-          "label": "pgia"
-        },
-        {
-          "qId": 18,
-          "prediction": "13-14",
-          "points": 0,
-          "label": "pispus"
-        },
-        {
-          "qId": 19,
-          "prediction": "אמבפה (צרפת)",
-          "points": 0,
-          "label": "פספוס"
-        },
-        {
-          "qId": 20,
-          "prediction": "אירופה",
-          "points": 0,
-          "label": "פספוס"
-        },
-        {
-          "qId": 21,
-          "prediction": "לא",
-          "points": 0,
-          "label": "פספוס"
-        },
-        {
-          "qId": 22,
-          "prediction": "קיין (אנגליה)",
-          "points": 10,
-          "label": "פגיעה"
-        },
-        {
-          "qId": 23,
-          "prediction": "אפריקה",
-          "points": 0,
-          "label": "פספוס"
-        },
-        {
-          "qId": 24,
-          "prediction": "כן",
-          "points": 10,
-          "label": "פגיעה"
-        },
-        {
-          "qId": 25,
-          "prediction": "קיין (אנגליה)",
-          "points": 0,
-          "label": "פספוס"
-        },
-        {
-          "qId": 26,
-          "prediction": "אירופה",
-          "points": 0,
-          "label": "פספוס"
-        },
-        {
-          "qId": 27,
-          "prediction": "כן",
-          "points": 10,
-          "label": "פגיעה"
-        },
-        {
-          "qId": 28,
-          "prediction": "לא",
-          "points": 10,
-          "label": "פגיעה"
-        },
-        {
-          "qId": 29,
-          "prediction": "אמבפה (צרפת)",
-          "points": 10,
-          "label": "פגיעה"
-        },
-        {
-          "qId": 30,
-          "prediction": "אירופה",
-          "points": 10,
-          "label": "פגיעה"
-        },
-        {
-          "qId": 31,
-          "prediction": "לא",
-          "points": 0,
-          "label": "פספוס"
-        },
-        {
-          "qId": 32,
-          "prediction": "רונאלדו (פורטוגל)",
-          "points": 0,
-          "label": "פספוס"
-        },
-        {
-          "qId": 33,
-          "prediction": "אירופה",
-          "points": 0,
-          "label": "פספוס"
-        },
-        {
-          "qId": 34,
-          "prediction": "דרום אמריקה",
-          "points": 10,
-          "label": "פגיעה"
-        },
-        {
-          "qId": 35,
-          "prediction": "לא",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 36,
-          "prediction": "לא",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 37,
-          "prediction": "4",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 38,
-          "prediction": "5",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 39,
-          "prediction": "לא",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 40,
-          "prediction": "כן",
-          "points": 10,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 41,
-          "prediction": "כן",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 42,
-          "prediction": "דקות 3-4",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 43,
-          "prediction": "דקות 94-95",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 44,
-          "prediction": "כן",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 45,
-          "prediction": "כן",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 46,
-          "prediction": "לא",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 47,
-          "prediction": "3",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 48,
-          "prediction": "5",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 49,
-          "prediction": "לא",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 50,
-          "prediction": "כן",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 51,
-          "prediction": "כן",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 52,
-          "prediction": "דקות 5-6",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 53,
-          "prediction": "דקות 90-91",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 54,
-          "prediction": "כן",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 55,
-          "prediction": "כן",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 56,
-          "prediction": "לא",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 57,
-          "prediction": "3",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 58,
-          "prediction": "5",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 59,
-          "prediction": "כן",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 60,
-          "prediction": "כן",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 61,
-          "prediction": "כן",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 62,
-          "prediction": "דקות 5-6",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 63,
-          "prediction": "דקות 92-93",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 64,
-          "prediction": "כן",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 65,
-          "prediction": "כן",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 66,
-          "prediction": "לא",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 67,
-          "prediction": "3",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 68,
-          "prediction": "4",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 69,
-          "prediction": "כן",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 70,
-          "prediction": "לא",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 71,
-          "prediction": "לא",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 72,
-          "prediction": "אחרי דקה 20",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 73,
-          "prediction": "דקות 90-91",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 74,
-          "prediction": "כן",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 75,
-          "prediction": "נורווגיה - האלאנד | מס' השערים שיבקיע",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 76,
-          "prediction": "פורטוגל -  פרננדש | מס' השערים שיבשל",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 77,
-          "prediction": "פורטוגל + מס' הפנדלים שיישרקו: 3-4",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 78,
-          "prediction": "קורסאו + מס' הפנדלים שיישרקו: פחות מ- 3 פנדלים",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 79,
-          "prediction": "צרפת + מס' השערים שתבקיע: 21-25",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 80,
-          "prediction": "7",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 81,
-          "prediction": "5",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 82,
-          "prediction": "2",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 83,
-          "prediction": "5",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 84,
-          "prediction": "3",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 85,
-          "prediction": "לא יותר מ- 10 שערים",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 86,
-          "prediction": "2-2",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 87,
-          "prediction": "1-1",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 88,
-          "prediction": "0-2",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 89,
-          "prediction": "6",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 90,
-          "prediction": "3",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 91,
-          "prediction": "2",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 92,
-          "prediction": "2",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 93,
-          "prediction": "12",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 94,
-          "prediction": "3",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 95,
-          "prediction": "5",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 96,
-          "prediction": "דקות 3-4",
-          "points": 0,
-          "label": "פספוס"
-        },
-        {
-          "qId": 97,
-          "prediction": "דקות 94-95",
-          "points": 0,
-          "label": "פספוס"
-        },
-        {
-          "qId": 98,
-          "prediction": "דקות 1-15",
-          "points": 10,
-          "label": "פגיעה"
-        },
-        {
-          "qId": 99,
-          "prediction": "דקות 76-90",
-          "points": 0,
-          "label": "פספוס"
-        },
-        {
-          "qId": 100,
-          "prediction": "1",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 101,
-          "prediction": "2",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 102,
-          "prediction": "ספרד",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 103,
-          "prediction": "לא",
-          "points": 10,
-          "label": "pgia"
-        },
-        {
-          "qId": 104,
-          "prediction": "כן",
-          "points": 10,
-          "label": "פגיעה"
-        },
-        {
-          "qId": 105,
-          "prediction": "לא",
-          "points": 10,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 106,
-          "prediction": "כן",
-          "points": 10,
-          "label": "פגיעה"
-        },
-        {
-          "qId": 107,
-          "prediction": "כן",
-          "points": 10,
-          "label": "פגיעה"
-        },
-        {
-          "qId": 108,
-          "prediction": "כן",
-          "points": 10,
-          "label": "פגיעה"
-        },
-        {
-          "qId": 109,
-          "prediction": "כן",
-          "points": 10,
-          "label": "פגיעה"
-        },
-        {
-          "qId": 110,
-          "prediction": "כן",
-          "points": 10,
-          "label": "פגיעה"
-        },
-        {
-          "qId": 111,
-          "prediction": "כן",
-          "points": 10,
-          "label": "פגיעה"
-        },
-        {
-          "qId": 112,
-          "prediction": "לא",
-          "points": 0,
-          "label": "פספוס"
-        },
-        {
-          "qId": 113,
-          "prediction": "כן",
-          "points": 10,
-          "label": "פגיעה"
-        },
-        {
-          "qId": 114,
-          "prediction": "לא",
-          "points": 0,
-          "label": "פספוס"
-        },
-        {
-          "qId": 115,
-          "prediction": "כן",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 116,
-          "prediction": "לא",
-          "points": 0,
-          "label": "פספוס"
-        },
-        {
-          "qId": 117,
-          "prediction": "לא",
-          "points": 0,
-          "label": "פספוס"
-        },
-        {
-          "qId": 118,
-          "prediction": "כן",
-          "points": 10,
-          "label": "פגיעה"
-        },
-        {
-          "qId": 119,
-          "prediction": "כן",
-          "points": 10,
-          "label": "פגיעה"
-        },
-        {
-          "qId": 120,
-          "prediction": "כן",
-          "points": 10,
-          "label": "פגיעה"
-        },
-        {
-          "qId": 121,
-          "prediction": "לא",
-          "points": 0,
-          "label": "פספוס"
-        },
-        {
-          "qId": 122,
-          "prediction": "כן",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 123,
-          "prediction": "כן",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 124,
-          "prediction": "כן",
-          "points": 10,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 125,
-          "prediction": "כן",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 126,
-          "prediction": "לא",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 127,
-          "prediction": "90 דקות",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 128,
-          "prediction": "3",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 129,
-          "prediction": "1-2",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 130,
-          "prediction": "0",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 131,
-          "prediction": "12",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 132,
-          "prediction": "כן",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 133,
-          "prediction": "מחצית 2",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 134,
-          "prediction": "לא",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 135,
-          "prediction": "כן",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 136,
-          "prediction": "כן",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 137,
-          "prediction": "כן",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 138,
-          "prediction": "לא",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 139,
-          "prediction": "לא",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 140,
-          "prediction": "כן",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 141,
-          "prediction": "כן",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 142,
-          "prediction": "לא",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 143,
-          "prediction": "לא",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 144,
-          "prediction": "נגיחה",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 145,
-          "prediction": "זריקת חוץ",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        },
-        {
-          "qId": 146,
-          "prediction": "רגל ימין",
-          "points": 0,
-          "label": "ממתין למקור מאומת"
-        }
-      ],
-      "bonuses": [
-        {
-          "kind": "top2",
-          "group": "A",
-          "firstPick": "מקסיקו",
-          "secondPick": "צ'כיה",
-          "firstPoints": 15,
-          "secondPoints": 0,
-          "firstStatus": "resolved",
-          "secondStatus": "resolved",
-          "points": 15,
-          "status": "resolved"
-        },
-        {
-          "kind": "top2",
-          "group": "B",
-          "firstPick": "בוסניה",
-          "secondPick": "קנדה",
-          "firstPoints": 7,
-          "secondPoints": 15,
-          "firstStatus": "resolved",
-          "secondStatus": "resolved",
-          "points": 22,
-          "status": "resolved"
-        },
-        {
-          "kind": "top2",
-          "group": "C",
-          "firstPick": "ברזיל",
-          "secondPick": "מרוקו",
-          "firstPoints": 15,
-          "secondPoints": 15,
-          "firstStatus": "resolved",
-          "secondStatus": "resolved",
-          "points": 30,
-          "status": "resolved"
-        },
-        {
-          "kind": "top2",
-          "group": "D",
-          "firstPick": "טורקיה",
-          "secondPick": "ארה\"ב",
-          "firstPoints": 0,
-          "secondPoints": 10,
-          "firstStatus": "resolved",
-          "secondStatus": "resolved",
-          "points": 10,
-          "status": "resolved"
-        },
-        {
-          "kind": "top2",
-          "group": "E",
-          "firstPick": "גרמניה",
-          "secondPick": "אקוואדור",
-          "firstPoints": 15,
-          "secondPoints": 7,
-          "firstStatus": "resolved",
-          "secondStatus": "resolved",
-          "points": 22,
-          "status": "resolved"
-        },
-        {
-          "kind": "top2",
-          "group": "F",
-          "firstPick": "הולנד",
-          "secondPick": "יפן",
-          "firstPoints": 15,
-          "secondPoints": 15,
-          "firstStatus": "resolved",
-          "secondStatus": "resolved",
-          "points": 30,
-          "status": "resolved"
-        },
-        {
-          "kind": "top2",
-          "group": "G",
-          "firstPick": "בלגיה",
-          "secondPick": "מצרים",
-          "firstPoints": 15,
-          "secondPoints": 15,
-          "firstStatus": "resolved",
-          "secondStatus": "resolved",
-          "points": 30,
-          "status": "resolved"
-        },
-        {
-          "kind": "top2",
-          "group": "H",
-          "firstPick": "ספרד",
-          "secondPick": "אורוגוואי",
-          "firstPoints": 15,
-          "secondPoints": 0,
-          "firstStatus": "resolved",
-          "secondStatus": "resolved",
-          "points": 15,
-          "status": "resolved"
-        },
-        {
-          "kind": "top2",
-          "group": "I",
-          "firstPick": "נורווגיה",
-          "secondPick": "צרפת",
-          "firstPoints": 10,
-          "secondPoints": 10,
-          "firstStatus": "resolved",
-          "secondStatus": "resolved",
-          "points": 20,
-          "status": "resolved"
-        },
-        {
-          "kind": "top2",
-          "group": "J",
-          "firstPick": "ארגנטינה",
-          "secondPick": "אוסטריה",
-          "firstPoints": 15,
-          "secondPoints": 15,
-          "firstStatus": "resolved",
-          "secondStatus": "resolved",
-          "points": 30,
-          "status": "resolved"
-        },
-        {
-          "kind": "top2",
-          "group": "K",
-          "firstPick": "פורטוגל",
-          "secondPick": "קולומביה",
-          "firstPoints": 10,
-          "secondPoints": 10,
-          "firstStatus": "resolved",
-          "secondStatus": "resolved",
-          "points": 20,
-          "status": "resolved"
-        },
-        {
-          "kind": "top2",
-          "group": "L",
-          "firstPick": "אנגליה",
-          "secondPick": "קרואטיה",
-          "firstPoints": 15,
-          "secondPoints": 15,
-          "firstStatus": "resolved",
-          "secondStatus": "resolved",
-          "points": 30,
-          "status": "resolved"
-        },
-        {
-          "kind": "bonus_all_advanced",
-          "points": 0,
-          "status": "resolved"
-        },
-        {
-          "kind": "bonus_all_position",
-          "points": 0,
-          "status": "resolved"
-        },
-        {
-          "kind": "third",
-          "group": "A",
-          "thirdPick": "דרום קוריאה",
-          "willAdvance": "כן",
-          "points": 10,
-          "status": "resolved",
-          "teamPoints": 10,
-          "teamStatus": "resolved",
-          "advPoints": 0,
-          "advStatus": "resolved"
-        },
-        {
-          "kind": "third",
-          "group": "B",
-          "thirdPick": "שווייץ",
-          "willAdvance": "כן",
-          "points": 11,
-          "status": "resolved",
-          "teamPoints": 7,
-          "teamStatus": "resolved",
-          "advPoints": 4,
-          "advStatus": "resolved"
-        },
-        {
-          "kind": "third",
-          "group": "C",
-          "thirdPick": "סקוטלנד",
-          "willAdvance": "לא",
-          "points": 14,
-          "status": "resolved",
-          "teamPoints": 10,
-          "teamStatus": "resolved",
-          "advPoints": 4,
-          "advStatus": "resolved"
-        },
-        {
-          "kind": "third",
-          "group": "D",
-          "thirdPick": "פרגוואי",
-          "willAdvance": "כן",
-          "points": 14,
-          "status": "resolved",
-          "teamPoints": 10,
-          "teamStatus": "resolved",
-          "advPoints": 4,
-          "advStatus": "resolved"
-        },
-        {
-          "kind": "third",
-          "group": "E",
-          "thirdPick": "חוף השנהב",
-          "willAdvance": "כן",
-          "points": 11,
-          "status": "resolved",
-          "teamPoints": 7,
-          "teamStatus": "resolved",
-          "advPoints": 4,
-          "advStatus": "resolved"
-        },
-        {
-          "kind": "third",
-          "group": "F",
-          "thirdPick": "שבדיה",
-          "willAdvance": "כן",
-          "points": 14,
-          "status": "resolved",
-          "teamPoints": 10,
-          "teamStatus": "resolved",
-          "advPoints": 4,
-          "advStatus": "resolved"
-        },
-        {
-          "kind": "third",
-          "group": "G",
-          "thirdPick": "איראן",
-          "willAdvance": "לא",
-          "points": 14,
-          "status": "resolved",
-          "teamPoints": 10,
-          "teamStatus": "resolved",
-          "advPoints": 4,
-          "advStatus": "resolved"
-        },
-        {
-          "kind": "third",
-          "group": "H",
-          "thirdPick": "ערב הסעודית",
-          "willAdvance": "כן",
-          "points": 0,
-          "status": "resolved",
-          "teamPoints": 0,
-          "teamStatus": "resolved",
-          "advPoints": 0,
-          "advStatus": "resolved"
-        },
-        {
-          "kind": "third",
-          "group": "I",
-          "thirdPick": "סנגל",
-          "willAdvance": "כן",
-          "points": 14,
-          "status": "resolved",
-          "teamPoints": 10,
-          "teamStatus": "resolved",
-          "advPoints": 4,
-          "advStatus": "resolved"
-        },
-        {
-          "kind": "third",
-          "group": "J",
-          "thirdPick": "אלג'יריה",
-          "willAdvance": "לא",
-          "points": 10,
-          "status": "resolved",
-          "teamPoints": 10,
-          "teamStatus": "resolved",
-          "advPoints": 0,
-          "advStatus": "resolved"
-        },
-        {
-          "kind": "third",
-          "group": "K",
-          "thirdPick": "קונגו",
-          "willAdvance": "לא",
-          "points": 10,
-          "status": "resolved",
-          "teamPoints": 10,
-          "teamStatus": "resolved",
-          "advPoints": 0,
-          "advStatus": "resolved"
-        },
-        {
-          "kind": "third",
-          "group": "L",
-          "thirdPick": "גאנה",
-          "willAdvance": "כן",
-          "points": 14,
-          "status": "resolved",
-          "teamPoints": 10,
-          "teamStatus": "resolved",
-          "advPoints": 4,
-          "advStatus": "resolved"
-        },
-        {
-          "kind": "bonus_third_all",
-          "points": 0,
-          "status": "resolved"
-        },
-        {
-          "kind": "group_directions",
-          "group": "A",
-          "points": 0,
-          "status": "resolved"
-        },
-        {
-          "kind": "group_directions",
-          "group": "B",
-          "points": 0,
-          "status": "resolved"
-        },
-        {
-          "kind": "group_directions",
-          "group": "C",
-          "points": 0,
-          "status": "resolved"
-        },
-        {
-          "kind": "group_directions",
-          "group": "D",
-          "points": 0,
-          "status": "resolved"
-        },
-        {
-          "kind": "group_directions",
-          "group": "E",
-          "points": 0,
-          "status": "resolved"
-        },
-        {
-          "kind": "group_directions",
-          "group": "F",
-          "points": 0,
-          "status": "resolved"
-        },
-        {
-          "kind": "group_directions",
-          "group": "G",
-          "points": 0,
-          "status": "resolved"
-        },
-        {
-          "kind": "group_directions",
-          "group": "H",
-          "points": 0,
-          "status": "resolved"
-        },
-        {
-          "kind": "group_directions",
-          "group": "I",
-          "points": 0,
-          "status": "resolved"
-        },
-        {
-          "kind": "group_directions",
-          "group": "J",
-          "points": 0,
-          "status": "resolved"
-        },
-        {
-          "kind": "group_directions",
-          "group": "K",
-          "points": 0,
-          "status": "resolved"
-        },
-        {
-          "kind": "group_directions",
-          "group": "L",
-          "points": 0,
-          "status": "resolved"
-        },
-        {
-          "kind": "r16advance",
-          "slot": 1,
-          "pick": "גרמניה",
-          "advanced": false,
-          "eliminated": true,
-          "points": 0,
-          "status": "resolved"
-        },
-        {
-          "kind": "r16advance",
-          "slot": 2,
-          "pick": "צרפת",
-          "advanced": true,
-          "eliminated": false,
-          "points": 20,
-          "status": "resolved"
-        },
-        {
-          "kind": "r16advance",
-          "slot": 3,
-          "pick": "ארה\"ב",
-          "advanced": true,
-          "eliminated": false,
-          "points": 20,
-          "status": "resolved"
-        },
-        {
-          "kind": "r16advance",
-          "slot": 4,
-          "pick": "הולנד",
-          "advanced": false,
-          "eliminated": true,
-          "points": 0,
-          "status": "resolved"
-        },
-        {
-          "kind": "r16advance",
-          "slot": 5,
-          "pick": "ארגנטינה",
-          "advanced": false,
-          "eliminated": false,
-          "points": 0,
-          "status": "pending"
-        },
-        {
-          "kind": "r16advance",
-          "slot": 6,
-          "pick": "פורטוגל",
-          "advanced": true,
-          "eliminated": false,
-          "points": 20,
-          "status": "resolved"
-        },
-        {
-          "kind": "r16advance",
-          "slot": 7,
-          "pick": "אנגליה",
-          "advanced": true,
-          "eliminated": false,
-          "points": 20,
-          "status": "resolved"
-        },
-        {
-          "kind": "r16advance",
-          "slot": 8,
-          "pick": "מקסיקו",
-          "advanced": true,
-          "eliminated": false,
-          "points": 20,
-          "status": "resolved"
-        },
-        {
-          "kind": "r16advance",
-          "slot": 9,
-          "pick": "ברזיל",
-          "advanced": true,
-          "eliminated": false,
-          "points": 20,
-          "status": "resolved"
-        },
-        {
-          "kind": "r16advance",
-          "slot": 10,
-          "pick": "טורקיה",
-          "advanced": false,
-          "eliminated": true,
-          "points": 0,
-          "status": "resolved"
-        },
-        {
-          "kind": "r16advance",
-          "slot": 11,
-          "pick": "בלגיה",
-          "advanced": true,
-          "eliminated": false,
-          "points": 20,
-          "status": "resolved"
-        },
-        {
-          "kind": "r16advance",
-          "slot": 12,
-          "pick": "קרואטיה",
-          "advanced": false,
-          "eliminated": true,
-          "points": 0,
-          "status": "resolved"
-        },
-        {
-          "kind": "r16advance",
-          "slot": 13,
-          "pick": "צ'כיה",
-          "advanced": false,
-          "eliminated": true,
-          "points": 0,
-          "status": "resolved"
-        },
-        {
-          "kind": "r16advance",
-          "slot": 14,
-          "pick": "אוסטריה",
-          "advanced": false,
-          "eliminated": true,
-          "points": 0,
-          "status": "resolved"
-        },
-        {
-          "kind": "r16advance",
-          "slot": 15,
-          "pick": "בוסניה",
-          "advanced": false,
-          "eliminated": true,
-          "points": 0,
-          "status": "resolved"
-        },
-        {
-          "kind": "r16advance",
-          "slot": 16,
-          "pick": "נורווגיה",
-          "advanced": true,
-          "eliminated": false,
-          "points": 20,
-          "status": "resolved"
-        },
-        {
-          "kind": "bonus_r16_all",
-          "points": 0,
-          "status": "pending"
-        }
-      ],
-      "rank": 91,
-      "bonusPicks": {
-        "top2": {
-          "A": {
-            "first": "מקסיקו",
-            "second": "צ'כיה"
-          },
-          "B": {
-            "first": "בוסניה",
-            "second": "קנדה"
-          },
-          "C": {
-            "first": "ברזיל",
-            "second": "מרוקו"
-          },
-          "D": {
-            "first": "טורקיה",
-            "second": "ארה\"ב"
-          },
-          "E": {
-            "first": "גרמניה",
-            "second": "אקוואדור"
-          },
-          "F": {
-            "first": "הולנד",
-            "second": "יפן"
-          },
-          "G": {
-            "first": "בלגיה",
-            "second": "מצרים"
-          },
-          "H": {
-            "first": "ספרד",
-            "second": "אורוגוואי"
-          },
-          "I": {
-            "first": "נורווגיה",
-            "second": "צרפת"
-          },
-          "J": {
-            "first": "ארגנטינה",
-            "second": "אוסטריה"
-          },
-          "K": {
-            "first": "פורטוגל",
-            "second": "קולומביה"
-          },
-          "L": {
-            "first": "אנגליה",
-            "second": "קרואטיה"
-          }
-        },
-        "third": {
-          "A": {
-            "team": "דרום קוריאה",
-            "willAdvance": "כן"
-          },
-          "B": {
-            "team": "שווייץ",
-            "willAdvance": "כן"
-          },
-          "C": {
-            "team": "סקוטלנד",
-            "willAdvance": "לא"
-          },
-          "D": {
-            "team": "פרגוואי",
-            "willAdvance": "כן"
-          },
-          "E": {
-            "team": "חוף השנהב",
-            "willAdvance": "כן"
-          },
-          "F": {
-            "team": "שבדיה",
-            "willAdvance": "כן"
-          },
-          "G": {
-            "team": "איראן",
-            "willAdvance": "לא"
-          },
-          "H": {
-            "team": "ערב הסעודית",
-            "willAdvance": "כן"
-          },
-          "I": {
-            "team": "סנגל",
-            "willAdvance": "כן"
-          },
-          "J": {
-            "team": "אלג'יריה",
-            "willAdvance": "לא"
-          },
-          "K": {
-            "team": "קונגו",
-            "willAdvance": "לא"
-          },
-          "L": {
-            "team": "גאנה",
-            "willAdvance": "כן"
-          }
-        },
-        "r16advance": [
-          "גרמניה",
-          "צרפת",
-          "ארה\"ב",
-          "הולנד",
-          "ארגנטינה",
-          "פורטוגל",
-          "אנגליה",
-          "מקסיקו",
-          "ברזיל",
-          "טורקיה",
-          "בלגיה",
-          "קרואטיה",
-          "צ'כיה",
-          "אוסטריה",
-          "בוסניה",
-          "נורווגיה"
         ]
       }
     },
