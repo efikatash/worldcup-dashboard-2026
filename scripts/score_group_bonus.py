@@ -242,6 +242,53 @@ def _score_r16_advancers(p, knockout, results=None):
     return entries
 
 
+def _score_qf_advancers(p, knockout):
+    """Score the 'רשימת הנבחרות שיעלו לרבע גמר' table (8 picks).
+
+    Each correctly-predicted quarter-finalist is worth 25 points; a +16 bonus is
+    awarded only if all 8 advanced.  A pick is confirmed NOT to reach the quarter
+    when the team lost its round-of-16 match (knockout.qfEliminated) or never
+    reached the round of 16 at all (not among knockout.r16advancers).  Otherwise
+    the pick stays pending.
+    """
+    picks = (p.get("bonusPicks") or {}).get("qfAdvance") or []
+    advancers = (knockout or {}).get("qfAdvancers") or []
+    eliminated = (knockout or {}).get("qfEliminated") or []
+    r16_reached = (knockout or {}).get("r16advancers") or []   # 16 round-of-16 teams
+    r16_field_known = bool((knockout or {}).get("r32decided"))
+    qf_decided = bool((knockout or {}).get("qfDecided"))
+    adv_norm = {_norm(t) for t in advancers if t}
+    elim_norm = {_norm(t) for t in eliminated if t}
+    reached_norm = {_norm(t) for t in r16_reached if t}
+
+    entries = []
+    correct = 0
+    for i, team in enumerate(picks):
+        tn = _norm(team) if team else None
+        advanced = tn in adv_norm if tn else False
+        lost_r16 = tn in elim_norm if tn else False
+        not_in_r16 = bool(r16_field_known and tn and tn not in reached_norm)
+        is_out = lost_r16 or not_in_r16
+        if advanced:
+            pts, status = 25, "resolved"
+            correct += 1
+        elif is_out or qf_decided:
+            pts, status = 0, "resolved"
+        else:
+            pts, status = 0, "pending"
+        entries.append({
+            "kind": "qfAdvance", "slot": i + 1, "pick": team,
+            "advanced": advanced, "eliminated": is_out, "points": pts, "status": status,
+        })
+    all_correct = (len(picks) == 8 and correct == 8)
+    entries.append({
+        "kind": "bonus_qf_all",
+        "points": 16 if all_correct else 0,
+        "status": "resolved" if qf_decided else "pending",
+    })
+    return entries
+
+
 def score_participant(p, results, group_matches=None, knockout=None):
     """Compute every bonus entry for one participant and return the flat
     p['bonuses'] list (each entry carries a 'points' field that recompute sums)."""
@@ -315,6 +362,9 @@ def score_participant(p, results, group_matches=None, knockout=None):
 
     # --- רשימת הנבחרות שיעלו לשמינית גמר (16 מעפילות, 20 לכל אחת + בונוס 16) ---
     bonuses.extend(_score_r16_advancers(p, knockout, results))
+
+    # --- רשימת הנבחרות שיעלו לרבע גמר (8 מעפילות, 25 לכל אחת + בונוס 16) ---
+    bonuses.extend(_score_qf_advancers(p, knockout))
 
     return bonuses
 

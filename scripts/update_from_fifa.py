@@ -545,6 +545,12 @@ def recompute(data: Dict[str, Any]) -> None:
             _knorm = lambda s: (str(s).strip() if s is not None else None)
         md_adv = (knockout.get("matchdayAdvancers") or {}).get(cur_md) or []
         adv_norm = {_knorm(t) for t in md_adv if t}
+        # The current stage decides which advance-bonus kind counts for the day's
+        # delta (r16advance for the round of 16, qfAdvance for the quarters, ...).
+        stage_kind = {
+            "r16": "r16advance", "qf": "qfAdvance",
+            "sf": "sfAdvance", "final": "finalAdvance",
+        }.get(str(knockout.get("currentStage") or "r16"), "r16advance")
         md_open_ids = {
             int(q["id"]) for q in data.get("openQuestions", [])
             if q.get("id") is not None and str(q.get("resolvedMatchday") or "") == str(cur_md)
@@ -553,7 +559,7 @@ def recompute(data: Dict[str, Any]) -> None:
         for p in data.get("participants", []):
             r16_change = sum(
                 int(b.get("points") or 0) for b in p.get("bonuses", [])
-                if b.get("kind") == "r16advance" and _knorm(b.get("pick")) in adv_norm
+                if b.get("kind") == stage_kind and _knorm(b.get("pick")) in adv_norm
             )
             open_change = sum(
                 int(o.get("points") or 0) for o in p.get("open", [])
