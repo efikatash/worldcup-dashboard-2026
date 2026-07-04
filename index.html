@@ -393,7 +393,7 @@ a{color:#93c5fd;text-decoration:none} a:hover{text-decoration:underline}
 <script src="js/yossiCup/yossiCupRender.js?v=20260624b"></script>
 <script>
 const $=id=>document.getElementById(id);
-let DATA=null;let selected=null;let activeView='leaderboard';let detailMode='matches';let lastDataStamp='';let countdown=30;let fetchOk=false;let clientLiveOk=false;let clientLiveLast='';let clientLiveCount=0;
+let DATA=null;let selected=null;let activeView='leaderboard';let detailMode='matches';let lastDataStamp='';let countdown=180;let fetchOk=false;let clientLiveOk=false;let clientLiveLast='';let clientLiveCount=0;
 function esc(v){return String(v??'').replace(/[&<>"']/g,s=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));}
 function norm(v){return String(v??'').toLowerCase().replace(/["'׳״\s\-]+/g,'').trim();}
 function fmt(v){return (v===null||v===undefined||v==='')?'—':v}
@@ -843,7 +843,7 @@ function setupResizableLayout(){
   }
 }
 function initEvents(){setupResizableLayout();document.querySelectorAll('.tabBtn').forEach(b=>b.onclick=()=>showView(b.dataset.view));$('search').addEventListener('input',()=>{const q=norm($('search').value);if(q){const exact=DATA.participants.find(p=>norm(p.name)===q);const matches=DATA.participants.filter(p=>norm(p.name).includes(q));if(exact)selected=exact.name;else if(matches.length===1)selected=matches[0].name;}renderCurrent();});$('sort').onchange=renderCurrent;$('statusFilter').onchange=renderCurrent;$('clearBtn').onclick=()=>{$('search').value='';renderCurrent();};$('downloadCsvBtn').onclick=downloadCsv;$('refreshBtn').onclick=()=>loadData(true);$('copyPlayerLinkBtn').onclick=copyPlayerLink;$('findMeBtn').onclick=()=>{$('search').focus();showToast('כתוב את השם שלך ובחר את השורה')};$('showMatchDetails').onclick=()=>{detailMode='matches';$('matchDetailsWrap').style.display='block';$('openDetailsWrap').style.display='none';$('bonusDetailsWrap').style.display='none';$('showMatchDetails').classList.add('active');$('showOpenDetails').classList.remove('active');$('showBonusDetails').classList.remove('active')};$('showOpenDetails').onclick=()=>{detailMode='open';$('matchDetailsWrap').style.display='none';$('openDetailsWrap').style.display='block';$('bonusDetailsWrap').style.display='none';$('showOpenDetails').classList.add('active');$('showMatchDetails').classList.remove('active');$('showBonusDetails').classList.remove('active')};$('showBonusDetails').onclick=()=>{detailMode='bonus';$('matchDetailsWrap').style.display='none';$('openDetailsWrap').style.display='none';$('bonusDetailsWrap').style.display='block';$('showBonusDetails').classList.add('active');$('showMatchDetails').classList.remove('active');$('showOpenDetails').classList.remove('active')};}
-initEvents();loadData();setInterval(()=>{countdown--;if(countdown<=0){countdown=30;loadData(false)}else updateRefreshStatus();},1000);
+initEvents();loadData();setInterval(()=>{countdown--;if(countdown<=0){countdown=180;loadData(false)}else updateRefreshStatus();},1000);
 </script>
 <!-- GoatCounter analytics (privacy-friendly, no cookies) -->
 <script>
