@@ -29,7 +29,7 @@
     "baselineScoreR2": 389,
     "baselineScoreR3": 672,
     "baselineScoreR4": 1109,
-    "baselineScoreR5": 1209
+    "baselineScoreR5": 1409
   },
   {
     "id": "seed-004",
@@ -95,7 +95,7 @@
     "baselineScoreR2": 421,
     "baselineScoreR3": 696,
     "baselineScoreR4": 1096,
-    "baselineScoreR5": 1196
+    "baselineScoreR5": 1396
   },
   {
     "id": "seed-010",
@@ -269,7 +269,7 @@
     "baselineScoreR2": 385,
     "baselineScoreR3": 653,
     "baselineScoreR4": 1057,
-    "baselineScoreR5": 1157
+    "baselineScoreR5": 1337
   },
   {
     "id": "seed-027",
@@ -330,7 +330,7 @@
     "baselineScoreR2": 402,
     "baselineScoreR3": 621,
     "baselineScoreR4": 973,
-    "baselineScoreR5": 1073
+    "baselineScoreR5": 1243
   },
   {
     "id": "seed-033",
@@ -352,7 +352,7 @@
     "baselineScoreR2": 384,
     "baselineScoreR3": 647,
     "baselineScoreR4": 1026,
-    "baselineScoreR5": 1146
+    "baselineScoreR5": 1346
   },
   {
     "id": "seed-035",
@@ -384,7 +384,7 @@
     "baselineScoreR2": 369,
     "baselineScoreR3": 628,
     "baselineScoreR4": 1076,
-    "baselineScoreR5": 1176
+    "baselineScoreR5": 1396
   },
   {
     "id": "seed-038",
@@ -396,7 +396,7 @@
     "baselineScoreR2": 409,
     "baselineScoreR3": 656,
     "baselineScoreR4": 1094,
-    "baselineScoreR5": 1194
+    "baselineScoreR5": 1364
   },
   {
     "id": "seed-039",
@@ -434,7 +434,7 @@
     "baselineScoreR2": 403,
     "baselineScoreR3": 644,
     "baselineScoreR4": 1070,
-    "baselineScoreR5": 1170
+    "baselineScoreR5": 1390
   },
   {
     "id": "seed-043",
@@ -520,7 +520,7 @@
     "baselineScoreR2": 364,
     "baselineScoreR3": 612,
     "baselineScoreR4": 980,
-    "baselineScoreR5": 1080
+    "baselineScoreR5": 1340
   },
   {
     "id": "seed-052",
@@ -540,7 +540,7 @@
     "baselineScoreR2": 378,
     "baselineScoreR3": 650,
     "baselineScoreR4": 1031,
-    "baselineScoreR5": 1131
+    "baselineScoreR5": 1331
   },
   {
     "id": "seed-054",
@@ -552,7 +552,7 @@
     "baselineScoreR2": 376,
     "baselineScoreR3": 639,
     "baselineScoreR4": 1037,
-    "baselineScoreR5": 1137
+    "baselineScoreR5": 1367
   },
   {
     "id": "seed-055",
@@ -625,7 +625,7 @@
     "baselineScoreR2": 361,
     "baselineScoreR3": 613,
     "baselineScoreR4": 1060,
-    "baselineScoreR5": 1180
+    "baselineScoreR5": 1330
   },
   {
     "id": "seed-062",
@@ -1035,7 +1035,7 @@
     "baselineScoreR2": 383,
     "baselineScoreR3": 673,
     "baselineScoreR4": 1058,
-    "baselineScoreR5": 1138
+    "baselineScoreR5": 1338
   },
   {
     "id": "seed-105",
@@ -1690,7 +1690,7 @@
     "eliminatedRound": 1,
     "baselineScoreR3": 574,
     "baselineScoreR4": 948,
-    "baselineScoreR5": 1048
+    "baselineScoreR5": 1238
   },
   {
     "id": "seed-176",
@@ -1953,7 +1953,7 @@
     "baselineScoreR2": 341,
     "baselineScoreR3": 601,
     "baselineScoreR4": 989,
-    "baselineScoreR5": 1089
+    "baselineScoreR5": 1269
   },
   {
     "id": "seed-206",
@@ -2265,7 +2265,7 @@
     "eliminatedRound": 1,
     "baselineScoreR3": 577,
     "baselineScoreR4": 1011,
-    "baselineScoreR5": 1091
+    "baselineScoreR5": 1271
   },
   {
     "id": "seed-242",
