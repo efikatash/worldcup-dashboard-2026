@@ -652,21 +652,30 @@ function renderLeaderboard(){const body=$('leaderBody'), cards=$('leaderCards');
 function distRow(label,count,pct,color){return `<div class="distRow"><span class="distLabel">${label}</span><div class="track"><div class="fill ${color}Fill" style="width:${Math.max(2,pct)}%"></div></div><span class="distPct">${pct}%<small>(${count})</small></span></div>`;}
 function knockoutNorm(s){s=String(s||'').replace(/"/g,'').trim();return ({'שוויץ':'שווייץ','שוייץ':'שווייץ'})[s]||s;}
 function renderKnockoutBars(box){
-  const ko=DATA.knockout||{};const matches=ko.r32matches||[];
-  if(!matches.length){box.innerHTML='<div class="empty">אין משחקים קרובים כרגע</div>';return;}
-  const adv=new Set((ko.r16advancers||[]).map(knockoutNorm));
-  const elim=new Set((ko.r16eliminated||[]).map(knockoutNorm));
-  const isPlayed=m=>adv.has(knockoutNorm(m.home))||adv.has(knockoutNorm(m.away))||elim.has(knockoutNorm(m.home))||elim.has(knockoutNorm(m.away));
-  const upcoming=matches.filter(m=>!isPlayed(m));
-  if(!upcoming.length){box.innerHTML='<div class="empty">אין משחקים קרובים כרגע</div>';return;}
-  const cnt={};DATA.participants.forEach(p=>{(((p.bonusPicks||{}).r16advance)||[]).forEach(t=>{const k=knockoutNorm(t);cnt[k]=(cnt[k]||0)+1;});});
+  const ko=DATA.knockout||{};
+  // Stages in tournament order; show the first one that still has unplayed matches.
+  const stages=[
+    {matches:ko.r32matches||[], pickKey:'r16advance', adv:ko.r16advancers||[], elim:ko.r16eliminated||[], q:'מי תעלה לשמינית?', tag:'1/16'},
+    {matches:ko.r16matches||[], pickKey:'qfAdvance',  adv:ko.qfAdvancers||[],  elim:ko.qfEliminated||[],  q:'מי תעלה לרבע?',    tag:'שמינית'},
+    {matches:ko.qfMatches||[],  pickKey:'sfAdvance',  adv:ko.sfAdvancers||[],  elim:ko.sfEliminated||[],  q:'מי תעלה לחצי?',    tag:'רבע'},
+  ];
+  let chosen=null,upcoming=[];
+  for(const st of stages){
+    if(!st.matches.length)continue;
+    const advS=new Set(st.adv.map(knockoutNorm)),elimS=new Set(st.elim.map(knockoutNorm));
+    const played=m=>advS.has(knockoutNorm(m.home))||advS.has(knockoutNorm(m.away))||elimS.has(knockoutNorm(m.home))||elimS.has(knockoutNorm(m.away));
+    const up=st.matches.filter(m=>!played(m));
+    if(up.length){chosen=st;upcoming=up;break;}
+  }
+  if(!chosen){box.innerHTML='<div class="empty">אין משחקים קרובים כרגע</div>';return;}
+  const cnt={};DATA.participants.forEach(p=>{(((p.bonusPicks||{})[chosen.pickKey])||[]).forEach(t=>{const k=knockoutNorm(t);cnt[k]=(cnt[k]||0)+1;});});
   upcoming.forEach(m=>{
     const a=knockoutNorm(m.home),b=knockoutNorm(m.away);
     const ca=cnt[a]||0,cb=cnt[b]||0,tot=ca+cb;const pct=n=>tot?Math.round(n/tot*100):0;
     const when=m.date?esc(String(m.date)):'';
     const card=document.createElement('div');card.className='distCard';
-    card.innerHTML=`<div class="distHead"><span class="distTeams">${esc(m.home)} – ${esc(m.away)}</span><span class="distWhen">1/16 · ${when}</span></div>`
-      +`<div class="distScores" style="margin:0 0 8px"><span class="distScoresLbl">מי תעלה לשמינית? · לפי ניחושי העולות</span></div>`
+    card.innerHTML=`<div class="distHead"><span class="distTeams">${esc(m.home)} – ${esc(m.away)}</span><span class="distWhen">${chosen.tag} · ${when}</span></div>`
+      +`<div class="distScores" style="margin:0 0 8px"><span class="distScoresLbl">${chosen.q} · לפי ניחושי העולות</span></div>`
       +distRow(esc(m.home),ca,pct(ca),'green')
       +distRow(esc(m.away),cb,pct(cb),'blue');
     box.appendChild(card);
