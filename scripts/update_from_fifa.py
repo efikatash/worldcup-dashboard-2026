@@ -549,6 +549,7 @@ def recompute(data: Dict[str, Any]) -> None:
             int(q["id"]) for q in data.get("openQuestions", [])
             if q.get("id") is not None and str(q.get("resolvedMatchday") or "") == str(cur_md)
         }
+        meta_bl = data.setdefault("meta", {}).setdefault("roundBaseline", {})
         for p in data.get("participants", []):
             r16_change = sum(
                 int(b.get("points") or 0) for b in p.get("bonuses", [])
@@ -559,6 +560,11 @@ def recompute(data: Dict[str, Any]) -> None:
                 if int(o.get("qId") or 0) in md_open_ids
             )
             p["pointsChange"] = r16_change + open_change
+            # Keep roundBaseline in sync (= total at start of the current
+            # matchday) so total == baseline + pointsChange stays a valid
+            # invariant even under the matchday-based delta.
+            meta_bl[p.get("name") or ""] = {"pts": int(p.get("total") or 0) - p["pointsChange"]}
+        data["meta"]["roundBaselineLabel"] = f"תחילת יום המשחקים הנוכחי בטורניר ({cur_md}) — לפי לוח גביע העולם"
     elif round_baseline:
         for p in data.get("participants", []):
             b = round_baseline.get(p.get("name") or "")
