@@ -89,6 +89,10 @@
     var live = (typeof DATA !== 'undefined' ? DATA : (window.DATA || null));
     var liveParts = (live && live.participants) || [];
 
+    // Always refresh participants from DOM so baseline updates take effect without hard-reload
+    var freshParts = _parse('ycParticipants');
+    if (freshParts && freshParts.length) _participants = freshParts;
+
     // Build per-seed baseline for rounds > 1
     var baselineBySeed = {};
     if (_activeRound >= 2) {
