@@ -637,11 +637,18 @@ function renderKpis(){
       status==='espn_final_pending_fifa' || source.includes('verified');
   };
   const played=(DATA.matches||[]).filter(isFinalMatch).length;
+  // Knockout matches played = one advancer per completed match, summed across stages.
+  const ko=DATA.knockout||{};
+  const koPlayed=((ko.r16advancers||[]).length)+((ko.qfAdvancers||[]).length)+((ko.sfAdvancers||[]).length)+((ko.finalAdvancers||[]).length);
   $('kpiPlayers').textContent=m.participantsCount??DATA.participants.length;
-  $('kpiMatches').textContent=String(played);
+  $('kpiMatches').textContent=String(played+koPlayed);
   $('kpiOpen').textContent=m.resolvedOpenQuestions??DATA.openQuestions.filter(isResolved).length;
   $('kpiLeader').textContent=DATA.participants[0]?.name||'—';
-  $('kpiUpdated').textContent=m.generatedAt||'—';
+  // Show the timestamp as DD/MM/YYYY HH:MM and force LTR so RTL doesn't flip it.
+  const _ts=String(m.generatedAt||'').match(/(\d{4})-(\d{2})-(\d{2})\s+(\d{1,2}:\d{2})/);
+  const kU=$('kpiUpdated');
+  kU.textContent=_ts?`${_ts[3]}/${_ts[2]}/${_ts[1]} ${_ts[4]}`:(m.generatedAt||'—');
+  kU.style.direction='ltr'; kU.style.display='inline-block';
   $('rulesText').textContent=m.scoringRules||'';
   $('policyText').textContent=m.dataPolicy||'';
 }
