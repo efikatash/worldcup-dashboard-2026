@@ -58,6 +58,8 @@ var r4BracketPath = path.join(root, 'data', 'yossiCup', 'round4Bracket.json');
 var r4Bracket   = fs.existsSync(r4BracketPath) ? JSON.parse(fs.readFileSync(r4BracketPath, 'utf8')) : null;
 var r5BracketPath = path.join(root, 'data', 'yossiCup', 'round5Bracket.json');
 var r5Bracket   = fs.existsSync(r5BracketPath) ? JSON.parse(fs.readFileSync(r5BracketPath, 'utf8')) : null;
+var r6BracketPath = path.join(root, 'data', 'yossiCup', 'round6Bracket.json');
+var r6Bracket   = fs.existsSync(r6BracketPath) ? JSON.parse(fs.readFileSync(r6BracketPath, 'utf8')) : null;
 var liveDataPath = path.join(root, 'data.json');
 var liveData    = fs.existsSync(liveDataPath) ? JSON.parse(fs.readFileSync(liveDataPath, 'utf8')) : null;
 
@@ -87,6 +89,11 @@ if (r4Bracket) {
 // Add/update R5 bracket block
 if (r5Bracket) {
   html = addBlockAfter(html, 'ycBracketR4', 'ycBracketR5', compact(r5Bracket));
+}
+
+// Add/update R6 bracket block
+if (r6Bracket) {
+  html = addBlockAfter(html, 'ycBracketR5', 'ycBracketR6', compact(r6Bracket));
 }
 
 fs.writeFileSync(htmlPath, html, 'utf8');

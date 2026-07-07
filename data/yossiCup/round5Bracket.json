@@ -10,13 +10,13 @@
     "playerBSeed": 241,
     "playerBName": "ליאור רוזן",
     "isBye": false,
-    "status": "pending",
-    "winnerSeed": null,
-    "winnerName": null,
-    "winnerReason": null,
+    "status": "completed",
+    "winnerSeed": 65,
+    "winnerName": "מור גרשגורן",
+    "winnerReason": "official",
     "tieBreakerUsed": null,
-    "roundScoreA": null,
-    "roundScoreB": null
+    "roundScoreA": 170,
+    "roundScoreB": 165
   },
   {
     "id": "r5-m002",
@@ -29,13 +29,13 @@
     "playerBSeed": 9,
     "playerBName": "אייל חסון",
     "isBye": false,
-    "status": "pending",
-    "winnerSeed": null,
-    "winnerName": null,
-    "winnerReason": null,
+    "status": "completed",
+    "winnerSeed": 9,
+    "winnerName": "אייל חסון",
+    "winnerReason": "official",
     "tieBreakerUsed": null,
-    "roundScoreA": null,
-    "roundScoreB": null
+    "roundScoreA": 150,
+    "roundScoreB": 155
   },
   {
     "id": "r5-m003",
@@ -48,13 +48,13 @@
     "playerBSeed": 84,
     "playerBName": "אורי קיין",
     "isBye": false,
-    "status": "pending",
-    "winnerSeed": null,
-    "winnerName": null,
-    "winnerReason": null,
+    "status": "completed",
+    "winnerSeed": 84,
+    "winnerName": "אורי קיין",
+    "winnerReason": "official",
     "tieBreakerUsed": null,
-    "roundScoreA": null,
-    "roundScoreB": null
+    "roundScoreA": 140,
+    "roundScoreB": 160
   },
   {
     "id": "r5-m004",
@@ -67,13 +67,13 @@
     "playerBSeed": 53,
     "playerBName": "שלום שאער",
     "isBye": false,
-    "status": "pending",
-    "winnerSeed": null,
-    "winnerName": null,
-    "winnerReason": null,
+    "status": "completed",
+    "winnerSeed": 53,
+    "winnerName": "שלום שאער",
+    "winnerReason": "official",
     "tieBreakerUsed": null,
-    "roundScoreA": null,
-    "roundScoreB": null
+    "roundScoreA": 165,
+    "roundScoreB": 215
   },
   {
     "id": "r5-m005",
@@ -86,13 +86,13 @@
     "playerBSeed": 79,
     "playerBName": "יואב יוקלסון",
     "isBye": false,
-    "status": "pending",
-    "winnerSeed": null,
-    "winnerName": null,
-    "winnerReason": null,
+    "status": "completed",
+    "winnerSeed": 79,
+    "winnerName": "יואב יוקלסון",
+    "winnerReason": "official",
     "tieBreakerUsed": null,
-    "roundScoreA": null,
-    "roundScoreB": null
+    "roundScoreA": 190,
+    "roundScoreB": 205
   },
   {
     "id": "r5-m006",
@@ -105,13 +105,13 @@
     "playerBSeed": 42,
     "playerBName": "רועי איזן",
     "isBye": false,
-    "status": "pending",
-    "winnerSeed": null,
-    "winnerName": null,
-    "winnerReason": null,
+    "status": "completed",
+    "winnerSeed": 7,
+    "winnerName": "שמוליק תמיר",
+    "winnerReason": "official",
     "tieBreakerUsed": null,
-    "roundScoreA": null,
-    "roundScoreB": null
+    "roundScoreA": 175,
+    "roundScoreB": 170
   },
   {
     "id": "r5-m007",
@@ -124,13 +124,13 @@
     "playerBSeed": 51,
     "playerBName": "עדי אדיוס",
     "isBye": false,
-    "status": "pending",
-    "winnerSeed": null,
-    "winnerName": null,
-    "winnerReason": null,
+    "status": "completed",
+    "winnerSeed": 51,
+    "winnerName": "עדי אדיוס",
+    "winnerReason": "official",
     "tieBreakerUsed": null,
-    "roundScoreA": null,
-    "roundScoreB": null
+    "roundScoreA": 180,
+    "roundScoreB": 185
   },
   {
     "id": "r5-m008",
@@ -143,12 +143,12 @@
     "playerBSeed": 54,
     "playerBName": "תומר אמינפור",
     "isBye": false,
-    "status": "pending",
-    "winnerSeed": null,
-    "winnerName": null,
-    "winnerReason": null,
+    "status": "completed",
+    "winnerSeed": 54,
+    "winnerName": "תומר אמינפור",
+    "winnerReason": "official",
     "tieBreakerUsed": null,
-    "roundScoreA": null,
-    "roundScoreB": null
+    "roundScoreA": 170,
+    "roundScoreB": 175
   }
 ]
