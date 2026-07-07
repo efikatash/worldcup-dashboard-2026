@@ -357,6 +357,8 @@ a{color:#93c5fd;text-decoration:none} a:hover{text-decoration:underline}
             <div class="tableWrap" style="border:none;max-height:none;overflow:visible"><table><thead><tr><th>#</th><th>ניחוש נבחרת</th><th>עלתה?</th><th>נק'</th></tr></thead><tbody id="bonusR16Details"></tbody></table></div>
             <div style="padding:7px 12px;font-weight:700;font-size:12px;color:var(--muted);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-transform:uppercase;letter-spacing:.5px">8 העולות לרבע הגמר (שמינית ← רבע)</div>
             <div class="tableWrap" style="border:none;max-height:none;overflow:visible"><table><thead><tr><th>#</th><th>ניחוש נבחרת</th><th>עלתה?</th><th>נק'</th></tr></thead><tbody id="bonusQFDetails"></tbody></table></div>
+            <div style="padding:7px 12px;font-weight:700;font-size:12px;color:var(--muted);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-transform:uppercase;letter-spacing:.5px">4 העולות לחצי הגמר (רבע ← חצי)</div>
+            <div class="tableWrap" style="border:none;max-height:none;overflow:visible"><table><thead><tr><th>#</th><th>ניחוש נבחרת</th><th>עלתה?</th><th>נק'</th></tr></thead><tbody id="bonusSFDetails"></tbody></table></div>
             <div id="bonusGlobalRows" style="padding:10px 14px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)"></div>
           </div>
         </section>
@@ -801,11 +803,35 @@ function renderBonusDetails(p){
     sumTr.innerHTML=`<td></td><td style="color:var(--muted)">סה"כ (${qfHits}/8 עלו · 25 לכל אחת)</td><td></td><td class="score"><b style="color:#34d399">${qfSum}</b></td>`;
     tQ.appendChild(sumTr);
   }
+  // --- 4 העולות לחצי הגמר ---
+  const tS=$('bonusSFDetails');
+  if(tS){
+    tS.innerHTML='';
+    const sf=bonuses.filter(b=>b.kind==='sfAdvance').sort((a,b)=>(a.slot||0)-(b.slot||0));
+    sf.forEach(b=>{
+      const advCell=b.advanced
+        ? '<span style="color:#34d399;font-weight:700">כן</span>'
+        : (b.status==='resolved'?'<span style="color:#f87171">לא</span>':'<span class="pill gray" style="font-size:11px">ממתין</span>');
+      const tr=document.createElement('tr');
+      tr.innerHTML=`<td>${b.slot||''}</td>`
+        +`<td>${b.pick?`<span${b.advanced?' style="color:#34d399;font-weight:700"':''}>${esc(b.pick)}</span>`:'<span style="color:var(--muted2)">—</span>'}</td>`
+        +`<td>${advCell}</td>`
+        +`<td>${ptsSpan(b.points,b.status)}</td>`;
+      tS.appendChild(tr);
+    });
+    const sfSum=sf.reduce((s,b)=>s+(b.points||0),0);
+    const sfHits=sf.filter(b=>b.advanced).length;
+    const sumTr=document.createElement('tr');
+    sumTr.style.borderTop='1px solid var(--line)';
+    sumTr.innerHTML=`<td></td><td style="color:var(--muted)">סה"כ (${sfHits}/4 עלו · 30 לכל אחת)</td><td></td><td class="score"><b style="color:#34d399">${sfSum}</b></td>`;
+    tS.appendChild(sumTr);
+  }
   const bAA=bonuses.find(b=>b.kind==='bonus_all_advanced')||{};
   const bAP=bonuses.find(b=>b.kind==='bonus_all_position')||{};
   const bTA=bonuses.find(b=>b.kind==='bonus_third_all')||{};
   const bR16=bonuses.find(b=>b.kind==='bonus_r16_all')||{};
   const bQF=bonuses.find(b=>b.kind==='bonus_qf_all')||{};
+  const bSF=bonuses.find(b=>b.kind==='bonus_sf_all')||{};
   const dirs=bonuses.filter(b=>b.kind==='group_directions');
   const dirHits=dirs.filter(b=>(b.points||0)>0).map(b=>b.group);
   const dirPts=dirs.reduce((s,b)=>s+(b.points||0),0);
@@ -817,6 +843,7 @@ function renderBonusDetails(p){
     +bonusLine('מ-3 מדויק לכולם',bTA,6)
     +bonusLine('כל 16 העולות לשמינית',bR16,16)
     +bonusLine('כל 8 העולות לרבע',bQF,16)
+    +bonusLine('כל 4 העולות לחצי',bSF,8)
     +dirLine
     +'</div>';
 }
