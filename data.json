@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-12 12:01",
+    "generatedAt": "2026-07-12 12:21",
     "timezone": "Asia/Manila",
     "workbookName": "תוצאות משחקי היום הרביעי - 14.6.26.xlsx",
     "participantsCount": 242,
@@ -15,7 +15,7 @@
     "scoringRules": "משחקים: 10 נק׳ לתוצאה מדויקת, 5 לכיוון נכון, ועוד 2 אם גם הפרש השערים נכון. שאלות פתוחות נספרות כשהן מאומתות ממקור FIFA, מקור חיצוני אמין, או קובץ תוצאות מעודכן שסיפקת.",
     "dataPolicy": "הניחושים והניקוד נלקחים מקובץ התוצאות המעודכן שהועלה. תוצאות משחקים נשארות FIFA-only לפי הדרישה המקורית; שאלות פתוחות יכולות להיספר גם ממקור שאינו FIFA.",
     "dashboardVersion": "GitHub Auto FIFA/ESPN Final Fallback + ESPN Live",
-    "dashboardBuiltAt": "2026-07-12 12:01",
+    "dashboardBuiltAt": "2026-07-12 12:21",
     "completedMatches": 72,
     "liveMatches": 0,
     "openQuestionEngine": "enabled_step8_fast_track_only",
@@ -6601,7 +6601,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 1,
@@ -9072,7 +9072,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 2,
@@ -11543,7 +11543,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 3,
@@ -14014,7 +14014,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 4,
@@ -16485,7 +16485,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 5,
@@ -18956,7 +18956,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 6,
@@ -21427,7 +21427,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 7,
@@ -23898,7 +23898,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 8,
@@ -26369,7 +26369,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 9,
@@ -28840,7 +28840,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 10,
@@ -31311,7 +31311,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 10,
@@ -33782,7 +33782,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 11,
@@ -36253,7 +36253,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 12,
@@ -38724,7 +38724,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 13,
@@ -41195,7 +41195,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 13,
@@ -43666,7 +43666,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 14,
@@ -46137,7 +46137,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 15,
@@ -48608,7 +48608,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 16,
@@ -51079,7 +51079,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 17,
@@ -53550,7 +53550,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 17,
@@ -56021,7 +56021,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 18,
@@ -58492,7 +58492,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 18,
@@ -60963,7 +60963,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 19,
@@ -63434,7 +63434,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 20,
@@ -65905,7 +65905,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 21,
@@ -68376,7 +68376,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 22,
@@ -70847,7 +70847,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 23,
@@ -73318,7 +73318,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 23,
@@ -75789,7 +75789,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 24,
@@ -78260,7 +78260,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 24,
@@ -80731,7 +80731,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 25,
@@ -83202,7 +83202,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 25,
@@ -85673,7 +85673,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 25,
@@ -88144,7 +88144,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 26,
@@ -90615,7 +90615,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 27,
@@ -93086,7 +93086,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 28,
@@ -95557,7 +95557,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 28,
@@ -98028,7 +98028,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 29,
@@ -100499,7 +100499,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 30,
@@ -102970,7 +102970,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 31,
@@ -105441,7 +105441,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 32,
@@ -107912,7 +107912,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 33,
@@ -110383,7 +110383,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 34,
@@ -112854,7 +112854,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 35,
@@ -115325,7 +115325,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 36,
@@ -117796,7 +117796,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 37,
@@ -120267,7 +120267,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 38,
@@ -122738,7 +122738,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 39,
@@ -125209,7 +125209,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 40,
@@ -127680,7 +127680,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 41,
@@ -130151,7 +130151,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 42,
@@ -132622,7 +132622,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 42,
@@ -135093,7 +135093,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 43,
@@ -137564,7 +137564,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 44,
@@ -140035,7 +140035,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 45,
@@ -142506,7 +142506,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 46,
@@ -144977,7 +144977,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 47,
@@ -147448,7 +147448,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 48,
@@ -149919,7 +149919,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 48,
@@ -152390,7 +152390,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 49,
@@ -154861,7 +154861,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 50,
@@ -157332,7 +157332,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 51,
@@ -159803,7 +159803,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 52,
@@ -162274,7 +162274,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 53,
@@ -164745,7 +164745,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 54,
@@ -167216,7 +167216,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 54,
@@ -169687,7 +169687,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 55,
@@ -172158,7 +172158,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 56,
@@ -174629,7 +174629,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 56,
@@ -177100,7 +177100,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 57,
@@ -179571,7 +179571,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 57,
@@ -182042,7 +182042,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 58,
@@ -184513,7 +184513,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 59,
@@ -186984,7 +186984,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 60,
@@ -189455,7 +189455,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 61,
@@ -191926,7 +191926,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 62,
@@ -194397,7 +194397,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 63,
@@ -196868,7 +196868,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 64,
@@ -199339,7 +199339,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 64,
@@ -201810,7 +201810,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 65,
@@ -204281,7 +204281,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 66,
@@ -206752,7 +206752,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 66,
@@ -209223,7 +209223,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 67,
@@ -211694,7 +211694,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 67,
@@ -214165,7 +214165,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 68,
@@ -216636,7 +216636,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 69,
@@ -219107,7 +219107,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 69,
@@ -221578,7 +221578,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 70,
@@ -224049,7 +224049,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 71,
@@ -226520,7 +226520,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 72,
@@ -228991,7 +228991,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 73,
@@ -231462,7 +231462,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 74,
@@ -233933,7 +233933,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 74,
@@ -236404,7 +236404,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 75,
@@ -238875,7 +238875,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 76,
@@ -241346,7 +241346,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 76,
@@ -243817,7 +243817,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 76,
@@ -246288,7 +246288,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 77,
@@ -248759,7 +248759,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 78,
@@ -251230,7 +251230,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 79,
@@ -253701,7 +253701,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 80,
@@ -256172,7 +256172,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 81,
@@ -258643,7 +258643,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 81,
@@ -261114,7 +261114,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 81,
@@ -263585,7 +263585,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 82,
@@ -266056,7 +266056,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 83,
@@ -268527,7 +268527,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 83,
@@ -270998,7 +270998,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 84,
@@ -273469,7 +273469,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 84,
@@ -275940,7 +275940,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 84,
@@ -278411,7 +278411,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 85,
@@ -280882,7 +280882,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 85,
@@ -283353,7 +283353,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 85,
@@ -285824,7 +285824,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 86,
@@ -288295,7 +288295,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 87,
@@ -290766,7 +290766,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 87,
@@ -293237,7 +293237,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 87,
@@ -295708,7 +295708,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 88,
@@ -298179,7 +298179,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 88,
@@ -300650,7 +300650,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 89,
@@ -303121,7 +303121,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 89,
@@ -305592,7 +305592,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 89,
@@ -308063,7 +308063,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 90,
@@ -310534,7 +310534,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 91,
@@ -313005,7 +313005,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 91,
@@ -315476,7 +315476,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 92,
@@ -317947,7 +317947,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 93,
@@ -320418,7 +320418,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 93,
@@ -322889,7 +322889,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 93,
@@ -325360,7 +325360,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 94,
@@ -327831,7 +327831,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 94,
@@ -330302,7 +330302,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 95,
@@ -332773,7 +332773,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 96,
@@ -335244,7 +335244,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 97,
@@ -337715,7 +337715,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 97,
@@ -340186,7 +340186,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 98,
@@ -342657,7 +342657,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 99,
@@ -345128,7 +345128,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 99,
@@ -347599,7 +347599,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 99,
@@ -350070,7 +350070,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 99,
@@ -352541,7 +352541,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 99,
@@ -355012,7 +355012,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 99,
@@ -357483,7 +357483,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 100,
@@ -359954,7 +359954,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 100,
@@ -362425,7 +362425,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 101,
@@ -364896,7 +364896,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 101,
@@ -367367,7 +367367,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 102,
@@ -369838,7 +369838,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 103,
@@ -372309,7 +372309,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 104,
@@ -374780,7 +374780,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 104,
@@ -377251,7 +377251,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 105,
@@ -379722,7 +379722,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 106,
@@ -382193,7 +382193,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 106,
@@ -384664,7 +384664,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 107,
@@ -387135,7 +387135,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 108,
@@ -389606,7 +389606,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 109,
@@ -392077,7 +392077,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 110,
@@ -394548,7 +394548,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 110,
@@ -397019,7 +397019,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 111,
@@ -399490,7 +399490,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 112,
@@ -401961,7 +401961,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 113,
@@ -404432,7 +404432,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 114,
@@ -406903,7 +406903,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 115,
@@ -409374,7 +409374,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 116,
@@ -411845,7 +411845,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 116,
@@ -414316,7 +414316,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 117,
@@ -416787,7 +416787,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 118,
@@ -419258,7 +419258,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 119,
@@ -421729,7 +421729,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 119,
@@ -424200,7 +424200,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 120,
@@ -426671,7 +426671,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 121,
@@ -429142,7 +429142,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 121,
@@ -431613,7 +431613,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 122,
@@ -434084,7 +434084,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 123,
@@ -436555,7 +436555,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 123,
@@ -439026,7 +439026,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 123,
@@ -441497,7 +441497,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 124,
@@ -443968,7 +443968,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 124,
@@ -446439,7 +446439,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 125,
@@ -448910,7 +448910,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 126,
@@ -451381,7 +451381,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 126,
@@ -453852,7 +453852,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 127,
@@ -456323,7 +456323,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 128,
@@ -458794,7 +458794,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 128,
@@ -461265,7 +461265,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 128,
@@ -463736,7 +463736,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 129,
@@ -466207,7 +466207,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 130,
@@ -468678,7 +468678,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 130,
@@ -471149,7 +471149,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 131,
@@ -473620,7 +473620,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 131,
@@ -476091,7 +476091,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 132,
@@ -478562,7 +478562,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 132,
@@ -481033,7 +481033,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 133,
@@ -483504,7 +483504,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 134,
@@ -485975,7 +485975,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 135,
@@ -488446,7 +488446,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 136,
@@ -490917,7 +490917,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 137,
@@ -493388,7 +493388,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 138,
@@ -495859,7 +495859,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 8,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 139,
@@ -498330,7 +498330,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 140,
@@ -500801,7 +500801,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 141,
@@ -503272,7 +503272,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 142,
@@ -505743,7 +505743,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 143,
@@ -508214,7 +508214,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 144,
@@ -510685,7 +510685,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 145,
@@ -513156,7 +513156,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 146,
@@ -515627,7 +515627,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 147,
@@ -518098,7 +518098,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 148,
@@ -520569,7 +520569,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 148,
@@ -523040,7 +523040,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 148,
@@ -525511,7 +525511,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 149,
@@ -527982,7 +527982,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 149,
@@ -530453,7 +530453,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 150,
@@ -532924,7 +532924,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 151,
@@ -535395,7 +535395,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 152,
@@ -537866,7 +537866,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 153,
@@ -540337,7 +540337,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 154,
@@ -542808,7 +542808,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 155,
@@ -545279,7 +545279,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 156,
@@ -547750,7 +547750,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 157,
@@ -550221,7 +550221,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 157,
@@ -552692,7 +552692,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 158,
@@ -555163,7 +555163,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 159,
@@ -557634,7 +557634,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 160,
@@ -560105,7 +560105,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 161,
@@ -562578,7 +562578,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 162,
@@ -565049,7 +565049,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 163,
@@ -567520,7 +567520,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 164,
@@ -569991,7 +569991,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 165,
@@ -572462,7 +572462,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 166,
@@ -574933,7 +574933,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 167,
@@ -577404,7 +577404,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 167,
@@ -579875,7 +579875,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 168,
@@ -582346,7 +582346,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 169,
@@ -584817,7 +584817,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 170,
@@ -587288,7 +587288,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 171,
@@ -589759,7 +589759,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 172,
@@ -592230,7 +592230,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 173,
@@ -594701,7 +594701,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 174,
@@ -597172,7 +597172,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 175,
@@ -599643,7 +599643,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 176,
@@ -602114,7 +602114,7 @@
         {
           "kind": "bonus_sf_all",
           "points": 0,
-          "status": "pending"
+          "status": "resolved"
         }
       ],
       "rank": 177,
@@ -602778,6 +602778,6 @@
       "נורווגיה",
       "שווייץ"
     ],
-    "sfDecided": false
+    "sfDecided": true
   }
 }
