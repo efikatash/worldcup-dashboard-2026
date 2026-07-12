@@ -68,12 +68,12 @@
     "seed": 7,
     "name": "שמוליק תמיר",
     "initialScore": 165,
-    "status": "active",
+    "status": "eliminated",
     "autoQualifiedRound2": true,
     "baselineScoreR2": 378,
     "baselineScoreR3": 618,
     "baselineScoreR5": 1336,
-    "baselineScoreR6": 1511
+    "eliminatedRound": 6
   },
   {
     "id": "seed-008",
@@ -97,7 +97,8 @@
     "baselineScoreR3": 696,
     "baselineScoreR4": 1096,
     "baselineScoreR5": 1396,
-    "baselineScoreR6": 1551
+    "baselineScoreR6": 1551,
+    "baselineScoreR7": 1739
   },
   {
     "id": "seed-010",
@@ -516,13 +517,13 @@
     "seed": 51,
     "name": "עדי אדיוס",
     "initialScore": 151,
-    "status": "active",
+    "status": "eliminated",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 364,
     "baselineScoreR3": 612,
     "baselineScoreR4": 980,
     "baselineScoreR5": 1340,
-    "baselineScoreR6": 1525
+    "eliminatedRound": 6
   },
   {
     "id": "seed-052",
@@ -543,7 +544,8 @@
     "baselineScoreR3": 650,
     "baselineScoreR4": 1031,
     "baselineScoreR5": 1331,
-    "baselineScoreR6": 1546
+    "baselineScoreR6": 1546,
+    "baselineScoreR7": 1686
   },
   {
     "id": "seed-054",
@@ -556,7 +558,8 @@
     "baselineScoreR3": 639,
     "baselineScoreR4": 1037,
     "baselineScoreR5": 1367,
-    "baselineScoreR6": 1542
+    "baselineScoreR6": 1542,
+    "baselineScoreR7": 1682
   },
   {
     "id": "seed-055",
@@ -665,12 +668,12 @@
     "seed": 65,
     "name": "מור גרשגורן",
     "initialScore": 147,
-    "status": "active",
+    "status": "eliminated",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 381,
     "baselineScoreR3": 663,
     "baselineScoreR5": 1407,
-    "baselineScoreR6": 1577
+    "eliminatedRound": 6
   },
   {
     "id": "seed-066",
@@ -802,7 +805,8 @@
     "baselineScoreR2": 359,
     "baselineScoreR3": 636,
     "baselineScoreR5": 1333,
-    "baselineScoreR6": 1538
+    "baselineScoreR6": 1538,
+    "baselineScoreR7": 1668
   },
   {
     "id": "seed-080",
@@ -846,12 +850,12 @@
     "seed": 84,
     "name": "אורי קיין",
     "initialScore": 142,
-    "status": "active",
+    "status": "eliminated",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 355,
     "baselineScoreR3": 595,
     "baselineScoreR5": 1337,
-    "baselineScoreR6": 1497
+    "eliminatedRound": 6
   },
   {
     "id": "seed-085",

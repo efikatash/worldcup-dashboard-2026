@@ -1,0 +1,40 @@
+[
+  {
+    "id": "r7-m001",
+    "round": 7,
+    "matchNumber": 1,
+    "bracketSlotA": 1,
+    "bracketSlotB": 2,
+    "playerASeed": 9,
+    "playerAName": "אייל חסון",
+    "playerBSeed": 53,
+    "playerBName": "שלום שאער",
+    "isBye": false,
+    "status": "pending",
+    "winnerSeed": null,
+    "winnerName": null,
+    "winnerReason": null,
+    "tieBreakerUsed": null,
+    "roundScoreA": null,
+    "roundScoreB": null
+  },
+  {
+    "id": "r7-m002",
+    "round": 7,
+    "matchNumber": 2,
+    "bracketSlotA": 3,
+    "bracketSlotB": 4,
+    "playerASeed": 79,
+    "playerAName": "יואב יוקלסון",
+    "playerBSeed": 54,
+    "playerBName": "תומר אמינפור",
+    "isBye": false,
+    "status": "pending",
+    "winnerSeed": null,
+    "winnerName": null,
+    "winnerReason": null,
+    "tieBreakerUsed": null,
+    "roundScoreA": null,
+    "roundScoreB": null
+  }
+]
