@@ -359,6 +359,8 @@ a{color:#93c5fd;text-decoration:none} a:hover{text-decoration:underline}
             <div class="tableWrap" style="border:none;max-height:none;overflow:visible"><table><thead><tr><th>#</th><th>ניחוש נבחרת</th><th>עלתה?</th><th>נק'</th></tr></thead><tbody id="bonusQFDetails"></tbody></table></div>
             <div style="padding:7px 12px;font-weight:700;font-size:12px;color:var(--muted);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-transform:uppercase;letter-spacing:.5px">4 העולות לחצי הגמר (רבע ← חצי)</div>
             <div class="tableWrap" style="border:none;max-height:none;overflow:visible"><table><thead><tr><th>#</th><th>ניחוש נבחרת</th><th>עלתה?</th><th>נק'</th></tr></thead><tbody id="bonusSFDetails"></tbody></table></div>
+            <div style="padding:7px 12px;font-weight:700;font-size:12px;color:var(--muted);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-transform:uppercase;letter-spacing:.5px">2 העולות לגמר (חצי ← גמר)</div>
+            <div class="tableWrap" style="border:none;max-height:none;overflow:visible"><table><thead><tr><th>#</th><th>ניחוש נבחרת</th><th>עלתה?</th><th>נק'</th></tr></thead><tbody id="bonusFinalDetails"></tbody></table></div>
             <div id="bonusGlobalRows" style="padding:10px 14px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)"></div>
           </div>
         </section>
@@ -828,6 +830,35 @@ function renderBonusDetails(p){
     sumTr.style.borderTop='1px solid var(--line)';
     sumTr.innerHTML=`<td></td><td style="color:var(--muted)">סה"כ (${sfHits}/4 עלו · 30 לכל אחת)</td><td></td><td class="score"><b style="color:#34d399">${sfSum}</b></td>`;
     tS.appendChild(sumTr);
+  }
+  // --- 2 העולות לגמר ---
+  const tF=$('bonusFinalDetails');
+  if(tF){
+    tF.innerHTML='';
+    let fin=bonuses.filter(b=>b.kind==='finalAdvance').sort((a,b)=>(a.slot||0)-(b.slot||0));
+    // Display-only fallback before the stage is scored: read the raw finalist picks.
+    if(!fin.length){
+      const picksF=((p.bonusPicks||{}).finalAdvance)||[];
+      fin=picksF.map((t,i)=>({slot:i+1,pick:t,advanced:false,status:'pending',points:0}));
+    }
+    fin.forEach(b=>{
+      const advCell=b.advanced
+        ? '<span style="color:#34d399;font-weight:700">כן</span>'
+        : (b.status==='resolved'?'<span style="color:#f87171">לא</span>':'<span class="pill gray" style="font-size:11px">ממתין</span>');
+      const tr=document.createElement('tr');
+      tr.innerHTML=`<td>${b.slot||''}</td>`
+        +`<td>${b.pick?`<span${b.advanced?' style="color:#34d399;font-weight:700"':''}>${esc(b.pick)}</span>`:'<span style="color:var(--muted2)">—</span>'}</td>`
+        +`<td>${advCell}</td>`
+        +`<td>${ptsSpan(b.points,b.status)}</td>`;
+      tF.appendChild(tr);
+    });
+    const finSum=fin.reduce((s,b)=>s+(b.points||0),0);
+    const finHits=fin.filter(b=>b.advanced).length;
+    const anyResolved=fin.some(b=>b.status==='resolved');
+    const sumTr=document.createElement('tr');
+    sumTr.style.borderTop='1px solid var(--line)';
+    sumTr.innerHTML=`<td></td><td style="color:var(--muted)">סה"כ (${finHits}/2 עלו${anyResolved?'':' · ממתין לחצי הגמר'})</td><td></td><td class="score"><b style="color:#34d399">${finSum}</b></td>`;
+    tF.appendChild(sumTr);
   }
   const bAA=bonuses.find(b=>b.kind==='bonus_all_advanced')||{};
   const bAP=bonuses.find(b=>b.kind==='bonus_all_position')||{};
