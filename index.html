@@ -669,6 +669,7 @@ function renderKnockoutBars(box){
     {matches:ko.r32matches||[], pickKey:'r16advance', adv:ko.r16advancers||[], elim:ko.r16eliminated||[], q:'מי תעלה לשמינית?', tag:'1/16'},
     {matches:ko.r16matches||[], pickKey:'qfAdvance',  adv:ko.qfAdvancers||[],  elim:ko.qfEliminated||[],  q:'מי תעלה לרבע?',    tag:'שמינית'},
     {matches:ko.qfMatches||[],  pickKey:'sfAdvance',  adv:ko.sfAdvancers||[],  elim:ko.sfEliminated||[],  q:'מי תעלה לחצי?',    tag:'רבע'},
+    {matches:ko.sfMatches||[],  pickKey:'finalAdvance', adv:ko.finalAdvancers||[], elim:ko.finalEliminated||[], q:'מי תעלה לגמר?', tag:'חצי'},
   ];
   let chosen=null,upcoming=[];
   for(const st of stages){
