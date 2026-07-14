@@ -335,6 +335,52 @@ def _score_sf_advancers(p, knockout):
     return entries
 
 
+def _score_final_advancers(p, knockout):
+    """Score the 'רשימת הנבחרות שיעלו לגמר' table (2 picks).
+
+    Each correctly-predicted finalist is worth 40 points; a +8 bonus if both
+    advanced.  A pick is confirmed out when the team lost its semi-final
+    (knockout.finalEliminated) or never reached the semi-final (not among
+    knockout.sfAdvancers, once sfDecided).
+    """
+    picks = (p.get("bonusPicks") or {}).get("finalAdvance") or []
+    advancers = (knockout or {}).get("finalAdvancers") or []
+    eliminated = (knockout or {}).get("finalEliminated") or []
+    sf_reached = (knockout or {}).get("sfAdvancers") or []
+    sf_field_known = bool((knockout or {}).get("sfDecided"))
+    final_decided = bool((knockout or {}).get("finalDecided"))
+    adv_norm = {_norm(t) for t in advancers if t}
+    elim_norm = {_norm(t) for t in eliminated if t}
+    reached_norm = {_norm(t) for t in sf_reached if t}
+
+    entries = []
+    correct = 0
+    for i, team in enumerate(picks):
+        tn = _norm(team) if team else None
+        advanced = tn in adv_norm if tn else False
+        lost_sf = tn in elim_norm if tn else False
+        not_in_sf = bool(sf_field_known and tn and tn not in reached_norm)
+        is_out = lost_sf or not_in_sf
+        if advanced:
+            pts, status = 40, "resolved"
+            correct += 1
+        elif is_out or final_decided:
+            pts, status = 0, "resolved"
+        else:
+            pts, status = 0, "pending"
+        entries.append({
+            "kind": "finalAdvance", "slot": i + 1, "pick": team,
+            "advanced": advanced, "eliminated": is_out, "points": pts, "status": status,
+        })
+    all_correct = (len(picks) == 2 and correct == 2)
+    entries.append({
+        "kind": "bonus_final_all",
+        "points": 8 if all_correct else 0,
+        "status": "resolved" if final_decided else "pending",
+    })
+    return entries
+
+
 def score_participant(p, results, group_matches=None, knockout=None):
     """Compute every bonus entry for one participant and return the flat
     p['bonuses'] list (each entry carries a 'points' field that recompute sums)."""
@@ -414,6 +460,9 @@ def score_participant(p, results, group_matches=None, knockout=None):
 
     # --- רשימת הנבחרות שיעלו לחצי גמר (4 מעפילות, 30 לכל אחת + בונוס 8) ---
     bonuses.extend(_score_sf_advancers(p, knockout))
+
+    # --- רשימת הנבחרות שיעלו לגמר (2 מעפילות, 40 לכל אחת + בונוס 8) ---
+    bonuses.extend(_score_final_advancers(p, knockout))
 
     return bonuses
 
