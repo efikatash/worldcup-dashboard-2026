@@ -866,6 +866,7 @@ function renderBonusDetails(p){
   const bR16=bonuses.find(b=>b.kind==='bonus_r16_all')||{};
   const bQF=bonuses.find(b=>b.kind==='bonus_qf_all')||{};
   const bSF=bonuses.find(b=>b.kind==='bonus_sf_all')||{};
+  const bFN=bonuses.find(b=>b.kind==='bonus_final_all')||{};
   const dirs=bonuses.filter(b=>b.kind==='group_directions');
   const dirHits=dirs.filter(b=>(b.points||0)>0).map(b=>b.group);
   const dirPts=dirs.reduce((s,b)=>s+(b.points||0),0);
@@ -878,6 +879,7 @@ function renderBonusDetails(p){
     +bonusLine('כל 16 העולות לשמינית',bR16,16)
     +bonusLine('כל 8 העולות לרבע',bQF,16)
     +bonusLine('כל 4 העולות לחצי',bSF,8)
+    +bonusLine('כל 2 העולות לגמר',bFN,8)
     +dirLine
     +'</div>';
 }
