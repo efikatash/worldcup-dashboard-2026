@@ -551,6 +551,26 @@ def recompute(data: Dict[str, Any]) -> None:
             "r16": "r16advance", "qf": "qfAdvance",
             "sf": "sfAdvance", "final": "finalAdvance",
         }.get(str(knockout.get("currentStage") or "r16"), "r16advance")
+        # The all-correct bonus for the stage (e.g. +8 for predicting both
+        # finalists) resolves on the matchday that completes the stage field.
+        # Attribute it to that day's delta so it shows in "שינוי נק'".
+        stage_meta = {
+            "r16":   ("bonus_r16_all", "r16advancers", "r32decided"),
+            "qf":    ("bonus_qf_all",  "qfAdvancers",  "qfDecided"),
+            "sf":    ("bonus_sf_all",  "sfAdvancers",  "sfDecided"),
+            "final": ("bonus_final_all", "finalAdvancers", "finalDecided"),
+        }.get(str(knockout.get("currentStage") or "r16"))
+        stage_all_kind = None
+        if stage_meta:
+            all_kind, adv_key, decided_key = stage_meta
+            stage_adv_norm = {_knorm(t) for t in (knockout.get(adv_key) or []) if t}
+            # Field completed on THIS matchday iff it is now decided and this
+            # matchday's advancers belong to (and helped close) the stage field.
+            field_closed_today = (
+                bool(knockout.get(decided_key)) and adv_norm and adv_norm <= stage_adv_norm
+            )
+            if field_closed_today:
+                stage_all_kind = all_kind
         md_open_ids = {
             int(q["id"]) for q in data.get("openQuestions", [])
             if q.get("id") is not None and str(q.get("resolvedMatchday") or "") == str(cur_md)
@@ -561,11 +581,15 @@ def recompute(data: Dict[str, Any]) -> None:
                 int(b.get("points") or 0) for b in p.get("bonuses", [])
                 if b.get("kind") == stage_kind and _knorm(b.get("pick")) in adv_norm
             )
+            bonus_all_change = sum(
+                int(b.get("points") or 0) for b in p.get("bonuses", [])
+                if stage_all_kind and b.get("kind") == stage_all_kind
+            )
             open_change = sum(
                 int(o.get("points") or 0) for o in p.get("open", [])
                 if int(o.get("qId") or 0) in md_open_ids
             )
-            p["pointsChange"] = r16_change + open_change
+            p["pointsChange"] = r16_change + bonus_all_change + open_change
             # Keep roundBaseline in sync (= total at start of the current
             # matchday) so total == baseline + pointsChange stays a valid
             # invariant even under the matchday-based delta.

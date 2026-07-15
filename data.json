@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-16 05:20",
+    "generatedAt": "2026-07-16 05:33",
     "timezone": "Asia/Manila",
     "workbookName": "תוצאות משחקי היום הרביעי - 14.6.26.xlsx",
     "participantsCount": 242,
@@ -15,7 +15,7 @@
     "scoringRules": "משחקים: 10 נק׳ לתוצאה מדויקת, 5 לכיוון נכון, ועוד 2 אם גם הפרש השערים נכון. שאלות פתוחות נספרות כשהן מאומתות ממקור FIFA, מקור חיצוני אמין, או קובץ תוצאות מעודכן שסיפקת.",
     "dataPolicy": "הניחושים והניקוד נלקחים מקובץ התוצאות המעודכן שהועלה. תוצאות משחקים נשארות FIFA-only לפי הדרישה המקורית; שאלות פתוחות יכולות להיספר גם ממקור שאינו FIFA.",
     "dashboardVersion": "GitHub Auto FIFA/ESPN Final Fallback + ESPN Live",
-    "dashboardBuiltAt": "2026-07-16 05:20",
+    "dashboardBuiltAt": "2026-07-16 05:33",
     "completedMatches": 72,
     "liveMatches": 0,
     "openQuestionEngine": "enabled_step8_fast_track_only",
@@ -32,7 +32,7 @@
     "roundBaselineLabel": "תחילת יום המשחקים הנוכחי בטורניר (2026-07-15) — לפי לוח גביע העולם",
     "roundBaseline": {
       "אייל חסון": {
-        "pts": 1807
+        "pts": 1799
       },
       "מאיה רון": {
         "pts": 1688
@@ -71,7 +71,7 @@
         "pts": 1723
       },
       "רועי שטרק": {
-        "pts": 1754
+        "pts": 1746
       },
       "כפיר כהן": {
         "pts": 1669
@@ -134,7 +134,7 @@
         "pts": 1697
       },
       "עודד רגב": {
-        "pts": 1727
+        "pts": 1719
       },
       "מיכל עובדיה": {
         "pts": 1755
@@ -149,7 +149,7 @@
         "pts": 1623
       },
       "שמוליק בראזני": {
-        "pts": 1682
+        "pts": 1674
       },
       "ליאור קורן": {
         "pts": 1670
@@ -170,7 +170,7 @@
         "pts": 1573
       },
       "אמרי צידון": {
-        "pts": 1624
+        "pts": 1616
       },
       "שי קוקוש": {
         "pts": 1717
@@ -188,7 +188,7 @@
         "pts": 1692
       },
       "יורם משה": {
-        "pts": 1677
+        "pts": 1669
       },
       "צחי כהן": {
         "pts": 1514
@@ -209,7 +209,7 @@
         "pts": 1710
       },
       "בוריס גורליק": {
-        "pts": 1718
+        "pts": 1710
       },
       "אלברט אברמוב": {
         "pts": 1586
@@ -221,7 +221,7 @@
         "pts": 1630
       },
       "אסף שרשוב": {
-        "pts": 1620
+        "pts": 1612
       },
       "ניר הייזלר": {
         "pts": 1593
@@ -233,7 +233,7 @@
         "pts": 1549
       },
       "איתי+אופק מניביץ": {
-        "pts": 1628
+        "pts": 1620
       },
       "צלי גרשגורן": {
         "pts": 1637
@@ -248,10 +248,10 @@
         "pts": 1618
       },
       "אוראל ויצמן": {
-        "pts": 1625
+        "pts": 1617
       },
       "יוני דלאל": {
-        "pts": 1737
+        "pts": 1729
       },
       "שלום אברהם": {
         "pts": 1554
@@ -326,7 +326,7 @@
         "pts": 1568
       },
       "אושרי ברזילי": {
-        "pts": 1748
+        "pts": 1740
       },
       "ישראל שטרנפלד": {
         "pts": 1506
@@ -386,7 +386,7 @@
         "pts": 1546
       },
       "דודי סיני": {
-        "pts": 1589
+        "pts": 1581
       },
       "אייל מנסור": {
         "pts": 1581
@@ -416,7 +416,7 @@
         "pts": 1520
       },
       "אור מילרוד": {
-        "pts": 1648
+        "pts": 1640
       },
       "גל עובדיה": {
         "pts": 1613
@@ -440,7 +440,7 @@
         "pts": 1616
       },
       "יאיר אללוף": {
-        "pts": 1624
+        "pts": 1616
       },
       "ויטלי גורביץ": {
         "pts": 1513
@@ -455,13 +455,13 @@
         "pts": 1510
       },
       "איציק מזרחי": {
-        "pts": 1544
+        "pts": 1536
       },
       "יוסי מצרי": {
-        "pts": 1645
+        "pts": 1637
       },
       "יניב סלומון": {
-        "pts": 1741
+        "pts": 1733
       },
       "ליאור רוזן": {
         "pts": 1606
@@ -485,13 +485,13 @@
         "pts": 1473
       },
       "אריה ציבוטרו": {
-        "pts": 1564
+        "pts": 1556
       },
       "לירן רז": {
         "pts": 1626
       },
       "אדוארדו בר חיים": {
-        "pts": 1638
+        "pts": 1630
       },
       "דוד פפושדו": {
         "pts": 1641
@@ -521,7 +521,7 @@
         "pts": 1637
       },
       "ראול קופרברג": {
-        "pts": 1515
+        "pts": 1507
       },
       "משה אילוז": {
         "pts": 1527
@@ -599,7 +599,7 @@
         "pts": 1510
       },
       "יותם מערבי": {
-        "pts": 1551
+        "pts": 1543
       },
       "שגיא דגול": {
         "pts": 1484
@@ -680,7 +680,7 @@
         "pts": 1553
       },
       "ניר אלטשולר": {
-        "pts": 1531
+        "pts": 1523
       },
       "אביב+עידן זיו": {
         "pts": 1589
@@ -713,7 +713,7 @@
         "pts": 1478
       },
       "ענת+עמית עובדיה": {
-        "pts": 1607
+        "pts": 1599
       },
       "צביקה+נועם מינסטר": {
         "pts": 1490
@@ -728,10 +728,10 @@
         "pts": 1480
       },
       "יובל קאופמן": {
-        "pts": 1418
+        "pts": 1410
       },
       "ניר בן יקיר": {
-        "pts": 1514
+        "pts": 1506
       },
       "מורן בן הרוש": {
         "pts": 1434
@@ -6793,9 +6793,9 @@
       "openHits": 54,
       "openResolved": 55,
       "prevPoints": 69,
-      "pointsChange": 90,
-      "prevRank": 2,
-      "rankChange": 0,
+      "pointsChange": 98,
+      "prevRank": 3,
+      "rankChange": 1,
       "matches": [
         {
           "matchId": 1,
@@ -11789,9 +11789,9 @@
       "openHits": 60,
       "openResolved": 55,
       "prevPoints": 87,
-      "pointsChange": 120,
-      "prevRank": 10,
-      "rankChange": 6,
+      "pointsChange": 128,
+      "prevRank": 12,
+      "rankChange": 8,
       "matches": [
         {
           "matchId": 1,
@@ -14288,8 +14288,8 @@
       "openResolved": 55,
       "prevPoints": 62,
       "pointsChange": 110,
-      "prevRank": 5,
-      "rankChange": 1,
+      "prevRank": 6,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -19283,9 +19283,9 @@
       "openHits": 56,
       "openResolved": 55,
       "prevPoints": 81,
-      "pointsChange": 100,
-      "prevRank": 8,
-      "rankChange": 2,
+      "pointsChange": 108,
+      "prevRank": 10,
+      "rankChange": 4,
       "matches": [
         {
           "matchId": 1,
@@ -21781,7 +21781,7 @@
       "openHits": 55,
       "openResolved": 55,
       "prevPoints": 54,
-      "pointsChange": 100,
+      "pointsChange": 108,
       "prevRank": 13,
       "rankChange": 6,
       "matches": [
@@ -24280,8 +24280,8 @@
       "openResolved": 55,
       "prevPoints": 82,
       "pointsChange": 70,
-      "prevRank": 3,
-      "rankChange": -5,
+      "prevRank": 4,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -26777,7 +26777,7 @@
       "openHits": 53,
       "openResolved": 55,
       "prevPoints": 81,
-      "pointsChange": 90,
+      "pointsChange": 98,
       "prevRank": 15,
       "rankChange": 6,
       "matches": [
@@ -29276,8 +29276,8 @@
       "openResolved": 55,
       "prevPoints": 64,
       "pointsChange": 60,
-      "prevRank": 6,
-      "rankChange": -4,
+      "prevRank": 7,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -31774,8 +31774,8 @@
       "openResolved": 55,
       "prevPoints": 74,
       "pointsChange": 60,
-      "prevRank": 7,
-      "rankChange": -4,
+      "prevRank": 8,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -34272,8 +34272,8 @@
       "openResolved": 55,
       "prevPoints": 79,
       "pointsChange": 80,
-      "prevRank": 16,
-      "rankChange": 4,
+      "prevRank": 14,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -36770,8 +36770,8 @@
       "openResolved": 55,
       "prevPoints": 59,
       "pointsChange": 70,
-      "prevRank": 14,
-      "rankChange": 1,
+      "prevRank": 12,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -41765,9 +41765,9 @@
       "openHits": 57,
       "openResolved": 55,
       "prevPoints": 49,
-      "pointsChange": 90,
-      "prevRank": 22,
-      "rankChange": 7,
+      "pointsChange": 98,
+      "prevRank": 25,
+      "rankChange": 10,
       "matches": [
         {
           "matchId": 1,
@@ -44263,9 +44263,9 @@
       "openHits": 56,
       "openResolved": 55,
       "prevPoints": 62,
-      "pointsChange": 80,
-      "prevRank": 17,
-      "rankChange": 1,
+      "pointsChange": 88,
+      "prevRank": 20,
+      "rankChange": 4,
       "matches": [
         {
           "matchId": 1,
@@ -46762,8 +46762,8 @@
       "openResolved": 55,
       "prevPoints": 72,
       "pointsChange": 90,
-      "prevRank": 23,
-      "rankChange": 7,
+      "prevRank": 21,
+      "rankChange": 5,
       "matches": [
         {
           "matchId": 1,
@@ -49260,8 +49260,8 @@
       "openResolved": 55,
       "prevPoints": 64,
       "pointsChange": 60,
-      "prevRank": 11,
-      "rankChange": -6,
+      "prevRank": 10,
+      "rankChange": -7,
       "matches": [
         {
           "matchId": 1,
@@ -51758,8 +51758,8 @@
       "openResolved": 55,
       "prevPoints": 71,
       "pointsChange": 40,
-      "prevRank": 4,
-      "rankChange": -14,
+      "prevRank": 5,
+      "rankChange": -13,
       "matches": [
         {
           "matchId": 1,
@@ -54255,9 +54255,9 @@
       "openHits": 59,
       "openResolved": 55,
       "prevPoints": 56,
-      "pointsChange": 120,
-      "prevRank": 39,
-      "rankChange": 20,
+      "pointsChange": 128,
+      "prevRank": 42,
+      "rankChange": 23,
       "matches": [
         {
           "matchId": 1,
@@ -56754,8 +56754,8 @@
       "openResolved": 55,
       "prevPoints": 72,
       "pointsChange": 80,
-      "prevRank": 27,
-      "rankChange": 7,
+      "prevRank": 25,
+      "rankChange": 5,
       "matches": [
         {
           "matchId": 1,
@@ -59252,8 +59252,8 @@
       "openResolved": 55,
       "prevPoints": 41,
       "pointsChange": 70,
-      "prevRank": 21,
-      "rankChange": 1,
+      "prevRank": 19,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -61750,8 +61750,8 @@
       "openResolved": 55,
       "prevPoints": 57,
       "pointsChange": 40,
-      "prevRank": 12,
-      "rankChange": -9,
+      "prevRank": 11,
+      "rankChange": -10,
       "matches": [
         {
           "matchId": 1,
@@ -64248,8 +64248,8 @@
       "openResolved": 55,
       "prevPoints": 78,
       "pointsChange": 100,
-      "prevRank": 35,
-      "rankChange": 13,
+      "prevRank": 33,
+      "rankChange": 11,
       "matches": [
         {
           "matchId": 1,
@@ -66746,8 +66746,8 @@
       "openResolved": 55,
       "prevPoints": 72,
       "pointsChange": 110,
-      "prevRank": 43,
-      "rankChange": 20,
+      "prevRank": 42,
+      "rankChange": 19,
       "matches": [
         {
           "matchId": 1,
@@ -69244,8 +69244,8 @@
       "openResolved": 55,
       "prevPoints": 89,
       "pointsChange": 70,
-      "prevRank": 28,
-      "rankChange": 5,
+      "prevRank": 26,
+      "rankChange": 3,
       "matches": [
         {
           "matchId": 1,
@@ -71742,8 +71742,8 @@
       "openResolved": 55,
       "prevPoints": 57,
       "pointsChange": 50,
-      "prevRank": 18,
-      "rankChange": -6,
+      "prevRank": 16,
+      "rankChange": -8,
       "matches": [
         {
           "matchId": 1,
@@ -74240,8 +74240,8 @@
       "openResolved": 55,
       "prevPoints": 66,
       "pointsChange": 50,
-      "prevRank": 19,
-      "rankChange": -6,
+      "prevRank": 17,
+      "rankChange": -8,
       "matches": [
         {
           "matchId": 1,
@@ -76738,8 +76738,8 @@
       "openResolved": 55,
       "prevPoints": 66,
       "pointsChange": 70,
-      "prevRank": 29,
-      "rankChange": 4,
+      "prevRank": 27,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -79236,8 +79236,8 @@
       "openResolved": 55,
       "prevPoints": 52,
       "pointsChange": 60,
-      "prevRank": 24,
-      "rankChange": -2,
+      "prevRank": 22,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -81734,8 +81734,8 @@
       "openResolved": 55,
       "prevPoints": 67,
       "pointsChange": 60,
-      "prevRank": 25,
-      "rankChange": -2,
+      "prevRank": 23,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -84231,9 +84231,9 @@
       "openHits": 53,
       "openResolved": 55,
       "prevPoints": 59,
-      "pointsChange": 90,
-      "prevRank": 36,
-      "rankChange": 9,
+      "pointsChange": 98,
+      "prevRank": 39,
+      "rankChange": 12,
       "matches": [
         {
           "matchId": 1,
@@ -86730,8 +86730,8 @@
       "openResolved": 55,
       "prevPoints": 53,
       "pointsChange": 60,
-      "prevRank": 27,
-      "rankChange": -1,
+      "prevRank": 25,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -89228,8 +89228,8 @@
       "openResolved": 55,
       "prevPoints": 94,
       "pointsChange": 40,
-      "prevRank": 20,
-      "rankChange": -9,
+      "prevRank": 18,
+      "rankChange": -11,
       "matches": [
         {
           "matchId": 1,
@@ -91726,8 +91726,8 @@
       "openResolved": 55,
       "prevPoints": 64,
       "pointsChange": 70,
-      "prevRank": 32,
-      "rankChange": 2,
+      "prevRank": 30,
+      "rankChange": 0,
       "matches": [
         {
           "matchId": 1,
@@ -94224,8 +94224,8 @@
       "openResolved": 55,
       "prevPoints": 54,
       "pointsChange": 50,
-      "prevRank": 28,
-      "rankChange": -3,
+      "prevRank": 26,
+      "rankChange": -5,
       "matches": [
         {
           "matchId": 1,
@@ -96722,8 +96722,8 @@
       "openResolved": 55,
       "prevPoints": 54,
       "pointsChange": 70,
-      "prevRank": 33,
-      "rankChange": 1,
+      "prevRank": 31,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -99220,8 +99220,8 @@
       "openResolved": 55,
       "prevPoints": 54,
       "pointsChange": 70,
-      "prevRank": 33,
-      "rankChange": 1,
+      "prevRank": 31,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -101717,9 +101717,9 @@
       "openHits": 57,
       "openResolved": 55,
       "prevPoints": 62,
-      "pointsChange": 110,
-      "prevRank": 55,
-      "rankChange": 22,
+      "pointsChange": 118,
+      "prevRank": 57,
+      "rankChange": 24,
       "matches": [
         {
           "matchId": 1,
@@ -104216,8 +104216,8 @@
       "openResolved": 55,
       "prevPoints": 64,
       "pointsChange": 40,
-      "prevRank": 26,
-      "rankChange": -8,
+      "prevRank": 24,
+      "rankChange": -10,
       "matches": [
         {
           "matchId": 1,
@@ -106714,8 +106714,8 @@
       "openResolved": 55,
       "prevPoints": 59,
       "pointsChange": 70,
-      "prevRank": 37,
-      "rankChange": 2,
+      "prevRank": 35,
+      "rankChange": 0,
       "matches": [
         {
           "matchId": 1,
@@ -109212,8 +109212,8 @@
       "openResolved": 55,
       "prevPoints": 66,
       "pointsChange": 50,
-      "prevRank": 30,
-      "rankChange": -5,
+      "prevRank": 28,
+      "rankChange": -7,
       "matches": [
         {
           "matchId": 1,
@@ -111709,9 +111709,9 @@
       "openHits": 55,
       "openResolved": 55,
       "prevPoints": 57,
-      "pointsChange": 110,
-      "prevRank": 59,
-      "rankChange": 23,
+      "pointsChange": 118,
+      "prevRank": 60,
+      "rankChange": 24,
       "matches": [
         {
           "matchId": 1,
@@ -114208,8 +114208,8 @@
       "openResolved": 55,
       "prevPoints": 76,
       "pointsChange": 70,
-      "prevRank": 38,
-      "rankChange": 2,
+      "prevRank": 36,
+      "rankChange": 0,
       "matches": [
         {
           "matchId": 1,
@@ -116706,8 +116706,8 @@
       "openResolved": 55,
       "prevPoints": 51,
       "pointsChange": 60,
-      "prevRank": 34,
-      "rankChange": -3,
+      "prevRank": 32,
+      "rankChange": -5,
       "matches": [
         {
           "matchId": 1,
@@ -119204,8 +119204,8 @@
       "openResolved": 55,
       "prevPoints": 52,
       "pointsChange": 50,
-      "prevRank": 31,
-      "rankChange": -6,
+      "prevRank": 29,
+      "rankChange": -8,
       "matches": [
         {
           "matchId": 1,
@@ -121702,8 +121702,8 @@
       "openResolved": 55,
       "prevPoints": 86,
       "pointsChange": 60,
-      "prevRank": 36,
-      "rankChange": -2,
+      "prevRank": 34,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -124200,8 +124200,8 @@
       "openResolved": 55,
       "prevPoints": 52,
       "pointsChange": 60,
-      "prevRank": 37,
-      "rankChange": -2,
+      "prevRank": 35,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -126698,8 +126698,8 @@
       "openResolved": 55,
       "prevPoints": 72,
       "pointsChange": 60,
-      "prevRank": 39,
-      "rankChange": -1,
+      "prevRank": 37,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -129196,8 +129196,8 @@
       "openResolved": 55,
       "prevPoints": 57,
       "pointsChange": 70,
-      "prevRank": 46,
-      "rankChange": 5,
+      "prevRank": 45,
+      "rankChange": 4,
       "matches": [
         {
           "matchId": 1,
@@ -131694,8 +131694,8 @@
       "openResolved": 55,
       "prevPoints": 59,
       "pointsChange": 80,
-      "prevRank": 51,
-      "rankChange": 9,
+      "prevRank": 50,
+      "rankChange": 8,
       "matches": [
         {
           "matchId": 1,
@@ -134192,8 +134192,8 @@
       "openResolved": 55,
       "prevPoints": 72,
       "pointsChange": 60,
-      "prevRank": 41,
-      "rankChange": -1,
+      "prevRank": 40,
+      "rankChange": -2,
       "matches": [
         {
           "matchId": 1,
@@ -136689,9 +136689,9 @@
       "openHits": 51,
       "openResolved": 55,
       "prevPoints": 52,
-      "pointsChange": 80,
-      "prevRank": 53,
-      "rankChange": 10,
+      "pointsChange": 88,
+      "prevRank": 56,
+      "rankChange": 13,
       "matches": [
         {
           "matchId": 1,
@@ -139187,9 +139187,9 @@
       "openHits": 54,
       "openResolved": 55,
       "prevPoints": 82,
-      "pointsChange": 100,
-      "prevRank": 66,
-      "rankChange": 22,
+      "pointsChange": 108,
+      "prevRank": 68,
+      "rankChange": 24,
       "matches": [
         {
           "matchId": 1,
@@ -141686,8 +141686,8 @@
       "openResolved": 55,
       "prevPoints": 70,
       "pointsChange": 50,
-      "prevRank": 40,
-      "rankChange": -4,
+      "prevRank": 38,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -144183,9 +144183,9 @@
       "openHits": 54,
       "openResolved": 55,
       "prevPoints": 71,
-      "pointsChange": 100,
-      "prevRank": 67,
-      "rankChange": 22,
+      "pointsChange": 108,
+      "prevRank": 69,
+      "rankChange": 24,
       "matches": [
         {
           "matchId": 1,
@@ -146682,8 +146682,8 @@
       "openResolved": 55,
       "prevPoints": 64,
       "pointsChange": 70,
-      "prevRank": 52,
-      "rankChange": 6,
+      "prevRank": 51,
+      "rankChange": 5,
       "matches": [
         {
           "matchId": 1,
@@ -149180,8 +149180,8 @@
       "openResolved": 55,
       "prevPoints": 57,
       "pointsChange": 70,
-      "prevRank": 54,
-      "rankChange": 7,
+      "prevRank": 52,
+      "rankChange": 5,
       "matches": [
         {
           "matchId": 1,
@@ -151678,8 +151678,8 @@
       "openResolved": 55,
       "prevPoints": 66,
       "pointsChange": 70,
-      "prevRank": 57,
-      "rankChange": 9,
+      "prevRank": 54,
+      "rankChange": 6,
       "matches": [
         {
           "matchId": 1,
@@ -154176,8 +154176,8 @@
       "openResolved": 55,
       "prevPoints": 67,
       "pointsChange": 60,
-      "prevRank": 51,
-      "rankChange": 2,
+      "prevRank": 50,
+      "rankChange": 1,
       "matches": [
         {
           "matchId": 1,
@@ -156673,9 +156673,9 @@
       "openHits": 52,
       "openResolved": 55,
       "prevPoints": 49,
-      "pointsChange": 90,
-      "prevRank": 70,
-      "rankChange": 20,
+      "pointsChange": 98,
+      "prevRank": 73,
+      "rankChange": 23,
       "matches": [
         {
           "matchId": 1,
@@ -159172,8 +159172,8 @@
       "openResolved": 55,
       "prevPoints": 59,
       "pointsChange": 70,
-      "prevRank": 60,
-      "rankChange": 9,
+      "prevRank": 57,
+      "rankChange": 6,
       "matches": [
         {
           "matchId": 1,
@@ -161670,8 +161670,8 @@
       "openResolved": 55,
       "prevPoints": 91,
       "pointsChange": 50,
-      "prevRank": 49,
-      "rankChange": -2,
+      "prevRank": 48,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -164168,8 +164168,8 @@
       "openResolved": 55,
       "prevPoints": 73,
       "pointsChange": 40,
-      "prevRank": 44,
-      "rankChange": -8,
+      "prevRank": 43,
+      "rankChange": -9,
       "matches": [
         {
           "matchId": 1,
@@ -166666,8 +166666,8 @@
       "openResolved": 55,
       "prevPoints": 66,
       "pointsChange": 110,
-      "prevRank": 88,
-      "rankChange": 36,
+      "prevRank": 84,
+      "rankChange": 32,
       "matches": [
         {
           "matchId": 1,
@@ -169163,9 +169163,9 @@
       "openHits": 55,
       "openResolved": 55,
       "prevPoints": 64,
-      "pointsChange": 80,
-      "prevRank": 67,
-      "rankChange": 14,
+      "pointsChange": 88,
+      "prevRank": 69,
+      "rankChange": 16,
       "matches": [
         {
           "matchId": 1,
@@ -171662,8 +171662,8 @@
       "openResolved": 55,
       "prevPoints": 77,
       "pointsChange": 30,
-      "prevRank": 42,
-      "rankChange": -12,
+      "prevRank": 41,
+      "rankChange": -13,
       "matches": [
         {
           "matchId": 1,
@@ -174160,8 +174160,8 @@
       "openResolved": 55,
       "prevPoints": 54,
       "pointsChange": 70,
-      "prevRank": 63,
-      "rankChange": 9,
+      "prevRank": 60,
+      "rankChange": 6,
       "matches": [
         {
           "matchId": 1,
@@ -176658,8 +176658,8 @@
       "openResolved": 55,
       "prevPoints": 54,
       "pointsChange": 100,
-      "prevRank": 86,
-      "rankChange": 31,
+      "prevRank": 82,
+      "rankChange": 27,
       "matches": [
         {
           "matchId": 1,
@@ -179156,8 +179156,8 @@
       "openResolved": 55,
       "prevPoints": 54,
       "pointsChange": 40,
-      "prevRank": 48,
-      "rankChange": -8,
+      "prevRank": 47,
+      "rankChange": -9,
       "matches": [
         {
           "matchId": 1,
@@ -181654,8 +181654,8 @@
       "openResolved": 55,
       "prevPoints": 64,
       "pointsChange": 80,
-      "prevRank": 71,
-      "rankChange": 15,
+      "prevRank": 67,
+      "rankChange": 11,
       "matches": [
         {
           "matchId": 1,
@@ -184152,8 +184152,8 @@
       "openResolved": 55,
       "prevPoints": 49,
       "pointsChange": 40,
-      "prevRank": 49,
-      "rankChange": -8,
+      "prevRank": 48,
+      "rankChange": -9,
       "matches": [
         {
           "matchId": 1,
@@ -186650,8 +186650,8 @@
       "openResolved": 55,
       "prevPoints": 64,
       "pointsChange": 60,
-      "prevRank": 60,
-      "rankChange": 3,
+      "prevRank": 57,
+      "rankChange": 0,
       "matches": [
         {
           "matchId": 1,
@@ -189148,8 +189148,8 @@
       "openResolved": 55,
       "prevPoints": 69,
       "pointsChange": 40,
-      "prevRank": 50,
-      "rankChange": -8,
+      "prevRank": 49,
+      "rankChange": -9,
       "matches": [
         {
           "matchId": 1,
@@ -191646,8 +191646,8 @@
       "openResolved": 55,
       "prevPoints": 72,
       "pointsChange": 70,
-      "prevRank": 66,
-      "rankChange": 7,
+      "prevRank": 62,
+      "rankChange": 3,
       "matches": [
         {
           "matchId": 1,
@@ -194144,8 +194144,8 @@
       "openResolved": 55,
       "prevPoints": 69,
       "pointsChange": 80,
-      "prevRank": 73,
-      "rankChange": 14,
+      "prevRank": 70,
+      "rankChange": 11,
       "matches": [
         {
           "matchId": 1,
@@ -196642,8 +196642,8 @@
       "openResolved": 55,
       "prevPoints": 72,
       "pointsChange": 30,
-      "prevRank": 45,
-      "rankChange": -14,
+      "prevRank": 44,
+      "rankChange": -15,
       "matches": [
         {
           "matchId": 1,
@@ -199140,8 +199140,8 @@
       "openResolved": 55,
       "prevPoints": 71,
       "pointsChange": 60,
-      "prevRank": 61,
-      "rankChange": 2,
+      "prevRank": 58,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -201638,8 +201638,8 @@
       "openResolved": 55,
       "prevPoints": 62,
       "pointsChange": 70,
-      "prevRank": 67,
-      "rankChange": 7,
+      "prevRank": 63,
+      "rankChange": 3,
       "matches": [
         {
           "matchId": 1,
@@ -204136,8 +204136,8 @@
       "openResolved": 55,
       "prevPoints": 60,
       "pointsChange": 50,
-      "prevRank": 56,
-      "rankChange": -4,
+      "prevRank": 53,
+      "rankChange": -7,
       "matches": [
         {
           "matchId": 1,
@@ -206634,8 +206634,8 @@
       "openResolved": 55,
       "prevPoints": 57,
       "pointsChange": 50,
-      "prevRank": 56,
-      "rankChange": -4,
+      "prevRank": 53,
+      "rankChange": -7,
       "matches": [
         {
           "matchId": 1,
@@ -209132,8 +209132,8 @@
       "openResolved": 55,
       "prevPoints": 79,
       "pointsChange": 70,
-      "prevRank": 68,
-      "rankChange": 7,
+      "prevRank": 64,
+      "rankChange": 3,
       "matches": [
         {
           "matchId": 1,
@@ -211630,8 +211630,8 @@
       "openResolved": 55,
       "prevPoints": 59,
       "pointsChange": 70,
-      "prevRank": 68,
-      "rankChange": 7,
+      "prevRank": 64,
+      "rankChange": 3,
       "matches": [
         {
           "matchId": 1,
@@ -214128,8 +214128,8 @@
       "openResolved": 55,
       "prevPoints": 58,
       "pointsChange": 70,
-      "prevRank": 69,
-      "rankChange": 7,
+      "prevRank": 65,
+      "rankChange": 3,
       "matches": [
         {
           "matchId": 1,
@@ -216626,8 +216626,8 @@
       "openResolved": 55,
       "prevPoints": 92,
       "pointsChange": 20,
-      "prevRank": 42,
-      "rankChange": -21,
+      "prevRank": 41,
+      "rankChange": -22,
       "matches": [
         {
           "matchId": 1,
@@ -219124,8 +219124,8 @@
       "openResolved": 55,
       "prevPoints": 57,
       "pointsChange": 110,
-      "prevRank": 99,
-      "rankChange": 36,
+      "prevRank": 95,
+      "rankChange": 32,
       "matches": [
         {
           "matchId": 1,
@@ -221622,8 +221622,8 @@
       "openResolved": 55,
       "prevPoints": 62,
       "pointsChange": 40,
-      "prevRank": 52,
-      "rankChange": -11,
+      "prevRank": 51,
+      "rankChange": -12,
       "matches": [
         {
           "matchId": 1,
@@ -224119,9 +224119,9 @@
       "openHits": 55,
       "openResolved": 55,
       "prevPoints": 75,
-      "pointsChange": 60,
-      "prevRank": 64,
-      "rankChange": 0,
+      "pointsChange": 68,
+      "prevRank": 66,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -226617,9 +226617,9 @@
       "openHits": 51,
       "openResolved": 55,
       "prevPoints": 48,
-      "pointsChange": 80,
-      "prevRank": 80,
-      "rankChange": 15,
+      "pointsChange": 88,
+      "prevRank": 82,
+      "rankChange": 17,
       "matches": [
         {
           "matchId": 1,
@@ -229116,8 +229116,8 @@
       "openResolved": 55,
       "prevPoints": 61,
       "pointsChange": 70,
-      "prevRank": 72,
-      "rankChange": 6,
+      "prevRank": 69,
+      "rankChange": 3,
       "matches": [
         {
           "matchId": 1,
@@ -231614,8 +231614,8 @@
       "openResolved": 55,
       "prevPoints": 39,
       "pointsChange": 50,
-      "prevRank": 62,
-      "rankChange": -5,
+      "prevRank": 59,
+      "rankChange": -8,
       "matches": [
         {
           "matchId": 1,
@@ -234112,8 +234112,8 @@
       "openResolved": 55,
       "prevPoints": 78,
       "pointsChange": 70,
-      "prevRank": 75,
-      "rankChange": 7,
+      "prevRank": 72,
+      "rankChange": 4,
       "matches": [
         {
           "matchId": 1,
@@ -236610,8 +236610,8 @@
       "openResolved": 55,
       "prevPoints": 66,
       "pointsChange": 20,
-      "prevRank": 47,
-      "rankChange": -22,
+      "prevRank": 46,
+      "rankChange": -23,
       "matches": [
         {
           "matchId": 1,
@@ -239108,8 +239108,8 @@
       "openResolved": 55,
       "prevPoints": 46,
       "pointsChange": 40,
-      "prevRank": 58,
-      "rankChange": -11,
+      "prevRank": 55,
+      "rankChange": -14,
       "matches": [
         {
           "matchId": 1,
@@ -241606,8 +241606,8 @@
       "openResolved": 55,
       "prevPoints": 76,
       "pointsChange": 50,
-      "prevRank": 63,
-      "rankChange": -7,
+      "prevRank": 60,
+      "rankChange": -10,
       "matches": [
         {
           "matchId": 1,
@@ -244104,8 +244104,8 @@
       "openResolved": 55,
       "prevPoints": 74,
       "pointsChange": 40,
-      "prevRank": 60,
-      "rankChange": -11,
+      "prevRank": 57,
+      "rankChange": -14,
       "matches": [
         {
           "matchId": 1,
@@ -246602,8 +246602,8 @@
       "openResolved": 55,
       "prevPoints": 44,
       "pointsChange": 50,
-      "prevRank": 65,
-      "rankChange": -7,
+      "prevRank": 61,
+      "rankChange": -11,
       "matches": [
         {
           "matchId": 1,
@@ -249100,8 +249100,8 @@
       "openResolved": 55,
       "prevPoints": 57,
       "pointsChange": 70,
-      "prevRank": 85,
-      "rankChange": 12,
+      "prevRank": 81,
+      "rankChange": 8,
       "matches": [
         {
           "matchId": 1,
@@ -251598,8 +251598,8 @@
       "openResolved": 55,
       "prevPoints": 82,
       "pointsChange": 30,
-      "prevRank": 58,
-      "rankChange": -15,
+      "prevRank": 55,
+      "rankChange": -18,
       "matches": [
         {
           "matchId": 1,
@@ -254096,8 +254096,8 @@
       "openResolved": 55,
       "prevPoints": 79,
       "pointsChange": 60,
-      "prevRank": 77,
-      "rankChange": 4,
+      "prevRank": 74,
+      "rankChange": 1,
       "matches": [
         {
           "matchId": 1,
@@ -256594,8 +256594,8 @@
       "openResolved": 55,
       "prevPoints": 79,
       "pointsChange": 50,
-      "prevRank": 70,
-      "rankChange": -4,
+      "prevRank": 66,
+      "rankChange": -8,
       "matches": [
         {
           "matchId": 1,
@@ -259092,8 +259092,8 @@
       "openResolved": 55,
       "prevPoints": 77,
       "pointsChange": 60,
-      "prevRank": 78,
-      "rankChange": 4,
+      "prevRank": 75,
+      "rankChange": 1,
       "matches": [
         {
           "matchId": 1,
@@ -261589,9 +261589,9 @@
       "openHits": 54,
       "openResolved": 55,
       "prevPoints": 49,
-      "pointsChange": 80,
-      "prevRank": 92,
-      "rankChange": 17,
+      "pointsChange": 88,
+      "prevRank": 94,
+      "rankChange": 19,
       "matches": [
         {
           "matchId": 1,
@@ -264088,8 +264088,8 @@
       "openResolved": 55,
       "prevPoints": 74,
       "pointsChange": 70,
-      "prevRank": 90,
-      "rankChange": 14,
+      "prevRank": 86,
+      "rankChange": 10,
       "matches": [
         {
           "matchId": 1,
@@ -266586,8 +266586,8 @@
       "openResolved": 55,
       "prevPoints": 61,
       "pointsChange": 60,
-      "prevRank": 83,
-      "rankChange": 7,
+      "prevRank": 79,
+      "rankChange": 3,
       "matches": [
         {
           "matchId": 1,
@@ -269084,8 +269084,8 @@
       "openResolved": 55,
       "prevPoints": 82,
       "pointsChange": 100,
-      "prevRank": 111,
-      "rankChange": 34,
+      "prevRank": 107,
+      "rankChange": 30,
       "matches": [
         {
           "matchId": 1,
@@ -271582,8 +271582,8 @@
       "openResolved": 55,
       "prevPoints": 44,
       "pointsChange": 60,
-      "prevRank": 85,
-      "rankChange": 7,
+      "prevRank": 81,
+      "rankChange": 3,
       "matches": [
         {
           "matchId": 1,
@@ -274080,8 +274080,8 @@
       "openResolved": 55,
       "prevPoints": 69,
       "pointsChange": 60,
-      "prevRank": 88,
-      "rankChange": 9,
+      "prevRank": 84,
+      "rankChange": 5,
       "matches": [
         {
           "matchId": 1,
@@ -276578,8 +276578,8 @@
       "openResolved": 55,
       "prevPoints": 47,
       "pointsChange": 60,
-      "prevRank": 89,
-      "rankChange": 9,
+      "prevRank": 85,
+      "rankChange": 5,
       "matches": [
         {
           "matchId": 1,
@@ -279076,8 +279076,8 @@
       "openResolved": 55,
       "prevPoints": 78,
       "pointsChange": 50,
-      "prevRank": 82,
-      "rankChange": 2,
+      "prevRank": 78,
+      "rankChange": -2,
       "matches": [
         {
           "matchId": 1,
@@ -281574,8 +281574,8 @@
       "openResolved": 55,
       "prevPoints": 65,
       "pointsChange": 40,
-      "prevRank": 73,
-      "rankChange": -7,
+      "prevRank": 70,
+      "rankChange": -10,
       "matches": [
         {
           "matchId": 1,
@@ -284072,8 +284072,8 @@
       "openResolved": 55,
       "prevPoints": 69,
       "pointsChange": 80,
-      "prevRank": 102,
-      "rankChange": 21,
+      "prevRank": 98,
+      "rankChange": 17,
       "matches": [
         {
           "matchId": 1,
@@ -286570,8 +286570,8 @@
       "openResolved": 55,
       "prevPoints": 72,
       "pointsChange": 60,
-      "prevRank": 90,
-      "rankChange": 9,
+      "prevRank": 86,
+      "rankChange": 5,
       "matches": [
         {
           "matchId": 1,
@@ -289068,8 +289068,8 @@
       "openResolved": 55,
       "prevPoints": 81,
       "pointsChange": 40,
-      "prevRank": 76,
-      "rankChange": -6,
+      "prevRank": 73,
+      "rankChange": -9,
       "matches": [
         {
           "matchId": 1,
@@ -291566,8 +291566,8 @@
       "openResolved": 55,
       "prevPoints": 57,
       "pointsChange": 80,
-      "prevRank": 103,
-      "rankChange": 21,
+      "prevRank": 99,
+      "rankChange": 17,
       "matches": [
         {
           "matchId": 1,
@@ -294064,8 +294064,8 @@
       "openResolved": 55,
       "prevPoints": 42,
       "pointsChange": 60,
-      "prevRank": 91,
-      "rankChange": 8,
+      "prevRank": 87,
+      "rankChange": 4,
       "matches": [
         {
           "matchId": 1,
@@ -296562,8 +296562,8 @@
       "openResolved": 55,
       "prevPoints": 81,
       "pointsChange": 50,
-      "prevRank": 86,
-      "rankChange": 2,
+      "prevRank": 82,
+      "rankChange": -2,
       "matches": [
         {
           "matchId": 1,
@@ -299060,8 +299060,8 @@
       "openResolved": 55,
       "prevPoints": 54,
       "pointsChange": 40,
-      "prevRank": 79,
-      "rankChange": -5,
+      "prevRank": 76,
+      "rankChange": -8,
       "matches": [
         {
           "matchId": 1,
@@ -301558,8 +301558,8 @@
       "openResolved": 55,
       "prevPoints": 59,
       "pointsChange": 50,
-      "prevRank": 87,
-      "rankChange": 2,
+      "prevRank": 83,
+      "rankChange": -2,
       "matches": [
         {
           "matchId": 1,
@@ -304056,8 +304056,8 @@
       "openResolved": 55,
       "prevPoints": 64,
       "pointsChange": 70,
-      "prevRank": 100,
-      "rankChange": 14,
+      "prevRank": 96,
+      "rankChange": 10,
       "matches": [
         {
           "matchId": 1,
@@ -306554,8 +306554,8 @@
       "openResolved": 55,
       "prevPoints": 61,
       "pointsChange": 60,
-      "prevRank": 94,
-      "rankChange": 8,
+      "prevRank": 90,
+      "rankChange": 4,
       "matches": [
         {
           "matchId": 1,
@@ -309052,8 +309052,8 @@
       "openResolved": 55,
       "prevPoints": 59,
       "pointsChange": 70,
-      "prevRank": 101,
-      "rankChange": 14,
+      "prevRank": 97,
+      "rankChange": 10,
       "matches": [
         {
           "matchId": 1,
@@ -311550,8 +311550,8 @@
       "openResolved": 55,
       "prevPoints": 57,
       "pointsChange": 80,
-      "prevRank": 109,
-      "rankChange": 21,
+      "prevRank": 105,
+      "rankChange": 17,
       "matches": [
         {
           "matchId": 1,
@@ -314048,8 +314048,8 @@
       "openResolved": 55,
       "prevPoints": 69,
       "pointsChange": 70,
-      "prevRank": 102,
-      "rankChange": 13,
+      "prevRank": 98,
+      "rankChange": 9,
       "matches": [
         {
           "matchId": 1,
@@ -316546,8 +316546,8 @@
       "openResolved": 55,
       "prevPoints": 74,
       "pointsChange": 60,
-      "prevRank": 96,
-      "rankChange": 7,
+      "prevRank": 92,
+      "rankChange": 3,
       "matches": [
         {
           "matchId": 1,
@@ -319044,8 +319044,8 @@
       "openResolved": 55,
       "prevPoints": 52,
       "pointsChange": 40,
-      "prevRank": 84,
-      "rankChange": -6,
+      "prevRank": 80,
+      "rankChange": -10,
       "matches": [
         {
           "matchId": 1,
@@ -321542,8 +321542,8 @@
       "openResolved": 55,
       "prevPoints": 61,
       "pointsChange": 70,
-      "prevRank": 103,
-      "rankChange": 13,
+      "prevRank": 99,
+      "rankChange": 9,
       "matches": [
         {
           "matchId": 1,
@@ -324040,8 +324040,8 @@
       "openResolved": 55,
       "prevPoints": 44,
       "pointsChange": 80,
-      "prevRank": 112,
-      "rankChange": 21,
+      "prevRank": 108,
+      "rankChange": 17,
       "matches": [
         {
           "matchId": 1,
@@ -326538,8 +326538,8 @@
       "openResolved": 55,
       "prevPoints": 54,
       "pointsChange": 50,
-      "prevRank": 91,
-      "rankChange": -1,
+      "prevRank": 87,
+      "rankChange": -5,
       "matches": [
         {
           "matchId": 1,
@@ -329036,8 +329036,8 @@
       "openResolved": 55,
       "prevPoints": 64,
       "pointsChange": 70,
-      "prevRank": 105,
-      "rankChange": 12,
+      "prevRank": 101,
+      "rankChange": 8,
       "matches": [
         {
           "matchId": 1,
@@ -331534,8 +331534,8 @@
       "openResolved": 55,
       "prevPoints": 43,
       "pointsChange": 50,
-      "prevRank": 93,
-      "rankChange": 0,
+      "prevRank": 89,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -334032,8 +334032,8 @@
       "openResolved": 55,
       "prevPoints": 52,
       "pointsChange": 30,
-      "prevRank": 81,
-      "rankChange": -13,
+      "prevRank": 77,
+      "rankChange": -17,
       "matches": [
         {
           "matchId": 1,
@@ -336530,8 +336530,8 @@
       "openResolved": 55,
       "prevPoints": 54,
       "pointsChange": 60,
-      "prevRank": 101,
-      "rankChange": 6,
+      "prevRank": 97,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -339027,7 +339027,7 @@
       "openHits": 55,
       "openResolved": 55,
       "prevPoints": 64,
-      "pointsChange": 90,
+      "pointsChange": 98,
       "prevRank": 123,
       "rankChange": 27,
       "matches": [
@@ -341526,8 +341526,8 @@
       "openResolved": 55,
       "prevPoints": 68,
       "pointsChange": 50,
-      "prevRank": 97,
-      "rankChange": 0,
+      "prevRank": 93,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -344024,8 +344024,8 @@
       "openResolved": 55,
       "prevPoints": 62,
       "pointsChange": 90,
-      "prevRank": 126,
-      "rankChange": 28,
+      "prevRank": 121,
+      "rankChange": 23,
       "matches": [
         {
           "matchId": 1,
@@ -346522,8 +346522,8 @@
       "openResolved": 55,
       "prevPoints": 55,
       "pointsChange": 40,
-      "prevRank": 92,
-      "rankChange": -7,
+      "prevRank": 88,
+      "rankChange": -11,
       "matches": [
         {
           "matchId": 1,
@@ -349020,8 +349020,8 @@
       "openResolved": 55,
       "prevPoints": 45,
       "pointsChange": 60,
-      "prevRank": 104,
-      "rankChange": 5,
+      "prevRank": 100,
+      "rankChange": 1,
       "matches": [
         {
           "matchId": 1,
@@ -351518,8 +351518,8 @@
       "openResolved": 55,
       "prevPoints": 64,
       "pointsChange": 40,
-      "prevRank": 92,
-      "rankChange": -7,
+      "prevRank": 88,
+      "rankChange": -11,
       "matches": [
         {
           "matchId": 1,
@@ -354016,8 +354016,8 @@
       "openResolved": 55,
       "prevPoints": 57,
       "pointsChange": 70,
-      "prevRank": 114,
-      "rankChange": 14,
+      "prevRank": 110,
+      "rankChange": 10,
       "matches": [
         {
           "matchId": 1,
@@ -356514,8 +356514,8 @@
       "openResolved": 55,
       "prevPoints": 37,
       "pointsChange": 20,
-      "prevRank": 81,
-      "rankChange": -20,
+      "prevRank": 77,
+      "rankChange": -24,
       "matches": [
         {
           "matchId": 1,
@@ -359012,8 +359012,8 @@
       "openResolved": 55,
       "prevPoints": 59,
       "pointsChange": 30,
-      "prevRank": 88,
-      "rankChange": -13,
+      "prevRank": 84,
+      "rankChange": -17,
       "matches": [
         {
           "matchId": 1,
@@ -361510,8 +361510,8 @@
       "openResolved": 55,
       "prevPoints": 44,
       "pointsChange": 60,
-      "prevRank": 107,
-      "rankChange": 6,
+      "prevRank": 103,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -364008,8 +364008,8 @@
       "openResolved": 55,
       "prevPoints": 57,
       "pointsChange": 60,
-      "prevRank": 108,
-      "rankChange": 6,
+      "prevRank": 104,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -366505,9 +366505,9 @@
       "openHits": 52,
       "openResolved": 55,
       "prevPoints": 42,
-      "pointsChange": 60,
-      "prevRank": 109,
-      "rankChange": 6,
+      "pointsChange": 68,
+      "prevRank": 111,
+      "rankChange": 8,
       "matches": [
         {
           "matchId": 1,
@@ -369004,8 +369004,8 @@
       "openResolved": 55,
       "prevPoints": 45,
       "pointsChange": 10,
-      "prevRank": 74,
-      "rankChange": -29,
+      "prevRank": 71,
+      "rankChange": -32,
       "matches": [
         {
           "matchId": 1,
@@ -371502,8 +371502,8 @@
       "openResolved": 55,
       "prevPoints": 60,
       "pointsChange": 60,
-      "prevRank": 110,
-      "rankChange": 6,
+      "prevRank": 106,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -374000,8 +374000,8 @@
       "openResolved": 55,
       "prevPoints": 49,
       "pointsChange": 70,
-      "prevRank": 119,
-      "rankChange": 14,
+      "prevRank": 115,
+      "rankChange": 10,
       "matches": [
         {
           "matchId": 1,
@@ -376498,8 +376498,8 @@
       "openResolved": 55,
       "prevPoints": 70,
       "pointsChange": 40,
-      "prevRank": 98,
-      "rankChange": -7,
+      "prevRank": 94,
+      "rankChange": -11,
       "matches": [
         {
           "matchId": 1,
@@ -378996,8 +378996,8 @@
       "openResolved": 55,
       "prevPoints": 67,
       "pointsChange": 60,
-      "prevRank": 113,
-      "rankChange": 7,
+      "prevRank": 109,
+      "rankChange": 3,
       "matches": [
         {
           "matchId": 1,
@@ -381494,8 +381494,8 @@
       "openResolved": 55,
       "prevPoints": 57,
       "pointsChange": 50,
-      "prevRank": 105,
-      "rankChange": -2,
+      "prevRank": 101,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -383992,8 +383992,8 @@
       "openResolved": 55,
       "prevPoints": 67,
       "pointsChange": 20,
-      "prevRank": 87,
-      "rankChange": -20,
+      "prevRank": 83,
+      "rankChange": -24,
       "matches": [
         {
           "matchId": 1,
@@ -386490,8 +386490,8 @@
       "openResolved": 55,
       "prevPoints": 76,
       "pointsChange": 30,
-      "prevRank": 95,
-      "rankChange": -13,
+      "prevRank": 91,
+      "rankChange": -17,
       "matches": [
         {
           "matchId": 1,
@@ -388988,8 +388988,8 @@
       "openResolved": 55,
       "prevPoints": 66,
       "pointsChange": 60,
-      "prevRank": 115,
-      "rankChange": 7,
+      "prevRank": 111,
+      "rankChange": 3,
       "matches": [
         {
           "matchId": 1,
@@ -391486,8 +391486,8 @@
       "openResolved": 55,
       "prevPoints": 61,
       "pointsChange": 50,
-      "prevRank": 107,
-      "rankChange": -1,
+      "prevRank": 103,
+      "rankChange": -5,
       "matches": [
         {
           "matchId": 1,
@@ -393984,8 +393984,8 @@
       "openResolved": 55,
       "prevPoints": 54,
       "pointsChange": 100,
-      "prevRank": 138,
-      "rankChange": 29,
+      "prevRank": 133,
+      "rankChange": 24,
       "matches": [
         {
           "matchId": 1,
@@ -396482,8 +396482,8 @@
       "openResolved": 55,
       "prevPoints": 76,
       "pointsChange": 40,
-      "prevRank": 102,
-      "rankChange": -8,
+      "prevRank": 98,
+      "rankChange": -12,
       "matches": [
         {
           "matchId": 1,
@@ -398980,8 +398980,8 @@
       "openResolved": 55,
       "prevPoints": 47,
       "pointsChange": 50,
-      "prevRank": 112,
-      "rankChange": 1,
+      "prevRank": 108,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -401477,9 +401477,9 @@
       "openHits": 50,
       "openResolved": 55,
       "prevPoints": 44,
-      "pointsChange": 80,
-      "prevRank": 130,
-      "rankChange": 19,
+      "pointsChange": 88,
+      "prevRank": 127,
+      "rankChange": 16,
       "matches": [
         {
           "matchId": 1,
@@ -403976,8 +403976,8 @@
       "openResolved": 55,
       "prevPoints": 56,
       "pointsChange": 90,
-      "prevRank": 134,
-      "rankChange": 22,
+      "prevRank": 129,
+      "rankChange": 17,
       "matches": [
         {
           "matchId": 1,
@@ -406474,8 +406474,8 @@
       "openResolved": 55,
       "prevPoints": 79,
       "pointsChange": 70,
-      "prevRank": 127,
-      "rankChange": 14,
+      "prevRank": 122,
+      "rankChange": 9,
       "matches": [
         {
           "matchId": 1,
@@ -408972,8 +408972,8 @@
       "openResolved": 55,
       "prevPoints": 57,
       "pointsChange": 70,
-      "prevRank": 127,
-      "rankChange": 14,
+      "prevRank": 122,
+      "rankChange": 9,
       "matches": [
         {
           "matchId": 1,
@@ -411470,8 +411470,8 @@
       "openResolved": 55,
       "prevPoints": 49,
       "pointsChange": 90,
-      "prevRank": 136,
-      "rankChange": 22,
+      "prevRank": 131,
+      "rankChange": 17,
       "matches": [
         {
           "matchId": 1,
@@ -413968,8 +413968,8 @@
       "openResolved": 55,
       "prevPoints": 49,
       "pointsChange": 50,
-      "prevRank": 114,
-      "rankChange": 0,
+      "prevRank": 110,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -416466,8 +416466,8 @@
       "openResolved": 55,
       "prevPoints": 71,
       "pointsChange": 60,
-      "prevRank": 121,
-      "rankChange": 6,
+      "prevRank": 117,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -418964,8 +418964,8 @@
       "openResolved": 55,
       "prevPoints": 64,
       "pointsChange": 50,
-      "prevRank": 115,
-      "rankChange": 0,
+      "prevRank": 111,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -421462,8 +421462,8 @@
       "openResolved": 55,
       "prevPoints": 81,
       "pointsChange": 50,
-      "prevRank": 115,
-      "rankChange": 0,
+      "prevRank": 111,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -423960,8 +423960,8 @@
       "openResolved": 55,
       "prevPoints": 59,
       "pointsChange": 50,
-      "prevRank": 116,
-      "rankChange": 0,
+      "prevRank": 112,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -426458,8 +426458,8 @@
       "openResolved": 55,
       "prevPoints": 49,
       "pointsChange": 40,
-      "prevRank": 108,
-      "rankChange": -8,
+      "prevRank": 104,
+      "rankChange": -12,
       "matches": [
         {
           "matchId": 1,
@@ -428956,8 +428956,8 @@
       "openResolved": 55,
       "prevPoints": 71,
       "pointsChange": 30,
-      "prevRank": 101,
-      "rankChange": -15,
+      "prevRank": 97,
+      "rankChange": -19,
       "matches": [
         {
           "matchId": 1,
@@ -431454,8 +431454,8 @@
       "openResolved": 55,
       "prevPoints": 52,
       "pointsChange": 70,
-      "prevRank": 128,
-      "rankChange": 11,
+      "prevRank": 124,
+      "rankChange": 7,
       "matches": [
         {
           "matchId": 1,
@@ -433952,8 +433952,8 @@
       "openResolved": 55,
       "prevPoints": 73,
       "pointsChange": 50,
-      "prevRank": 117,
-      "rankChange": 0,
+      "prevRank": 113,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -436450,8 +436450,8 @@
       "openResolved": 55,
       "prevPoints": 46,
       "pointsChange": 60,
-      "prevRank": 125,
-      "rankChange": 7,
+      "prevRank": 120,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -438948,8 +438948,8 @@
       "openResolved": 55,
       "prevPoints": 52,
       "pointsChange": 40,
-      "prevRank": 113,
-      "rankChange": -6,
+      "prevRank": 109,
+      "rankChange": -10,
       "matches": [
         {
           "matchId": 1,
@@ -441446,8 +441446,8 @@
       "openResolved": 55,
       "prevPoints": 54,
       "pointsChange": 30,
-      "prevRank": 106,
-      "rankChange": -14,
+      "prevRank": 102,
+      "rankChange": -18,
       "matches": [
         {
           "matchId": 1,
@@ -443944,8 +443944,8 @@
       "openResolved": 55,
       "prevPoints": 59,
       "pointsChange": 50,
-      "prevRank": 122,
-      "rankChange": 1,
+      "prevRank": 118,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -446442,8 +446442,8 @@
       "openResolved": 55,
       "prevPoints": 52,
       "pointsChange": 80,
-      "prevRank": 138,
-      "rankChange": 16,
+      "prevRank": 133,
+      "rankChange": 11,
       "matches": [
         {
           "matchId": 1,
@@ -448940,8 +448940,8 @@
       "openResolved": 55,
       "prevPoints": 52,
       "pointsChange": 50,
-      "prevRank": 124,
-      "rankChange": 1,
+      "prevRank": 119,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -451438,8 +451438,8 @@
       "openResolved": 55,
       "prevPoints": 36,
       "pointsChange": 40,
-      "prevRank": 118,
-      "rankChange": -5,
+      "prevRank": 114,
+      "rankChange": -9,
       "matches": [
         {
           "matchId": 1,
@@ -453935,7 +453935,7 @@
       "openHits": 47,
       "openResolved": 55,
       "prevPoints": 52,
-      "pointsChange": 40,
+      "pointsChange": 48,
       "prevRank": 119,
       "rankChange": -5,
       "matches": [
@@ -456434,8 +456434,8 @@
       "openResolved": 55,
       "prevPoints": 64,
       "pointsChange": 40,
-      "prevRank": 120,
-      "rankChange": -5,
+      "prevRank": 116,
+      "rankChange": -9,
       "matches": [
         {
           "matchId": 1,
@@ -458932,8 +458932,8 @@
       "openResolved": 55,
       "prevPoints": 54,
       "pointsChange": 60,
-      "prevRank": 131,
-      "rankChange": 5,
+      "prevRank": 126,
+      "rankChange": 0,
       "matches": [
         {
           "matchId": 1,
@@ -461429,9 +461429,9 @@
       "openHits": 45,
       "openResolved": 55,
       "prevPoints": 59,
-      "pointsChange": 70,
-      "prevRank": 137,
-      "rankChange": 10,
+      "pointsChange": 78,
+      "prevRank": 139,
+      "rankChange": 12,
       "matches": [
         {
           "matchId": 1,
@@ -463927,9 +463927,9 @@
       "openHits": 51,
       "openResolved": 55,
       "prevPoints": 44,
-      "pointsChange": 70,
-      "prevRank": 138,
-      "rankChange": 10,
+      "pointsChange": 78,
+      "prevRank": 140,
+      "rankChange": 12,
       "matches": [
         {
           "matchId": 1,
@@ -466426,8 +466426,8 @@
       "openResolved": 55,
       "prevPoints": 54,
       "pointsChange": 60,
-      "prevRank": 132,
-      "rankChange": 3,
+      "prevRank": 127,
+      "rankChange": -2,
       "matches": [
         {
           "matchId": 1,
@@ -468924,8 +468924,8 @@
       "openResolved": 55,
       "prevPoints": 59,
       "pointsChange": 50,
-      "prevRank": 129,
-      "rankChange": -1,
+      "prevRank": 125,
+      "rankChange": -5,
       "matches": [
         {
           "matchId": 1,
@@ -471422,8 +471422,8 @@
       "openResolved": 55,
       "prevPoints": 49,
       "pointsChange": 60,
-      "prevRank": 133,
-      "rankChange": 2,
+      "prevRank": 128,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -473920,8 +473920,8 @@
       "openResolved": 55,
       "prevPoints": 67,
       "pointsChange": 70,
-      "prevRank": 141,
-      "rankChange": 9,
+      "prevRank": 136,
+      "rankChange": 4,
       "matches": [
         {
           "matchId": 1,
@@ -476418,8 +476418,8 @@
       "openResolved": 55,
       "prevPoints": 49,
       "pointsChange": 60,
-      "prevRank": 135,
-      "rankChange": 2,
+      "prevRank": 130,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -478916,8 +478916,8 @@
       "openResolved": 55,
       "prevPoints": 71,
       "pointsChange": 90,
-      "prevRank": 149,
-      "rankChange": 15,
+      "prevRank": 145,
+      "rankChange": 11,
       "matches": [
         {
           "matchId": 1,
@@ -481414,8 +481414,8 @@
       "openResolved": 55,
       "prevPoints": 59,
       "pointsChange": 70,
-      "prevRank": 144,
-      "rankChange": 9,
+      "prevRank": 140,
+      "rankChange": 5,
       "matches": [
         {
           "matchId": 1,
@@ -483912,8 +483912,8 @@
       "openResolved": 55,
       "prevPoints": 55,
       "pointsChange": 60,
-      "prevRank": 140,
-      "rankChange": 4,
+      "prevRank": 135,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -486410,8 +486410,8 @@
       "openResolved": 55,
       "prevPoints": 39,
       "pointsChange": 30,
-      "prevRank": 126,
-      "rankChange": -11,
+      "prevRank": 121,
+      "rankChange": -16,
       "matches": [
         {
           "matchId": 1,
@@ -488908,8 +488908,8 @@
       "openResolved": 55,
       "prevPoints": 67,
       "pointsChange": 60,
-      "prevRank": 142,
-      "rankChange": 4,
+      "prevRank": 137,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -491406,8 +491406,8 @@
       "openResolved": 55,
       "prevPoints": 62,
       "pointsChange": 30,
-      "prevRank": 127,
-      "rankChange": -12,
+      "prevRank": 122,
+      "rankChange": -17,
       "matches": [
         {
           "matchId": 1,
@@ -493904,8 +493904,8 @@
       "openResolved": 55,
       "prevPoints": 60,
       "pointsChange": 50,
-      "prevRank": 137,
-      "rankChange": -3,
+      "prevRank": 132,
+      "rankChange": -8,
       "matches": [
         {
           "matchId": 1,
@@ -496402,8 +496402,8 @@
       "openResolved": 55,
       "prevPoints": 61,
       "pointsChange": 40,
-      "prevRank": 136,
-      "rankChange": -5,
+      "prevRank": 131,
+      "rankChange": -10,
       "matches": [
         {
           "matchId": 1,
@@ -498900,8 +498900,8 @@
       "openResolved": 55,
       "prevPoints": 39,
       "pointsChange": 40,
-      "prevRank": 141,
-      "rankChange": -1,
+      "prevRank": 136,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -501398,8 +501398,8 @@
       "openResolved": 55,
       "prevPoints": 59,
       "pointsChange": 40,
-      "prevRank": 141,
-      "rankChange": -1,
+      "prevRank": 136,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -503896,8 +503896,8 @@
       "openResolved": 55,
       "prevPoints": 35,
       "pointsChange": 60,
-      "prevRank": 149,
-      "rankChange": 6,
+      "prevRank": 145,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -506394,8 +506394,8 @@
       "openResolved": 55,
       "prevPoints": 46,
       "pointsChange": 30,
-      "prevRank": 136,
-      "rankChange": -7,
+      "prevRank": 131,
+      "rankChange": -12,
       "matches": [
         {
           "matchId": 1,
@@ -508892,8 +508892,8 @@
       "openResolved": 55,
       "prevPoints": 37,
       "pointsChange": 30,
-      "prevRank": 138,
-      "rankChange": -6,
+      "prevRank": 133,
+      "rankChange": -11,
       "matches": [
         {
           "matchId": 1,
@@ -511390,8 +511390,8 @@
       "openResolved": 55,
       "prevPoints": 62,
       "pointsChange": 60,
-      "prevRank": 150,
-      "rankChange": 6,
+      "prevRank": 146,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -513888,8 +513888,8 @@
       "openResolved": 55,
       "prevPoints": 82,
       "pointsChange": 70,
-      "prevRank": 155,
-      "rankChange": 10,
+      "prevRank": 151,
+      "rankChange": 6,
       "matches": [
         {
           "matchId": 1,
@@ -516386,8 +516386,8 @@
       "openResolved": 55,
       "prevPoints": 64,
       "pointsChange": 60,
-      "prevRank": 152,
-      "rankChange": 6,
+      "prevRank": 148,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -518884,8 +518884,8 @@
       "openResolved": 55,
       "prevPoints": 67,
       "pointsChange": 80,
-      "prevRank": 158,
-      "rankChange": 11,
+      "prevRank": 154,
+      "rankChange": 7,
       "matches": [
         {
           "matchId": 1,
@@ -521382,8 +521382,8 @@
       "openResolved": 55,
       "prevPoints": 59,
       "pointsChange": 60,
-      "prevRank": 154,
-      "rankChange": 6,
+      "prevRank": 150,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -523880,8 +523880,8 @@
       "openResolved": 55,
       "prevPoints": 60,
       "pointsChange": 30,
-      "prevRank": 145,
-      "rankChange": -4,
+      "prevRank": 141,
+      "rankChange": -8,
       "matches": [
         {
           "matchId": 1,
@@ -526378,8 +526378,8 @@
       "openResolved": 55,
       "prevPoints": 70,
       "pointsChange": 30,
-      "prevRank": 145,
-      "rankChange": -4,
+      "prevRank": 141,
+      "rankChange": -8,
       "matches": [
         {
           "matchId": 1,
@@ -528876,8 +528876,8 @@
       "openResolved": 55,
       "prevPoints": 49,
       "pointsChange": 40,
-      "prevRank": 147,
-      "rankChange": -2,
+      "prevRank": 143,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -531374,8 +531374,8 @@
       "openResolved": 55,
       "prevPoints": 67,
       "pointsChange": 20,
-      "prevRank": 143,
-      "rankChange": -7,
+      "prevRank": 138,
+      "rankChange": -12,
       "matches": [
         {
           "matchId": 1,
@@ -533872,8 +533872,8 @@
       "openResolved": 55,
       "prevPoints": 57,
       "pointsChange": 50,
-      "prevRank": 153,
-      "rankChange": 3,
+      "prevRank": 149,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -536370,8 +536370,8 @@
       "openResolved": 55,
       "prevPoints": 57,
       "pointsChange": 80,
-      "prevRank": 161,
-      "rankChange": 10,
+      "prevRank": 157,
+      "rankChange": 6,
       "matches": [
         {
           "matchId": 1,
@@ -538868,8 +538868,8 @@
       "openResolved": 55,
       "prevPoints": 59,
       "pointsChange": 30,
-      "prevRank": 146,
-      "rankChange": -6,
+      "prevRank": 142,
+      "rankChange": -10,
       "matches": [
         {
           "matchId": 1,
@@ -541366,8 +541366,8 @@
       "openResolved": 55,
       "prevPoints": 49,
       "pointsChange": 10,
-      "prevRank": 139,
-      "rankChange": -13,
+      "prevRank": 134,
+      "rankChange": -18,
       "matches": [
         {
           "matchId": 1,
@@ -543864,8 +543864,8 @@
       "openResolved": 55,
       "prevPoints": 60,
       "pointsChange": 40,
-      "prevRank": 151,
-      "rankChange": -2,
+      "prevRank": 147,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -546364,8 +546364,8 @@
       "openResolved": 55,
       "prevPoints": 68,
       "pointsChange": 50,
-      "prevRank": 157,
-      "rankChange": 3,
+      "prevRank": 153,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -548862,8 +548862,8 @@
       "openResolved": 55,
       "prevPoints": 47,
       "pointsChange": 50,
-      "prevRank": 158,
-      "rankChange": 3,
+      "prevRank": 154,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -551360,8 +551360,8 @@
       "openResolved": 55,
       "prevPoints": 74,
       "pointsChange": 20,
-      "prevRank": 148,
-      "rankChange": -7,
+      "prevRank": 144,
+      "rankChange": -11,
       "matches": [
         {
           "matchId": 1,
@@ -553858,8 +553858,8 @@
       "openResolved": 55,
       "prevPoints": 72,
       "pointsChange": 80,
-      "prevRank": 166,
-      "rankChange": 11,
+      "prevRank": 162,
+      "rankChange": 7,
       "matches": [
         {
           "matchId": 1,
@@ -556355,9 +556355,9 @@
       "openHits": 48,
       "openResolved": 55,
       "prevPoints": 41,
-      "pointsChange": 90,
-      "prevRank": 169,
-      "rankChange": 13,
+      "pointsChange": 98,
+      "prevRank": 166,
+      "rankChange": 10,
       "matches": [
         {
           "matchId": 1,
@@ -558854,8 +558854,8 @@
       "openResolved": 55,
       "prevPoints": 42,
       "pointsChange": 60,
-      "prevRank": 162,
-      "rankChange": 5,
+      "prevRank": 158,
+      "rankChange": 1,
       "matches": [
         {
           "matchId": 1,
@@ -561352,8 +561352,8 @@
       "openResolved": 55,
       "prevPoints": 52,
       "pointsChange": 80,
-      "prevRank": 168,
-      "rankChange": 10,
+      "prevRank": 164,
+      "rankChange": 6,
       "matches": [
         {
           "matchId": 1,
@@ -563850,8 +563850,8 @@
       "openResolved": 55,
       "prevPoints": 44,
       "pointsChange": 30,
-      "prevRank": 156,
-      "rankChange": -3,
+      "prevRank": 152,
+      "rankChange": -7,
       "matches": [
         {
           "matchId": 1,
@@ -566348,8 +566348,8 @@
       "openResolved": 55,
       "prevPoints": 42,
       "pointsChange": 50,
-      "prevRank": 159,
-      "rankChange": -1,
+      "prevRank": 155,
+      "rankChange": -5,
       "matches": [
         {
           "matchId": 1,
@@ -568846,8 +568846,8 @@
       "openResolved": 55,
       "prevPoints": 49,
       "pointsChange": 40,
-      "prevRank": 160,
-      "rankChange": -1,
+      "prevRank": 156,
+      "rankChange": -5,
       "matches": [
         {
           "matchId": 1,
@@ -571344,8 +571344,8 @@
       "openResolved": 55,
       "prevPoints": 74,
       "pointsChange": 40,
-      "prevRank": 162,
-      "rankChange": 0,
+      "prevRank": 158,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -573842,8 +573842,8 @@
       "openResolved": 55,
       "prevPoints": 54,
       "pointsChange": 50,
-      "prevRank": 164,
-      "rankChange": 1,
+      "prevRank": 160,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -576340,8 +576340,8 @@
       "openResolved": 55,
       "prevPoints": 56,
       "pointsChange": 90,
-      "prevRank": 173,
-      "rankChange": 9,
+      "prevRank": 169,
+      "rankChange": 5,
       "matches": [
         {
           "matchId": 1,
@@ -578838,8 +578838,8 @@
       "openResolved": 55,
       "prevPoints": 48,
       "pointsChange": 50,
-      "prevRank": 165,
-      "rankChange": 0,
+      "prevRank": 161,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -581336,8 +581336,8 @@
       "openResolved": 55,
       "prevPoints": 52,
       "pointsChange": 40,
-      "prevRank": 163,
-      "rankChange": -3,
+      "prevRank": 159,
+      "rankChange": -7,
       "matches": [
         {
           "matchId": 1,
@@ -583834,8 +583834,8 @@
       "openResolved": 55,
       "prevPoints": 37,
       "pointsChange": 50,
-      "prevRank": 168,
-      "rankChange": 1,
+      "prevRank": 164,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -586332,8 +586332,8 @@
       "openResolved": 55,
       "prevPoints": 41,
       "pointsChange": 100,
-      "prevRank": 174,
-      "rankChange": 6,
+      "prevRank": 170,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -588830,8 +588830,8 @@
       "openResolved": 55,
       "prevPoints": 35,
       "pointsChange": 30,
-      "prevRank": 167,
-      "rankChange": -2,
+      "prevRank": 163,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -591328,8 +591328,8 @@
       "openResolved": 55,
       "prevPoints": 71,
       "pointsChange": 30,
-      "prevRank": 170,
-      "rankChange": 0,
+      "prevRank": 165,
+      "rankChange": -5,
       "matches": [
         {
           "matchId": 1,
@@ -593826,8 +593826,8 @@
       "openResolved": 55,
       "prevPoints": 67,
       "pointsChange": 50,
-      "prevRank": 172,
-      "rankChange": 2,
+      "prevRank": 168,
+      "rankChange": -2,
       "matches": [
         {
           "matchId": 1,
@@ -596324,8 +596324,8 @@
       "openResolved": 55,
       "prevPoints": 58,
       "pointsChange": 40,
-      "prevRank": 171,
-      "rankChange": 0,
+      "prevRank": 167,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -598822,8 +598822,8 @@
       "openResolved": 55,
       "prevPoints": 84,
       "pointsChange": 20,
-      "prevRank": 171,
-      "rankChange": -1,
+      "prevRank": 167,
+      "rankChange": -5,
       "matches": [
         {
           "matchId": 1,
@@ -601320,8 +601320,8 @@
       "openResolved": 55,
       "prevPoints": 54,
       "pointsChange": 50,
-      "prevRank": 175,
-      "rankChange": 2,
+      "prevRank": 171,
+      "rankChange": -2,
       "matches": [
         {
           "matchId": 1,
@@ -603818,8 +603818,8 @@
       "openResolved": 55,
       "prevPoints": 42,
       "pointsChange": 20,
-      "prevRank": 176,
-      "rankChange": 2,
+      "prevRank": 172,
+      "rankChange": -2,
       "matches": [
         {
           "matchId": 1,
@@ -606316,8 +606316,8 @@
       "openResolved": 55,
       "prevPoints": 58,
       "pointsChange": 50,
-      "prevRank": 177,
-      "rankChange": 2,
+      "prevRank": 173,
+      "rankChange": -2,
       "matches": [
         {
           "matchId": 1,
