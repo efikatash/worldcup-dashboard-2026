@@ -10,13 +10,13 @@
     "playerBSeed": 53,
     "playerBName": "שלום שאער",
     "isBye": false,
-    "status": "pending",
-    "winnerSeed": null,
-    "winnerName": null,
-    "winnerReason": null,
+    "status": "completed",
+    "winnerSeed": 9,
+    "winnerName": "אייל חסון",
+    "winnerReason": "official",
     "tieBreakerUsed": null,
-    "roundScoreA": null,
-    "roundScoreB": null
+    "roundScoreA": 158,
+    "roundScoreB": 120
   },
   {
     "id": "r7-m002",
@@ -29,12 +29,12 @@
     "playerBSeed": 54,
     "playerBName": "תומר אמינפור",
     "isBye": false,
-    "status": "pending",
-    "winnerSeed": null,
-    "winnerName": null,
-    "winnerReason": null,
-    "tieBreakerUsed": null,
-    "roundScoreA": null,
-    "roundScoreB": null
+    "status": "completed",
+    "winnerSeed": 54,
+    "winnerName": "תומר אמינפור",
+    "winnerReason": "official",
+    "tieBreakerUsed": "B",
+    "roundScoreA": 80,
+    "roundScoreB": 80
   }
 ]

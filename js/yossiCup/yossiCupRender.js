@@ -20,6 +20,7 @@
   var _rawBracketR5 = [];   // frozen R5 rows (from #ycBracketR5)
   var _rawBracketR6 = [];   // frozen R6 rows (from #ycBracketR6)
   var _rawBracketR7 = [];   // frozen R7 rows (from #ycBracketR7)
+  var _rawBracketR8 = [];   // frozen R8 rows (from #ycBracketR8)
   var _bracket      = [];   // enriched active-round bracket (live scores + provisional)
   var _participants = [];   // from #ycParticipants
   var _rounds       = [];
@@ -41,6 +42,7 @@
       _rawBracketR5 = _parse('ycBracketR5')    || [];
       _rawBracketR6 = _parse('ycBracketR6')    || [];
       _rawBracketR7 = _parse('ycBracketR7')    || [];
+      _rawBracketR8 = _parse('ycBracketR8')    || [];
       _rounds       = _parse('ycRounds')       || [];
       _rules        = _parse('ycRules')        || {};
       _activeRound  = _computeActiveRound();
@@ -70,7 +72,8 @@
     if (round === 4) return _rawBracketR4;
     if (round === 5) return _rawBracketR5;
     if (round === 6) return _rawBracketR6;
-    return _rawBracketR7;
+    if (round === 7) return _rawBracketR7;
+    return _rawBracketR8;
   }
 
   // ── live recompute ─────────────────────────────────────────────────────
@@ -103,7 +106,8 @@
     var baselineBySeed = {};
     if (_activeRound >= 2) {
       _participants.forEach(function (p) {
-        var bKey = _activeRound >= 7 ? 'baselineScoreR7'
+        var bKey = _activeRound >= 8 ? 'baselineScoreR8'
+                 : _activeRound >= 7 ? 'baselineScoreR7'
                  : _activeRound >= 6 ? 'baselineScoreR6'
                  : _activeRound >= 5 ? 'baselineScoreR5'
                  : _activeRound >= 4 ? 'baselineScoreR4'

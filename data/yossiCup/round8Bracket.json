@@ -1,0 +1,21 @@
+[
+  {
+    "id": "r8-m001",
+    "round": 8,
+    "matchNumber": 1,
+    "bracketSlotA": 1,
+    "bracketSlotB": 2,
+    "playerASeed": 9,
+    "playerAName": "אייל חסון",
+    "playerBSeed": 54,
+    "playerBName": "תומר אמינפור",
+    "isBye": false,
+    "status": "pending",
+    "winnerSeed": null,
+    "winnerName": null,
+    "winnerReason": null,
+    "tieBreakerUsed": null,
+    "roundScoreA": null,
+    "roundScoreB": null
+  }
+]
