@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-20 04:02",
+    "generatedAt": "2026-07-20 04:03",
     "timezone": "Asia/Manila",
     "workbookName": "תוצאות משחקי היום הרביעי - 14.6.26.xlsx",
     "participantsCount": 242,
@@ -8,14 +8,14 @@
     "completedFifaMatches": 72,
     "pendingMatches": 0,
     "openQuestionsCount": 146,
-    "resolvedOpenQuestions": 111,
-    "verifiedOpenQuestions": 111,
+    "resolvedOpenQuestions": 112,
+    "verifiedOpenQuestions": 112,
     "verifiedFifaOpenQuestions": 6,
-    "verifiedExternalOpenQuestions": 30,
+    "verifiedExternalOpenQuestions": 31,
     "scoringRules": "משחקים: 10 נק׳ לתוצאה מדויקת, 5 לכיוון נכון, ועוד 2 אם גם הפרש השערים נכון. שאלות פתוחות נספרות כשהן מאומתות ממקור FIFA, מקור חיצוני אמין, או קובץ תוצאות מעודכן שסיפקת.",
     "dataPolicy": "הניחושים והניקוד נלקחים מקובץ התוצאות המעודכן שהועלה. תוצאות משחקים נשארות FIFA-only לפי הדרישה המקורית; שאלות פתוחות יכולות להיספר גם ממקור שאינו FIFA.",
     "dashboardVersion": "GitHub Auto FIFA/ESPN Final Fallback + ESPN Live",
-    "dashboardBuiltAt": "2026-07-20 04:02",
+    "dashboardBuiltAt": "2026-07-20 04:03",
     "completedMatches": 72,
     "liveMatches": 0,
     "openQuestionEngine": "enabled_step8_fast_track_only",
@@ -4197,15 +4197,16 @@
       "num": "(15",
       "section": "מסלול ה\"גמר\" (*)",
       "question": "האם יבוצע חילוף במשחק הגמר בטרם פתיחת המחצית השניה (כולל חילוף במחצית המשחק) ?",
-      "actualAnswer": "לא ידוע",
-      "status": "pending",
-      "sourceStatus": "pending",
+      "actualAnswer": "כן",
+      "status": "known",
+      "sourceStatus": "verified_external",
       "sourceUrl": "",
       "sourceTitle": "",
       "maxPoints": 10,
       "block": "גמר",
       "ruleType": "threshold_or_yes_no_manual",
-      "policyStatus": "locked_not_answered_now"
+      "policyStatus": "locked_not_answered_now",
+      "resolvedMatchday": "2026-07-19"
     },
     {
       "id": 142,
@@ -4293,17 +4294,17 @@
   "participants": [
     {
       "name": "אריאל אנגל",
-      "total": 1943,
+      "total": 1953,
       "matchPoints": 310,
-      "openPoints": 622,
+      "openPoints": 632,
       "bonusPoints": 1011,
       "exact": 9,
       "partial": 40,
       "gd": 10,
-      "openHits": 64,
+      "openHits": 65,
       "openResolved": 55,
       "prevPoints": 74,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 1,
       "rankChange": 0,
       "matches": [
@@ -5946,7 +5947,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -9289,17 +9290,17 @@
     },
     {
       "name": "יובל גרשון",
-      "total": 1887,
+      "total": 1897,
       "matchPoints": 280,
-      "openPoints": 622,
+      "openPoints": 632,
       "bonusPoints": 985,
       "exact": 9,
       "partial": 34,
       "gd": 10,
-      "openHits": 65,
+      "openHits": 66,
       "openResolved": 55,
       "prevPoints": 69,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 4,
       "rankChange": 1,
       "matches": [
@@ -10942,7 +10943,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -16783,17 +16784,17 @@
     },
     {
       "name": "גיא טלסניק",
-      "total": 1880,
+      "total": 1890,
       "matchPoints": 301,
-      "openPoints": 642,
+      "openPoints": 652,
       "bonusPoints": 937,
       "exact": 9,
       "partial": 37,
       "gd": 13,
-      "openHits": 65,
+      "openHits": 66,
       "openResolved": 55,
       "prevPoints": 69,
-      "pointsChange": 13,
+      "pointsChange": 23,
       "prevRank": 7,
       "rankChange": 2,
       "matches": [
@@ -18436,7 +18437,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -19281,17 +19282,17 @@
     },
     {
       "name": "רועי שטרק",
-      "total": 1884,
+      "total": 1894,
       "matchPoints": 313,
-      "openPoints": 572,
+      "openPoints": 582,
       "bonusPoints": 999,
       "exact": 10,
       "partial": 37,
       "gd": 14,
-      "openHits": 59,
+      "openHits": 60,
       "openResolved": 55,
       "prevPoints": 81,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 5,
       "rankChange": 1,
       "matches": [
@@ -20934,7 +20935,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -24277,19 +24278,19 @@
     },
     {
       "name": "אפי קטש",
-      "total": 1833,
+      "total": 1843,
       "matchPoints": 291,
-      "openPoints": 612,
+      "openPoints": 622,
       "bonusPoints": 930,
       "exact": 12,
       "partial": 31,
       "gd": 8,
-      "openHits": 64,
+      "openHits": 65,
       "openResolved": 55,
       "prevPoints": 82,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 11,
-      "rankChange": -2,
+      "rankChange": 0,
       "matches": [
         {
           "matchId": 1,
@@ -25930,7 +25931,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -26631,7 +26632,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 13,
+      "rank": 11,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -26775,17 +26776,17 @@
     },
     {
       "name": "יוני דלאל",
-      "total": 1857,
+      "total": 1867,
       "matchPoints": 280,
-      "openPoints": 562,
+      "openPoints": 572,
       "bonusPoints": 1015,
       "exact": 6,
       "partial": 40,
       "gd": 10,
-      "openHits": 56,
+      "openHits": 57,
       "openResolved": 55,
       "prevPoints": 81,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 8,
       "rankChange": 0,
       "matches": [
@@ -28428,7 +28429,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -29285,7 +29286,7 @@
       "prevPoints": 64,
       "pointsChange": 10,
       "prevRank": 12,
-      "rankChange": 2,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -31627,7 +31628,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 10,
+      "rank": 13,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -31783,7 +31784,7 @@
       "prevPoints": 74,
       "pointsChange": 0,
       "prevRank": 10,
-      "rankChange": -2,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -34125,7 +34126,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 12,
+      "rank": 14,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -41763,19 +41764,19 @@
     },
     {
       "name": "בוריס גורליק",
-      "total": 1833,
+      "total": 1843,
       "matchPoints": 266,
-      "openPoints": 587,
+      "openPoints": 597,
       "bonusPoints": 980,
       "exact": 6,
       "partial": 38,
       "gd": 8,
-      "openHits": 61,
+      "openHits": 62,
       "openResolved": 55,
       "prevPoints": 49,
-      "pointsChange": 15,
+      "pointsChange": 25,
       "prevRank": 17,
-      "rankChange": 4,
+      "rankChange": 6,
       "matches": [
         {
           "matchId": 1,
@@ -43416,7 +43417,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -44117,7 +44118,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 13,
+      "rank": 11,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -44273,7 +44274,7 @@
       "prevPoints": 62,
       "pointsChange": 10,
       "prevRank": 12,
-      "rankChange": 2,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -46615,7 +46616,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 10,
+      "rank": 13,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -46759,19 +46760,19 @@
     },
     {
       "name": "שי קוקוש",
-      "total": 1810,
+      "total": 1820,
       "matchPoints": 293,
-      "openPoints": 625,
+      "openPoints": 635,
       "bonusPoints": 892,
       "exact": 11,
       "partial": 33,
       "gd": 9,
-      "openHits": 64,
+      "openHits": 65,
       "openResolved": 55,
       "prevPoints": 72,
-      "pointsChange": 3,
+      "pointsChange": 13,
       "prevRank": 19,
-      "rankChange": 0,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -48412,7 +48413,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -49113,7 +49114,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 19,
+      "rank": 17,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -49257,19 +49258,19 @@
     },
     {
       "name": "שלום שאער",
-      "total": 1836,
+      "total": 1846,
       "matchPoints": 276,
-      "openPoints": 572,
+      "openPoints": 582,
       "bonusPoints": 988,
       "exact": 3,
       "partial": 42,
       "gd": 18,
-      "openHits": 60,
+      "openHits": 61,
       "openResolved": 55,
       "prevPoints": 64,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 13,
-      "rankChange": 2,
+      "rankChange": 3,
       "matches": [
         {
           "matchId": 1,
@@ -50910,7 +50911,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -51611,7 +51612,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 11,
+      "rank": 10,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -51755,19 +51756,19 @@
     },
     {
       "name": "אריק גליקמן",
-      "total": 1831,
+      "total": 1841,
       "matchPoints": 340,
-      "openPoints": 559,
+      "openPoints": 569,
       "bonusPoints": 932,
       "exact": 11,
       "partial": 40,
       "gd": 15,
-      "openHits": 58,
+      "openHits": 59,
       "openResolved": 55,
       "prevPoints": 71,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 14,
-      "rankChange": 0,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -53408,7 +53409,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -54109,7 +54110,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 14,
+      "rank": 12,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -56751,19 +56752,19 @@
     },
     {
       "name": "אביחי+יואב קראבץ",
-      "total": 1800,
+      "total": 1810,
       "matchPoints": 286,
-      "openPoints": 562,
+      "openPoints": 572,
       "bonusPoints": 952,
       "exact": 7,
       "partial": 40,
       "gd": 8,
-      "openHits": 59,
+      "openHits": 60,
       "openResolved": 55,
       "prevPoints": 72,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 20,
-      "rankChange": -4,
+      "rankChange": 1,
       "matches": [
         {
           "matchId": 1,
@@ -58404,7 +58405,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -59105,7 +59106,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 24,
+      "rank": 19,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -59261,7 +59262,7 @@
       "prevPoints": 41,
       "pointsChange": 3,
       "prevRank": 20,
-      "rankChange": -3,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -61603,7 +61604,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 23,
+      "rank": 24,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -61759,7 +61760,7 @@
       "prevPoints": 57,
       "pointsChange": 10,
       "prevRank": 23,
-      "rankChange": 1,
+      "rankChange": 0,
       "matches": [
         {
           "matchId": 1,
@@ -64101,7 +64102,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 22,
+      "rank": 23,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -64257,7 +64258,7 @@
       "prevPoints": 78,
       "pointsChange": 0,
       "prevRank": 24,
-      "rankChange": -5,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -66599,7 +66600,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 29,
+      "rank": 30,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -69241,19 +69242,19 @@
     },
     {
       "name": "ניר כהן",
-      "total": 1799,
+      "total": 1809,
       "matchPoints": 266,
-      "openPoints": 652,
+      "openPoints": 662,
       "bonusPoints": 881,
       "exact": 9,
       "partial": 32,
       "gd": 8,
-      "openHits": 68,
+      "openHits": 69,
       "openResolved": 55,
       "prevPoints": 89,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 26,
-      "rankChange": 1,
+      "rankChange": 6,
       "matches": [
         {
           "matchId": 1,
@@ -70894,7 +70895,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -71595,7 +71596,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 25,
+      "rank": 20,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -71739,19 +71740,19 @@
     },
     {
       "name": "חוני במנולקר+רן בטאט",
-      "total": 1796,
+      "total": 1806,
       "matchPoints": 290,
-      "openPoints": 562,
+      "openPoints": 572,
       "bonusPoints": 944,
       "exact": 8,
       "partial": 38,
       "gd": 10,
-      "openHits": 58,
+      "openHits": 59,
       "openResolved": 55,
       "prevPoints": 57,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 27,
-      "rankChange": 0,
+      "rankChange": 5,
       "matches": [
         {
           "matchId": 1,
@@ -73392,7 +73393,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -74093,7 +74094,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 27,
+      "rank": 22,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -76747,7 +76748,7 @@
       "prevPoints": 66,
       "pointsChange": 10,
       "prevRank": 28,
-      "rankChange": 0,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -79089,7 +79090,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 28,
+      "rank": 29,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -79245,7 +79246,7 @@
       "prevPoints": 52,
       "pointsChange": 3,
       "prevRank": 23,
-      "rankChange": -3,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -81587,7 +81588,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 26,
+      "rank": 27,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -81731,19 +81732,19 @@
     },
     {
       "name": "אבינועם דהן",
-      "total": 1792,
+      "total": 1802,
       "matchPoints": 278,
-      "openPoints": 590,
+      "openPoints": 600,
       "bonusPoints": 924,
       "exact": 6,
       "partial": 40,
       "gd": 9,
-      "openHits": 61,
+      "openHits": 62,
       "openResolved": 55,
       "prevPoints": 67,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 30,
-      "rankChange": 0,
+      "rankChange": 5,
       "matches": [
         {
           "matchId": 1,
@@ -83384,7 +83385,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -84085,7 +84086,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 30,
+      "rank": 25,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -84229,19 +84230,19 @@
     },
     {
       "name": "שמוליק בראזני",
-      "total": 1782,
+      "total": 1792,
       "matchPoints": 280,
-      "openPoints": 512,
+      "openPoints": 522,
       "bonusPoints": 990,
       "exact": 8,
       "partial": 36,
       "gd": 10,
-      "openHits": 54,
+      "openHits": 55,
       "openResolved": 55,
       "prevPoints": 59,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 30,
-      "rankChange": -3,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -85882,7 +85883,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -86583,7 +86584,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 33,
+      "rank": 31,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -86727,19 +86728,19 @@
     },
     {
       "name": "אלירן נוי",
-      "total": 1790,
+      "total": 1800,
       "matchPoints": 234,
-      "openPoints": 649,
+      "openPoints": 659,
       "bonusPoints": 907,
       "exact": 4,
       "partial": 36,
       "gd": 7,
-      "openHits": 65,
+      "openHits": 66,
       "openResolved": 55,
       "prevPoints": 53,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 25,
-      "rankChange": -7,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -88380,7 +88381,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -89081,7 +89082,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 32,
+      "rank": 26,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -89237,7 +89238,7 @@
       "prevPoints": 94,
       "pointsChange": 13,
       "prevRank": 29,
-      "rankChange": 2,
+      "rankChange": 1,
       "matches": [
         {
           "matchId": 1,
@@ -91579,7 +91580,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 27,
+      "rank": 28,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -91723,19 +91724,19 @@
     },
     {
       "name": "תומר אמינפור",
-      "total": 1782,
+      "total": 1792,
       "matchPoints": 260,
-      "openPoints": 622,
+      "openPoints": 632,
       "bonusPoints": 900,
       "exact": 4,
       "partial": 40,
       "gd": 10,
-      "openHits": 63,
+      "openHits": 64,
       "openResolved": 55,
       "prevPoints": 64,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 32,
-      "rankChange": -1,
+      "rankChange": 1,
       "matches": [
         {
           "matchId": 1,
@@ -93376,7 +93377,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -94077,7 +94078,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 33,
+      "rank": 31,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -94221,19 +94222,19 @@
     },
     {
       "name": "עפר לירון",
-      "total": 1771,
+      "total": 1781,
       "matchPoints": 254,
-      "openPoints": 599,
+      "openPoints": 609,
       "bonusPoints": 918,
       "exact": 4,
       "partial": 38,
       "gd": 12,
-      "openHits": 61,
+      "openHits": 62,
       "openResolved": 55,
       "prevPoints": 54,
-      "pointsChange": 2,
+      "pointsChange": 12,
       "prevRank": 33,
-      "rankChange": -4,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -95874,7 +95875,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -96575,7 +96576,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 37,
+      "rank": 34,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -96719,19 +96720,19 @@
     },
     {
       "name": "מאיה רון",
-      "total": 1781,
+      "total": 1791,
       "matchPoints": 293,
-      "openPoints": 572,
+      "openPoints": 582,
       "bonusPoints": 916,
       "exact": 8,
       "partial": 37,
       "gd": 14,
-      "openHits": 59,
+      "openHits": 60,
       "openResolved": 55,
       "prevPoints": 54,
-      "pointsChange": 3,
+      "pointsChange": 13,
       "prevRank": 31,
-      "rankChange": -3,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -98372,7 +98373,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -99073,7 +99074,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 34,
+      "rank": 32,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -99229,7 +99230,7 @@
       "prevPoints": 54,
       "pointsChange": 13,
       "prevRank": 31,
-      "rankChange": 0,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -101571,7 +101572,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 31,
+      "rank": 32,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -101715,19 +101716,19 @@
     },
     {
       "name": "יוסי מצרי",
-      "total": 1755,
+      "total": 1765,
       "matchPoints": 274,
-      "openPoints": 550,
+      "openPoints": 560,
       "bonusPoints": 931,
       "exact": 7,
       "partial": 36,
       "gd": 12,
-      "openHits": 57,
+      "openHits": 58,
       "openResolved": 55,
       "prevPoints": 62,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 40,
-      "rankChange": -4,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -103368,7 +103369,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -104069,7 +104070,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 44,
+      "rank": 41,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -104225,7 +104226,7 @@
       "prevPoints": 64,
       "pointsChange": 10,
       "prevRank": 36,
-      "rankChange": -1,
+      "rankChange": -2,
       "matches": [
         {
           "matchId": 1,
@@ -106567,7 +106568,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 37,
+      "rank": 38,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -109221,7 +109222,7 @@
       "prevPoints": 66,
       "pointsChange": 0,
       "prevRank": 33,
-      "rankChange": -5,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -111563,7 +111564,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 38,
+      "rank": 39,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -111719,7 +111720,7 @@
       "prevPoints": 57,
       "pointsChange": 10,
       "prevRank": 34,
-      "rankChange": -2,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -114061,7 +114062,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 36,
+      "rank": 35,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -114217,7 +114218,7 @@
       "prevPoints": 76,
       "pointsChange": 10,
       "prevRank": 38,
-      "rankChange": -1,
+      "rankChange": -2,
       "matches": [
         {
           "matchId": 1,
@@ -116559,7 +116560,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 39,
+      "rank": 40,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -116703,19 +116704,19 @@
     },
     {
       "name": "אורי קיין",
-      "total": 1767,
+      "total": 1777,
       "matchPoints": 287,
-      "openPoints": 579,
+      "openPoints": 589,
       "bonusPoints": 901,
       "exact": 5,
       "partial": 43,
       "gd": 11,
-      "openHits": 58,
+      "openHits": 59,
       "openResolved": 55,
       "prevPoints": 51,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 35,
-      "rankChange": -5,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -118356,7 +118357,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -119057,7 +119058,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 40,
+      "rank": 36,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -119201,19 +119202,19 @@
     },
     {
       "name": "רוני גליק",
-      "total": 1779,
+      "total": 1789,
       "matchPoints": 263,
-      "openPoints": 619,
+      "openPoints": 629,
       "bonusPoints": 897,
       "exact": 7,
       "partial": 35,
       "gd": 9,
-      "openHits": 65,
+      "openHits": 66,
       "openResolved": 55,
       "prevPoints": 52,
-      "pointsChange": 12,
+      "pointsChange": 22,
       "prevRank": 35,
-      "rankChange": 0,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -120854,7 +120855,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -121555,7 +121556,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 35,
+      "rank": 33,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -126695,19 +126696,19 @@
     },
     {
       "name": "בוריס גורובוי+לירן בר זאב",
-      "total": 1767,
+      "total": 1777,
       "matchPoints": 284,
-      "openPoints": 630,
+      "openPoints": 640,
       "bonusPoints": 853,
       "exact": 8,
       "partial": 38,
       "gd": 7,
-      "openHits": 64,
+      "openHits": 65,
       "openResolved": 55,
       "prevPoints": 72,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 39,
-      "rankChange": -1,
+      "rankChange": 3,
       "matches": [
         {
           "matchId": 1,
@@ -128348,7 +128349,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -129049,7 +129050,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 40,
+      "rank": 36,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -129193,19 +129194,19 @@
     },
     {
       "name": "יוסי אדרי",
-      "total": 1764,
+      "total": 1774,
       "matchPoints": 241,
-      "openPoints": 622,
+      "openPoints": 632,
       "bonusPoints": 901,
       "exact": 7,
       "partial": 31,
       "gd": 8,
-      "openHits": 64,
+      "openHits": 65,
       "openResolved": 55,
       "prevPoints": 57,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 41,
-      "rankChange": 0,
+      "rankChange": 4,
       "matches": [
         {
           "matchId": 1,
@@ -130846,7 +130847,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -131547,7 +131548,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 41,
+      "rank": 37,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -131691,17 +131692,17 @@
     },
     {
       "name": "שלומי+הראל ביגר",
-      "total": 1734,
+      "total": 1744,
       "matchPoints": 249,
-      "openPoints": 582,
+      "openPoints": 592,
       "bonusPoints": 903,
       "exact": 8,
       "partial": 31,
       "gd": 7,
-      "openHits": 61,
+      "openHits": 62,
       "openResolved": 55,
       "prevPoints": 59,
-      "pointsChange": 3,
+      "pointsChange": 13,
       "prevRank": 48,
       "rankChange": -1,
       "matches": [
@@ -133344,7 +133345,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -134189,19 +134190,19 @@
     },
     {
       "name": "שמוליק תמיר",
-      "total": 1744,
+      "total": 1754,
       "matchPoints": 291,
-      "openPoints": 603,
+      "openPoints": 613,
       "bonusPoints": 850,
       "exact": 9,
       "partial": 35,
       "gd": 13,
-      "openHits": 61,
+      "openHits": 62,
       "openResolved": 55,
       "prevPoints": 72,
-      "pointsChange": 3,
+      "pointsChange": 13,
       "prevRank": 44,
-      "rankChange": -4,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -135842,7 +135843,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -136543,7 +136544,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 48,
+      "rank": 45,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -136699,7 +136700,7 @@
       "prevPoints": 52,
       "pointsChange": 5,
       "prevRank": 49,
-      "rankChange": -1,
+      "rankChange": -5,
       "matches": [
         {
           "matchId": 1,
@@ -139041,7 +139042,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 50,
+      "rank": 54,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -139197,7 +139198,7 @@
       "prevPoints": 82,
       "pointsChange": 10,
       "prevRank": 47,
-      "rankChange": 0,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -141539,7 +141540,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 47,
+      "rank": 48,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -141695,7 +141696,7 @@
       "prevPoints": 70,
       "pointsChange": 0,
       "prevRank": 43,
-      "rankChange": -4,
+      "rankChange": -5,
       "matches": [
         {
           "matchId": 1,
@@ -144037,7 +144038,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 47,
+      "rank": 48,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -144181,19 +144182,19 @@
     },
     {
       "name": "יאיר אללוף",
-      "total": 1724,
+      "total": 1734,
       "matchPoints": 286,
-      "openPoints": 539,
+      "openPoints": 549,
       "bonusPoints": 899,
       "exact": 9,
       "partial": 34,
       "gd": 13,
-      "openHits": 54,
+      "openHits": 55,
       "openResolved": 55,
       "prevPoints": 71,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 51,
-      "rankChange": -5,
+      "rankChange": -2,
       "matches": [
         {
           "matchId": 1,
@@ -145834,7 +145835,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -146535,7 +146536,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 56,
+      "rank": 53,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -146691,7 +146692,7 @@
       "prevPoints": 64,
       "pointsChange": 10,
       "prevRank": 45,
-      "rankChange": 0,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -149033,7 +149034,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 45,
+      "rank": 46,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -149189,7 +149190,7 @@
       "prevPoints": 57,
       "pointsChange": 10,
       "prevRank": 46,
-      "rankChange": 0,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -151531,7 +151532,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 46,
+      "rank": 47,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -151687,7 +151688,7 @@
       "prevPoints": 66,
       "pointsChange": 10,
       "prevRank": 52,
-      "rankChange": 1,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -154029,7 +154030,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 51,
+      "rank": 55,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -154185,7 +154186,7 @@
       "prevPoints": 67,
       "pointsChange": 13,
       "prevRank": 48,
-      "rankChange": 0,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -156527,7 +156528,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 48,
+      "rank": 49,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -156683,7 +156684,7 @@
       "prevPoints": 49,
       "pointsChange": 13,
       "prevRank": 53,
-      "rankChange": 3,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -159025,7 +159026,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 50,
+      "rank": 54,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -159169,19 +159170,19 @@
     },
     {
       "name": "צלי גרשגורן",
-      "total": 1727,
+      "total": 1737,
       "matchPoints": 258,
-      "openPoints": 602,
+      "openPoints": 612,
       "bonusPoints": 867,
       "exact": 6,
       "partial": 38,
       "gd": 4,
-      "openHits": 61,
+      "openHits": 62,
       "openResolved": 55,
       "prevPoints": 59,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 50,
-      "rankChange": -3,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -160822,7 +160823,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -161523,7 +161524,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 53,
+      "rank": 51,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -161679,7 +161680,7 @@
       "prevPoints": 91,
       "pointsChange": 0,
       "prevRank": 50,
-      "rankChange": -3,
+      "rankChange": -8,
       "matches": [
         {
           "matchId": 1,
@@ -164021,7 +164022,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 53,
+      "rank": 58,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -164165,19 +164166,19 @@
     },
     {
       "name": "אלעד מור+אבירן",
-      "total": 1726,
+      "total": 1736,
       "matchPoints": 290,
-      "openPoints": 552,
+      "openPoints": 562,
       "bonusPoints": 884,
       "exact": 9,
       "partial": 34,
       "gd": 15,
-      "openHits": 54,
+      "openHits": 55,
       "openResolved": 55,
       "prevPoints": 73,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 56,
-      "rankChange": 2,
+      "rankChange": 4,
       "matches": [
         {
           "matchId": 1,
@@ -165818,7 +165819,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -166519,7 +166520,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 54,
+      "rank": 52,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -166663,19 +166664,19 @@
     },
     {
       "name": "מאור אלפסי",
-      "total": 1719,
+      "total": 1729,
       "matchPoints": 261,
-      "openPoints": 572,
+      "openPoints": 582,
       "bonusPoints": 886,
       "exact": 9,
       "partial": 31,
       "gd": 8,
-      "openHits": 60,
+      "openHits": 61,
       "openResolved": 55,
       "prevPoints": 66,
-      "pointsChange": 3,
+      "pointsChange": 13,
       "prevRank": 56,
-      "rankChange": -3,
+      "rankChange": 0,
       "matches": [
         {
           "matchId": 1,
@@ -168316,7 +168317,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -169017,7 +169018,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 59,
+      "rank": 56,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -169161,19 +169162,19 @@
     },
     {
       "name": "אמרי צידון",
-      "total": 1724,
+      "total": 1734,
       "matchPoints": 282,
-      "openPoints": 547,
+      "openPoints": 557,
       "bonusPoints": 895,
       "exact": 10,
       "partial": 32,
       "gd": 11,
-      "openHits": 57,
+      "openHits": 58,
       "openResolved": 55,
       "prevPoints": 64,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 51,
-      "rankChange": -5,
+      "rankChange": -2,
       "matches": [
         {
           "matchId": 1,
@@ -170814,7 +170815,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -171515,7 +171516,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 56,
+      "rank": 53,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -171671,7 +171672,7 @@
       "prevPoints": 77,
       "pointsChange": 13,
       "prevRank": 68,
-      "rankChange": 3,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -174013,7 +174014,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 65,
+      "rank": 69,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -174169,7 +174170,7 @@
       "prevPoints": 54,
       "pointsChange": 10,
       "prevRank": 60,
-      "rankChange": 2,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -176511,7 +176512,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 58,
+      "rank": 63,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -176655,19 +176656,19 @@
     },
     {
       "name": "שני בארד",
-      "total": 1719,
+      "total": 1729,
       "matchPoints": 237,
-      "openPoints": 622,
+      "openPoints": 632,
       "bonusPoints": 860,
       "exact": 2,
       "partial": 39,
       "gd": 11,
-      "openHits": 63,
+      "openHits": 64,
       "openResolved": 55,
       "prevPoints": 54,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 61,
-      "rankChange": 2,
+      "rankChange": 5,
       "matches": [
         {
           "matchId": 1,
@@ -178308,7 +178309,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -179009,7 +179010,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 59,
+      "rank": 56,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -179165,7 +179166,7 @@
       "prevPoints": 54,
       "pointsChange": 10,
       "prevRank": 54,
-      "rankChange": 2,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -181507,7 +181508,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 52,
+      "rank": 57,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -181651,19 +181652,19 @@
     },
     {
       "name": "נדב ברגר",
-      "total": 1718,
+      "total": 1728,
       "matchPoints": 243,
-      "openPoints": 649,
+      "openPoints": 659,
       "bonusPoints": 826,
       "exact": 9,
       "partial": 29,
       "gd": 4,
-      "openHits": 66,
+      "openHits": 67,
       "openResolved": 55,
       "prevPoints": 64,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 62,
-      "rankChange": 2,
+      "rankChange": 5,
       "matches": [
         {
           "matchId": 1,
@@ -183304,7 +183305,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -184005,7 +184006,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 60,
+      "rank": 57,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -184161,7 +184162,7 @@
       "prevPoints": 49,
       "pointsChange": 0,
       "prevRank": 55,
-      "rankChange": -6,
+      "rankChange": -10,
       "matches": [
         {
           "matchId": 1,
@@ -186503,7 +186504,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 61,
+      "rank": 65,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -186659,7 +186660,7 @@
       "prevPoints": 64,
       "pointsChange": 0,
       "prevRank": 55,
-      "rankChange": -6,
+      "rankChange": -10,
       "matches": [
         {
           "matchId": 1,
@@ -189001,7 +189002,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 61,
+      "rank": 65,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -189145,19 +189146,19 @@
     },
     {
       "name": "דור יטח",
-      "total": 1716,
+      "total": 1726,
       "matchPoints": 275,
-      "openPoints": 552,
+      "openPoints": 562,
       "bonusPoints": 889,
       "exact": 6,
       "partial": 39,
       "gd": 10,
-      "openHits": 57,
+      "openHits": 58,
       "openResolved": 55,
       "prevPoints": 69,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 56,
-      "rankChange": -6,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -190798,7 +190799,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -191499,7 +191500,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 62,
+      "rank": 59,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -191655,7 +191656,7 @@
       "prevPoints": 72,
       "pointsChange": 10,
       "prevRank": 64,
-      "rankChange": 1,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -193997,7 +193998,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 63,
+      "rank": 67,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -194153,7 +194154,7 @@
       "prevPoints": 69,
       "pointsChange": 10,
       "prevRank": 64,
-      "rankChange": 1,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -196495,7 +196496,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 63,
+      "rank": 67,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -196651,7 +196652,7 @@
       "prevPoints": 72,
       "pointsChange": 10,
       "prevRank": 64,
-      "rankChange": 1,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -198993,7 +198994,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 63,
+      "rank": 67,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -199149,7 +199150,7 @@
       "prevPoints": 71,
       "pointsChange": 10,
       "prevRank": 57,
-      "rankChange": 2,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -201491,7 +201492,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 55,
+      "rank": 60,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -201647,7 +201648,7 @@
       "prevPoints": 62,
       "pointsChange": 0,
       "prevRank": 58,
-      "rankChange": -6,
+      "rankChange": -10,
       "matches": [
         {
           "matchId": 1,
@@ -203989,7 +203990,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 64,
+      "rank": 68,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -204133,19 +204134,19 @@
     },
     {
       "name": "כפיר אטס",
-      "total": 1714,
+      "total": 1724,
       "matchPoints": 239,
-      "openPoints": 600,
+      "openPoints": 610,
       "bonusPoints": 875,
       "exact": 2,
       "partial": 39,
       "gd": 12,
-      "openHits": 60,
+      "openHits": 61,
       "openResolved": 55,
       "prevPoints": 60,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 65,
-      "rankChange": 1,
+      "rankChange": 4,
       "matches": [
         {
           "matchId": 1,
@@ -205786,7 +205787,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -206487,7 +206488,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 64,
+      "rank": 61,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -206631,19 +206632,19 @@
     },
     {
       "name": "תומר פרי",
-      "total": 1724,
+      "total": 1734,
       "matchPoints": 292,
-      "openPoints": 532,
+      "openPoints": 542,
       "bonusPoints": 900,
       "exact": 7,
       "partial": 40,
       "gd": 11,
-      "openHits": 54,
+      "openHits": 55,
       "openResolved": 55,
       "prevPoints": 57,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 58,
-      "rankChange": 2,
+      "rankChange": 5,
       "matches": [
         {
           "matchId": 1,
@@ -208284,7 +208285,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -208985,7 +208986,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 56,
+      "rank": 53,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -209141,7 +209142,7 @@
       "prevPoints": 79,
       "pointsChange": 10,
       "prevRank": 59,
-      "rankChange": 2,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -211483,7 +211484,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 57,
+      "rank": 62,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -211627,19 +211628,19 @@
     },
     {
       "name": "נימרוד רון",
-      "total": 1706,
+      "total": 1716,
       "matchPoints": 277,
-      "openPoints": 552,
+      "openPoints": 562,
       "bonusPoints": 877,
       "exact": 7,
       "partial": 37,
       "gd": 11,
-      "openHits": 57,
+      "openHits": 58,
       "openResolved": 55,
       "prevPoints": 59,
-      "pointsChange": 3,
+      "pointsChange": 13,
       "prevRank": 66,
-      "rankChange": -2,
+      "rankChange": 0,
       "matches": [
         {
           "matchId": 1,
@@ -213280,7 +213281,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -213981,7 +213982,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 68,
+      "rank": 66,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -214137,7 +214138,7 @@
       "prevPoints": 58,
       "pointsChange": 0,
       "prevRank": 67,
-      "rankChange": -3,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -216479,7 +216480,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 70,
+      "rank": 73,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -216635,7 +216636,7 @@
       "prevPoints": 92,
       "pointsChange": 0,
       "prevRank": 68,
-      "rankChange": -4,
+      "rankChange": -7,
       "matches": [
         {
           "matchId": 1,
@@ -218977,7 +218978,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 72,
+      "rank": 75,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -219133,7 +219134,7 @@
       "prevPoints": 57,
       "pointsChange": 10,
       "prevRank": 68,
-      "rankChange": 2,
+      "rankChange": -2,
       "matches": [
         {
           "matchId": 1,
@@ -221475,7 +221476,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 66,
+      "rank": 70,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -221619,19 +221620,19 @@
     },
     {
       "name": "תומר אליהו",
-      "total": 1713,
+      "total": 1723,
       "matchPoints": 262,
-      "openPoints": 565,
+      "openPoints": 575,
       "bonusPoints": 886,
       "exact": 5,
       "partial": 38,
       "gd": 11,
-      "openHits": 60,
+      "openHits": 61,
       "openResolved": 55,
       "prevPoints": 62,
-      "pointsChange": 13,
+      "pointsChange": 23,
       "prevRank": 68,
-      "rankChange": 3,
+      "rankChange": 6,
       "matches": [
         {
           "matchId": 1,
@@ -223272,7 +223273,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -223973,7 +223974,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 65,
+      "rank": 62,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -224117,19 +224118,19 @@
     },
     {
       "name": "איתי+אופק מניביץ",
-      "total": 1728,
+      "total": 1738,
       "matchPoints": 269,
-      "openPoints": 562,
+      "openPoints": 572,
       "bonusPoints": 897,
       "exact": 8,
       "partial": 33,
       "gd": 12,
-      "openHits": 59,
+      "openHits": 60,
       "openResolved": 55,
       "prevPoints": 75,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 54,
-      "rankChange": 2,
+      "rankChange": 4,
       "matches": [
         {
           "matchId": 1,
@@ -225770,7 +225771,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -226471,7 +226472,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 52,
+      "rank": 50,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -226627,7 +226628,7 @@
       "prevPoints": 48,
       "pointsChange": 10,
       "prevRank": 74,
-      "rankChange": 1,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -228969,7 +228970,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 73,
+      "rank": 77,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -229113,19 +229114,19 @@
     },
     {
       "name": "רועי הדר",
-      "total": 1709,
+      "total": 1719,
       "matchPoints": 254,
-      "openPoints": 552,
+      "openPoints": 562,
       "bonusPoints": 903,
       "exact": 5,
       "partial": 36,
       "gd": 12,
-      "openHits": 58,
+      "openHits": 59,
       "openResolved": 55,
       "prevPoints": 61,
-      "pointsChange": 3,
+      "pointsChange": 13,
       "prevRank": 63,
-      "rankChange": -4,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -230766,7 +230767,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -231467,7 +231468,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 67,
+      "rank": 64,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -231623,7 +231624,7 @@
       "prevPoints": 39,
       "pointsChange": 12,
       "prevRank": 69,
-      "rankChange": 1,
+      "rankChange": -2,
       "matches": [
         {
           "matchId": 1,
@@ -233965,7 +233966,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 68,
+      "rank": 71,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -234121,7 +234122,7 @@
       "prevPoints": 78,
       "pointsChange": 12,
       "prevRank": 70,
-      "rankChange": 1,
+      "rankChange": -2,
       "matches": [
         {
           "matchId": 1,
@@ -236463,7 +236464,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 69,
+      "rank": 72,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -236619,7 +236620,7 @@
       "prevPoints": 66,
       "pointsChange": 0,
       "prevRank": 71,
-      "rankChange": -4,
+      "rankChange": -8,
       "matches": [
         {
           "matchId": 1,
@@ -238961,7 +238962,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 75,
+      "rank": 79,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -239105,19 +239106,19 @@
     },
     {
       "name": "דוד פפושדו",
-      "total": 1691,
+      "total": 1701,
       "matchPoints": 285,
-      "openPoints": 504,
+      "openPoints": 514,
       "bonusPoints": 902,
       "exact": 8,
       "partial": 37,
       "gd": 10,
-      "openHits": 50,
+      "openHits": 51,
       "openResolved": 55,
       "prevPoints": 46,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 71,
-      "rankChange": -4,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -240758,7 +240759,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -241459,7 +241460,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 75,
+      "rank": 74,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -241615,7 +241616,7 @@
       "prevPoints": 76,
       "pointsChange": 0,
       "prevRank": 72,
-      "rankChange": -4,
+      "rankChange": -8,
       "matches": [
         {
           "matchId": 1,
@@ -243957,7 +243958,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 76,
+      "rank": 80,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -244101,19 +244102,19 @@
     },
     {
       "name": "ירדן ברזני",
-      "total": 1690,
+      "total": 1700,
       "matchPoints": 264,
-      "openPoints": 520,
+      "openPoints": 530,
       "bonusPoints": 906,
       "exact": 6,
       "partial": 36,
       "gd": 12,
-      "openHits": 55,
+      "openHits": 56,
       "openResolved": 55,
       "prevPoints": 74,
-      "pointsChange": 3,
+      "pointsChange": 13,
       "prevRank": 74,
-      "rankChange": -2,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -245754,7 +245755,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -246455,7 +246456,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 76,
+      "rank": 75,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -246611,7 +246612,7 @@
       "prevPoints": 44,
       "pointsChange": 2,
       "prevRank": 75,
-      "rankChange": -3,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -248953,7 +248954,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 78,
+      "rank": 81,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -249109,7 +249110,7 @@
       "prevPoints": 57,
       "pointsChange": 10,
       "prevRank": 71,
-      "rankChange": 0,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -251451,7 +251452,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 71,
+      "rank": 74,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -251607,7 +251608,7 @@
       "prevPoints": 82,
       "pointsChange": 0,
       "prevRank": 77,
-      "rankChange": -2,
+      "rankChange": -9,
       "matches": [
         {
           "matchId": 1,
@@ -253949,7 +253950,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 79,
+      "rank": 86,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -254105,7 +254106,7 @@
       "prevPoints": 79,
       "pointsChange": 10,
       "prevRank": 71,
-      "rankChange": 0,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -256447,7 +256448,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 71,
+      "rank": 74,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -256603,7 +256604,7 @@
       "prevPoints": 79,
       "pointsChange": 0,
       "prevRank": 72,
-      "rankChange": -4,
+      "rankChange": -8,
       "matches": [
         {
           "matchId": 1,
@@ -258945,7 +258946,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 76,
+      "rank": 80,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -259101,7 +259102,7 @@
       "prevPoints": 77,
       "pointsChange": 0,
       "prevRank": 72,
-      "rankChange": -4,
+      "rankChange": -8,
       "matches": [
         {
           "matchId": 1,
@@ -261443,7 +261444,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 76,
+      "rank": 80,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -261587,19 +261588,19 @@
     },
     {
       "name": "דודי סיני",
-      "total": 1689,
+      "total": 1699,
       "matchPoints": 264,
-      "openPoints": 547,
+      "openPoints": 557,
       "bonusPoints": 878,
       "exact": 5,
       "partial": 38,
       "gd": 12,
-      "openHits": 56,
+      "openHits": 57,
       "openResolved": 55,
       "prevPoints": 49,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 73,
-      "rankChange": -4,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -263240,7 +263241,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -263941,7 +263942,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 77,
+      "rank": 76,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -264085,19 +264086,19 @@
     },
     {
       "name": "ניר הייזלר",
-      "total": 1673,
+      "total": 1683,
       "matchPoints": 277,
-      "openPoints": 582,
+      "openPoints": 592,
       "bonusPoints": 814,
       "exact": 9,
       "partial": 33,
       "gd": 11,
-      "openHits": 60,
+      "openHits": 61,
       "openResolved": 55,
       "prevPoints": 74,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 87,
-      "rankChange": 4,
+      "rankChange": 3,
       "matches": [
         {
           "matchId": 1,
@@ -265738,7 +265739,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -266439,7 +266440,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 83,
+      "rank": 84,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -266595,7 +266596,7 @@
       "prevPoints": 61,
       "pointsChange": 0,
       "prevRank": 79,
-      "rankChange": -4,
+      "rankChange": -11,
       "matches": [
         {
           "matchId": 1,
@@ -268937,7 +268938,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 83,
+      "rank": 90,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -269093,7 +269094,7 @@
       "prevPoints": 82,
       "pointsChange": 10,
       "prevRank": 76,
-      "rankChange": 2,
+      "rankChange": -2,
       "matches": [
         {
           "matchId": 1,
@@ -271435,7 +271436,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 74,
+      "rank": 78,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -271579,17 +271580,17 @@
     },
     {
       "name": "אילון אלחיאני+יותם סגל",
-      "total": 1681,
+      "total": 1691,
       "matchPoints": 291,
-      "openPoints": 597,
+      "openPoints": 607,
       "bonusPoints": 793,
       "exact": 5,
       "partial": 43,
       "gd": 13,
-      "openHits": 61,
+      "openHits": 62,
       "openResolved": 55,
       "prevPoints": 44,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 77,
       "rankChange": -2,
       "matches": [
@@ -273232,7 +273233,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -274077,19 +274078,19 @@
     },
     {
       "name": "מיכאל זוהר",
-      "total": 1676,
+      "total": 1686,
       "matchPoints": 246,
-      "openPoints": 557,
+      "openPoints": 567,
       "bonusPoints": 873,
       "exact": 5,
       "partial": 36,
       "gd": 8,
-      "openHits": 56,
+      "openHits": 57,
       "openResolved": 55,
       "prevPoints": 69,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 85,
-      "rankChange": 4,
+      "rankChange": 3,
       "matches": [
         {
           "matchId": 1,
@@ -275730,7 +275731,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -276431,7 +276432,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 81,
+      "rank": 82,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -276575,19 +276576,19 @@
     },
     {
       "name": "קובי צורי",
-      "total": 1675,
+      "total": 1685,
       "matchPoints": 229,
-      "openPoints": 592,
+      "openPoints": 602,
       "bonusPoints": 854,
       "exact": 1,
       "partial": 39,
       "gd": 12,
-      "openHits": 60,
+      "openHits": 61,
       "openResolved": 55,
       "prevPoints": 47,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 86,
-      "rankChange": 4,
+      "rankChange": 3,
       "matches": [
         {
           "matchId": 1,
@@ -278228,7 +278229,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -278929,7 +278930,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 82,
+      "rank": 83,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -279085,7 +279086,7 @@
       "prevPoints": 78,
       "pointsChange": 13,
       "prevRank": 78,
-      "rankChange": 0,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -281427,7 +281428,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 78,
+      "rank": 81,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -281583,7 +281584,7 @@
       "prevPoints": 65,
       "pointsChange": 0,
       "prevRank": 92,
-      "rankChange": 0,
+      "rankChange": -8,
       "matches": [
         {
           "matchId": 1,
@@ -283925,7 +283926,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 92,
+      "rank": 100,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -284069,19 +284070,19 @@
     },
     {
       "name": "איתי שפרן",
-      "total": 1663,
+      "total": 1673,
       "matchPoints": 296,
-      "openPoints": 544,
+      "openPoints": 554,
       "bonusPoints": 823,
       "exact": 9,
       "partial": 38,
       "gd": 8,
-      "openHits": 56,
+      "openHits": 57,
       "openResolved": 55,
       "prevPoints": 69,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 87,
-      "rankChange": -1,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -285722,7 +285723,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -286423,7 +286424,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 88,
+      "rank": 90,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -286579,7 +286580,7 @@
       "prevPoints": 72,
       "pointsChange": 0,
       "prevRank": 93,
-      "rankChange": -1,
+      "rankChange": -8,
       "matches": [
         {
           "matchId": 1,
@@ -288921,7 +288922,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 94,
+      "rank": 101,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -289065,19 +289066,19 @@
     },
     {
       "name": "דולב קרקו",
-      "total": 1672,
+      "total": 1682,
       "matchPoints": 301,
-      "openPoints": 552,
+      "openPoints": 562,
       "bonusPoints": 819,
       "exact": 7,
       "partial": 43,
       "gd": 8,
-      "openHits": 58,
+      "openHits": 59,
       "openResolved": 55,
       "prevPoints": 81,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 80,
-      "rankChange": -4,
+      "rankChange": -5,
       "matches": [
         {
           "matchId": 1,
@@ -290718,7 +290719,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -291419,7 +291420,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 84,
+      "rank": 85,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -291563,19 +291564,19 @@
     },
     {
       "name": "מיקי דלויה",
-      "total": 1672,
+      "total": 1682,
       "matchPoints": 257,
-      "openPoints": 492,
+      "openPoints": 502,
       "bonusPoints": 923,
       "exact": 5,
       "partial": 39,
       "gd": 6,
-      "openHits": 51,
+      "openHits": 52,
       "openResolved": 55,
       "prevPoints": 57,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 80,
-      "rankChange": -4,
+      "rankChange": -5,
       "matches": [
         {
           "matchId": 1,
@@ -293216,7 +293217,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -293917,7 +293918,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 84,
+      "rank": 85,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -294073,7 +294074,7 @@
       "prevPoints": 42,
       "pointsChange": 0,
       "prevRank": 81,
-      "rankChange": -4,
+      "rankChange": -10,
       "matches": [
         {
           "matchId": 1,
@@ -296415,7 +296416,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 85,
+      "rank": 91,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -296571,7 +296572,7 @@
       "prevPoints": 81,
       "pointsChange": 10,
       "prevRank": 82,
-      "rankChange": 2,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -298913,7 +298914,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 80,
+      "rank": 88,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -299057,17 +299058,17 @@
     },
     {
       "name": "עומר מנור+גיל ויובל שדות",
-      "total": 1651,
+      "total": 1661,
       "matchPoints": 293,
-      "openPoints": 509,
+      "openPoints": 519,
       "bonusPoints": 849,
       "exact": 9,
       "partial": 35,
       "gd": 14,
-      "openHits": 53,
+      "openHits": 54,
       "openResolved": 55,
       "prevPoints": 54,
-      "pointsChange": 2,
+      "pointsChange": 12,
       "prevRank": 97,
       "rankChange": 1,
       "matches": [
@@ -300710,7 +300711,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -301555,19 +301556,19 @@
     },
     {
       "name": "איתי בן סימון",
-      "total": 1670,
+      "total": 1680,
       "matchPoints": 266,
-      "openPoints": 539,
+      "openPoints": 549,
       "bonusPoints": 865,
       "exact": 6,
       "partial": 38,
       "gd": 8,
-      "openHits": 56,
+      "openHits": 57,
       "openResolved": 55,
       "prevPoints": 59,
-      "pointsChange": 2,
+      "pointsChange": 12,
       "prevRank": 83,
-      "rankChange": -2,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -303208,7 +303209,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -303909,7 +303910,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 85,
+      "rank": 87,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -304053,19 +304054,19 @@
     },
     {
       "name": "אסף יצחקי",
-      "total": 1660,
+      "total": 1670,
       "matchPoints": 275,
-      "openPoints": 582,
+      "openPoints": 592,
       "bonusPoints": 803,
       "exact": 12,
       "partial": 29,
       "gd": 5,
-      "openHits": 61,
+      "openHits": 62,
       "openResolved": 55,
       "prevPoints": 64,
-      "pointsChange": 3,
+      "pointsChange": 13,
       "prevRank": 90,
-      "rankChange": 1,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -305706,7 +305707,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -306407,7 +306408,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 89,
+      "rank": 91,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -306551,19 +306552,19 @@
     },
     {
       "name": "דני אוקון",
-      "total": 1672,
+      "total": 1682,
       "matchPoints": 255,
-      "openPoints": 539,
+      "openPoints": 549,
       "bonusPoints": 878,
       "exact": 5,
       "partial": 37,
       "gd": 10,
-      "openHits": 57,
+      "openHits": 58,
       "openResolved": 55,
       "prevPoints": 61,
-      "pointsChange": 5,
+      "pointsChange": 15,
       "prevRank": 84,
-      "rankChange": 0,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -308204,7 +308205,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -308905,7 +308906,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 84,
+      "rank": 85,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -309049,19 +309050,19 @@
     },
     {
       "name": "דוד+שגיא אברמסון",
-      "total": 1665,
+      "total": 1675,
       "matchPoints": 269,
-      "openPoints": 572,
+      "openPoints": 582,
       "bonusPoints": 824,
       "exact": 6,
       "partial": 35,
       "gd": 17,
-      "openHits": 59,
+      "openHits": 60,
       "openResolved": 55,
       "prevPoints": 59,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 86,
-      "rankChange": -1,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -310702,7 +310703,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -311403,7 +311404,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 87,
+      "rank": 89,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -311559,7 +311560,7 @@
       "prevPoints": 57,
       "pointsChange": 15,
       "prevRank": 100,
-      "rankChange": 10,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -313901,7 +313902,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 90,
+      "rank": 98,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -314057,7 +314058,7 @@
       "prevPoints": 69,
       "pointsChange": 10,
       "prevRank": 101,
-      "rankChange": 7,
+      "rankChange": 0,
       "matches": [
         {
           "matchId": 1,
@@ -316399,7 +316400,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 94,
+      "rank": 101,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -316555,7 +316556,7 @@
       "prevPoints": 74,
       "pointsChange": 10,
       "prevRank": 87,
-      "rankChange": 4,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -318897,7 +318898,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 83,
+      "rank": 90,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -319041,17 +319042,17 @@
     },
     {
       "name": "אביעד קחטה",
-      "total": 1652,
+      "total": 1662,
       "matchPoints": 254,
-      "openPoints": 492,
+      "openPoints": 502,
       "bonusPoints": 906,
       "exact": 4,
       "partial": 38,
       "gd": 12,
-      "openHits": 51,
+      "openHits": 52,
       "openResolved": 55,
       "prevPoints": 52,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 94,
       "rankChange": -1,
       "matches": [
@@ -320694,7 +320695,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -321539,19 +321540,19 @@
     },
     {
       "name": "יובל שדות",
-      "total": 1665,
+      "total": 1675,
       "matchPoints": 271,
-      "openPoints": 552,
+      "openPoints": 562,
       "bonusPoints": 842,
       "exact": 7,
       "partial": 37,
       "gd": 8,
-      "openHits": 58,
+      "openHits": 59,
       "openResolved": 55,
       "prevPoints": 61,
-      "pointsChange": 3,
+      "pointsChange": 13,
       "prevRank": 88,
-      "rankChange": 1,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -323192,7 +323193,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -323893,7 +323894,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 87,
+      "rank": 89,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -324037,17 +324038,17 @@
     },
     {
       "name": "תומר כהן",
-      "total": 1651,
+      "total": 1661,
       "matchPoints": 259,
-      "openPoints": 479,
+      "openPoints": 489,
       "bonusPoints": 913,
       "exact": 7,
       "partial": 35,
       "gd": 7,
-      "openHits": 50,
+      "openHits": 51,
       "openResolved": 55,
       "prevPoints": 44,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 95,
       "rankChange": -1,
       "matches": [
@@ -325690,7 +325691,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -326547,7 +326548,7 @@
       "prevPoints": 54,
       "pointsChange": 10,
       "prevRank": 104,
-      "rankChange": 7,
+      "rankChange": 0,
       "matches": [
         {
           "matchId": 1,
@@ -328889,7 +328890,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 97,
+      "rank": 104,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -329045,7 +329046,7 @@
       "prevPoints": 64,
       "pointsChange": 10,
       "prevRank": 89,
-      "rankChange": 3,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -331387,7 +331388,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 86,
+      "rank": 92,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -331531,17 +331532,17 @@
     },
     {
       "name": "יוני פרוביז",
-      "total": 1651,
+      "total": 1661,
       "matchPoints": 235,
-      "openPoints": 592,
+      "openPoints": 602,
       "bonusPoints": 824,
       "exact": 3,
       "partial": 37,
       "gd": 10,
-      "openHits": 59,
+      "openHits": 60,
       "openResolved": 55,
       "prevPoints": 43,
-      "pointsChange": 3,
+      "pointsChange": 13,
       "prevRank": 98,
       "rankChange": 2,
       "matches": [
@@ -333184,7 +333185,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -334029,19 +334030,19 @@
     },
     {
       "name": "ליאור בוגנים",
-      "total": 1656,
+      "total": 1666,
       "matchPoints": 246,
-      "openPoints": 597,
+      "openPoints": 607,
       "bonusPoints": 813,
       "exact": 8,
       "partial": 30,
       "gd": 8,
-      "openHits": 60,
+      "openHits": 61,
       "openResolved": 55,
       "prevPoints": 52,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 91,
-      "rankChange": 0,
+      "rankChange": -2,
       "matches": [
         {
           "matchId": 1,
@@ -335682,7 +335683,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -336383,7 +336384,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 91,
+      "rank": 93,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -336527,19 +336528,19 @@
     },
     {
       "name": "צפריר+עילי פיקס",
-      "total": 1635,
+      "total": 1645,
       "matchPoints": 280,
-      "openPoints": 522,
+      "openPoints": 532,
       "bonusPoints": 833,
       "exact": 8,
       "partial": 36,
       "gd": 10,
-      "openHits": 54,
+      "openHits": 55,
       "openResolved": 55,
       "prevPoints": 54,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 108,
-      "rankChange": 2,
+      "rankChange": 0,
       "matches": [
         {
           "matchId": 1,
@@ -338180,7 +338181,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -338881,7 +338882,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 106,
+      "rank": 108,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -339025,19 +339026,19 @@
     },
     {
       "name": "איציק מזרחי",
-      "total": 1654,
+      "total": 1664,
       "matchPoints": 252,
-      "openPoints": 557,
+      "openPoints": 567,
       "bonusPoints": 845,
       "exact": 6,
       "partial": 36,
       "gd": 6,
-      "openHits": 57,
+      "openHits": 58,
       "openResolved": 55,
       "prevPoints": 64,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 100,
-      "rankChange": 7,
+      "rankChange": 6,
       "matches": [
         {
           "matchId": 1,
@@ -340678,7 +340679,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -341379,7 +341380,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 93,
+      "rank": 94,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -341523,17 +341524,17 @@
     },
     {
       "name": "אבירן זינו",
-      "total": 1642,
+      "total": 1652,
       "matchPoints": 235,
-      "openPoints": 552,
+      "openPoints": 562,
       "bonusPoints": 855,
       "exact": 3,
       "partial": 35,
       "gd": 15,
-      "openHits": 57,
+      "openHits": 58,
       "openResolved": 55,
       "prevPoints": 68,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 102,
       "rankChange": 0,
       "matches": [
@@ -343176,7 +343177,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -344021,19 +344022,19 @@
     },
     {
       "name": "יהונתן+אלון קירו",
-      "total": 1663,
+      "total": 1673,
       "matchPoints": 273,
-      "openPoints": 530,
+      "openPoints": 540,
       "bonusPoints": 860,
       "exact": 6,
       "partial": 39,
       "gd": 9,
-      "openHits": 55,
+      "openHits": 56,
       "openResolved": 55,
       "prevPoints": 62,
-      "pointsChange": 13,
+      "pointsChange": 23,
       "prevRank": 96,
-      "rankChange": 8,
+      "rankChange": 6,
       "matches": [
         {
           "matchId": 1,
@@ -345674,7 +345675,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -346375,7 +346376,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 88,
+      "rank": 90,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -346531,7 +346532,7 @@
       "prevPoints": 55,
       "pointsChange": 2,
       "prevRank": 113,
-      "rankChange": 4,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -348873,7 +348874,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 109,
+      "rank": 117,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -349029,7 +349030,7 @@
       "prevPoints": 45,
       "pointsChange": 0,
       "prevRank": 105,
-      "rankChange": 2,
+      "rankChange": -7,
       "matches": [
         {
           "matchId": 1,
@@ -351371,7 +351372,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 103,
+      "rank": 112,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -351527,7 +351528,7 @@
       "prevPoints": 64,
       "pointsChange": 10,
       "prevRank": 97,
-      "rankChange": 7,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -353869,7 +353870,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 90,
+      "rank": 98,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -354025,7 +354026,7 @@
       "prevPoints": 57,
       "pointsChange": 15,
       "prevRank": 114,
-      "rankChange": 12,
+      "rankChange": 4,
       "matches": [
         {
           "matchId": 1,
@@ -356367,7 +356368,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 102,
+      "rank": 110,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -356511,19 +356512,19 @@
     },
     {
       "name": "ליאור רוזן",
-      "total": 1636,
+      "total": 1646,
       "matchPoints": 279,
-      "openPoints": 522,
+      "openPoints": 532,
       "bonusPoints": 835,
       "exact": 10,
       "partial": 33,
       "gd": 7,
-      "openHits": 54,
+      "openHits": 55,
       "openResolved": 55,
       "prevPoints": 37,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 107,
-      "rankChange": 2,
+      "rankChange": 0,
       "matches": [
         {
           "matchId": 1,
@@ -358164,7 +358165,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -358865,7 +358866,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 105,
+      "rank": 107,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -359021,7 +359022,7 @@
       "prevPoints": 59,
       "pointsChange": 3,
       "prevRank": 99,
-      "rankChange": 1,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -361363,7 +361364,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 98,
+      "rank": 105,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -361519,7 +361520,7 @@
       "prevPoints": 44,
       "pointsChange": 10,
       "prevRank": 107,
-      "rankChange": 8,
+      "rankChange": 0,
       "matches": [
         {
           "matchId": 1,
@@ -363861,7 +363862,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 99,
+      "rank": 107,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -364005,17 +364006,17 @@
     },
     {
       "name": "ליאור פלג",
-      "total": 1645,
+      "total": 1655,
       "matchPoints": 244,
-      "openPoints": 622,
+      "openPoints": 632,
       "bonusPoints": 779,
       "exact": 8,
       "partial": 30,
       "gd": 7,
-      "openHits": 63,
+      "openHits": 64,
       "openResolved": 55,
       "prevPoints": 57,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 108,
       "rankChange": 8,
       "matches": [
@@ -365658,7 +365659,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -366503,19 +366504,19 @@
     },
     {
       "name": "אריה ציבוטרו",
-      "total": 1636,
+      "total": 1646,
       "matchPoints": 259,
-      "openPoints": 517,
+      "openPoints": 527,
       "bonusPoints": 860,
       "exact": 5,
       "partial": 39,
       "gd": 7,
-      "openHits": 54,
+      "openHits": 55,
       "openResolved": 55,
       "prevPoints": 42,
-      "pointsChange": 2,
+      "pointsChange": 12,
       "prevRank": 109,
-      "rankChange": 4,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -368156,7 +368157,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -368857,7 +368858,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 105,
+      "rank": 107,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -369001,19 +369002,19 @@
     },
     {
       "name": "גל טישלמן",
-      "total": 1634,
+      "total": 1644,
       "matchPoints": 246,
-      "openPoints": 540,
+      "openPoints": 550,
       "bonusPoints": 848,
       "exact": 6,
       "partial": 34,
       "gd": 8,
-      "openHits": 55,
+      "openHits": 56,
       "openResolved": 55,
       "prevPoints": 45,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 109,
-      "rankChange": 2,
+      "rankChange": 0,
       "matches": [
         {
           "matchId": 1,
@@ -370654,7 +370655,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -371355,7 +371356,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 107,
+      "rank": 109,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -371511,7 +371512,7 @@
       "prevPoints": 60,
       "pointsChange": 10,
       "prevRank": 118,
-      "rankChange": 10,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -373853,7 +373854,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 108,
+      "rank": 116,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -373997,19 +373998,19 @@
     },
     {
       "name": "אביב כרמי",
-      "total": 1631,
+      "total": 1641,
       "matchPoints": 237,
-      "openPoints": 537,
+      "openPoints": 547,
       "bonusPoints": 857,
       "exact": 4,
       "partial": 37,
       "gd": 6,
-      "openHits": 56,
+      "openHits": 57,
       "openResolved": 55,
       "prevPoints": 49,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 111,
-      "rankChange": 2,
+      "rankChange": 0,
       "matches": [
         {
           "matchId": 1,
@@ -375650,7 +375651,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -376351,7 +376352,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 109,
+      "rank": 111,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -376507,7 +376508,7 @@
       "prevPoints": 70,
       "pointsChange": 10,
       "prevRank": 103,
-      "rankChange": 7,
+      "rankChange": 0,
       "matches": [
         {
           "matchId": 1,
@@ -378849,7 +378850,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 96,
+      "rank": 103,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -378993,17 +378994,17 @@
     },
     {
       "name": "חן יעקב",
-      "total": 1650,
+      "total": 1660,
       "matchPoints": 233,
-      "openPoints": 597,
+      "openPoints": 607,
       "bonusPoints": 820,
       "exact": 5,
       "partial": 33,
       "gd": 9,
-      "openHits": 61,
+      "openHits": 62,
       "openResolved": 55,
       "prevPoints": 67,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 104,
       "rankChange": 7,
       "matches": [
@@ -380646,7 +380647,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -381491,19 +381492,19 @@
     },
     {
       "name": "יריב וישנו",
-      "total": 1638,
+      "total": 1648,
       "matchPoints": 275,
-      "openPoints": 520,
+      "openPoints": 530,
       "bonusPoints": 843,
       "exact": 10,
       "partial": 31,
       "gd": 10,
-      "openHits": 54,
+      "openHits": 55,
       "openResolved": 55,
       "prevPoints": 57,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 106,
-      "rankChange": 2,
+      "rankChange": 0,
       "matches": [
         {
           "matchId": 1,
@@ -383144,7 +383145,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -383845,7 +383846,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 104,
+      "rank": 106,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -383989,19 +383990,19 @@
     },
     {
       "name": "לידן דלויה",
-      "total": 1638,
+      "total": 1648,
       "matchPoints": 268,
-      "openPoints": 522,
+      "openPoints": 532,
       "bonusPoints": 848,
       "exact": 6,
       "partial": 38,
       "gd": 9,
-      "openHits": 55,
+      "openHits": 56,
       "openResolved": 55,
       "prevPoints": 67,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 106,
-      "rankChange": 2,
+      "rankChange": 0,
       "matches": [
         {
           "matchId": 1,
@@ -385642,7 +385643,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -386343,7 +386344,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 104,
+      "rank": 106,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -386499,7 +386500,7 @@
       "prevPoints": 76,
       "pointsChange": 3,
       "prevRank": 115,
-      "rankChange": 5,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -388841,7 +388842,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 110,
+      "rank": 118,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -388997,7 +388998,7 @@
       "prevPoints": 66,
       "pointsChange": 13,
       "prevRank": 107,
-      "rankChange": 9,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -391339,7 +391340,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 98,
+      "rank": 105,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -391483,19 +391484,19 @@
     },
     {
       "name": "עוז וישנו",
-      "total": 1636,
+      "total": 1646,
       "matchPoints": 269,
-      "openPoints": 647,
+      "openPoints": 657,
       "bonusPoints": 720,
       "exact": 6,
       "partial": 37,
       "gd": 12,
-      "openHits": 63,
+      "openHits": 64,
       "openResolved": 55,
       "prevPoints": 61,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 107,
-      "rankChange": 2,
+      "rankChange": 0,
       "matches": [
         {
           "matchId": 1,
@@ -393136,7 +393137,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -393837,7 +393838,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 105,
+      "rank": 107,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -393981,19 +393982,19 @@
     },
     {
       "name": "צחי כהן",
-      "total": 1627,
+      "total": 1637,
       "matchPoints": 300,
-      "openPoints": 527,
+      "openPoints": 537,
       "bonusPoints": 800,
       "exact": 10,
       "partial": 36,
       "gd": 10,
-      "openHits": 55,
+      "openHits": 56,
       "openResolved": 55,
       "prevPoints": 54,
-      "pointsChange": 3,
+      "pointsChange": 13,
       "prevRank": 117,
-      "rankChange": 5,
+      "rankChange": 3,
       "matches": [
         {
           "matchId": 1,
@@ -395634,7 +395635,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -396335,7 +396336,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 112,
+      "rank": 114,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -396479,17 +396480,17 @@
     },
     {
       "name": "קוסטה הופמן",
-      "total": 1646,
+      "total": 1656,
       "matchPoints": 264,
-      "openPoints": 512,
+      "openPoints": 522,
       "bonusPoints": 870,
       "exact": 10,
       "partial": 30,
       "gd": 7,
-      "openHits": 54,
+      "openHits": 55,
       "openResolved": 55,
       "prevPoints": 76,
-      "pointsChange": 13,
+      "pointsChange": 23,
       "prevRank": 110,
       "rankChange": 11,
       "matches": [
@@ -398132,7 +398133,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -398989,7 +398990,7 @@
       "prevPoints": 47,
       "pointsChange": 3,
       "prevRank": 111,
-      "rankChange": 4,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -401331,7 +401332,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 107,
+      "rank": 115,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -401487,7 +401488,7 @@
       "prevPoints": 44,
       "pointsChange": 13,
       "prevRank": 119,
-      "rankChange": 12,
+      "rankChange": 4,
       "matches": [
         {
           "matchId": 1,
@@ -403829,7 +403830,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 107,
+      "rank": 115,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -403973,17 +403974,17 @@
     },
     {
       "name": "תומר עמבר",
-      "total": 1643,
+      "total": 1653,
       "matchPoints": 296,
-      "openPoints": 502,
+      "openPoints": 512,
       "bonusPoints": 845,
       "exact": 9,
       "partial": 36,
       "gd": 13,
-      "openHits": 53,
+      "openHits": 54,
       "openResolved": 55,
       "prevPoints": 56,
-      "pointsChange": 13,
+      "pointsChange": 23,
       "prevRank": 112,
       "rankChange": 11,
       "matches": [
@@ -405626,7 +405627,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -406471,19 +406472,19 @@
     },
     {
       "name": "אביב רחמים",
-      "total": 1631,
+      "total": 1641,
       "matchPoints": 251,
-      "openPoints": 575,
+      "openPoints": 585,
       "bonusPoints": 805,
       "exact": 5,
       "partial": 37,
       "gd": 8,
-      "openHits": 60,
+      "openHits": 61,
       "openResolved": 55,
       "prevPoints": 79,
-      "pointsChange": 13,
+      "pointsChange": 23,
       "prevRank": 120,
-      "rankChange": 11,
+      "rankChange": 9,
       "matches": [
         {
           "matchId": 1,
@@ -408124,7 +408125,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -408825,7 +408826,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 109,
+      "rank": 111,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -408969,19 +408970,19 @@
     },
     {
       "name": "דניאל סבג",
-      "total": 1628,
+      "total": 1638,
       "matchPoints": 250,
-      "openPoints": 562,
+      "openPoints": 572,
       "bonusPoints": 816,
       "exact": 6,
       "partial": 34,
       "gd": 10,
-      "openHits": 58,
+      "openHits": 59,
       "openResolved": 55,
       "prevPoints": 57,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 120,
-      "rankChange": 9,
+      "rankChange": 7,
       "matches": [
         {
           "matchId": 1,
@@ -410622,7 +410623,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -411323,7 +411324,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 111,
+      "rank": 113,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -411467,19 +411468,19 @@
     },
     {
       "name": "אייל +מורן כהן",
-      "total": 1617,
+      "total": 1627,
       "matchPoints": 267,
-      "openPoints": 434,
+      "openPoints": 444,
       "bonusPoints": 916,
       "exact": 6,
       "partial": 37,
       "gd": 11,
-      "openHits": 45,
+      "openHits": 46,
       "openResolved": 55,
       "prevPoints": 49,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 128,
-      "rankChange": 11,
+      "rankChange": 9,
       "matches": [
         {
           "matchId": 1,
@@ -413120,7 +413121,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -413821,7 +413822,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 117,
+      "rank": 119,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -413965,19 +413966,19 @@
     },
     {
       "name": "בן סולומון",
-      "total": 1607,
+      "total": 1617,
       "matchPoints": 287,
-      "openPoints": 502,
+      "openPoints": 512,
       "bonusPoints": 818,
       "exact": 9,
       "partial": 35,
       "gd": 11,
-      "openHits": 53,
+      "openHits": 54,
       "openResolved": 55,
       "prevPoints": 49,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 128,
-      "rankChange": 2,
+      "rankChange": 3,
       "matches": [
         {
           "matchId": 1,
@@ -415618,7 +415619,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -416319,7 +416320,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 126,
+      "rank": 125,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -416475,7 +416476,7 @@
       "prevPoints": 71,
       "pointsChange": 10,
       "prevRank": 122,
-      "rankChange": 9,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -418817,7 +418818,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 113,
+      "rank": 120,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -418961,19 +418962,19 @@
     },
     {
       "name": "עידו כהן",
-      "total": 1606,
+      "total": 1616,
       "matchPoints": 276,
-      "openPoints": 472,
+      "openPoints": 482,
       "bonusPoints": 858,
       "exact": 10,
       "partial": 30,
       "gd": 13,
-      "openHits": 49,
+      "openHits": 50,
       "openResolved": 55,
       "prevPoints": 64,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 129,
-      "rankChange": 2,
+      "rankChange": 3,
       "matches": [
         {
           "matchId": 1,
@@ -420614,7 +420615,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -421315,7 +421316,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 127,
+      "rank": 126,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -421459,19 +421460,19 @@
     },
     {
       "name": "עידן כהן",
-      "total": 1619,
+      "total": 1629,
       "matchPoints": 276,
-      "openPoints": 563,
+      "openPoints": 573,
       "bonusPoints": 780,
       "exact": 8,
       "partial": 34,
       "gd": 13,
-      "openHits": 57,
+      "openHits": 58,
       "openResolved": 55,
       "prevPoints": 81,
-      "pointsChange": 3,
+      "pointsChange": 13,
       "prevRank": 122,
-      "rankChange": 6,
+      "rankChange": 4,
       "matches": [
         {
           "matchId": 1,
@@ -423112,7 +423113,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -423813,7 +423814,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 116,
+      "rank": 118,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -423957,19 +423958,19 @@
     },
     {
       "name": "אבי עיני+ניסים שלום",
-      "total": 1608,
+      "total": 1618,
       "matchPoints": 272,
-      "openPoints": 492,
+      "openPoints": 502,
       "bonusPoints": 844,
       "exact": 5,
       "partial": 40,
       "gd": 11,
-      "openHits": 52,
+      "openHits": 53,
       "openResolved": 55,
       "prevPoints": 59,
-      "pointsChange": 3,
+      "pointsChange": 13,
       "prevRank": 130,
-      "rankChange": 5,
+      "rankChange": 6,
       "matches": [
         {
           "matchId": 1,
@@ -425610,7 +425611,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -426311,7 +426312,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 125,
+      "rank": 124,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -426467,7 +426468,7 @@
       "prevPoints": 49,
       "pointsChange": 0,
       "prevRank": 116,
-      "rankChange": 2,
+      "rankChange": -5,
       "matches": [
         {
           "matchId": 1,
@@ -428809,7 +428810,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 114,
+      "rank": 121,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -428953,19 +428954,19 @@
     },
     {
       "name": "עומר אברמסון",
-      "total": 1635,
+      "total": 1645,
       "matchPoints": 243,
-      "openPoints": 572,
+      "openPoints": 582,
       "bonusPoints": 820,
       "exact": 6,
       "partial": 33,
       "gd": 9,
-      "openHits": 60,
+      "openHits": 61,
       "openResolved": 55,
       "prevPoints": 71,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 116,
-      "rankChange": 10,
+      "rankChange": 8,
       "matches": [
         {
           "matchId": 1,
@@ -430606,7 +430607,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -431307,7 +431308,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 106,
+      "rank": 108,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -431463,7 +431464,7 @@
       "prevPoints": 52,
       "pointsChange": 0,
       "prevRank": 124,
-      "rankChange": 4,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -433805,7 +433806,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 120,
+      "rank": 128,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -433949,19 +433950,19 @@
     },
     {
       "name": "שלום אברהם",
-      "total": 1614,
+      "total": 1624,
       "matchPoints": 285,
-      "openPoints": 530,
+      "openPoints": 540,
       "bonusPoints": 799,
       "exact": 6,
       "partial": 39,
       "gd": 15,
-      "openHits": 55,
+      "openHits": 56,
       "openResolved": 55,
       "prevPoints": 73,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 124,
-      "rankChange": 4,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -435602,7 +435603,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -436303,7 +436304,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 120,
+      "rank": 122,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -436447,19 +436448,19 @@
     },
     {
       "name": "שלומי לוי",
-      "total": 1611,
+      "total": 1621,
       "matchPoints": 217,
-      "openPoints": 564,
+      "openPoints": 574,
       "bonusPoints": 830,
       "exact": 7,
       "partial": 27,
       "gd": 6,
-      "openHits": 58,
+      "openHits": 59,
       "openResolved": 55,
       "prevPoints": 46,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 126,
-      "rankChange": 4,
+      "rankChange": 3,
       "matches": [
         {
           "matchId": 1,
@@ -438100,7 +438101,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -438801,7 +438802,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 122,
+      "rank": 123,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -438957,7 +438958,7 @@
       "prevPoints": 52,
       "pointsChange": 5,
       "prevRank": 127,
-      "rankChange": 8,
+      "rankChange": 0,
       "matches": [
         {
           "matchId": 1,
@@ -441299,7 +441300,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 119,
+      "rank": 127,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -441443,19 +441444,19 @@
     },
     {
       "name": "אלון יוסף+דני שוורצמן",
-      "total": 1617,
+      "total": 1627,
       "matchPoints": 240,
-      "openPoints": 562,
+      "openPoints": 572,
       "bonusPoints": 815,
       "exact": 5,
       "partial": 34,
       "gd": 10,
-      "openHits": 57,
+      "openHits": 58,
       "openResolved": 55,
       "prevPoints": 54,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 121,
-      "rankChange": 4,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -443096,7 +443097,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -443797,7 +443798,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 117,
+      "rank": 119,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -443953,7 +443954,7 @@
       "prevPoints": 59,
       "pointsChange": 10,
       "prevRank": 123,
-      "rankChange": 9,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -446295,7 +446296,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 114,
+      "rank": 121,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -446451,7 +446452,7 @@
       "prevPoints": 52,
       "pointsChange": 10,
       "prevRank": 124,
-      "rankChange": 9,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -448793,7 +448794,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 115,
+      "rank": 122,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -448949,7 +448950,7 @@
       "prevPoints": 52,
       "pointsChange": 0,
       "prevRank": 137,
-      "rankChange": 7,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -451291,7 +451292,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 130,
+      "rank": 140,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -451435,19 +451436,19 @@
     },
     {
       "name": "מירית אננבורג",
-      "total": 1616,
+      "total": 1626,
       "matchPoints": 216,
-      "openPoints": 505,
+      "openPoints": 515,
       "bonusPoints": 895,
       "exact": 1,
       "partial": 38,
       "gd": 8,
-      "openHits": 53,
+      "openHits": 54,
       "openResolved": 55,
       "prevPoints": 36,
-      "pointsChange": 13,
+      "pointsChange": 23,
       "prevRank": 131,
-      "rankChange": 13,
+      "rankChange": 11,
       "matches": [
         {
           "matchId": 1,
@@ -453088,7 +453089,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -453789,7 +453790,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 118,
+      "rank": 120,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -453933,19 +453934,19 @@
     },
     {
       "name": "יותם מערבי",
-      "total": 1636,
+      "total": 1646,
       "matchPoints": 223,
-      "openPoints": 512,
+      "openPoints": 522,
       "bonusPoints": 901,
       "exact": 6,
       "partial": 29,
       "gd": 9,
-      "openHits": 53,
+      "openHits": 54,
       "openResolved": 55,
       "prevPoints": 52,
-      "pointsChange": 15,
+      "pointsChange": 25,
       "prevRank": 119,
-      "rankChange": 14,
+      "rankChange": 12,
       "matches": [
         {
           "matchId": 1,
@@ -455586,7 +455587,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -456287,7 +456288,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 105,
+      "rank": 107,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -456443,7 +456444,7 @@
       "prevPoints": 64,
       "pointsChange": 0,
       "prevRank": 138,
-      "rankChange": 7,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -458785,7 +458786,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 131,
+      "rank": 141,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -458941,7 +458942,7 @@
       "prevPoints": 54,
       "pointsChange": 0,
       "prevRank": 128,
-      "rankChange": 2,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -461283,7 +461284,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 126,
+      "rank": 134,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -461427,19 +461428,19 @@
     },
     {
       "name": "ראול קופרברג",
-      "total": 1585,
+      "total": 1595,
       "matchPoints": 277,
-      "openPoints": 429,
+      "openPoints": 439,
       "bonusPoints": 879,
       "exact": 10,
       "partial": 33,
       "gd": 6,
-      "openHits": 45,
+      "openHits": 46,
       "openResolved": 55,
       "prevPoints": 59,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 140,
-      "rankChange": 7,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -463080,7 +463081,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -463781,7 +463782,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 133,
+      "rank": 138,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -463937,7 +463938,7 @@
       "prevPoints": 44,
       "pointsChange": 10,
       "prevRank": 141,
-      "rankChange": 12,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -466279,7 +466280,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 129,
+      "rank": 139,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -466435,7 +466436,7 @@
       "prevPoints": 54,
       "pointsChange": 10,
       "prevRank": 131,
-      "rankChange": 10,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -468777,7 +468778,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 121,
+      "rank": 129,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -468921,19 +468922,19 @@
     },
     {
       "name": "עדי בן סימון",
-      "total": 1614,
+      "total": 1624,
       "matchPoints": 289,
-      "openPoints": 554,
+      "openPoints": 564,
       "bonusPoints": 771,
       "exact": 9,
       "partial": 35,
       "gd": 12,
-      "openHits": 59,
+      "openHits": 60,
       "openResolved": 55,
       "prevPoints": 59,
-      "pointsChange": 2,
+      "pointsChange": 12,
       "prevRank": 125,
-      "rankChange": 5,
+      "rankChange": 3,
       "matches": [
         {
           "matchId": 1,
@@ -470574,7 +470575,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -471275,7 +471276,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 120,
+      "rank": 122,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -471431,7 +471432,7 @@
       "prevPoints": 49,
       "pointsChange": 10,
       "prevRank": 132,
-      "rankChange": 10,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -473773,7 +473774,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 122,
+      "rank": 130,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -473929,7 +473930,7 @@
       "prevPoints": 67,
       "pointsChange": 10,
       "prevRank": 133,
-      "rankChange": 10,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -476271,7 +476272,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 123,
+      "rank": 131,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -476415,19 +476416,19 @@
     },
     {
       "name": "עידו מונטה",
-      "total": 1589,
+      "total": 1599,
       "matchPoints": 258,
-      "openPoints": 484,
+      "openPoints": 494,
       "bonusPoints": 847,
       "exact": 9,
       "partial": 30,
       "gd": 9,
-      "openHits": 50,
+      "openHits": 51,
       "openResolved": 55,
       "prevPoints": 49,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 143,
-      "rankChange": 12,
+      "rankChange": 7,
       "matches": [
         {
           "matchId": 1,
@@ -478068,7 +478069,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -478769,7 +478770,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 131,
+      "rank": 136,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -478913,19 +478914,19 @@
     },
     {
       "name": "נתנאל שישפורטיש",
-      "total": 1587,
+      "total": 1597,
       "matchPoints": 242,
-      "openPoints": 572,
+      "openPoints": 582,
       "bonusPoints": 773,
       "exact": 6,
       "partial": 32,
       "gd": 11,
-      "openHits": 59,
+      "openHits": 60,
       "openResolved": 55,
       "prevPoints": 71,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 139,
-      "rankChange": 7,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -480566,7 +480567,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -481267,7 +481268,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 132,
+      "rank": 137,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -481423,7 +481424,7 @@
       "prevPoints": 59,
       "pointsChange": 10,
       "prevRank": 136,
-      "rankChange": 9,
+      "rankChange": 1,
       "matches": [
         {
           "matchId": 1,
@@ -483765,7 +483766,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 127,
+      "rank": 135,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -483921,7 +483922,7 @@
       "prevPoints": 55,
       "pointsChange": 10,
       "prevRank": 144,
-      "rankChange": 10,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -486263,7 +486264,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 134,
+      "rank": 142,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -486419,7 +486420,7 @@
       "prevPoints": 39,
       "pointsChange": 0,
       "prevRank": 142,
-      "rankChange": 7,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -488761,7 +488762,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 135,
+      "rank": 143,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -488917,7 +488918,7 @@
       "prevPoints": 67,
       "pointsChange": 10,
       "prevRank": 134,
-      "rankChange": 10,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -491259,7 +491260,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 124,
+      "rank": 132,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -491403,19 +491404,19 @@
     },
     {
       "name": "אילן קאלי",
-      "total": 1598,
+      "total": 1608,
       "matchPoints": 216,
-      "openPoints": 572,
+      "openPoints": 582,
       "bonusPoints": 810,
       "exact": 2,
       "partial": 38,
       "gd": 3,
-      "openHits": 58,
+      "openHits": 59,
       "openResolved": 55,
       "prevPoints": 62,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 135,
-      "rankChange": 7,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -493056,7 +493057,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -493757,7 +493758,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 128,
+      "rank": 133,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -493901,19 +493902,19 @@
     },
     {
       "name": "ברק קפ",
-      "total": 1598,
+      "total": 1608,
       "matchPoints": 228,
-      "openPoints": 566,
+      "openPoints": 576,
       "bonusPoints": 804,
       "exact": 5,
       "partial": 32,
       "gd": 9,
-      "openHits": 57,
+      "openHits": 58,
       "openResolved": 55,
       "prevPoints": 60,
-      "pointsChange": 13,
+      "pointsChange": 23,
       "prevRank": 140,
-      "rankChange": 12,
+      "rankChange": 7,
       "matches": [
         {
           "matchId": 1,
@@ -495554,7 +495555,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -496255,7 +496256,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 128,
+      "rank": 133,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -496399,19 +496400,19 @@
     },
     {
       "name": "זיו+תומר אסף",
-      "total": 1569,
+      "total": 1579,
       "matchPoints": 269,
-      "openPoints": 566,
+      "openPoints": 576,
       "bonusPoints": 734,
       "exact": 8,
       "partial": 35,
       "gd": 7,
-      "openHits": 58,
+      "openHits": 59,
       "openResolved": 55,
       "prevPoints": 61,
-      "pointsChange": 2,
+      "pointsChange": 12,
       "prevRank": 146,
-      "rankChange": 8,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -498052,7 +498053,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -498753,7 +498754,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 138,
+      "rank": 144,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -498909,7 +498910,7 @@
       "prevPoints": 39,
       "pointsChange": 0,
       "prevRank": 145,
-      "rankChange": 8,
+      "rankChange": -2,
       "matches": [
         {
           "matchId": 1,
@@ -501251,7 +501252,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 137,
+      "rank": 147,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -501407,7 +501408,7 @@
       "prevPoints": 59,
       "pointsChange": 10,
       "prevRank": 145,
-      "rankChange": 10,
+      "rankChange": 2,
       "matches": [
         {
           "matchId": 1,
@@ -503749,7 +503750,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 135,
+      "rank": 143,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -503905,7 +503906,7 @@
       "prevPoints": 35,
       "pointsChange": 10,
       "prevRank": 148,
-      "rankChange": 9,
+      "rankChange": 0,
       "matches": [
         {
           "matchId": 1,
@@ -506247,7 +506248,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 139,
+      "rank": 148,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -506403,7 +506404,7 @@
       "prevPoints": 46,
       "pointsChange": 0,
       "prevRank": 148,
-      "rankChange": 6,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -508745,7 +508746,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 142,
+      "rank": 152,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -508889,19 +508890,19 @@
     },
     {
       "name": "יונתן קוחן",
-      "total": 1567,
+      "total": 1577,
       "matchPoints": 255,
-      "openPoints": 465,
+      "openPoints": 475,
       "bonusPoints": 847,
       "exact": 3,
       "partial": 41,
       "gd": 10,
-      "openHits": 49,
+      "openHits": 50,
       "openResolved": 55,
       "prevPoints": 37,
-      "pointsChange": 13,
+      "pointsChange": 23,
       "prevRank": 149,
-      "rankChange": 10,
+      "rankChange": 4,
       "matches": [
         {
           "matchId": 1,
@@ -510542,7 +510543,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -511243,7 +511244,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 139,
+      "rank": 145,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -511387,19 +511388,19 @@
     },
     {
       "name": "שגיא דגול",
-      "total": 1544,
+      "total": 1554,
       "matchPoints": 252,
-      "openPoints": 520,
+      "openPoints": 530,
       "bonusPoints": 772,
       "exact": 5,
       "partial": 36,
       "gd": 11,
-      "openHits": 52,
+      "openHits": 53,
       "openResolved": 55,
       "prevPoints": 62,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 152,
-      "rankChange": 6,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -513040,7 +513041,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -513741,7 +513742,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 146,
+      "rank": 153,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -513897,7 +513898,7 @@
       "prevPoints": 82,
       "pointsChange": 10,
       "prevRank": 147,
-      "rankChange": 11,
+      "rankChange": 1,
       "matches": [
         {
           "matchId": 1,
@@ -516239,7 +516240,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 136,
+      "rank": 146,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -516395,7 +516396,7 @@
       "prevPoints": 64,
       "pointsChange": 10,
       "prevRank": 153,
-      "rankChange": 9,
+      "rankChange": -2,
       "matches": [
         {
           "matchId": 1,
@@ -518737,7 +518738,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 144,
+      "rank": 155,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -518881,19 +518882,19 @@
     },
     {
       "name": "דודי חשוב",
-      "total": 1539,
+      "total": 1549,
       "matchPoints": 242,
-      "openPoints": 502,
+      "openPoints": 512,
       "bonusPoints": 795,
       "exact": 3,
       "partial": 38,
       "gd": 11,
-      "openHits": 52,
+      "openHits": 53,
       "openResolved": 55,
       "prevPoints": 67,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 154,
-      "rankChange": 4,
+      "rankChange": -2,
       "matches": [
         {
           "matchId": 1,
@@ -520534,7 +520535,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -521235,7 +521236,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 150,
+      "rank": 156,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -521391,7 +521392,7 @@
       "prevPoints": 59,
       "pointsChange": 0,
       "prevRank": 152,
-      "rankChange": 6,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -523733,7 +523734,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 146,
+      "rank": 158,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -523877,19 +523878,19 @@
     },
     {
       "name": "גיא טוויג",
-      "total": 1552,
+      "total": 1562,
       "matchPoints": 236,
-      "openPoints": 547,
+      "openPoints": 557,
       "bonusPoints": 769,
       "exact": 4,
       "partial": 36,
       "gd": 8,
-      "openHits": 57,
+      "openHits": 58,
       "openResolved": 55,
       "prevPoints": 60,
-      "pointsChange": 12,
+      "pointsChange": 22,
       "prevRank": 153,
-      "rankChange": 10,
+      "rankChange": 4,
       "matches": [
         {
           "matchId": 1,
@@ -525530,7 +525531,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -526231,7 +526232,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 143,
+      "rank": 149,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -526375,19 +526376,19 @@
     },
     {
       "name": "עידן+רום מנייביץ",
-      "total": 1540,
+      "total": 1550,
       "matchPoints": 228,
-      "openPoints": 522,
+      "openPoints": 532,
       "bonusPoints": 790,
       "exact": 4,
       "partial": 34,
       "gd": 9,
-      "openHits": 55,
+      "openHits": 56,
       "openResolved": 55,
       "prevPoints": 70,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 153,
-      "rankChange": 4,
+      "rankChange": -2,
       "matches": [
         {
           "matchId": 1,
@@ -528028,7 +528029,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -528729,7 +528730,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 149,
+      "rank": 155,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -528873,19 +528874,19 @@
     },
     {
       "name": "צביקה+נועם מינסטר",
-      "total": 1530,
+      "total": 1540,
       "matchPoints": 229,
-      "openPoints": 479,
+      "openPoints": 489,
       "bonusPoints": 822,
       "exact": 3,
       "partial": 37,
       "gd": 7,
-      "openHits": 48,
+      "openHits": 49,
       "openResolved": 55,
       "prevPoints": 49,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 158,
-      "rankChange": 6,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -530526,7 +530527,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -531227,7 +531228,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 152,
+      "rank": 161,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -531383,7 +531384,7 @@
       "prevPoints": 67,
       "pointsChange": 10,
       "prevRank": 150,
-      "rankChange": 9,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -533725,7 +533726,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 141,
+      "rank": 151,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -533881,7 +533882,7 @@
       "prevPoints": 57,
       "pointsChange": 0,
       "prevRank": 160,
-      "rankChange": 6,
+      "rankChange": -5,
       "matches": [
         {
           "matchId": 1,
@@ -536223,7 +536224,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 154,
+      "rank": 165,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -536379,7 +536380,7 @@
       "prevPoints": 57,
       "pointsChange": 13,
       "prevRank": 151,
-      "rankChange": 11,
+      "rankChange": 1,
       "matches": [
         {
           "matchId": 1,
@@ -538721,7 +538722,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 140,
+      "rank": 150,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -538865,19 +538866,19 @@
     },
     {
       "name": "דניאל מערבי",
-      "total": 1533,
+      "total": 1543,
       "matchPoints": 279,
-      "openPoints": 512,
+      "openPoints": 522,
       "bonusPoints": 742,
       "exact": 8,
       "partial": 35,
       "gd": 12,
-      "openHits": 53,
+      "openHits": 54,
       "openResolved": 55,
       "prevPoints": 59,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 156,
-      "rankChange": 5,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -540518,7 +540519,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -541219,7 +541220,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 151,
+      "rank": 159,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -541375,7 +541376,7 @@
       "prevPoints": 49,
       "pointsChange": 0,
       "prevRank": 156,
-      "rankChange": 5,
+      "rankChange": -7,
       "matches": [
         {
           "matchId": 1,
@@ -543717,7 +543718,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 151,
+      "rank": 163,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -543873,7 +543874,7 @@
       "prevPoints": 60,
       "pointsChange": 12,
       "prevRank": 157,
-      "rankChange": 11,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -546215,7 +546216,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 146,
+      "rank": 158,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -546373,7 +546374,7 @@
       "prevPoints": 68,
       "pointsChange": 10,
       "prevRank": 155,
-      "rankChange": 10,
+      "rankChange": -2,
       "matches": [
         {
           "matchId": 1,
@@ -548715,7 +548716,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 145,
+      "rank": 157,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -548871,7 +548872,7 @@
       "prevPoints": 47,
       "pointsChange": 10,
       "prevRank": 159,
-      "rankChange": 9,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -551213,7 +551214,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 150,
+      "rank": 162,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -551369,7 +551370,7 @@
       "prevPoints": 74,
       "pointsChange": 3,
       "prevRank": 162,
-      "rankChange": 6,
+      "rankChange": -5,
       "matches": [
         {
           "matchId": 1,
@@ -553711,7 +553712,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 156,
+      "rank": 167,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -553867,7 +553868,7 @@
       "prevPoints": 72,
       "pointsChange": 13,
       "prevRank": 159,
-      "rankChange": 12,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -556209,7 +556210,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 147,
+      "rank": 160,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -556353,19 +556354,19 @@
     },
     {
       "name": "יובל קאופמן",
-      "total": 1541,
+      "total": 1551,
       "matchPoints": 200,
-      "openPoints": 490,
+      "openPoints": 500,
       "bonusPoints": 851,
       "exact": 5,
       "partial": 28,
       "gd": 5,
-      "openHits": 52,
+      "openHits": 53,
       "openResolved": 55,
       "prevPoints": 41,
-      "pointsChange": 13,
+      "pointsChange": 23,
       "prevRank": 160,
-      "rankChange": 12,
+      "rankChange": 6,
       "matches": [
         {
           "matchId": 1,
@@ -558006,7 +558007,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -558707,7 +558708,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 148,
+      "rank": 154,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -558851,19 +558852,19 @@
     },
     {
       "name": "אורן רוזן",
-      "total": 1506,
+      "total": 1516,
       "matchPoints": 267,
-      "openPoints": 502,
+      "openPoints": 512,
       "bonusPoints": 737,
       "exact": 6,
       "partial": 37,
       "gd": 11,
-      "openHits": 52,
+      "openHits": 53,
       "openResolved": 55,
       "prevPoints": 42,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 164,
-      "rankChange": 5,
+      "rankChange": -5,
       "matches": [
         {
           "matchId": 1,
@@ -560504,7 +560505,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -561205,7 +561206,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 159,
+      "rank": 169,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -561349,19 +561350,19 @@
     },
     {
       "name": "ניל וישנו",
-      "total": 1513,
+      "total": 1523,
       "matchPoints": 260,
-      "openPoints": 539,
+      "openPoints": 549,
       "bonusPoints": 714,
       "exact": 3,
       "partial": 40,
       "gd": 15,
-      "openHits": 55,
+      "openHits": 56,
       "openResolved": 55,
       "prevPoints": 52,
-      "pointsChange": 2,
+      "pointsChange": 12,
       "prevRank": 163,
-      "rankChange": 6,
+      "rankChange": -3,
       "matches": [
         {
           "matchId": 1,
@@ -563002,7 +563003,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -563703,7 +563704,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 157,
+      "rank": 166,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -563859,7 +563860,7 @@
       "prevPoints": 44,
       "pointsChange": 3,
       "prevRank": 161,
-      "rankChange": 6,
+      "rankChange": -5,
       "matches": [
         {
           "matchId": 1,
@@ -566201,7 +566202,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 155,
+      "rank": 166,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -566357,7 +566358,7 @@
       "prevPoints": 42,
       "pointsChange": 10,
       "prevRank": 162,
-      "rankChange": 9,
+      "rankChange": -2,
       "matches": [
         {
           "matchId": 1,
@@ -568699,7 +568700,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 153,
+      "rank": 164,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -568843,19 +568844,19 @@
     },
     {
       "name": "תומר חי",
-      "total": 1501,
+      "total": 1511,
       "matchPoints": 253,
-      "openPoints": 440,
+      "openPoints": 450,
       "bonusPoints": 808,
       "exact": 5,
       "partial": 37,
       "gd": 9,
-      "openHits": 46,
+      "openHits": 47,
       "openResolved": 55,
       "prevPoints": 49,
-      "pointsChange": 3,
+      "pointsChange": 13,
       "prevRank": 165,
-      "rankChange": 4,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -570496,7 +570497,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -571197,7 +571198,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 161,
+      "rank": 171,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -571341,19 +571342,19 @@
     },
     {
       "name": "עמוס גויכמן",
-      "total": 1509,
+      "total": 1519,
       "matchPoints": 268,
-      "openPoints": 455,
+      "openPoints": 465,
       "bonusPoints": 786,
       "exact": 8,
       "partial": 36,
       "gd": 4,
-      "openHits": 48,
+      "openHits": 49,
       "openResolved": 55,
       "prevPoints": 74,
-      "pointsChange": 3,
+      "pointsChange": 13,
       "prevRank": 164,
-      "rankChange": 6,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -572994,7 +572995,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -573695,7 +573696,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 158,
+      "rank": 168,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -573839,19 +573840,19 @@
     },
     {
       "name": "מורן בן הרוש",
-      "total": 1504,
+      "total": 1514,
       "matchPoints": 211,
-      "openPoints": 530,
+      "openPoints": 540,
       "bonusPoints": 763,
       "exact": 5,
       "partial": 29,
       "gd": 8,
-      "openHits": 54,
+      "openHits": 55,
       "openResolved": 55,
       "prevPoints": 54,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 166,
-      "rankChange": 6,
+      "rankChange": -4,
       "matches": [
         {
           "matchId": 1,
@@ -575492,7 +575493,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -576193,7 +576194,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 160,
+      "rank": 170,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -576337,19 +576338,19 @@
     },
     {
       "name": "אריאל חביה",
-      "total": 1493,
+      "total": 1503,
       "matchPoints": 235,
-      "openPoints": 419,
+      "openPoints": 429,
       "bonusPoints": 839,
       "exact": 7,
       "partial": 31,
       "gd": 5,
-      "openHits": 44,
+      "openHits": 45,
       "openResolved": 55,
       "prevPoints": 56,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 167,
-      "rankChange": 3,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -577990,7 +577991,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -578691,7 +578692,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 164,
+      "rank": 173,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -578835,19 +578836,19 @@
     },
     {
       "name": "יותמי+בוזי+ספי עדס",
-      "total": 1490,
+      "total": 1500,
       "matchPoints": 256,
-      "openPoints": 392,
+      "openPoints": 402,
       "bonusPoints": 842,
       "exact": 7,
       "partial": 34,
       "gd": 8,
-      "openHits": 42,
+      "openHits": 43,
       "openResolved": 55,
       "prevPoints": 48,
-      "pointsChange": 0,
+      "pointsChange": 10,
       "prevRank": 169,
-      "rankChange": 4,
+      "rankChange": -5,
       "matches": [
         {
           "matchId": 1,
@@ -580488,7 +580489,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -581189,7 +581190,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 165,
+      "rank": 174,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -581345,7 +581346,7 @@
       "prevPoints": 52,
       "pointsChange": 0,
       "prevRank": 170,
-      "rankChange": 4,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -583687,7 +583688,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 166,
+      "rank": 176,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -583843,7 +583844,7 @@
       "prevPoints": 37,
       "pointsChange": 5,
       "prevRank": 168,
-      "rankChange": 5,
+      "rankChange": -7,
       "matches": [
         {
           "matchId": 1,
@@ -586185,7 +586186,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 163,
+      "rank": 175,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -586329,19 +586330,19 @@
     },
     {
       "name": "אופיר ניב",
-      "total": 1500,
+      "total": 1510,
       "matchPoints": 229,
-      "openPoints": 502,
+      "openPoints": 512,
       "bonusPoints": 769,
       "exact": 6,
       "partial": 31,
       "gd": 7,
-      "openHits": 53,
+      "openHits": 54,
       "openResolved": 55,
       "prevPoints": 41,
-      "pointsChange": 13,
+      "pointsChange": 23,
       "prevRank": 171,
-      "rankChange": 9,
+      "rankChange": -1,
       "matches": [
         {
           "matchId": 1,
@@ -587982,7 +587983,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -588683,7 +588684,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 162,
+      "rank": 172,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -588827,19 +588828,19 @@
     },
     {
       "name": "אייל קורפירסט",
-      "total": 1467,
+      "total": 1477,
       "matchPoints": 195,
-      "openPoints": 430,
+      "openPoints": 440,
       "bonusPoints": 842,
       "exact": 3,
       "partial": 29,
       "gd": 10,
-      "openHits": 45,
+      "openHits": 46,
       "openResolved": 55,
       "prevPoints": 35,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 172,
-      "rankChange": 5,
+      "rankChange": -5,
       "matches": [
         {
           "matchId": 1,
@@ -590480,7 +590481,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -591181,7 +591182,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 167,
+      "rank": 177,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -591337,7 +591338,7 @@
       "prevPoints": 71,
       "pointsChange": 0,
       "prevRank": 173,
-      "rankChange": 4,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -593679,7 +593680,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 169,
+      "rank": 179,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -593823,19 +593824,19 @@
     },
     {
       "name": "יובל קליין",
-      "total": 1464,
+      "total": 1474,
       "matchPoints": 227,
-      "openPoints": 527,
+      "openPoints": 537,
       "bonusPoints": 710,
       "exact": 6,
       "partial": 31,
       "gd": 6,
-      "openHits": 54,
+      "openHits": 55,
       "openResolved": 55,
       "prevPoints": 67,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 173,
-      "rankChange": 5,
+      "rankChange": -5,
       "matches": [
         {
           "matchId": 1,
@@ -595476,7 +595477,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -596177,7 +596178,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 168,
+      "rank": 178,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -596333,7 +596334,7 @@
       "prevPoints": 58,
       "pointsChange": 10,
       "prevRank": 174,
-      "rankChange": 4,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -598675,7 +598676,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 170,
+      "rank": 180,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -598831,7 +598832,7 @@
       "prevPoints": 84,
       "pointsChange": 12,
       "prevRank": 175,
-      "rankChange": 4,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -601173,7 +601174,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 171,
+      "rank": 181,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -601317,19 +601318,19 @@
     },
     {
       "name": "שהם+שון וישנו",
-      "total": 1394,
+      "total": 1404,
       "matchPoints": 205,
-      "openPoints": 525,
+      "openPoints": 535,
       "bonusPoints": 664,
       "exact": 3,
       "partial": 31,
       "gd": 10,
-      "openHits": 54,
+      "openHits": 55,
       "openResolved": 55,
       "prevPoints": 54,
-      "pointsChange": 10,
+      "pointsChange": 20,
       "prevRank": 176,
-      "rankChange": 4,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -602970,7 +602971,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -603671,7 +603672,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 172,
+      "rank": 182,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -603815,19 +603816,19 @@
     },
     {
       "name": "דניאל קולסניק",
-      "total": 1351,
+      "total": 1361,
       "matchPoints": 222,
-      "openPoints": 453,
+      "openPoints": 463,
       "bonusPoints": 676,
       "exact": 6,
       "partial": 30,
       "gd": 6,
-      "openHits": 45,
+      "openHits": 46,
       "openResolved": 55,
       "prevPoints": 42,
-      "pointsChange": 13,
+      "pointsChange": 23,
       "prevRank": 177,
-      "rankChange": 4,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -605468,7 +605469,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -606169,7 +606170,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 173,
+      "rank": 183,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -606313,19 +606314,19 @@
     },
     {
       "name": "טל בן נעים",
-      "total": 1339,
+      "total": 1349,
       "matchPoints": 234,
-      "openPoints": 417,
+      "openPoints": 427,
       "bonusPoints": 688,
       "exact": 7,
       "partial": 30,
       "gd": 7,
-      "openHits": 44,
+      "openHits": 45,
       "openResolved": 55,
       "prevPoints": 58,
-      "pointsChange": 13,
+      "pointsChange": 23,
       "prevRank": 178,
-      "rankChange": 4,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -607966,7 +607967,7 @@
         {
           "qId": 141,
           "prediction": "כן",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -608667,7 +608668,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 174,
+      "rank": 184,
       "bonusPicks": {
         "top2": {
           "A": {
