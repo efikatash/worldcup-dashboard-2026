@@ -91,7 +91,7 @@
     "seed": 9,
     "name": "אייל חסון",
     "initialScore": 165,
-    "status": "active",
+    "status": "champion",
     "autoQualifiedRound2": true,
     "baselineScoreR2": 421,
     "baselineScoreR3": 696,
@@ -99,7 +99,8 @@
     "baselineScoreR5": 1396,
     "baselineScoreR6": 1551,
     "baselineScoreR7": 1739,
-    "baselineScoreR8": 1897
+    "baselineScoreR8": 1897,
+    "championRound": 8
   },
   {
     "id": "seed-010",
@@ -553,7 +554,7 @@
     "seed": 54,
     "name": "תומר אמינפור",
     "initialScore": 150,
-    "status": "active",
+    "status": "eliminated",
     "autoQualifiedRound2": false,
     "baselineScoreR2": 376,
     "baselineScoreR3": 639,
@@ -561,7 +562,7 @@
     "baselineScoreR5": 1367,
     "baselineScoreR6": 1542,
     "baselineScoreR7": 1682,
-    "baselineScoreR8": 1762
+    "eliminatedRound": 8
   },
   {
     "id": "seed-055",
