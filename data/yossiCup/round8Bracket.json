@@ -10,12 +10,12 @@
     "playerBSeed": 54,
     "playerBName": "תומר אמינפור",
     "isBye": false,
-    "status": "pending",
-    "winnerSeed": null,
-    "winnerName": null,
-    "winnerReason": null,
+    "status": "completed",
+    "winnerSeed": 9,
+    "winnerName": "אייל חסון",
+    "winnerReason": "official",
     "tieBreakerUsed": null,
-    "roundScoreA": null,
-    "roundScoreB": null
+    "roundScoreA": 270,
+    "roundScoreB": 200
   }
 ]

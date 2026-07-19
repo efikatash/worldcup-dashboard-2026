@@ -99,13 +99,13 @@
     "name": "גמר",
     "description": "גמר גביע יוסי — מקביל לגמר גביע העולם 2026",
     "wcStage": "third_place_and_final",
-    "status": "active",
+    "status": "closed",
     "participantCountStart": 2,
     "activeMatchCount": 1,
     "byeCount": 0,
     "participantCountEnd": 1,
-    "closedBySummaryEmail": false,
-    "summaryEmailDate": null,
+    "closedBySummaryEmail": true,
+    "summaryEmailDate": "2026-07-19T23:18:05.518Z",
     "roundScoreSnapshots": {}
   }
 ]

@@ -312,14 +312,66 @@
 
   // ── section renderers ──────────────────────────────────────────────────
 
+  function _cupIsComplete() {
+    return _rounds.length > 0 && _rounds.every(function (r) { return r.status === 'closed'; });
+  }
+
+  function _getChampion() {
+    return _participants.find(function (p) { return p.status === 'champion'; }) || null;
+  }
+
+  function _renderChampion() {
+    var el = document.getElementById('yc-champion');
+    if (!el) return;
+    if (!_cupIsComplete()) { el.innerHTML = ''; return; }
+    var champ = _getChampion();
+    if (!champ) { el.innerHTML = ''; return; }
+
+    var finalMatch = (_rawBracketR8 && _rawBracketR8[0]) ? _rawBracketR8[0] : null;
+    var champScore = 0, runnerScore = 0, runnerName = '';
+    if (finalMatch && finalMatch.winnerSeed != null) {
+      var champIsA = finalMatch.winnerSeed === finalMatch.playerASeed;
+      champScore  = champIsA ? finalMatch.roundScoreA : finalMatch.roundScoreB;
+      runnerScore = champIsA ? finalMatch.roundScoreB : finalMatch.roundScoreA;
+      runnerName  = champIsA ? finalMatch.playerBName : finalMatch.playerAName;
+    }
+
+    el.innerHTML =
+      '<div class="yc-champion-banner card">' +
+        '<div class="yc-champion-trophy-big">🏆</div>' +
+        '<div class="yc-champion-label">זוכה גביע יוסי · מונדיאל 2026</div>' +
+        '<div class="yc-champion-name">' + esc(champ.name) + '</div>' +
+        '<div class="yc-champion-seed">זרע #' + esc(champ.seed) + '</div>' +
+        (finalMatch ? (
+          '<div class="yc-champion-scores">' +
+            '<div class="yc-champ-score-box winner-box">' +
+              '<div class="cs-name">🏆 ' + esc(champ.name) + '</div>' +
+              '<div class="cs-val">' + champScore + '</div>' +
+            '</div>' +
+            '<div class="yc-champ-vs">vs</div>' +
+            '<div class="yc-champ-score-box">' +
+              '<div class="cs-name">🥈 ' + esc(runnerName) + '</div>' +
+              '<div class="cs-val">' + runnerScore + '</div>' +
+            '</div>' +
+          '</div>'
+        ) : '') +
+      '</div>';
+  }
+
   function _renderHero() {
     var el = document.getElementById('yc-hero');
     if (!el) return;
     var liveCount = _bracket.filter(function (m) { return m.isProvisional; }).length;
-    var statusBadge = liveCount > 0
-      ? '<span class="pill orange yc-live-pill"><span class="yc-live-dot"></span> ' + liveCount + ' דו-קרבים חיים</span>'
-      : (_activeRound > 1 ? '<span class="pill blue">סיבוב ' + _activeRound + ' פעיל</span>'
-                           : '<span class="pill">ממתין לתחילת המחזור</span>');
+    var statusBadge;
+    if (_cupIsComplete()) {
+      statusBadge = '<span class="pill gold">הגביע הסתיים!</span>';
+    } else if (liveCount > 0) {
+      statusBadge = '<span class="pill orange yc-live-pill"><span class="yc-live-dot"></span> ' + liveCount + ' דו-קרבים חיים</span>';
+    } else {
+      statusBadge = _activeRound > 1
+        ? '<span class="pill blue">סיבוב ' + _activeRound + ' פעיל</span>'
+        : '<span class="pill">ממתין לתחילת המחזור</span>';
+    }
     el.innerHTML =
       '<div class="yc-hero-inner card">' +
         '<div class="yc-hero-left">' +
@@ -649,6 +701,7 @@
     }
 
     _renderHero();
+    _renderChampion();
     _renderKpis();
     _renderExplanation();
     _renderRoundTabs();
