@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-19 15:14",
+    "generatedAt": "2026-07-19 15:15",
     "timezone": "Asia/Manila",
     "workbookName": "תוצאות משחקי היום הרביעי - 14.6.26.xlsx",
     "participantsCount": 242,
@@ -8,14 +8,14 @@
     "completedFifaMatches": 72,
     "pendingMatches": 0,
     "openQuestionsCount": 146,
-    "resolvedOpenQuestions": 106,
-    "verifiedOpenQuestions": 106,
+    "resolvedOpenQuestions": 107,
+    "verifiedOpenQuestions": 107,
     "verifiedFifaOpenQuestions": 6,
-    "verifiedExternalOpenQuestions": 25,
+    "verifiedExternalOpenQuestions": 26,
     "scoringRules": "משחקים: 10 נק׳ לתוצאה מדויקת, 5 לכיוון נכון, ועוד 2 אם גם הפרש השערים נכון. שאלות פתוחות נספרות כשהן מאומתות ממקור FIFA, מקור חיצוני אמין, או קובץ תוצאות מעודכן שסיפקת.",
     "dataPolicy": "הניחושים והניקוד נלקחים מקובץ התוצאות המעודכן שהועלה. תוצאות משחקים נשארות FIFA-only לפי הדרישה המקורית; שאלות פתוחות יכולות להיספר גם ממקור שאינו FIFA.",
     "dashboardVersion": "GitHub Auto FIFA/ESPN Final Fallback + ESPN Live",
-    "dashboardBuiltAt": "2026-07-19 15:14",
+    "dashboardBuiltAt": "2026-07-19 15:15",
     "completedMatches": 72,
     "liveMatches": 0,
     "openQuestionEngine": "enabled_step8_fast_track_only",
@@ -3220,15 +3220,16 @@
       "num": "(8",
       "section": "(*) \"הניחושים המיוחדים\"",
       "question": "מס' השערים הגדול ביותר שיובקע ע\"י הקבוצה המפסידה במשחק (ב- 90 דקות)",
-      "actualAnswer": "לא ידוע",
-      "status": "pending",
-      "sourceStatus": "pending",
+      "actualAnswer": "4",
+      "status": "known",
+      "sourceStatus": "verified_external",
       "sourceUrl": "",
       "sourceTitle": "",
       "maxPoints": 10,
       "block": "לא מסווג - דורש בדיקת מנהל",
       "ruleType": "threshold_or_yes_no_manual",
-      "policyStatus": "locked_not_answered_now"
+      "policyStatus": "locked_not_answered_now",
+      "resolvedMatchday": "2026-07-15"
     },
     {
       "id": 83,
@@ -119196,19 +119197,19 @@
     },
     {
       "name": "רוני גליק",
-      "total": 1757,
+      "total": 1767,
       "matchPoints": 263,
-      "openPoints": 597,
+      "openPoints": 607,
       "bonusPoints": 897,
       "exact": 7,
       "partial": 35,
       "gd": 9,
-      "openHits": 62,
+      "openHits": 63,
       "openResolved": 55,
       "prevPoints": 52,
-      "pointsChange": 60,
+      "pointsChange": 70,
       "prevRank": 29,
-      "rankChange": -10,
+      "rankChange": -6,
       "matches": [
         {
           "matchId": 1,
@@ -120495,7 +120496,7 @@
         {
           "qId": 82,
           "prediction": "4",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -121550,7 +121551,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 39,
+      "rank": 35,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -224112,19 +224113,19 @@
     },
     {
       "name": "איתי+אופק מניביץ",
-      "total": 1708,
+      "total": 1718,
       "matchPoints": 269,
-      "openPoints": 542,
+      "openPoints": 552,
       "bonusPoints": 897,
       "exact": 8,
       "partial": 33,
       "gd": 12,
-      "openHits": 57,
+      "openHits": 58,
       "openResolved": 55,
       "prevPoints": 75,
-      "pointsChange": 88,
+      "pointsChange": 98,
       "prevRank": 66,
-      "rankChange": 4,
+      "rankChange": 12,
       "matches": [
         {
           "matchId": 1,
@@ -225411,7 +225412,7 @@
         {
           "qId": 82,
           "prediction": "4",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -226466,7 +226467,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 62,
+      "rank": 54,
       "bonusPicks": {
         "top2": {
           "A": {
@@ -453928,19 +453929,19 @@
     },
     {
       "name": "יותם מערבי",
-      "total": 1611,
+      "total": 1621,
       "matchPoints": 223,
-      "openPoints": 487,
+      "openPoints": 497,
       "bonusPoints": 901,
       "exact": 6,
       "partial": 29,
       "gd": 9,
-      "openHits": 49,
+      "openHits": 50,
       "openResolved": 55,
       "prevPoints": 52,
-      "pointsChange": 68,
+      "pointsChange": 78,
       "prevRank": 119,
-      "rankChange": -5,
+      "rankChange": 1,
       "matches": [
         {
           "matchId": 1,
@@ -455227,7 +455228,7 @@
         {
           "qId": 82,
           "prediction": "4",
-          "points": 0,
+          "points": 10,
           "label": "ממתין למקור מאומת"
         },
         {
@@ -456282,7 +456283,7 @@
           "status": "resolved"
         }
       ],
-      "rank": 124,
+      "rank": 118,
       "bonusPicks": {
         "top2": {
           "A": {
