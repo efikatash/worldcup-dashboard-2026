@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-22 08:16",
+    "generatedAt": "2026-07-22 08:34",
     "timezone": "Asia/Manila",
     "workbookName": "תוצאות משחקי היום הרביעי - 14.6.26.xlsx",
     "participantsCount": 242,
@@ -15,7 +15,7 @@
     "scoringRules": "משחקים: 10 נק׳ לתוצאה מדויקת, 5 לכיוון נכון, ועוד 2 אם גם הפרש השערים נכון. שאלות פתוחות נספרות כשהן מאומתות ממקור FIFA, מקור חיצוני אמין, או קובץ תוצאות מעודכן שסיפקת.",
     "dataPolicy": "הניחושים והניקוד נלקחים מקובץ התוצאות המעודכן שהועלה. תוצאות משחקים נשארות FIFA-only לפי הדרישה המקורית; שאלות פתוחות יכולות להיספר גם ממקור שאינו FIFA.",
     "dashboardVersion": "GitHub Auto FIFA/ESPN Final Fallback + ESPN Live",
-    "dashboardBuiltAt": "2026-07-22 08:16",
+    "dashboardBuiltAt": "2026-07-22 08:34",
     "completedMatches": 72,
     "liveMatches": 0,
     "openQuestionEngine": "enabled_step8_fast_track_only",
@@ -115131,7 +115131,7 @@
         },
         {
           "qId": 14,
-          "prediction": "2026-07-08 00:00:00",
+          "prediction": "7-8",
           "points": 0,
           "label": "pispus"
         },
@@ -227541,7 +227541,7 @@
         },
         {
           "qId": 14,
-          "prediction": "2026-05-06 00:00:00",
+          "prediction": "5-6",
           "points": 0,
           "label": "pispus"
         },
@@ -452805,7 +452805,7 @@
         },
         {
           "qId": 88,
-          "prediction": "2026-01-03 00:00:00",
+          "prediction": "1-3",
           "points": 0,
           "label": "ממתין למקור מאומת"
         },
